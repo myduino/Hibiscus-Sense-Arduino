@@ -61,6 +61,50 @@ There is 1x blue LED labelled as `LED` on-board, as circled on the image above. 
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/schematic-exercise-one.png" width="150"></a></p>
  
-This is quite unusual behaviour, but it is good to learn how an electronic circuit could behave either way. Whereas, in the most use cases in circuit design is **active-high circuit**, where the positive (+ve) terminal of the LED connected to the GPIO2, as schematic below, instead of the negative (-ve) terminal of the LED connected to GPIO2 as schematic above.
+This is quite unusual behaviour, but it is good to learn how an electronic circuit could behave either way. Whereas, the usual circuit design was **active-high circuit**, where the positive (+ve) terminal of the LED connected to the GPIO2, as in the schematic below, instead of the negative (-ve) terminal of the LED connected to GPIO2, as in the schematic above. According to this type of circuit, we need to pull GPIO2 to HIGH state, to turn ON the LED, otherwise pull GPIO2 to LOW state, to turn OFF the LED.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/schematic-exercise-one-a.png" width="140"></a></p>
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/schematic-exercise-one-a.png" width="150"></a></p>
+
+Since, the blue LED circuit on Hibiscus Sense is active-low, we will program it as below:
+
+**Complete Sketch**
+```
+void setup() {
+  pinMode(2, OUTPUT); // declaring GPIO2 as an OUTPUT pin.
+
+}
+
+void loop() {
+  // stobe light effect, such on the aeroplane.
+  digitalWrite(2, LOW);
+  delay(100);
+  digitalWrite(2, HIGH);
+  delay(100);
+
+  digitalWrite(2, LOW);
+  delay(100);
+  digitalWrite(2, HIGH);
+  delay(2000);
+
+}
+```
+
+**Detail Code Explanations**
+
+The LED is connected to `GPIO2`, which we need to configure GPIO2 as `OUTPUT`.
+```
+pinMode(2, OUTPUT);
+```
+
+In the void loop() function, the program start by turning the LED ON, as the ciruit is active-low, we use `LOW` state on GPIO2 to complete the LED circuit. Then delay() function to pause the program in milliseconds.
+```
+digitalWrite(2, LOW);
+delay(100);
+digitalWrite(2, HIGH);
+delay(100);
+```
+
+Now, upload the complete sketch to ESP32, then observe the output.
+
+Interesting facts! The output of the program is actually, an example of strobe light, which we saw on an airplane during the night.
+
