@@ -96,7 +96,7 @@ The LED is connected to `GPIO2`, which we need to configure GPIO2 as `OUTPUT`.
 pinMode(2, OUTPUT);
 ```
 
-In the void loop() function, the program start by turning the LED ON, as the ciruit is active-low, we use `LOW` state on GPIO2 to complete the LED circuit. Then delay() function to pause the program in milliseconds.
+In the void loop() function, the program start by turning the LED ON, as the ciruit is active-low, we use `LOW` state on GPIO2 to complete the LED circuit. Then delay() function to pause the program in milliseconds. Vice versa to turn OFF the LED. 
 ```
 digitalWrite(2, LOW);
 delay(100);
