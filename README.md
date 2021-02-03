@@ -61,6 +61,6 @@ There is 1x blue LED labelled as `LED` on-board, as circled on the image above. 
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/schematic-exercise-one.png" width="150"></a></p>
  
-This is quite unusual behaviour, but it is good to learn how an electronic circuit could behave either way. Whereas, in the most use cases in circuit design is **active-high circuit**, where the positive (+ve) terminal of the LED will be connected to the GPIO2, as schematic below, instead of the negative (-ve) terminal of the LED connected to GPIO2 as schematic above.
+This is quite unusual behaviour, but it is good to learn how an electronic circuit could behave either way. Whereas, in the most use cases in circuit design is **active-high circuit**, where the positive (+ve) terminal of the LED connected to the GPIO2, as schematic below, instead of the negative (-ve) terminal of the LED connected to GPIO2 as schematic above.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/schematic-exercise-one-a.png" width="150"></a></p>
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/schematic-exercise-one-a.png" width="140"></a></p>
