@@ -3,7 +3,7 @@
  * 
  * There is 1x blue LED.
  * This LED is connected to GPIO2 of ESP32 microcontroller.
- * GPIO2 is an active-low pins, it means we need to pull the pins LOW,
+ * The circuit is an active-low circuit, therefore we need to pull the pins LOW,
  * in order to complete the circuit to the GND.
  * 
  * Therefore in the sketch,

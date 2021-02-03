@@ -55,10 +55,9 @@ Connect the USB cable Type-C to Hibiscus Sense and Type-A to our computer. Hibis
 
 ## Tutorial 1: Control Blue LED on GPIO2
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense.png" width="400"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-exercise-one.png" width="400"></a></p>
 
-There is 1x blue LED labelled as `LED` on-board. The circuit of this LED is an active-low circuit, which the negative terminal of this LED is connected to GPIO2, therefore we have to pull the GPIO2 to LOW state, in order to complete the circuit, then the light of the LED will turn ON. This is quite unusual behaviour, but it is good to learn how an electronic circuit can behave either way.
+There is 1x blue LED labelled as `LED` on-board, as circled on the image above. The circuit of this LED is an **active-low circuit**, which the negative terminal of this LED is connected to GPIO2, therefore we have to pull the GPIO2 to LOW state, in order to complete the circuit, then the light of the LED will turn ON. This is quite unusual behaviour, but it is good to learn how an electronic circuit can behave either way.
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/schematic-exercise-one.png" width="150"></a></p>
  
-Therefore in the sketch, we need to call LOW state in the digitalWrite function, to light ON the LED, while call HIGH state, to light OFF the LED.
