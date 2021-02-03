@@ -53,3 +53,10 @@ Connect the USB cable Type-C to Hibiscus Sense and Type-A to our computer. Hibis
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-first-time-monitor.gif" width="600"></a></p>
 
+## Tutorial 1: Control Blue LED on GPIO2
+
+There is 1x blue LED.
+This LED is connected to GPIO2 of ESP32 microcontroller.
+GPIO2 is an active-low pins, it means we need to pull the pins LOW, in order to complete the circuit to the GND.
+ 
+Therefore in the sketch, we need to call LOW state in the digitalWrite function, to light ON the LED, while call HIGH state, to light OFF the LED.
