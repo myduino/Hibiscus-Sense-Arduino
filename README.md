@@ -51,3 +51,5 @@ Connect the USB cable Type-C to Hibiscus Sense and Type-A to our computer. Hibis
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-first-time.gif" width="600"></a></p>
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-first-time-monitor.gif" width="600"></a></p>
+
+## Exercise 1
