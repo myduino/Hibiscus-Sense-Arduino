@@ -17,13 +17,19 @@ Despite, we can program ESP32 using other programming language and it's tools, i
 
 ## Hibiscus Sense Features
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-features.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-features.png" width="900"></a></p>
 
 ## Hibiscus Sense Pinout Diagram
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-pinout.png" width="900"></a><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-precaution.png" width="900"></a></p>
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-pinout.png" width="900"></a></p>
 
-- Small Buzzer is connected to `GPIO13` ESP32 microcontroller.
-- Blue LED is connected to `GPIO2` ESP32 microcontroller.
-- WS2812 RGB LED is connected to `GPIO16` ESP32 microcontroller.
-- Sensors: APDS9960, BME280 and MPU6050 is interfaced to the `I2C` ESP32 microcontroller.
+- **Small Buzzer** is connected to `GPIO13` ESP32 microcontroller.
+- **Blue LED** is connected to `GPIO2` ESP32 microcontroller.
+- **WS2812 RGB LED** is connected to `GPIO16` ESP32 microcontroller.
+- All GPIO can generate PWM signal output, except `GPIO34-GPIO39` because it is an input pin only.
+- ESP32 `VSPI` is complete **MISO** `GPIO19`, **MOSI** `GPIO32`, **CLK** `GPIO18` and **CS** `GPIO5`.
+- ESP32 `I2C` **SDA** `GPIO21` and **SCL** `GPIO22`, without pullup resistor.
+- **Sensors**: **APDS9960**, **BME280** and **MPU6050** interfaced to the `I2C` ESP32 microcontroller, respectively I2C address: `0x39`, `0x77` and `0x68`.
+- Avoid to use `ADC2` channel while using WiFi.
+- Each GPIO absolute maximum current drawn only 16mA.
+
