@@ -57,6 +57,6 @@ Connect the USB cable Type-C to Hibiscus Sense and Type-A to our computer. Hibis
 
 There is 1x blue LED labelled as LED on-board. The circuit of this LED is an active-low and connected to GPIO2 ESP32, this means we have to pull the GPIO2 to LOW state, in order to complete the circuit to the GND.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/schematic-exercise-one" width="600"></a></p>
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/schematic-exercise-one.png" width="600"></a></p>
  
 Therefore in the sketch, we need to call LOW state in the digitalWrite function, to light ON the LED, while call HIGH state, to light OFF the LED.
