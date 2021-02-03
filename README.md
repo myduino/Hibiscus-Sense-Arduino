@@ -17,11 +17,11 @@ Despite, we can program ESP32 using other programming language and it's tools, i
 
 ## Hibiscus Sense Features
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-features.png" width="700"></a></p>
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-features.png" width="800"></a></p>
 
 ## Hibiscus Sense Pinout Diagram
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-pinout.png" width="700"></a><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-precaution.png" width="700"></a></p>
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-pinout.png" width="800"></a><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-precaution.png" width="800"></a></p>
 
 - Small Buzzer is connected to `GPIO13` ESP32 microcontroller.
 - Blue LED is connected to `GPIO2` ESP32 microcontroller.
