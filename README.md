@@ -10,7 +10,8 @@
   - **MPU6050**: 6-axis motion tracking sensor, which sense *3-axis gravitational acceleration, 3-axis rotational velocity* and *temperature*.
 - 3 actuators:
   - **Buzzer**: short distance small buzzer.
-  - **LED & RGB LED**: blue LED and WS2812 RGB LED.
+  - **LED**: blue LED.
+  - **RGB LED**: WS2812 RGB LED.
 
 Comes with **USB Type-C** to powered the board with 5V and to program the ESP32 microcontroller, which on-board has USB-to-Serial converter **Silicon Labs CP2104** with **automatic bootloader reset**, so we don’t have to press the RESET button each time to upload the program into the microcontroller.
 
@@ -52,4 +53,3 @@ Connect the USB cable Type-C to Hibiscus Sense and Type-A to our computer. Hibis
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-first-time-monitor.gif" width="600"></a></p>
 
-## Exercise 1
