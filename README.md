@@ -106,6 +106,6 @@ delay(100);
 
 Now, upload the complete sketch to ESP32, then observe the output.
 
-Interesting facts! The output of the program is actually, an example of strobe light, which we saw on an airplane during the night. 
+**Interesting facts!** The output of the program is actually, an example of strobe light, which we saw on an airplane during the night. 
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-one.gif" width="400"></a></p>
