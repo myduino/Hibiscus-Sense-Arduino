@@ -15,4 +15,10 @@ Comes with USB Type-C to powered the board with 5V and to program the ESP32 micr
 
 Despite, we can program ESP32 using other programming language and it's tools, in this tutorial we will focus on using [Arduino](https://www.arduino.cc/) as the prototyping platform.
 
-## Hibiscus Sense Features and Pinout Diagram
+## Hibiscus Sense Features
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-features.png" width="400"></a></p>
+
+## Hibiscus Sense Features
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-pinout.png" width="400"></a><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-precaution.png" width="400"></a></p>
