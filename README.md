@@ -1,5 +1,6 @@
 # Hibiscus Sense ESP32 Arduino Tutorial
 
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-logo.png" width="200"></a></p>
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense.png" width="400"></a></p>
 
 [Hibiscus Sense](https://myduino.com/product/myd-036/) is an Internet of Things (IoT) development board, powered by the mighty and popular dual-core [ESP32](https://www.espressif.com/en/products/socs/esp32) microcontroller, which on-board equipped with:
@@ -32,4 +33,6 @@ Despite, we can program ESP32 using other programming language and it's tools, i
 - **Sensors**: **APDS9960**, **BME280** and **MPU6050** interfaced to the `I2C` ESP32 microcontroller, respectively I2C address: `0x39`, `0x77` and `0x68`.
 - Avoid to use `ADC2` channel while using WiFi.
 - Each GPIO absolute maximum current drawn only 16mA.
+- Board measurement including header in mm: 58.7 x 27 x 13.3 (length x width x height)
+- Package measurement in mm: 71.8 x 35.5 x 20.4 (length x width x height)
 
