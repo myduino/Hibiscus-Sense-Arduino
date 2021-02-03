@@ -106,5 +106,5 @@ delay(100);
 
 Now, upload the complete sketch to ESP32, then observe the output.
 
-Interesting facts! The output of the program is actually, an example of strobe light, which we saw on an airplane during the night.
+Interesting facts! The output of the program is actually, an example of strobe light, which we saw on an airplane during the night. 
 
