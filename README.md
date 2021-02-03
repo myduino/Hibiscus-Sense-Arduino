@@ -63,7 +63,7 @@ Connect the USB cable Type-C to Hibiscus Sense and Type-A to our computer. Hibis
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-first-time-monitor.gif" width="600"></a></p>
 
-## Tutorial 1: Control Blue LED on GPIO2
+## Tutorial 1: Control Blue LED on GPIO2 (Strobe Light Effect)
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-exercise-one.png" width="400"></a></p>
 
@@ -118,8 +118,14 @@ digitalWrite(2, HIGH);
 delay(2000);
 ```
 
-Now, upload the complete sketch to ESP32, then observe the output.
+Now, upload the complete sketch to ESP32, then observe the output. By oversation, the output of the LED only have 2 states, which are ON and OFF, thus what we called it as **`DIGITAL OUTPUT`**.
 
 **Interesting facts!** The output of the program is actually, an example of strobe light, which we saw on an airplane during the night. 
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-one.gif" width="200"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-one.gif" width="300"></a></p>
+
+## Tutorial 2: Control Blue LED on GPIO2 (Glowing Light)
+
+In this tutorial, we will use same blue LED as the circuit will also be the same as in Tutorial 1, then only changes happen in this tutorial are the program will be replace for an output of glowing light effect. Where the blue LED color will start from OFF and slowly glowing until it reach maximum light ON and turn OFF again and repeat the process again and again.
+
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-one.gif" width="300"></a></p>
