@@ -4,6 +4,11 @@
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense.png" width="400"></a></p>
 
 ## Table of Content
+- [Introduction](https://github.com/myinvent/hibiscus-sense-arduino#introduction)
+- [Hibiscus Sense Features](https://github.com/myinvent/hibiscus-sense-arduino#hibiscus-sense-features)
+- [Hibiscus Sense Pinout Diagram](https://github.com/myinvent/hibiscus-sense-arduino#hibiscus-sense-pinout-diagram)
+- [Learning Material Preparation](https://github.com/myinvent/hibiscus-sense-arduino#learning-material-preparation)
+- [Interfacing Hibiscus to Computer's USB Port](https://github.com/myinvent/hibiscus-sense-arduino#interfacing-hibiscus-to-computers-usb-port)
 - [Tutorial 1: Control Blue LED on GPIO2](https://github.com/myinvent/hibiscus-sense-arduino#tutorial-1-control-blue-led-on-gpio2)
 
 ## Introduction
@@ -90,7 +95,6 @@ void loop() {
   delay(100);
   digitalWrite(2, HIGH);
   delay(2000);
-
 }
 ```
 
@@ -101,12 +105,17 @@ The LED is connected to `GPIO2`, which we need to configure GPIO2 as `OUTPUT`.
 pinMode(2, OUTPUT);
 ```
 
-In the void loop() function, the program start by turning the LED ON, as the ciruit is active-low, we use `LOW` state on GPIO2 to complete the LED circuit. Then delay() function to pause the program in milliseconds. Vice versa to turn OFF the LED. 
+In the void loop() function, the program start by turning the LED ON, as the ciruit is active-low, we use `LOW` state on GPIO2 to complete the LED circuit. Then delay() function to pause the program in milliseconds. Vice versa to turn OFF the LED.
 ```
 digitalWrite(2, LOW);
 delay(100);
 digitalWrite(2, HIGH);
 delay(100);
+
+digitalWrite(2, LOW);
+delay(100);
+digitalWrite(2, HIGH);
+delay(2000);
 ```
 
 Now, upload the complete sketch to ESP32, then observe the output.
