@@ -250,4 +250,19 @@ Now, we can upload the complete sketch to ESP32, then observe the output. By ove
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-three-a.gif" width="600"></a></p>
 
-## Exercise 4: Pushbutton on GPIO0 ()
+## Exercise 4: Serial Communication (Hibiscus Sense & Computer)
+
+Serial Communication is a communication process for receiving and transmitting data between two devices, such as **_computer to computer_** or **_microcontroller to computer_** or **_microcontroller to microcontroller_**, by implementing hardware protocol called UART (Universal Asynchronous Receiver/Transmitter). The data has been sent/receive bit by bit sequentially by UART over two or one transmission line (wires), with configurables speed known as baud-rate or unit bits-per-second (bps): 9600, 19200, 38400, 57600, 115200, 230400, 460800, 921600.
+
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four.gif" width="600"></a></p>
+
+The two transmission lines of UART, known as RX (receive) and TX (transmit). The transmission begin by transmitting the data from TX port of one UART controller to RX port of the other UART controller.
+
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four-a.png" width="600"></a></p>
+
+In ESP32, the serial communication is done by the UART . There are 3x UART controllers available in ESP32:
+UART | RX  | RX  |
+---- | --- | --- |
+UART0 | GPIO3 | GPIO1
+UART1 | GPIO9 | GPIO10
+UART2 | GPIO16 | GPIO17
