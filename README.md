@@ -122,7 +122,7 @@ delay(2000);
 
 Now, we can upload the complete sketch to ESP32, then observe the output. By oversation, the output of the LED only have 2 states, which are ON and OFF, thus this output signal is what we called, as **`DIGITAL OUTPUT`**.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-one-b.gif" width="600"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-one-a.gif" width="600"></a></p>
 
 **Interesting facts!** The LED output of the program is actually, an example of strobe light, which we saw on an airplane during the night.
 
