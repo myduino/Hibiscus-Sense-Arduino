@@ -87,7 +87,7 @@ void setup() {
 }
 
 void loop() {
-  // stobe light effect, such on the aeroplane.
+  // strobe light effect, such on the aeroplane.
   digitalWrite(2, LOW);
   delay(100);
   digitalWrite(2, HIGH);
@@ -127,6 +127,7 @@ Now, we can upload the complete sketch to ESP32, then observe the output. By ove
 **Interesting facts!** The LED output of the program is actually, an example of strobe light on an aeroplane during the night.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-one.gif" width="300"></a></p>
+
 
 ## Exercise 2: Control Blue LED on GPIO2 (Glowing Light Effect)
 
@@ -169,6 +170,7 @@ void setup() {
 
 void loop() {
   // function for() to create decremental value by 1 start from 255 --> 0
+  // from OFF LED to linear increasing brightness, for active-low circuit
   for(int brightness = 255; brightness >= 0; brightness--){   
     // generate PWM output signal according to variable brightness value
     ledcWrite(0, brightness);
@@ -199,6 +201,49 @@ for(int brightness = 255; brightness >= 0; brightness--){
 }
 ```
 
-Now, we can upload the complete sketch to ESP32, then observe the output. By oversation, the output of the blue LED is repeated glowing effect, which the results from variable decremental PWM signal output.
+Now, we can upload the complete sketch to ESP32, then observe the output. By oversation, the output of the blue LED is repeated glowing light effect, which the results from decremental value of the PWM signal output.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-two-b.gif" width="600"></a></p>
+
+
+## Exercise 3: Control Blue LED on GPIO2 (Breathing Light Effect)
+
+This exercise is a continuation from Exercise 02. In Exercise 02, we use `for()` function to automatically generate decremental PWM value from 255-0 `(active-low circuit)` to produce an output of glowing light effect, while in this exercise we want produce breathing light effect.
+
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-three.gif" width="500"></a></p>
+
+It's easy ... we just need to add another `for()` function after decremental PWM value, just this moment, the for() function is used to automatically generate incremental PWM value from 0-255, so the program as follows:
+
+**Complete Sketch**
+```cpp
+void setup() {
+  // configure PWM controller congfiguration
+  ledcSetup(0, 5000, 8);
+  // declare the GPIO number for PWM signal output
+  ledcAttachPin(2, 0);
+}
+
+void loop() {
+  // function for() to create decremental value by 1 start from 255 --> 0
+  // from OFF LED to linear increasing brightness, for active-low circuit
+  for(int brightness = 255; brightness >= 0; brightness--){   
+    ledcWrite(0, brightness);
+    delay(15);
+  }
+  // wait for 0.2 seconds before start again
+  delay(200);
+  
+  // function for() to create incremental value by 1 start from 0 --> 255
+  // from ON LED to linear decreasing brightness, for active-low circuit
+  for(int brightness = 0; brightness <= 255; brightness++){   
+    ledcWrite(0, brightness);
+    delay(15);
+  }
+
+  delay(200);
+}
+```
+
+Now, we can upload the complete sketch to ESP32, then observe the output. By oversation, the output of the blue LED is repeated breathing light effect, which the results from decremental and incremental value of the PWM signal output.
+
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-three-b.gif" width="600"></a></p>

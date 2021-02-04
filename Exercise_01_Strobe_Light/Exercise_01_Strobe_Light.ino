@@ -1,5 +1,5 @@
 /*
- * Hibiscus Sense Example Sketch - LED
+ * Hibiscus Sense - Exercise 01 Strobe Light
  * 
  * There is 1x blue LED.
  * This LED is connected to GPIO2 of ESP32 microcontroller.
@@ -18,7 +18,7 @@ void setup() {
 }
 
 void loop() {
-  // stobe light effect, such on the aeroplane.
+  // strobe light effect, such on the aeroplane.
   digitalWrite(2, LOW);
   delay(100);
   digitalWrite(2, HIGH);
