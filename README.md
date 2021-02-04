@@ -11,7 +11,9 @@
 - [Hibiscus Sense Pinout Diagram](https://github.com/myinvent/hibiscus-sense-arduino#hibiscus-sense-pinout-diagram)
 - [Learning Material Preparation](https://github.com/myinvent/hibiscus-sense-arduino#learning-material-preparation)
 - [Interfacing Hibiscus to Computer's USB Port](https://github.com/myinvent/hibiscus-sense-arduino#interfacing-hibiscus-to-computers-usb-port)
-- [Tutorial 1: Control Blue LED on GPIO2](https://github.com/myinvent/hibiscus-sense-arduino#exercise-1-control-blue-led-on-gpio2)
+- [Exercise 1: Control Blue LED on GPIO2 (Strobe Light Effect)](https://github.com/myinvent/hibiscus-sense-arduino#exercise-1-control-blue-led-on-gpio2-strobe-light-effect)
+- [Exercise 2: Control Blue LED on GPIO2 (Glowing Light Effect))](https://github.com/myinvent/hibiscus-sense-arduino#exercise-2-control-blue-led-on-gpio2-glowing-light-effect)
+- [Exercise 3: Control Blue LED on GPIO2 (Breathing Light Effect)](https://github.com/myinvent/hibiscus-sense-arduino#exercise-3-control-blue-led-on-gpio2-breathing-light-effect)
 
 ## Introduction
 
