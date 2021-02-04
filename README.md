@@ -197,4 +197,4 @@ for(int brightness = 255; brightness >= 0; brightness--){
 
 Now, we can upload the complete sketch to ESP32, then observe the output. By oversation, the output of the blue LED is glowing effect, which the results from variable decremental PWM signal output.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-two-b.gif" width="900"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-two-b.gif" width="600"></a></p>
