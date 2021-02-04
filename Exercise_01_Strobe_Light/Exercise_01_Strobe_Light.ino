@@ -13,7 +13,8 @@
  */
 
 void setup() {
-  pinMode(2, OUTPUT); // declaring GPIO2 as an OUTPUT pin.
+  // declaring GPIO2 as an OUTPUT pin.
+  pinMode(2, OUTPUT);
 
 }
 
