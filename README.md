@@ -107,7 +107,7 @@ The LED is connected to `GPIO2`, which we need to configure GPIO2 as `OUTPUT`.
 pinMode(2, OUTPUT);
 ```
 
-In the _void loop()_ function, the program start by turning the LED ON, as the ciruit is active-low, we use `LOW` state on GPIO2 to complete the LED circuit. Then _delay()_ function to pause the program in milliseconds. Vice versa to turn OFF the LED.
+In the `void loop()` function, the program start by turning the LED ON, as the ciruit is active-low, we use `LOW` state on GPIO2 to complete the LED circuit. Then `delay()` function to pause the program in milliseconds. Vice versa to turn OFF the LED.
 ```
 digitalWrite(2, LOW);
 delay(100);
@@ -120,7 +120,7 @@ digitalWrite(2, HIGH);
 delay(2000);
 ```
 
-Now, upload the complete sketch to ESP32, then observe the output. By oversation, the output signal of the LED only have 2 states, which are ON and OFF, thus this output signal is what we called, as **`DIGITAL OUTPUT`**.
+Now, we can upload the complete sketch to ESP32, then observe the output. By oversation, the output of the LED only have 2 states, which are ON and OFF, thus this output signal is what we called, as **`DIGITAL OUTPUT`**.
 
 **Interesting facts!** The LED output of the program is actually, an example of strobe light, which we saw on an airplane during the night.
 
@@ -138,7 +138,63 @@ What we need is the Pulse-Width Modulation (PWM), whereas the signal output that
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-two-a.gif" width="500"></a></p>
 
-Fortunately, ESP32 microcontroller have 16 channels of independent PWM controller, which can be configured to generate PWM signal on all GPIOs available on ESP32, except GPIO34 to GPIO39.
+The great news is, ESP32 microcontroller have 16 channels congifurable independent PWM controller, which can be configured to generate PWM signal on all GPIOs available on ESP32, except GPIO34 to GPIO39.
 
-Prior to hands-on programming, let's dicsuss about the program to control the PWM output signal. Usually in any official Arduino boards or any compatible Arduino boards, we will use analogWrite() function
+Prior to hands-on programming, let's dicsuss about the program to control the PWM output signal. Usually in any official Arduino boards or any compatible Arduino boards, we will use `analogWrite()` function to generate PWM signal, since ESP32's PWM controller is configurable, does it has 3 functions to control the PWM output signal, which are:
+1. `ledcSetup(_channel_, _frequency_, _resolution_)` setup function for PWM controller, with 3 arguments:
+  - _channel_ the number of the PWM channels, from 0 to 15.
+  - _frequency_ the PWM signal frequency, for LED is 5 kHz.
+  - _resolution_ the PWM signal resolution, from 1 bit to 16 bits, for the LED we will use 8 bits resolution.
+2. `ledcAttachPin(_gpio_, _channel_)` function to declare LED's GPIO number and the PWM channel, with 2 arguments:
+  - _gpio_ the GPIO number for output of the PWM signal.
+  - _channel_ the number of the PWM channel.
+3. `ledcWrite(_channel_, _dutycycle_)` function to generate PWM signal outputs, with 2 arguments:
+  - _channel_ the number of the PWM channel.
+  - _dutycycle_ the PWM duty cycle value. For 8 bits resolutions, the value range from 0 - 255.
 
+Again, to be remember, the blue LED circuit on Hibiscus Sense is active-low, so we will program the LED for glowing effect as follows:
+
+**Complete Sketch**
+```
+void setup() {
+  // configure PWM controller congfiguration
+  ledcSetup(0, 5000, 8);
+  // declare the GPIO number for PWM signal output
+  ledcAttachPin(2, 0);
+}
+
+void loop() {
+  // function for() to create decremental value by 1 start from 255 --> 0
+  for(int brightness = 255; brightness >= 0; brightness--){   
+    // generate PWM output signal according to variable brightness value
+    ledcWrite(0, brightness);
+    delay(15);
+  }
+  // wait for 0.2 seconds before start again
+  delay(200);
+}
+```
+
+**Detail Code Explanations**
+
+In the `void setup()` function, we configure the PWM configuration using `ledcSetup()` function, with **_PWM channels `0`_**, **_PWM frequency `5 kHz`_** and **_`8 bits` PWM resolution_**. 
+```
+ledcSetup(0, 5000, 8);
+```
+
+In the `void setup()` function, we also declare which GPIO to choose for PWM signal output using `ledcAttachPin();` function, with **_GPIO number `2`_** where the blue LED is interfaced and **_PWM channels `0`_**.
+```
+ledcAttachPin(2, 0);
+```
+
+Both function to configure the PWM controller and to declare GPIO for PWM output signal has been done, now we can generate the PWM signal by using `ledcWrite()` function inside the `void loop` to produce repeatedly glowing blue LED effect. To produce glowing effect, since the blue LED circuit is active-low, the PWM value _(from 0-255)_ needs to be automatically decremental 1 by 1 by, from 255 to 254, from 254 to 253, from 253 to 252 and so on until the value reach its minimum, which is 0. Therefore, `for()` function is used to automatically generate decremental variable of PWM value from 255-0 as follows, where the `ledcWrite()` function is inside `for()` function:
+```
+for(int brightness = 255; brightness >= 0; brightness--){   
+  ledcWrite(0, brightness);
+  delay(15);
+}
+```
+
+Now, we can upload the complete sketch to ESP32, then observe the output. By oversation, the output of the blue LED is glowing effect, which the results from variable decremental PWM signal output.
+
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-two-b.gif" width="300"></a></p>
