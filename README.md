@@ -292,5 +292,5 @@ Despite hardware serial is ready, it woudld not initialized, unless we program t
 
 The objectives of serial communication in this exercise is to transmit value of variable counter to Arduino IDE's Serial Monitor.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four-b.gif" width="400"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four-b.gif" width="600"></a></p>
 
