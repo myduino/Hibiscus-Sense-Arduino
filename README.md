@@ -131,6 +131,7 @@ Now, we can upload the complete sketch to ESP32, then observe the output. By obs
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-one.gif" width="300"></a></p>
 
+<p align="right"><a href="https://github.com/myinvent/hibiscus-sense-arduino#hibiscus-sense-esp32-arduino-tutorial">Back to Top</a> | <a href="https://github.com/myinvent/hibiscus-sense-arduino#table-of-content">Table of Content</a></p>
 
 ## Exercise 2: Control Blue LED on GPIO2 (Glowing Light Effect)
 
@@ -209,6 +210,8 @@ for(int brightness = 255; brightness >= 0; brightness--){
 Now, we can upload the complete sketch to ESP32, then observe the output. By observatoin, the output of the blue LED is repeated glowing light effect, which the results from decremental value of the PWM signal output.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-two-b.gif" width="600"></a></p>
+
+<p align="right"><a href="https://github.com/myinvent/hibiscus-sense-arduino#hibiscus-sense-esp32-arduino-tutorial">Back to Top</a> | <a href="https://github.com/myinvent/hibiscus-sense-arduino#table-of-content">Table of Content</a></p>
 
 
 ## Exercise 3: Control Blue LED on GPIO2 (Breathing Light Effect)
@@ -300,4 +303,6 @@ Although, the hardware serial is ready, it woudld not initialized, unless we pro
 The objectives of serial communication in this exercise is to transmit value of variable counter to Arduino IDE's Serial Monitor.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four-b.gif" width="600"></a></p>
+
+<p align="right"><a href="https://github.com/myinvent/hibiscus-sense-arduino#hibiscus-sense-esp32-arduino-tutorial">Back to Top</a> | <a href="https://github.com/myinvent/hibiscus-sense-arduino#table-of-content">Table of Content</a></p>
 
