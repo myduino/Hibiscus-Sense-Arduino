@@ -25,7 +25,7 @@ void loop() {
     ledcWrite(0, brightness);
     delay(15);
   }
-  // wait for 0.2 seconds before start again
+  // wait for 0.2 seconds
   delay(200);
   
   // function for() to create incremental value by 1 start from 0 --> 255
@@ -34,6 +34,6 @@ void loop() {
     ledcWrite(0, brightness);
     delay(15);
   }
-
+  // wait for 0.2 seconds before start again
   delay(200);
 }
