@@ -14,6 +14,7 @@
 - [Exercise 1: Control Blue LED on GPIO2 (Strobe Light Effect)](https://github.com/myinvent/hibiscus-sense-arduino#exercise-1-control-blue-led-on-gpio2-strobe-light-effect)
 - [Exercise 2: Control Blue LED on GPIO2 (Glowing Light Effect))](https://github.com/myinvent/hibiscus-sense-arduino#exercise-2-control-blue-led-on-gpio2-glowing-light-effect)
 - [Exercise 3: Control Blue LED on GPIO2 (Breathing Light Effect)](https://github.com/myinvent/hibiscus-sense-arduino#exercise-3-control-blue-led-on-gpio2-breathing-light-effect)
+- [Exercise 4: Serial Communication (Hibiscus Sense & Computer)](https://github.com/myinvent/hibiscus-sense-arduino#exercise-4-serial-communication-hibiscus-sense--computer)
 
 ## Introduction
 
@@ -27,9 +28,9 @@
   - **LED**: blue LED.
   - **RGB LED**: WS2812 RGB LED.
 
-Hibiscus Sense, comes with **USB Type-C** to power up the board (5V supply from the computer's USB) and to program the ESP32 microcontroller. On-board also has USB-to-Serial converter **Silicon Labs CP2104** with **automatic bootloader reset**, so we don’t have to press the RESET button each time to upload the program into the microcontroller.
+Hibiscus Sense comes with **USB Type-C** to power up the board and to program the ESP32. The on-board USB-to-Serial converter **Silicon Labs CP2104** with **automatic bootloader reset** circuit, we don’t have to press the RESET button each time to upload the program.
 
-Despite, we can program ESP32 using other programming language and it's tools, in this exercise we will focus on using [Arduino](https://www.arduino.cc/) as the learning and prototyping platform.
+Although, we can program ESP32 using other programming language such as C, C++ and Micropython, but in this tutorial we will be using [Arduino](https://www.arduino.cc/) as the learning and prototyping platform.
 
 ## Hibiscus Sense Features
 
@@ -39,14 +40,14 @@ Despite, we can program ESP32 using other programming language and it's tools, i
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-pinout.png" width="900"></a></p>
 
-- **Blue LED** is connected to `GPIO2` ESP32 microcontroller.
-- **Small Buzzer** is connected to `GPIO13` ESP32 microcontroller.
-- **WS2812 RGB LED** is connected to `GPIO16` ESP32 microcontroller.
+- **Blue LED** is connected to ESP32's `GPIO2`.
+- **Small Buzzer** is connected to ESP32's `GPIO13`.
+- **WS2812 RGB LED** is connected to ESP32's `GPIO16`.
 - All GPIO can generate digital input/output (3.3V) and PWM signal output, except `GPIO34-GPIO39` because it is an input pin only.
-- ESP32 `VSPI` is complete **MISO** `GPIO19`, **MOSI** `GPIO32`, **CLK** `GPIO18` and **CS** `GPIO5`.
-- ESP32 `I2C` **SDA** `GPIO21` and **SCL** `GPIO22`, without pullup resistor.
-- **Sensors**: **APDS9960**, **BME280** and **MPU6050** interfaced to the `I2C` ESP32 microcontroller, respective I2C address: `0x39`, `0x77` and `0x68`.
-- Avoid to use `ADC2` channel while using WiFi.
+- ESP32's `VSPI` is complete **MISO** `GPIO19`, **MOSI** `GPIO32`, **CLK** `GPIO18` and **CS** `GPIO5`.
+- ESP32's `I2C` **SDA** `GPIO21` and **SCL** `GPIO22`, without pullup resistor.
+- **Sensors**: **APDS9960**, **BME280** and **MPU6050** interfaced to the ESP32's `I2C`, respective I2C address: `0x39`, `0x77` and `0x68`.
+- Avoid using `ADC2` channel while using WiFi.
 - Each GPIO absolute maximum current drawn only 16mA.
 - Board measurement including header in mm: 58.7 x 27 x 13.3 (length x width x height).
 - Package measurement in mm: 71.8 x 35.5 x 20.4 (length x width x height).
@@ -61,7 +62,7 @@ Prior to start learning to control the actuators and acquire data from the senso
 
 ## Interfacing Hibiscus to Computer's USB Port
 
-Connect the USB cable Type-C to Hibiscus Sense and Type-A to our computer. Hibiscus Sense comes with preset program to test on-board actuators and sensors, should be by now we'll see the buzzer is buzzing, the RGB LED changing colors, the blue LED blinking and the reading of sensors at Serial Monitor (we have to open the Arduino IDE Serial Monitor to see the data). Suppose, you didn't see any reaction on the board you can contact Mr. Ariffin via [WhatsApp](https://api.whatsapp.com/send?phone=60177875232&text=Hi%20Mr.%20Ariffin,%20please%20help.%20My%20Hibiscus%20Sense,%20seems%20not%20working%20for%20the%20first%20time.) for help.
+Connect the USB cable Type-C to Hibiscus Sense and Type-A to our computer. Hibiscus Sense comes with preset program to test on-board actuators and sensors. Should be by now we'll see the buzzer is buzzing, the RGB LED changing colors, the blue LED blinking and the reading of sensors at Serial Monitor (we have to open the Arduino IDE Serial Monitor to see the data). Suppose, you didn't see any reaction on the board you can contact Mr. Ariffin via [WhatsApp](https://api.whatsapp.com/send?phone=60177875232&text=Hi%20Mr.%20Ariffin,%20please%20help.%20My%20Hibiscus%20Sense,%20seems%20not%20working%20for%20the%20first%20time.) for help.
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-first-time.gif" width="600"></a></p>
 
@@ -75,7 +76,7 @@ There is 1x blue LED labelled as `LED` on-board, as circled on the image above. 
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/schematic-exercise-one.png" width="150"></a></p>
  
-This is quite unusual behaviour, but it is good to learn how an electronic circuit could behave either way. Whereas, the usual circuit design was **active-high circuit**, where the positive (+ve) terminal of the LED connected to the GPIO2, as in the schematic below, instead of the negative (-ve) terminal of the LED connected to GPIO2, as in the schematic above. According to this type of circuit, we need to pull GPIO2 to HIGH state, to turn ON the LED, otherwise pull GPIO2 to LOW state, to turn OFF the LED.
+This is quite unusual behaviour, but it is good to learn how an electronic circuit could behave either way. Whereas, the usual circuit design is **active-high circuit**, where the positive (+ve) terminal of the LED connected to the GPIO2, as in the schematic below, instead of the negative (-ve) terminal of the LED connected to GPIO2, as in the schematic above. According to this type of circuit, we need to pull GPIO2 to HIGH state, to turn ON the LED, otherwise pull GPIO2 to LOW state, to turn OFF the LED.
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/schematic-exercise-one-a.png" width="150"></a></p>
 
@@ -104,12 +105,12 @@ void loop() {
 
 **Detail Code Explanations**
 
-The LED is connected to `GPIO2`, which we need to configure GPIO2 as `OUTPUT`.
+The LED is connected to `GPIO2`, we need to configure GPIO2 as `OUTPUT`.
 ```cpp
 pinMode(2, OUTPUT);
 ```
 
-In the `void loop()` function, the program start by turning the LED ON, as the ciruit is active-low, we use `LOW` state on GPIO2 to complete the LED circuit. Then `delay()` function to pause the program in milliseconds. Vice versa to turn OFF the LED.
+In the `void loop()` function, the program start by turn ON the LED, as the ciruit is active-low, we use `LOW` state on GPIO2 to complete the LED circuit. Then `delay()` function to pause the program in milliseconds. Vice versa to turn OFF the LED.
 ```cpp
 digitalWrite(2, LOW);
 delay(100);
@@ -122,34 +123,36 @@ digitalWrite(2, HIGH);
 delay(2000);
 ```
 
-Now, we can upload the complete sketch to ESP32, then observe the output. By oversation, the output of the LED only have 2 states, which are ON and OFF, thus this output signal is what we called, as **`DIGITAL OUTPUT`**.
+Now, we can upload the complete sketch to ESP32, then observe the output. By observation, the output of the LED only have 2 states, which are ON and OFF, thus this output signal known as **`DIGITAL OUTPUT`**.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-one-a.gif" width="600"></a></p>
 
-**Interesting facts!** The LED output of the program is actually, an example of strobe light on an aeroplane during the night.
+**Interesting facts!** This exercise is mimicking the strobe light on an aeroplane during the night.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-one.gif" width="300"></a></p>
 
 
 ## Exercise 2: Control Blue LED on GPIO2 (Glowing Light Effect)
 
-In this exercise, we will use the same blue LED in Tutorial 1, then only changes happen in this exercise are the program will be replace for an output of glowing light effect, as the image shown below. Where the blue LED color will start from OFF and slowly glowing until it reach maximum light ON and turn OFF again and repeat the process again and again.
+In this exercise, we will use the same blue LED in [Exercise 1](https://github.com/myinvent/hibiscus-sense-arduino#exercise-1-control-blue-led-on-gpio2-strobe-light-effect), but producing glowing light effect, as the image shown below. Where the blue LED color will start from OFF and slowly glowing until it reach its maximum brightness and turn OFF again, repeatedly.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-two.gif" width="300"></a></p>
 
-As we know, the output signal from Tutorial 1 is `DIGITAL OUTPUT`, where the output signal is either turn ON or turn OFF, but to achieve glowing light effect, we cannot rely on digital output signal anymore. Therefore we need a signal that has ranges of output signal from minimum to maximum value.
+As we know, the output signal from [Exercise 1](https://github.com/myinvent/hibiscus-sense-arduino#exercise-1-control-blue-led-on-gpio2-strobe-light-effect) is `DIGITAL OUTPUT`, where the output signal is either turn ON or turn OFF, but to achieve glowing light effect, we need an output signal that has ranges of values from minimum to maximum value.
 
-What we need is the Pulse-Width Modulation (PWM), whereas the signal output that has been generated by the PWM, most of us also called it as **`ANALOG OUTPUT`**, despite it is not a true sine wave analog output. PWM is a modulation technique which generates variable-width pulses in the duty cycle of digital signal (square wave), which in average over time, representing analog output signal, as shown in the image below.
+What we need is the Pulse-Width Modulation (PWM), where the signal output that has been generated by the PWM, is almost **`ANALOG OUTPUT`**, but not a true sine wave analog output. PWM is a modulation technique which generates variable-width pulses in the duty cycle of digital signal (square wave), where in average over time, it is representing analog output signal, as shown in the image below.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-two-a.gif" width="500"></a></p>
 
 With PWM output signal, we can control brightness of LEDs, the speed of motors, the heat of the heating elements, the vibration of piezo elements for buzzer loudness, the direction of the servo motors and modulated audio signal.
 
-The great news is, ESP32 microcontroller have 16 channels congifurable independent PWM controller, which can be configured to generate PWM signal on all GPIOs available on ESP32, except GPIO34 to GPIO39.
+The great news is, ESP32 have 16 congifurable independent PWM channels, which can be configured to generate PWM signal on all GPIOs, except GPIO34 to GPIO39.
 
-Prior to hands-on programming, let's dicsuss about the program to control the PWM output signal. Usually in any official Arduino boards or any compatible Arduino boards, we will use `analogWrite()` function to generate PWM signal, since ESP32's PWM controller is configurable, does it has 3 functions to control the PWM output signal, which are:
+Prior to hands-on programming, let's discuss about the program to generate the PWM output signal.
+
+Usually in any official Arduino boards or any compatible Arduino boards, we will use `analogWrite()` function to generate PWM signal. Since ESP32's PWM channels is configurable, it has 3 functions to configure and generate the PWM signal, which are:
 1. `ledcSetup(_channel_, _frequency_, _resolution_)` setup function for PWM controller, with 3 arguments:
-  - _channel_ the number of the PWM channels, from 0 to 15.
+  - _channel_ the number of the PWM channel, from 0 to 15.
   - _frequency_ the PWM signal frequency, for LED is 5 kHz.
   - _resolution_ the PWM signal resolution, from 1 bit to 16 bits, for the LED we will use 8 bits resolution.
 2. `ledcAttachPin(_gpio_, _channel_)` function to declare LED's GPIO number and the PWM channel, with 2 arguments:
@@ -185,17 +188,17 @@ void loop() {
 
 **Detail Code Explanations**
 
-In the `void setup()` function, we configure the PWM configuration using `ledcSetup()` function, with **_PWM channels `0`_**, **_PWM frequency `5 kHz`_** and **_`8 bits` PWM resolution_**. 
+In the `void setup()` function, we configure the PWM channelf using `ledcSetup()` function, with **_PWM channel `0`_**, **_PWM frequency `5 kHz`_** and **_`8 bits` PWM resolution_**. 
 ```cpp
 ledcSetup(0, 5000, 8);
 ```
 
-In the `void setup()` function, we also declare which GPIO to choose for PWM signal output using `ledcAttachPin();` function, with **_GPIO number `2`_** where the blue LED is interfaced and **_PWM channels `0`_**.
+In the `void setup()` function, we also declare which GPIO to deliver the output of the PWM signal using `ledcAttachPin();` function, with **_GPIO number `2`_** where the blue LED is interfaced and **_PWM channel `0`_**.
 ```cpp
 ledcAttachPin(2, 0);
 ```
 
-Both function to configure the PWM controller and to declare GPIO for PWM output signal has been done, now we can generate the PWM signal by using `ledcWrite()` function inside the `void loop` to produce repeatedly glowing blue LED effect. To produce glowing effect, since the blue LED circuit is active-low, the PWM value _(from 0-255)_ needs to be automatically decremental 1 by 1 by, from 255 to 254, from 254 to 253, from 253 to 252 and so on until the value reach its minimum, which is 0. Therefore, `for()` function is used to automatically generate decremental variable of PWM value from 255-0 as follows, where the `ledcWrite()` function is inside `for()` function:
+Both function to configure the PWM channel and to declare GPIO for PWM output signal has been done. Now we can generate the PWM signal by using `ledcWrite()` function inside the `void loop` to control the brightness of the blue LED to produce glowing blue LED effect. Since the blue LED circuit is active-low, the PWM value _(from 255-0)_ needs to be automatically decremental 1 by 1 by, from 255 to 254, from 254 to 253, from 253 to 252 and so on until the value reach minimum PWM value, 0. Therefore, `for()` function is used to automatically generate decremental variable of PWM value from 255-0 as follows, where the `ledcWrite()` function is inside `for()` function:
 ```cpp
 for(int brightness = 255; brightness >= 0; brightness--){   
   ledcWrite(0, brightness);
@@ -203,18 +206,20 @@ for(int brightness = 255; brightness >= 0; brightness--){
 }
 ```
 
-Now, we can upload the complete sketch to ESP32, then observe the output. By oversation, the output of the blue LED is repeated glowing light effect, which the results from decremental value of the PWM signal output.
+Now, we can upload the complete sketch to ESP32, then observe the output. By observatoin, the output of the blue LED is repeated glowing light effect, which the results from decremental value of the PWM signal output.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-two-b.gif" width="600"></a></p>
 
 
 ## Exercise 3: Control Blue LED on GPIO2 (Breathing Light Effect)
 
-This exercise is a continuation from Exercise 02. In Exercise 02, we use `for()` function to automatically generate decremental PWM value from 255-0 `(active-low circuit)` to produce an output of glowing light effect, while in this exercise we want produce breathing light effect.
+This exercise is a continuation from [Exercise 2](https://github.com/myinvent/hibiscus-sense-arduino#exercise-2-control-blue-led-on-gpio2-glowing-light-effect).
+
+In Exercise 2, we use `for()` function to automatically generate decremental PWM value from 255-0 for the `(active-low circuit)` to produce an output of glowing light effect, while in this exercise we produce breathing light effect.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-three.gif" width="500"></a></p>
 
-It's easy ... we just need to add another `for()` function after decremental PWM value, just this moment, the for() function is used to automatically generate incremental PWM value from 0-255, so the program as follows:
+It's easy ... we just need to add another `for()` function to automatically generate incremental PWM value from 0-255, so the program as follows:
 
 **Complete Sketch**
 ```cpp
@@ -246,13 +251,13 @@ void loop() {
 }
 ```
 
-Now, we can upload the complete sketch to ESP32, then observe the output. By oversation, the output of the blue LED is repeated breathing light effect, which the results from decremental and incremental value of the PWM signal output.
+Now, we can upload the complete sketch to ESP32, then observe the output. By observation, the output of the blue LED is repeated breathing light effect, which the results from decremental and incremental value of the PWM signal output.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-three-a.gif" width="600"></a></p>
 
 ## Exercise 4: Serial Communication (Hibiscus Sense & Computer)
 
-Serial Communication is a communication process for receiving and transmitting data between two devices, such as **_computer to computer_** or **_microcontroller to computer_** or **_microcontroller to microcontroller_**, by implementing hardware protocol called `UART (Universal Asynchronous Receiver/Transmitter)`. The data has been sent/receive bit by bit sequentially by UART over two or one transmission line (wires), with configurables speed known as `baud-rate` or `bits-per-second` (bps): _9600, 19200, 38400, 57600, 115200, 230400, 460800, 921600_.
+Serial Communication is a communication process, receiving and transmitting data between two devices, such as **_computer to computer_** or **_microcontroller to computer_** or **_microcontroller to microcontroller_**, by implementing hardware protocol called `UART (Universal Asynchronous Receiver/Transmitter)`. The data were sent/receive bit by bit sequentially by UART over two or one transmission line (wires), with configurables speed known as `baud-rate` or `bits-per-second` (bps): _9600, 19200, 38400, 57600, 115200, 230400, 460800, 921600_.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four.gif" width="200"></a></p>
 
@@ -260,32 +265,32 @@ The two transmission lines of UART, known as `RX (receive)` and `TX (transmit)`.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four-a.png" width="400"></a></p>
 
-In ESP32, the serial communication is done by the UART. There are 3x UART controllers available in ESP32:
+There are 3x UART controllers available in ESP32:
 UART | RX  | RX  |
 ---- | --- | --- |
 UART0 | GPIO3 | GPIO1
 UART1 | GPIO9 | GPIO10
 UART2 | GPIO16 | GPIO17
 
-In Hibiscus Sense, UART0 has been interfaced to USB-to-Serial chip, Silicon Labs CP2104, which enable us to make serial communication between computer and ESP32. The UART0 also used for uploading the program into the ESP32. _While, UART1 has been used for SPI flash for the ESP32 module and UART1 RX has been used for WS2812 RGB LED._
+In Hibiscus Sense, UART0 has been interfaced to Silicon Labs CP2104, which enable us to make serial communication between computer and ESP32. The UART0 also used for uploading the program into the ESP32. _While, UART1 has been used for SPI flash for the ESP32 module and UART1 RX has been used for WS2812 RGB LED._
 
-Despite hardware serial is ready, it woudld not initialized, unless we program the ESP32 to initialized its serial hardware. In Arduino programming, there is default library for serial communication, called `Serial`, which we can use to program the ESP32 for serial communication. There are 5 basic functions in `Serial` object for serial communication, which we will usually use, they are:
+Although, the hardware serial is ready, it woudld not initialized, unless we program the ESP32 to initialized its serial hardware. In Arduino programming, the default library for serial communication, known as `Serial`. We can use **Serial** library to program the ESP32 for serial communication. There are 5 main functions in `Serial` library for serial communication, they are:
 1. `Serial.begin(_baud-rate_)` function, with 1 argument:
   - _baud-rate_ the speed of serial communication.
-2. `Serial.print()` function transmit the data and print the data on Serial Monitor, with 1 / 2 arguments:
+2. `Serial.print()` function transmit the data and print the data on the Serial Monitor, with 1 / 2 arguments:
   - 1 arguments:
     - `Serial.print(88)` transmit and print "88"
     - `Serial.print(1.23456)` transmit and print "1.23" (default 2 decimal places)
     - `Serial.print('H')` transmit and print "H"
     - `Serial.print("Hello, hibiscus!")` transmit and print "Hello, hibiscus!"
-  - 2 arguments (optional):
-    - Serial.print(78, BIN) gives "1001110"
-    - Serial.print(78, OCT) gives "116"
-    - Serial.print(78, DEC) gives "78"
-    - Serial.print(78, HEX) gives "4E"
-    - Serial.print(1.23456, 0) gives "1"
-    - Serial.print(1.23456, 2) gives "1.23"
-    - Serial.print(1.23456, 4) gives "1.2345"
+  - 2 arguments (optional) `base number or decimal points`:
+    - `Serial.print(88, BIN)` transmit and print "1011000"
+    - `Serial.print(88, OCT)` transmit and print "130"
+    - `Serial.print(88, DEC)` transmit and print "88"
+    - `Serial.print(88, HEX)` transmit and print "58"
+    - `Serial.print(1.23456, 0)` transmit and print "1"
+    - `Serial.print(1.23456, 2)` transmit and print "1.23"
+    - `Serial.print(1.23456, 4)` transmit and print "1.2345"
 3. `Serial.println()` function same as `Serial.print()`, with additional character of newline.
 4. `Serial.available()` function use to check if the data is received and available in the buffer (which holds 64 bytes).
 5. `Serial.read()`function use to read the data inside the serial receive buffer.
