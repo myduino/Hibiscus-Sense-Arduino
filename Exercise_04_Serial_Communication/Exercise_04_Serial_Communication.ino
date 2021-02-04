@@ -10,7 +10,7 @@ void loop() {
   // increment counter variable by 1 on every loop.
   counter++;
   // transmit the variable counter value to computer
-  Serial.println(counter);
+  Serial.println(78);
   // wait for 1 second before next action.
   delay(1000);
 }
