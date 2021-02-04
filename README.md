@@ -260,9 +260,37 @@ The two transmission lines of UART, known as `RX (receive)` and `TX (transmit)`.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four-a.png" width="400"></a></p>
 
-In ESP32, the serial communication is done by the UART . There are 3x UART controllers available in ESP32:
+In ESP32, the serial communication is done by the UART. There are 3x UART controllers available in ESP32:
 UART | RX  | RX  |
 ---- | --- | --- |
 UART0 | GPIO3 | GPIO1
 UART1 | GPIO9 | GPIO10
 UART2 | GPIO16 | GPIO17
+
+In Hibiscus Sense, UART0 has been interfaced to USB-to-Serial chip, Silicon Labs CP2104, which enable us to make serial communication between computer and ESP32. The UART0 also used for uploading the program into the ESP32. _While, UART1 has been used for SPI flash for the ESP32 module and UART1 RX has been used for WS2812 RGB LED._
+
+Despite hardware serial is ready, it woudld not initialized, unless we program the ESP32 to initialized its serial hardware. In Arduino programming, there is default library for serial communication, called `Serial`, which we can use to program the ESP32 for serial communication. There are 5 basic functions in `Serial` object for serial communication, which we will usually use, they are:
+1. `Serial.begin(_baud-rate_)` function, with 1 argument:
+  - _baud-rate_ the speed of serial communication.
+2. `Serial.print()` function transmit the data and print the data on Serial Monitor, with 1 / 2 arguments:
+  - 1 arguments:
+    - `Serial.print(88)` transmit and print "88"
+    - `Serial.print(1.23456)` transmit and print "1.23" (default 2 decimal places)
+    - `Serial.print('H')` transmit and print "H"
+    - `Serial.print("Hello, hibiscus!")` transmit and print "Hello, hibiscus!"
+  - 2 arguments (optional):
+    - Serial.print(78, BIN) gives "1001110"
+    - Serial.print(78, OCT) gives "116"
+    - Serial.print(78, DEC) gives "78"
+    - Serial.print(78, HEX) gives "4E"
+    - Serial.print(1.23456, 0) gives "1"
+    - Serial.print(1.23456, 2) gives "1.23"
+    - Serial.print(1.23456, 4) gives "1.2345"
+3. `Serial.println()` function same as `Serial.print()`, with additional character of newline.
+4. `Serial.available()` function use to check if the data is received and available in the buffer (which holds 64 bytes).
+5. `Serial.read()`function use to read the data inside the serial receive buffer.
+
+The objectives of serial communication in this exercise is to transmit value of variable counter to Arduino IDE's Serial Monitor.
+
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four-b.gif" width="400"></a></p>
+
