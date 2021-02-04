@@ -80,7 +80,7 @@ This is quite unusual behaviour, but it is good to learn how an electronic circu
 Since, the blue LED circuit on Hibiscus Sense is active-low, we will program it as below:
 
 **Complete Sketch**
-```
+```cpp
 void setup() {
   pinMode(2, OUTPUT); // declaring GPIO2 as an OUTPUT pin.
 
@@ -103,12 +103,12 @@ void loop() {
 **Detail Code Explanations**
 
 The LED is connected to `GPIO2`, which we need to configure GPIO2 as `OUTPUT`.
-```
+```cpp
 pinMode(2, OUTPUT);
 ```
 
 In the `void loop()` function, the program start by turning the LED ON, as the ciruit is active-low, we use `LOW` state on GPIO2 to complete the LED circuit. Then `delay()` function to pause the program in milliseconds. Vice versa to turn OFF the LED.
-```
+```cpp
 digitalWrite(2, LOW);
 delay(100);
 digitalWrite(2, HIGH);
@@ -159,7 +159,7 @@ Prior to hands-on programming, let's dicsuss about the program to control the PW
 Again, to be remember, the blue LED circuit on Hibiscus Sense is active-low, so we will program the LED for glowing effect as follows:
 
 **Complete Sketch**
-```
+```cpp
 void setup() {
   // configure PWM controller congfiguration
   ledcSetup(0, 5000, 8);
@@ -182,17 +182,17 @@ void loop() {
 **Detail Code Explanations**
 
 In the `void setup()` function, we configure the PWM configuration using `ledcSetup()` function, with **_PWM channels `0`_**, **_PWM frequency `5 kHz`_** and **_`8 bits` PWM resolution_**. 
-```
+```cpp
 ledcSetup(0, 5000, 8);
 ```
 
 In the `void setup()` function, we also declare which GPIO to choose for PWM signal output using `ledcAttachPin();` function, with **_GPIO number `2`_** where the blue LED is interfaced and **_PWM channels `0`_**.
-```
+```cpp
 ledcAttachPin(2, 0);
 ```
 
 Both function to configure the PWM controller and to declare GPIO for PWM output signal has been done, now we can generate the PWM signal by using `ledcWrite()` function inside the `void loop` to produce repeatedly glowing blue LED effect. To produce glowing effect, since the blue LED circuit is active-low, the PWM value _(from 0-255)_ needs to be automatically decremental 1 by 1 by, from 255 to 254, from 254 to 253, from 253 to 252 and so on until the value reach its minimum, which is 0. Therefore, `for()` function is used to automatically generate decremental variable of PWM value from 255-0 as follows, where the `ledcWrite()` function is inside `for()` function:
-```
+```cpp
 for(int brightness = 255; brightness >= 0; brightness--){   
   ledcWrite(0, brightness);
   delay(15);
