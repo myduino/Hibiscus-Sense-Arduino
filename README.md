@@ -267,15 +267,20 @@ Now, we can upload the complete sketch to ESP32, then observe the output. By obs
 
 ## Exercise 4: Control Small Buzzer on GPIO13 (Melody)
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four-a.gif" width="500"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four.png" width="300"></a></p>
 
-Buzzer is a piezoelectrical components, which generate tones when the piezo elements is vibrated based on given voltage supply, different current will produce different vibration, thus generating different tone.
+Buzzer is a piezoelectrical electronic components, which generate tones when the piezo elements is vibrated based on given voltage supply, different voltage will produce different vibration, thus generating different tone. Since ESP32 has the ability to generate range of voltage using, the built-in PWM controllers, we can apply it on our small buzzer to generate tone.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/imagee-exercise-four.png" width="500"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four-a.gif" width="400"></a></p>
 
-There are several form of buzzers in the market, example as shown above. In Hibiscus Sense, there is 1x small buzzer, labelled as `BUZZER` on-board, as circled on the image below.
+On Hibiscus Sense, there is 1x small buzzer, labelled as `BUZZER` on-board, as circled on the image below.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four-b.png" width="500"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four-b.png" width="400"></a></p>
+
+Since operating voltage of the small buzzer operating is ranging from 2-4V with rated voltage of 3V, the `(+ve) terminal` of the buzzer connected directly to `GPIO13`, as shown in the schematic below, while the `(-ve) terminal` is connected to `GND`.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/schematic-exercise-four.png" width="150"></a></p>
+
 
 <p align="right"><a href="https://github.com/myinvent/hibiscus-sense-arduino#hibiscus-sense-esp32-arduino-tutorial">Back to Top</a> | <a href="https://github.com/myinvent/hibiscus-sense-arduino#table-of-content">Table of Content</a></p>
 
@@ -296,7 +301,7 @@ UART0 | GPIO3 | GPIO1
 UART1 | GPIO9 | GPIO10
 UART2 | GPIO16 | GPIO17
 
-In Hibiscus Sense, UART0 has been interfaced to Silicon Labs CP2104, which enable us to make serial communication between computer and ESP32. The UART0 also used for uploading the program into the ESP32. _While, UART1 has been used for SPI flash for the ESP32 module and UART1 RX has been used for WS2812 RGB LED._
+On Hibiscus Sense, UART0 has been interfaced to Silicon Labs CP2104, which enable us to make serial communication between computer and ESP32. The UART0 also used for uploading the program into the ESP32. _While, UART1 has been used for SPI flash for the ESP32 module and UART1 RX has been used for WS2812 RGB LED._
 
 Although, the hardware serial is ready, it woudld not initialized, unless we program the ESP32 to initialized its serial hardware. In Arduino programming, the default library for serial communication, known as `Serial`. We can use **Serial** library to program the ESP32 for serial communication. There are 5 main functions in `Serial` library for serial communication, they are:
 1. `Serial.begin(_baud-rate_)` function, with 1 argument:
