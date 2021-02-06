@@ -289,7 +289,7 @@ To produce the tone or melody from the buzzer, we need to write PWM functions to
 
 In this exercise, all the available note and its frequency to produce the tone, has been declared on a header file, titled `tones.h` as [here](https://github.com/myinvent/hibiscus-sense-arduino/blob/main/Exercise_04_Melody/tones.h) for available tones.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/schematic-exercise-four-c.png" width="500"></a></p>
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four-c.png" width="500"></a></p>
 
 Since we have notice, we need to use `ledcWriteTone()` function instead of `ledcWrite()` function to generate the PWM output signal for the buzzer to produce the tone, let's write the program as below:
 
