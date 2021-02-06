@@ -16,7 +16,8 @@
 - [Exercise 1: Control Blue LED on GPIO2 (Strobe Light Effect)](https://github.com/myinvent/hibiscus-sense-arduino#exercise-1-control-blue-led-on-gpio2-strobe-light-effect)
 - [Exercise 2: Control Blue LED on GPIO2 (Glowing Light Effect))](https://github.com/myinvent/hibiscus-sense-arduino#exercise-2-control-blue-led-on-gpio2-glowing-light-effect)
 - [Exercise 3: Control Blue LED on GPIO2 (Breathing Light Effect)](https://github.com/myinvent/hibiscus-sense-arduino#exercise-3-control-blue-led-on-gpio2-breathing-light-effect)
-- [Exercise 4: Serial Communication (Hibiscus Sense & Computer)](https://github.com/myinvent/hibiscus-sense-arduino#exercise-4-serial-communication-hibiscus-sense--computer)
+- [Exercise 4: Control Small Buzzer on GPIO13]()
+- [Exercise 5: Serial Communication (Hibiscus Sense & Computer)](https://github.com/myinvent/hibiscus-sense-arduino#exercise-4-serial-communication-hibiscus-sense--computer)
 
 ## Introduction
 
@@ -264,15 +265,19 @@ Now, we can upload the complete sketch to ESP32, then observe the output. By obs
 
 <p align="right"><a href="https://github.com/myinvent/hibiscus-sense-arduino#hibiscus-sense-esp32-arduino-tutorial">Back to Top</a> | <a href="https://github.com/myinvent/hibiscus-sense-arduino#table-of-content">Table of Content</a></p>
 
-## Exercise 4: Serial Communication (Hibiscus Sense & Computer)
+## Exercise 4: Control Small Buzzer on GPIO13 (Melody)
+
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-exercise-one.png" width="400"></a></p>
+
+## Exercise 5: Serial Communication (Hibiscus Sense & Computer)
 
 Serial Communication is a communication process, receiving and transmitting data between two devices, such as **_computer to computer_** or **_microcontroller to computer_** or **_microcontroller to microcontroller_**, by implementing hardware protocol called `UART (Universal Asynchronous Receiver/Transmitter)`. The data were sent/receive bit by bit sequentially by UART over two or one transmission line (wires), with configurables speed known as `baud-rate` or `bits-per-second` (bps): _9600, 19200, 38400, 57600, 115200, 230400, 460800, 921600_.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four.gif" width="200"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-five.gif" width="200"></a></p>
 
 The two transmission lines of UART, known as `RX (receive)` and `TX (transmit)`. The transmission begin by transmitting the data from TX port of one UART controller to RX port of the other UART controller.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four-a.png" width="400"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-five-a.png" width="400"></a></p>
 
 There are 3x UART controllers available in ESP32:
 UART | RX  | RX  |
@@ -354,7 +359,7 @@ delay(1000);
 
 Now, we can upload the complete sketch to ESP32, once done uploading open the Serial Monitor. By observation, we can see an incremental value with newline is printed on the Arduino IDE Serial Monitor.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four-b.gif" width="600"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-five-b.gif" width="600"></a></p>
 
 <p align="right"><a href="https://github.com/myinvent/hibiscus-sense-arduino#hibiscus-sense-esp32-arduino-tutorial">Back to Top</a> | <a href="https://github.com/myinvent/hibiscus-sense-arduino#table-of-content">Table of Content</a></p>
 
