@@ -267,7 +267,17 @@ Now, we can upload the complete sketch to ESP32, then observe the output. By obs
 
 ## Exercise 4: Control Small Buzzer on GPIO13 (Melody)
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-exercise-one.png" width="400"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-exercise-four-a.gif" width="500"></a></p>
+
+Buzzer is a piezoelectrical components, which generate tones when the piezo elements is vibrated based on given voltage supply, different current will produce different vibration, thus generating different tone.
+
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-exercise-four.png" width="500"></a></p>
+
+There are several form of buzzers in the market, example as shown above. In Hibiscus Sense, there is 1x small buzzer, labelled as `BUZZER` on-board, as circled on the image below.
+
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-exercise-four-b.png" width="500"></a></p>
+
+<p align="right"><a href="https://github.com/myinvent/hibiscus-sense-arduino#hibiscus-sense-esp32-arduino-tutorial">Back to Top</a> | <a href="https://github.com/myinvent/hibiscus-sense-arduino#table-of-content">Table of Content</a></p>
 
 ## Exercise 5: Serial Communication (Hibiscus Sense & Computer)
 
