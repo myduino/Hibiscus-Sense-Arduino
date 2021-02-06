@@ -1,4 +1,4 @@
-// global variable, named counter.
+// global variable named as counter with value 0
 int counter = 0;
 
 void setup() {
@@ -7,10 +7,10 @@ void setup() {
 }
 
 void loop() {
-  // increment counter variable by 1 on every loop.
+  // increment variable counter's value by +1 on every loop.
   counter++;
-  // transmit the variable counter value to computer
-  Serial.println(78);
+  // transmit the variable counter's value to computer
+  Serial.println(counter);
   // wait for 1 second before next action.
   delay(1000);
 }
