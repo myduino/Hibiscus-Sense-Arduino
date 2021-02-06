@@ -72,6 +72,8 @@ Connect the USB cable Type-C to Hibiscus Sense and Type-A to our computer. Hibis
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-first-time-monitor.gif" width="600"></a></p>
 
 <p align="right"><a href="https://github.com/myinvent/hibiscus-sense-arduino#hibiscus-sense-esp32-arduino-tutorial">Back to Top</a> | <a href="https://github.com/myinvent/hibiscus-sense-arduino#table-of-content">Table of Content</a></p>
+<p align="right"><a href="https://forms.gle/UgpDSFc46K4MkvTM8">Tutorial Improvement & Suggestions</a></p>
+
 
 ## Exercise 1: Control Blue LED on GPIO2 (Strobe Light Effect)
 
@@ -137,6 +139,7 @@ Now, we can upload the complete sketch to ESP32, then observe the output. By obs
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-one.gif" width="300"></a></p>
 
 <p align="right"><a href="https://github.com/myinvent/hibiscus-sense-arduino#hibiscus-sense-esp32-arduino-tutorial">Back to Top</a> | <a href="https://github.com/myinvent/hibiscus-sense-arduino#table-of-content">Table of Content</a></p>
+<p align="right"><a href="https://forms.gle/UgpDSFc46K4MkvTM8">Tutorial Improvement & Suggestions</a></p>
 
 ## Exercise 2: Control Blue LED on GPIO2 (Glowing Light Effect)
 
@@ -219,6 +222,7 @@ Now, we can upload the complete sketch to ESP32, then observe the output. By obs
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-two-b.gif" width="600"></a></p>
 
 <p align="right"><a href="https://github.com/myinvent/hibiscus-sense-arduino#hibiscus-sense-esp32-arduino-tutorial">Back to Top</a> | <a href="https://github.com/myinvent/hibiscus-sense-arduino#table-of-content">Table of Content</a></p>
+<p align="right"><a href="https://forms.gle/UgpDSFc46K4MkvTM8">Tutorial Improvement & Suggestions</a></p>
 
 
 ## Exercise 3: Control Blue LED on GPIO2 (Breathing Light Effect)
@@ -266,6 +270,7 @@ Now, we can upload the complete sketch to ESP32, then observe the output. By obs
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-three-a.gif" width="600"></a></p>
 
 <p align="right"><a href="https://github.com/myinvent/hibiscus-sense-arduino#hibiscus-sense-esp32-arduino-tutorial">Back to Top</a> | <a href="https://github.com/myinvent/hibiscus-sense-arduino#table-of-content">Table of Content</a></p>
+<p align="right"><a href="https://forms.gle/UgpDSFc46K4MkvTM8">Tutorial Improvement & Suggestions</a></p>
 
 ## Exercise 4: Control Small Buzzer on GPIO13 (Melody)
 
@@ -341,6 +346,7 @@ delay(500);
 Now, we can upload the complete sketch to ESP32. Once done uploading, we'll hear beeping sound.
 
 <p align="right"><a href="https://github.com/myinvent/hibiscus-sense-arduino#hibiscus-sense-esp32-arduino-tutorial">Back to Top</a> | <a href="https://github.com/myinvent/hibiscus-sense-arduino#table-of-content">Table of Content</a></p>
+<p align="right"><a href="https://forms.gle/UgpDSFc46K4MkvTM8">Tutorial Improvement & Suggestions</a></p>
 
 ## Exercise 5: Serial Communication (Hibiscus Sense & Computer)
 
@@ -435,4 +441,5 @@ Now, we can upload the complete sketch to ESP32, once done uploading open the Se
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-five-b.gif" width="600"></a></p>
 
 <p align="right"><a href="https://github.com/myinvent/hibiscus-sense-arduino#hibiscus-sense-esp32-arduino-tutorial">Back to Top</a> | <a href="https://github.com/myinvent/hibiscus-sense-arduino#table-of-content">Table of Content</a></p>
+<p align="right"><a href="https://forms.gle/UgpDSFc46K4MkvTM8">Tutorial Improvement & Suggestions</a></p>
 
