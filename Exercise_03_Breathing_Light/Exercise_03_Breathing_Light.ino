@@ -1,5 +1,5 @@
 /*
- * Hibiscus Sense - Exercise 02 Glowing Light
+ * Hibiscus Sense - Exercise 03 Breathing Light
  * 
  * There is 1x blue LED.
  * This LED is connected to GPIO2 of ESP32 microcontroller.
