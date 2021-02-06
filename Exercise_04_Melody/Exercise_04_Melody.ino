@@ -1,5 +1,5 @@
 /*
- * Hibiscus Sense - Exercise 04 Melody
+ * Hibiscus Sense Example Sketch - Melody
  * 
  * There is 1x Small Buzzer on-board.
  * This is a passive buzzer and it is connected to GPIO13.
@@ -17,14 +17,13 @@
 #include "tones.h"
 
 void setup() {
-  
+  // configure PWM controller congfiguration
+  ledcSetup(0, 5000, 8);
+  // declare the GPIO number for PWM signal output
+  ledcAttachPin(13, 0);
 }
 
 void loop() {
-  // ledcAttachPin() function to declare GPIO and PWM channels.
-  // 1st argument: GPIO number.
-  // 2nd argument: PWM channel number.
-  ledcAttachPin(13, 0);
   // ledcWriteTone() function will generate PWM signal based on given tone frequency.
   // 1st argument: PWM channel number.
   // 2nd argument: Tone frequency.
