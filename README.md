@@ -70,6 +70,8 @@ Connect the USB cable Type-C to Hibiscus Sense and Type-A to our computer. Hibis
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-first-time-monitor.gif" width="600"></a></p>
 
+<p align="right"><a href="https://github.com/myinvent/hibiscus-sense-arduino#hibiscus-sense-esp32-arduino-tutorial">Back to Top</a> | <a href="https://github.com/myinvent/hibiscus-sense-arduino#table-of-content">Table of Content</a></p>
+
 ## Exercise 1: Control Blue LED on GPIO2 (Strobe Light Effect)
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-exercise-one.png" width="400"></a></p>
@@ -299,10 +301,58 @@ Although, the hardware serial is ready, it woudld not initialized, unless we pro
     - `Serial.print(1.23456, 2)` transmit and print "1.23"
     - `Serial.print(1.23456, 4)` transmit and print "1.2345"
 3. `Serial.println()` function same as `Serial.print()`, with additional character of newline.
-4. `Serial.available()` function use to check if the data is received and available in the buffer (which holds 64 bytes).
+4. `Serial.available()` function use to check if the data is available in the buffer (holds 64 bytes).
 5. `Serial.read()`function use to read the data inside the serial receive buffer.
 
-The objectives of serial communication in this exercise is to transmit value of variable counter to Arduino IDE's Serial Monitor.
+We have understand main `Serial` library functions, now let's write a program ESP32 can transmit incremental value to Arduino IDE's Serial Monitor. The program as below:
+
+**Complete Sketch**
+```cpp
+// global variable named as counter with value 0
+int counter = 0;
+
+void setup() {
+  // initialized ESP32 UART0 with speed 9600bps
+  Serial.begin(9600);
+}
+
+void loop() {
+  // increment variable counter's value by +1 on every loop.
+  counter++;
+  // transmit the variable counter's value to computer
+  Serial.println(counter);
+  // wait for 1 second before next action.
+  delay(1000);
+}
+```
+
+**Detail Code Explanations**
+To create incremental value, we can use (+) plus operator as it is an _addition_ arithmetic operations. We can create a global variable with `initial value of 0` and `int` integer data type.
+```cpp
+int counter = 0;
+```
+
+In the `void setup()` function, firstly we need to initialize the hardware serial communication by calling `begin()` function of `Serial` object, with suitable baud-rate, most commonly used is `9600`.
+```cpp
+Serial.begin(9600);
+```
+
+In logical thinking, before we can submit any value we need to have the value first, before we are can submit it, right? Therefore, in the `void loop()` function, the first thing to do, is to generate _incremental value_ of variable `counter`, applying (++) arithmetic operations, representing +1 to the previous value of variable counter. Example of previous value of `counter` is `0` then add it by +1, the latest value of variable counter is 1, as thing process is inside the `void loop()` function, the variable counter's value incrementally by 1 each loop.
+```cpp
+counter++;
+```
+
+To transmit the value of variable counter with newline, we use `println()` function of `Serial` object, to do the task by refering the variable counter on the argument of `println()` function.
+```cpp
+Serial.println(counter);
+```
+
+Pause the task for a second before continue to the next action.
+```cpp
+delay(1000);
+```
+
+Now, we can upload the complete sketch to ESP32, once done uploading open the Serial Monitor. By observation, we can see an incremental value with newline is printed on the Arduino IDE Serial Monitor.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four-b.gif" width="600"></a></p>
 
