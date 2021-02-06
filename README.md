@@ -18,6 +18,7 @@
 - [Exercise 3: Control Blue LED on GPIO2 (Breathing Light Effect)](https://github.com/myinvent/hibiscus-sense-arduino#exercise-3-control-blue-led-on-gpio2-breathing-light-effect)
 - [Exercise 4: Control Small Buzzer on GPIO13](https://github.com/myinvent/hibiscus-sense-arduino#exercise-4-control-small-buzzer-on-gpio13-melody)
 - [Exercise 5: Serial Communication (Hibiscus Sense & Computer)](https://github.com/myinvent/hibiscus-sense-arduino#exercise-4-serial-communication-hibiscus-sense--computer)
+- [Exercise 6: Monitor Pushbutton Status on GPIP0 (LED ON/OFF)](https://github.com/myinvent/hibiscus-sense-arduino#exercise-6-monitor-pushbutton-status-on-gpip0-led-onoff)
 
 ## Introduction
 
