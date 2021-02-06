@@ -1,5 +1,5 @@
 /*
- * Hibiscus Sense Example Sketch - Melody
+ * Hibiscus Sense - Exercise 04 Melody
  * 
  * There is 1x Small Buzzer on-board.
  * This is a passive buzzer and it is connected to GPIO13.

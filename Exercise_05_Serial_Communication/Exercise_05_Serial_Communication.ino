@@ -1,3 +1,14 @@
+/*
+ * Hibiscus Sense - Exercise 05 Serial Communication
+ * 
+ * In Arduino ESP32 programming Serial library is used to program the UART controller
+ * Main functions of Serial library are:
+ * begin() function to initiate serial communication
+ * print() function to transmit data
+ * available() function to check if data is available in the receiving buffer
+ * read() function to read data in receving buffer
+ */
+
 // global variable named as counter with value 0
 int counter = 0;
 
