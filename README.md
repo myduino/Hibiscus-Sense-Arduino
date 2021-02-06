@@ -16,7 +16,7 @@
 - [Exercise 1: Control Blue LED on GPIO2 (Strobe Light Effect)](https://github.com/myinvent/hibiscus-sense-arduino#exercise-1-control-blue-led-on-gpio2-strobe-light-effect)
 - [Exercise 2: Control Blue LED on GPIO2 (Glowing Light Effect))](https://github.com/myinvent/hibiscus-sense-arduino#exercise-2-control-blue-led-on-gpio2-glowing-light-effect)
 - [Exercise 3: Control Blue LED on GPIO2 (Breathing Light Effect)](https://github.com/myinvent/hibiscus-sense-arduino#exercise-3-control-blue-led-on-gpio2-breathing-light-effect)
-- [Exercise 4: Control Small Buzzer on GPIO13]()
+- [Exercise 4: Control Small Buzzer on GPIO13](https://github.com/myinvent/hibiscus-sense-arduino#exercise-4-control-small-buzzer-on-gpio13-melody)
 - [Exercise 5: Serial Communication (Hibiscus Sense & Computer)](https://github.com/myinvent/hibiscus-sense-arduino#exercise-4-serial-communication-hibiscus-sense--computer)
 
 ## Introduction
@@ -267,15 +267,15 @@ Now, we can upload the complete sketch to ESP32, then observe the output. By obs
 
 ## Exercise 4: Control Small Buzzer on GPIO13 (Melody)
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-exercise-four-a.gif" width="500"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four-a.gif" width="500"></a></p>
 
 Buzzer is a piezoelectrical components, which generate tones when the piezo elements is vibrated based on given voltage supply, different current will produce different vibration, thus generating different tone.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-exercise-four.png" width="500"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/imagee-exercise-four.png" width="500"></a></p>
 
 There are several form of buzzers in the market, example as shown above. In Hibiscus Sense, there is 1x small buzzer, labelled as `BUZZER` on-board, as circled on the image below.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-exercise-four-b.png" width="500"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four-b.png" width="500"></a></p>
 
 <p align="right"><a href="https://github.com/myinvent/hibiscus-sense-arduino#hibiscus-sense-esp32-arduino-tutorial">Back to Top</a> | <a href="https://github.com/myinvent/hibiscus-sense-arduino#table-of-content">Table of Content</a></p>
 
