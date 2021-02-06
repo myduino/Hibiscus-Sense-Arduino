@@ -108,7 +108,7 @@ void loop() {
 }
 ```
 
-**Detail Code Explanations**
+**Detail Sketch Explanations**
 
 The LED is connected to `GPIO2`, we need to configure GPIO2 as `OUTPUT`.
 ```cpp
@@ -183,7 +183,9 @@ void loop() {
   // function for() to create decremental value by 1 start from 255 --> 0
   // from OFF LED to linear increasing brightness, for active-low circuit
   for(int brightness = 255; brightness >= 0; brightness--){   
-    // generate PWM output signal according to variable brightness value
+    // ledcWrite() function will generate PWM output signal according to variable brightness value
+    // 1st argument: PWM channel number.
+    // 2nd argument: Tone frequency.
     ledcWrite(0, brightness);
     delay(15);
   }
@@ -192,9 +194,9 @@ void loop() {
 }
 ```
 
-**Detail Code Explanations**
+**Detail Sketch Explanations**
 
-In the `void setup()` function, we configure the PWM channelf using `ledcSetup()` function, with **_PWM channel `0`_**, **_PWM frequency `5 kHz`_** and **_`8 bits` PWM resolution_**. 
+In the `void setup()` function, there are two functions to be program, first to configure the PWM channelf using `ledcSetup()` function, with **_PWM channel `0`_**, **_PWM frequency `5 kHz`_** and **_`8 bits` PWM resolution_**. 
 ```cpp
 ledcSetup(0, 5000, 8);
 ```
@@ -277,16 +279,72 @@ On Hibiscus Sense, there is 1x small buzzer, labelled as `BUZZER` on-board, as c
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four-b.png" width="400"></a></p>
 
-Since operating voltage of the small buzzer operating is ranging from 2-4V with rated voltage of 3V, the `(+ve) terminal` of the buzzer connected directly to `GPIO13`, as shown in the schematic below, while the `(-ve) terminal` is connected to `GND`.
+The operating voltage of the small buzzer is ranging from 2-4V with rated voltage of 3V, the `(+ve) terminal` of the buzzer is connected to `GPIO13`, while the `(-ve) terminal` is connected to `GND`, as shown in the schematic below.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/schematic-exercise-four.png" width="150"></a></p>
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/schematic-exercise-four.png" width="400"></a></p>
 
+To produce the tone or melody from the buzzer, we need to write PWM functions to control the PWM output signal on GPIO13. In [Exercise 2]() and [Exercise 3]() we use `ledcWrite(_channel_, _dutycycle_)` function to control the brightness of the LEDs, while to generate the tone, ESP32 has other function known as `ledcWriteTone(_channel_, _note_)` function, with 2 arguments:
+  - _channel_ the number of the PWM channel.
+  - _note_ the the frequency of note. Example, Note D4 = 147 Hz. Click [here](https://github.com/myinvent/hibiscus-sense-arduino/blob/main/Exercise_04_Melody/tones.h) for available tones.
+
+In this exercise, all the available note and its frequency to produce the tone, has been declared on a header file, titled `tones.h` as [here](https://github.com/myinvent/hibiscus-sense-arduino/blob/main/Exercise_04_Melody/tones.h) for available tones.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/schematic-exercise-four-c.png" width="500"></a></p>
+
+Since we have notice, we need to use `ledcWriteTone()` function instead of `ledcWrite()` function to generate the PWM output signal for the buzzer to produce the tone, let's write the program as below:
+
+**Complete Sketch**
+```cpp
+// include the preset tones file, which included in local header files named tones.h
+#include "tones.h"
+
+void setup() {
+  // configure PWM controller congfiguration
+  ledcSetup(0, 5000, 8);
+  // declare the GPIO number for PWM signal output
+  ledcAttachPin(13, 0);
+}
+
+void loop() {
+  // ledcWriteTone() function will generate PWM signal based on given tone frequency.
+  // 1st argument: PWM channel number.
+  // 2nd argument: Tone frequency.
+  ledcWriteTone(0, NOTE_D4);  // buzzer will sound according to NOTE_D4.
+  delay(500);
+
+  ledcWrite(0, 0);  // buzzer has no sound since PWM signal is 0.
+  delay(500);
+}
+```
+
+**Detail Sketch Explanations**
+First, we need to include header file, which has the declaration of all available note.
+```cpp
+#include "tones.h"
+```
+
+In `void setup()` function, we have to configure the PWM channel using `ledcSetup()` function and declare buzzer (+ve) terminal attach to GPIO13 using `ledcAttachPin()` function.
+```cpp
+  ledcSetup(0, 5000, 8);
+  ledcAttachPin(13, 0);
+```
+
+Inside the `void loop()` function, we use `ledcWriteTone()` function to generate sound of `NOTE_D4` frequency, while `ledcWrite()` function to turn OFF the buzzer. Therefore, the execution of these functions repeatedly, producing alarm-like sound.
+```cpp
+ledcWriteTone(0, NOTE_D4);  // buzzer will sound according to NOTE_D4.
+delay(500);
+
+ledcWrite(0, 0);  // buzzer has no sound since PWM signal is 0.
+delay(500);
+```
+
+Now, we can upload the complete sketch to ESP32. Once done uploading, we'll hear beeping sound.
 
 <p align="right"><a href="https://github.com/myinvent/hibiscus-sense-arduino#hibiscus-sense-esp32-arduino-tutorial">Back to Top</a> | <a href="https://github.com/myinvent/hibiscus-sense-arduino#table-of-content">Table of Content</a></p>
 
 ## Exercise 5: Serial Communication (Hibiscus Sense & Computer)
 
-Serial Communication is a communication process, receiving and transmitting data between two devices, such as **_computer to computer_** or **_microcontroller to computer_** or **_microcontroller to microcontroller_**, by implementing hardware protocol called `UART (Universal Asynchronous Receiver/Transmitter)`. The data were sent/receive bit by bit sequentially by UART over two or one transmission line (wires), with configurables speed known as `baud-rate` or `bits-per-second` (bps): _9600, 19200, 38400, 57600, 115200, 230400, 460800, 921600_.
+Serial Communication is a communication process, receiving and transmitting data between two devices, such as **_computer to computer_** or **_microcontroller to computer_** or **_microcontroller to microcontroller_**, by implementing hardware protocol known as `UART (Universal Asynchronous Receiver/Transmitter)`. The data were sent/receive bit by bit sequentially by UART over two or one transmission line (wires), with configurables speed known as `baud-rate` or `bits-per-second` (bps): _9600, 19200, 38400, 57600, 115200, 230400, 460800, 921600_.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-five.gif" width="200"></a></p>
 
@@ -346,7 +404,7 @@ void loop() {
 }
 ```
 
-**Detail Code Explanations**
+**Detail Sketch Explanations**
 To create incremental value, we can use (+) plus operator as it is an _addition_ arithmetic operations. We can create a global variable with `initial value of 0` and `int` integer data type.
 ```cpp
 int counter = 0;
