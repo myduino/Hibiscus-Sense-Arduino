@@ -337,7 +337,7 @@ In the `void setup()` function, firstly we need to initialize the hardware seria
 Serial.begin(9600);
 ```
 
-In logical thinking, before we can submit any value we need to have the value first, before we are can submit it, right? Therefore, in the `void loop()` function, the first thing to do, is to generate _incremental value_ of variable `counter`, applying (++) arithmetic operations, representing +1 to the previous value of variable counter. Example of previous value of `counter` is `0` then add it by +1, the latest value of variable counter is 1, as thing process is inside the `void loop()` function, the variable counter's value incrementally by 1 each loop.
+In logical thinking, before we can submit any value we need to have the value first, before we can submit it, right? Therefore, in the `void loop()` function, the first thing to do, is to generate _incremental value_ of variable `counter`, applying (++) arithmetic operations, representing +1 to the previous value of variable counter. Example of previous value of `counter` is `0` then add it by +1, the latest value of variable counter is 1, as thing process is inside the `void loop()` function, the variable counter's value incrementally by 1 each loop.
 ```cpp
 counter++;
 ```
