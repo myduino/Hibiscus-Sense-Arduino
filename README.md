@@ -448,7 +448,7 @@ On Hibiscus Sense, there are two pushbutton:
 1. **`RST`** push the button to reset the ESP32 program.
 2. **`IO0`** connected to GPIO0.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-six-a.png" width="300"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-six-a.png" width="400"></a></p>
 
 Both pushbutton in Hibiscus Sense applying [pull-up resistor](https://learn.sparkfun.com/tutorials/pull-up-resistors/all), to prevent floating voltage with capacitor to fix [debouncing effect](https://www.analog.com/en/technical-articles/better-way-to-push-your-buttons.html) of pushbutton. The circuit is complete when we push the **`IO0`** pushbutton, then ESP32 saw `LOW` state at `GPIO0`, because `GND` is connected to the junction of `GPIO0` in the circuit, as shown in the schematic below.
 
@@ -456,7 +456,7 @@ Both pushbutton in Hibiscus Sense applying [pull-up resistor](https://learn.spar
 
 Somehow, if a pushbutton circuit is applying pull-down resistor, as shown in the schematic below. ESP32 saw `HIGH` state at `GPIO0` when the IO0 pushbutton is pressed, because `3.3V` is connected to the junction of `GPIO0`. _This is **NOT** the circuit on Hibiscus Sense._
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/schematic-exercise-six-a.png" width="400"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/schematic-exercise-six-a.png" width="300"></a></p>
 
 Since we know that ESP32 will sense `LOW` state at `GPIO0` during pushbutton pressed, so the program as follows:
 
@@ -506,8 +506,6 @@ Now, we can upload the complete sketch to ESP32. Now we'll see the blue is turn 
 
 <p align="right"><a href="https://github.com/myinvent/hibiscus-sense-arduino#hibiscus-sense-esp32-arduino-tutorial">&#128285; Back to Top</a> | <a href="https://github.com/myinvent/hibiscus-sense-arduino#table-of-content">&#128203; Table of Content</a><br><a href="https://forms.gle/UgpDSFc46K4MkvTM8">&#128640; Tutorial Improvement & Suggestions</a></p>
 
-}
-
 ## Image Credits
 - Isaac Low on Quora
 - Ben Ot on Wikimedia
@@ -517,3 +515,4 @@ Now, we can upload the complete sketch to ESP32. Now we'll see the blue is turn 
 - Arduino Getting Started
 - Cable Depot
 - Analog Devices
+- Circuit Digest
