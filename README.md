@@ -318,6 +318,7 @@ void loop() {
 ```
 
 **Detail Sketch Explanations**
+
 First, we need to include header file, which has the declaration of all available note.
 ```cpp
 #include "tones.h"
@@ -405,6 +406,7 @@ void loop() {
 ```
 
 **Detail Sketch Explanations**
+
 To create incremental value, we can use (+) plus operator as it is an _addition_ arithmetic operations. We can create a global variable with `initial value of 0` and `int` integer data type.
 ```cpp
 int counter = 0;
