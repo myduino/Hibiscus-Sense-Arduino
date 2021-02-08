@@ -21,6 +21,7 @@
 - [Exercise 4: Control Small Buzzer on GPIO13](https://github.com/myinvent/hibiscus-sense-arduino#exercise-4-control-small-buzzer-on-gpio13-melody)
 - [Exercise 5: Serial Communication (Hibiscus Sense & Computer)](https://github.com/myinvent/hibiscus-sense-arduino#exercise-4-serial-communication-hibiscus-sense--computer)
 - [Exercise 6: Monitor Pushbutton Status on GPIP0 (LED ON/OFF)](https://github.com/myinvent/hibiscus-sense-arduino#exercise-6-monitor-pushbutton-status-on-gpip0-led-onoff)
+- [Exercise 7: Control RGB LED on GPIO16](https://github.com/myinvent/hibiscus-sense-arduino#exercise-7-control-rgb-led-on-gpio16)
 
 ## Introduction
 
@@ -520,13 +521,13 @@ An RGB LED, have four leads, for each colour and one common anode (+ve) or commo
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-seven-a.png" width="400"></a></p>
 
-There is 1x RGB LED on Hibiscus Sense labelled as `WS2812` and it is a special RGB LED. WS2812 is an addressable RGB LED that can be connected in series. We can control the colour of the RGB LED colour in its position, with just only one pin to ESP32 microcontroller, amazing!
+There is 1x RGB LED on Hibiscus Sense labelled as **`WS2812`** and it is a special RGB LED. WS2812 is an addressable RGB LED that can be connected in series. We can control the colour of the RGB LED colour in its position, with just only one pin to ESP32 microcontroller, amazing!
 
 WS2812 have 4 connector:
-1. VDD - Power supply 3.5~5.3V. 3.3V also enough to power the RGB LED.
-2. DOUT - Control data signal output.
-3. VSS - GND terminal.
-4. DIN - Control data signal input.
+1. **`VDD`** - Power supply 3.5~5.3V. 3.3V also enough to power the RGB LED.
+2. **`DOUT`** - Control data signal output.
+3. **`VSS`** - GND terminal.
+4. **`DIN`** - Control data signal input.
 
 The schematic of WS2812 RGB on Hibiscus Sense, as in the image below.
 
@@ -607,6 +608,8 @@ rgb.show();
 Now, we can upload the complete sketch to ESP32, then observe the output. By observation, the colour output from RGB LED is magenta.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-seven-c.jpg" width="500"></a></p>
+
+<p align="right"><a href="https://github.com/myinvent/hibiscus-sense-arduino#hibiscus-sense-esp32-arduino-tutorial">&#128285; Back to Top</a> | <a href="https://github.com/myinvent/hibiscus-sense-arduino#table-of-content">&#128203; Table of Content</a><br><a href="https://forms.gle/UgpDSFc46K4MkvTM8">&#128640; Tutorial Improvement & Suggestions</a></p>
 
 ## Image Credits
 - _Isaac Low on Quora_
