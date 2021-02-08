@@ -13,7 +13,7 @@
 // include the Adafruit_MPU6050 header file.
 #include <Adafruit_MPU6050.h>
 
-// instance of the Adafruit_MPU6050 class as mpu.
+// instance of the Adafruit_MPU6050 class named as mpu.
 Adafruit_MPU6050 mpu;
 
 // sensor event object variable declaration:

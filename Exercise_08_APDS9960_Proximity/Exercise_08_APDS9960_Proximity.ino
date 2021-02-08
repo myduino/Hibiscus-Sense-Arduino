@@ -13,7 +13,7 @@
 // include the Adafruit_APDS9960 header file.
 #include <Adafruit_APDS9960.h>
 
-// instance of the Adafruit_APDS9960 class as bme.
+// instance of the Adafruit_APDS9960 class named as apds.
 Adafruit_APDS9960 apds;
 
 void setup() {

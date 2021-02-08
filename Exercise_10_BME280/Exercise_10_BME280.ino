@@ -13,7 +13,7 @@
 // include the Adafruit_BME280 header file.
 #include <Adafruit_BME280.h>
 
-// instance of the Adafruit_BME280 class as bme.
+// instance of the Adafruit_BME280 class named as bme.
 Adafruit_BME280 bme;
 
 void setup() {
