@@ -509,14 +509,14 @@ Now, we can upload the complete sketch to ESP32. Now we'll see the blue is turn 
 
 <p align="right"><a href="https://github.com/myinvent/hibiscus-sense-arduino#hibiscus-sense-esp32-arduino-tutorial">&#128285; Back to Top</a> | <a href="https://github.com/myinvent/hibiscus-sense-arduino#table-of-content">&#128203; Table of Content</a><br><a href="https://forms.gle/UgpDSFc46K4MkvTM8">&#128640; Tutorial Improvement & Suggestions</a></p>
 
-##Exercise 7: Control RGB LED on GPIO16
+## Exercise 7: Control RGB LED on GPIO16
 
 RGB LED is a tri-color LED in a package:
 <p><strong><span style="color: #ff0000;">Red</span>, <span style="color: #00ff00;">Green</span> and <span style="color: #0000ff;">Blue</span>.</strong></p>
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-seven.png" width="400"></a></p>
 
-An RGB LED, have four leads, for each colour and one common anode (+ve) or common cathode (-ve). In `common cathode` RGB LED, three LEDs share one `(-ve) connection`. While, in `common anode` RGB LED, three LEDs share one `(+ve) connection`. The image above, shows that the RGB LED is common cathode, as the longest lead is (-ve) lead. We can use ESP32's PWM controller to control each RGB LED lead to produce different colour.
+An RGB LED, have four leads, for each colour and one common anode (+ve) or common cathode (-ve). In `common cathode` RGB LED, three LEDs share one `(-ve) connection`, while, in `common anode` RGB LED, three LEDs share one `(+ve) connection`. The image above, shows that the RGB LED is common cathode, as the longest lead is (-ve) lead. We can use ESP32's PWM controller to control each RGB LED lead to produce different colour.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-seven-a.png" width="400"></a></p>
 
