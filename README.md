@@ -595,7 +595,7 @@ If `show()` function we execute without any colour set, it will send `OFF` comma
 rgb.show();
 ```
 
-`setPixelColor()` is to set the position of the LED and the colour output of the RGB LED. The value of RGB colour range from 0-255 as on the image below.
+`setPixelColor()` is to set the position of the LED and the colour output of the RGB LED. The combination of the RGB colour range from 0-255 as on the image below
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-seven-d.gif" width="500"></a></p>
 
