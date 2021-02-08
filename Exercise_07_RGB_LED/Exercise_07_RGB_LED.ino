@@ -1,5 +1,5 @@
 /*
- * Hibiscus Sense Example Sketch - RGB LED
+ * Hibiscus Sense - Exercise 07 RGB LED
  * 
  * There is 1x RGB LED.
  * This RGB LED is connected to GPIO16 and integrated with WS2812.
