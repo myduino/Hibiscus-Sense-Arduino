@@ -513,7 +513,9 @@ Now, we can upload the complete sketch to ESP32. Now we'll see the blue is turn 
 ## Exercise 7: Control RGB LED on GPIO16
 
 RGB LED is a tri-color LED in a package:
-<p><strong><span style="color: #ff0000;">Red</span>, <span style="color: #00ff00;">Green</span> and <span style="color: #0000ff;">Blue</span>.</strong></p>
+- **Red**
+- **Green**
+- **Blue**
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-seven.png" width="400"></a></p>
 
