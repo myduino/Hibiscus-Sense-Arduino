@@ -530,11 +530,11 @@ WS2812 have 4 connector:
 
 The schematic of WS2812 RGB on Hibiscus Sense, as in the image below.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/schematic-exercise-seven.png" width="300"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/schematic-exercise-seven.png" width="400"></a></p>
 
 To control usual RGB LED, we can generate the PWM signal output to its indivial lead to produce different colour of RGB LED. Since, our RGB LED on Hibiscus Sense is WS2812, we need to use [Adafruit_Neopixel](https://github.com/adafruit/Adafruit_NeoPixel) library to control the colour of RGB LED using single-wire connection. Prior to program the ESP32, we need to install the library from Arduino IDE's Library Manager, as on the image below.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-seven-b.png" width="500"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-seven-b.png" width="600"></a></p>
 
 Once the library is successfully installed, we can start to write the sketch as below:
 
@@ -595,7 +595,7 @@ If `show()` function we execute without any colour set, it will send `OFF` comma
 rgb.show();
 ```
 
-`setPixelColor()` is to set the position of the LED and the colour output of the RGB LED. The combination of the RGB colour range from 0-255 as on the image below
+`setPixelColor()` function is to set the position of the LED and the colour output of the RGB LED. The combination of the RGB colour range from 0-255 as on the image below, for example in the line of sketch below, RED: 255, GREEN: 0 and BLUE: 255, represent magenta.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-seven-d.gif" width="500"></a></p>
 
@@ -604,17 +604,18 @@ rgb.setPixelColor(0, 255, 0, 255);
 rgb.show();
 ```
 
-Now, we can upload the complete sketch to ESP32, then observe the output. By observation, the output of colour from RGB LED is magenta.
+Now, we can upload the complete sketch to ESP32, then observe the output. By observation, the colour output from RGB LED is magenta.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-seven-c.png" width="500"></a></p>
 
 ## Image Credits
-- Isaac Low on Quora
-- Ben Ot on Wikimedia
-- Explore Embedded
-- DeStress Monday on Giphy
-- Mouser
-- Arduino Getting Started
-- Cable Depot
-- Analog Devices
-- Circuit Digest
+- _Isaac Low on Quora_
+- _Ben Ot on Wikimedia_
+- _Explore Embedded_
+- _DeStress Monday on Giphy_
+- _Mouser_
+- _Arduino Getting Started_
+- _Cable Depot_
+- _Analog Devices_
+- _Circuit Digest_
+- _Matthew L. Beckler_
