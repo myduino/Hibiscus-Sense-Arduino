@@ -11,7 +11,7 @@
  */
 #include <Adafruit_NeoPixel.h>
 
-// instance of the Adafruit_Neopixel class as rgb.
+// instance of the Adafruit_Neopixel class named as rgb.
 // 1st argument: number of LED, Hibiscus Sense has 1x RGB LED.
 // 2nd argument: the RGB LED connected to which pin? Answer: GPIO16 of ESP32.
 Adafruit_NeoPixel rgb(1, 16); 
