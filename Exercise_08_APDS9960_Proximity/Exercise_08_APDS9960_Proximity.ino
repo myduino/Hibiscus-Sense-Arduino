@@ -1,8 +1,8 @@
 /*
- * Hibiscus Sense Example Sketch - APDS9960
+ * Hibiscus Sense - Exercise 08 APDS9960 (Proximity)
  * 
  * There is 1x APDS9960, a proximity sensor.
- * The sensor sense proximity, gesture and rgb color.
+ * The sensor sense proximity, gesture, ambient light and rgb color.
  * This sensor is interfaced to the I2C of ESP32 microcontroller.
  * 
  * Therefore in the sketch,
