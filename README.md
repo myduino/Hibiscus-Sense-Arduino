@@ -22,6 +22,10 @@
 - [Exercise 5: Serial Communication (Hibiscus Sense & Computer)](https://github.com/myinvent/hibiscus-sense-arduino#exercise-4-serial-communication-hibiscus-sense--computer)
 - [Exercise 6: Monitor Pushbutton Status on GPIP0 (LED ON/OFF)](https://github.com/myinvent/hibiscus-sense-arduino#exercise-6-monitor-pushbutton-status-on-gpip0-led-onoff)
 - [Exercise 7: Control RGB LED on GPIO16](https://github.com/myinvent/hibiscus-sense-arduino#exercise-7-control-rgb-led-on-gpio16)
+- [Exercise 8: Monitor Proximity Value from APDS9960](https://github.com/myinvent/hibiscus-sense-arduino#exercise-8-monitor-proximity-value-from-apds9960)
+- [Exercise 9: Monitor Gesture Direction using APDS9960](https://github.com/myinvent/hibiscus-sense-arduino#exercise-9-monitor-gesture-direction-from-apds9960)
+- [Exercise 10: Monitor Environmental Value using BME280]()
+- [Exercise 11: Monitor 6-axis Motion Tracking using MPU6050]()
 
 ## Introduction
 
@@ -766,7 +770,7 @@ This sensor is manufactured by Bosch, low-cost sensing solution:
 3. Humidity with ±3%RH accuracy.
 4. Temperature with ±1.0°C accuracy.
 
-To acquire sensing information from APDS9660, we need to use [Adafruit_APDS9960](https://github.com/adafruit/Adafruit_APDS9960) library, as it will helps shorten the time consuming development and focus on the objective, which to sense the proximity value. Prior to program the ESP32, we need to install the library from Arduino IDE's Library Manager, as on the image below.
+To acquire sensing information from BME280, we need to use [Adafruit_BME280](https://github.com/adafruit/Adafruit_BME280_Library) library, as it will helps shorten the time consuming development and focus on the objective, which to sense the proximity value. Prior to program the ESP32, we need to install the library from Arduino IDE's Library Manager, as on the image below.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-ten-a.png" width="700"></a></p>
 
@@ -836,7 +840,17 @@ Now, we can upload the complete sketch to ESP32, once done uploading open the Se
 MPU6050 is a 6-axis motion tracking sensor with the ability to sense:
 1. 3-axis accelerometer, the gravitational acceleration.
 2. 3-axis gyroscope, the rotational velocity.
-3. 
+3. Temperature
+
+There is 1x MPU6050 on Hibiscus Sense, as on the image below. The circuit is interfaced to **ESP32's I2C** (`SDA`: **GPIO21**, `SCL`: **GPIO22**) with the sensor I2C default address: **`0x68`**.
+
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-eleven.png" width="400"></a></p>
+
+To acquire sensing information from MPU6050, we need to use [Adafruit_MPU6050](https://github.com/adafruit/Adafruit_MPU6050) library, as it will helps shorten the time consuming development and focus on the objective, which to sense the proximity value. Prior to program the ESP32, we need to install the library from Arduino IDE's Library Manager, as on the image below.
+
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-ten-a.png" width="700"></a></p>
+
+Once the library is successfully installed, we can start to write the sketch to monitor proximity value as below:
 
 ```cpp
 // include the Adafruit_MPU6050 header file.
@@ -907,7 +921,9 @@ void loop() {
 }
 ```
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-ten.gif" width="600"></a></p>
+Now, we can upload the complete sketch to ESP32, once done uploading open the Serial Monitor and move around Hibiscus Sense. Then, we'll see latest value 3-axis accelerometer, 3-axis gyroscope and temperature.
+
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-eleven.gif" width="600"></a></p>
 
 <p align="right"><a href="https://github.com/myinvent/hibiscus-sense-arduino#hibiscus-sense-esp32-arduino-tutorial">&#128285; Back to Top</a> | <a href="https://github.com/myinvent/hibiscus-sense-arduino#table-of-content">&#128203; Table of Content</a><br><a href="https://forms.gle/UgpDSFc46K4MkvTM8">&#128640; Tutorial Improvement & Suggestions</a></p>
 
