@@ -691,7 +691,7 @@ void loop() {
 }
 ```
 
-Now, we can upload the complete sketch to ESP32, once done uploading open the Serial Monitor and try to move our hands up and down over the sensor. By observation, we can see on the Serial Monitor a proximity in an 8-bit chaning based on up and down of our hand.
+Now, we can upload the complete sketch to ESP32, once done uploading open the Serial Monitor and try to move our hands up and down over the sensor. By observation, we can see on the Serial Monitor a proximity in an 8-bit chaning based on up and down of our hand. The closer the object, the higher the proximity value.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-eight-c.gif" width="600"></a></p>
 
