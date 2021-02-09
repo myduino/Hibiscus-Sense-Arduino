@@ -6,7 +6,7 @@
  * This sensor is interfaced to the I2C of ESP32 microcontroller.
  * 
  * Therefore in the sketch,
- * we will use an Arduino library: Adafruit_APDS9960 from Adafruit, to acquire proximity value.
+ * we will use an Arduino library: Adafruit_APDS9960 from Adafruit, to monitor gesture direction.
  * 
  */
 
@@ -28,19 +28,19 @@ void setup() {
 
   // enable the proximity mode on APDS9960
   apds.enableProximity(true);
+  // enable the gesture mode on APDS9960
+  apds.enableGesture(true);
 }
 
 void loop() {
+  // to acquire APDS9960 gesture direction,
+  // we need to call apds.readGesture() function from apds instance.
 
-  // to acquire APDS9960 proximity value,
-  // we need to call apds.readProximity() function from apds instance.
-  // The proximity values range from 0-255, 255 is the nearest proximity value.
+  uint8_t gesture = apds.readGesture();
 
-  Serial.print("Proximity: ");
-  Serial.println(apds.readProximity());
-
-  Serial.println("===============");
-
-  delay(500);
+  if(gesture == APDS9960_DOWN) Serial.println(APDS9960_DOWN);
+  if(gesture == APDS9960_UP) Serial.println(APDS9960_UP);
+  if(gesture == APDS9960_LEFT) Serial.println(APDS9960_LEFT);
+  if(gesture == APDS9960_RIGHT) Serial.println(APDS9960_RIGHT);
   
 }
