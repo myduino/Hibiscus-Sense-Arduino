@@ -713,7 +713,6 @@ In this exercise, we will use same APDS9960 from [Exercise 8](https://github.com
 Adafruit_APDS9960 apds;
 
 void setup() {
-  
   // Initialize the serial communication with baud rate 9600bps.
   Serial.begin(9600);
   // Initialize APDS9960 sensor and if the connection is not successful,
