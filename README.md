@@ -24,7 +24,7 @@
 - [Exercise 7: Control RGB LED on GPIO16](https://github.com/myinvent/hibiscus-sense-arduino#exercise-7-control-rgb-led-on-gpio16)
 - [Exercise 8: Monitor Proximity Value from APDS9960](https://github.com/myinvent/hibiscus-sense-arduino#exercise-8-monitor-proximity-value-from-apds9960)
 - [Exercise 9: Monitor Gesture Direction using APDS9960](https://github.com/myinvent/hibiscus-sense-arduino#exercise-9-monitor-gesture-direction-from-apds9960)
-- [Exercise 10: Monitor Environmental Value using BME280]()
+- [Exercise 10: Monitor Environmental Value using BME280](https://github.com/myinvent/hibiscus-sense-arduino#exercise-10-monitor-environmental-value-using-bme280)
 - [Exercise 11: Monitor 6-axis Motion Tracking using MPU6050](https://github.com/myinvent/hibiscus-sense-arduino#exercise-11-monitor-6-axis-motion-tracking-using-mpu6050)
 
 ## Introduction
