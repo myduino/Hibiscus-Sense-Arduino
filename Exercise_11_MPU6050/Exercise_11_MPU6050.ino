@@ -1,5 +1,5 @@
 /*
- * Hibiscus Sense Example Sketch - MPU6050
+ * Hibiscus Sense - Exercise 11 MPU6050
  * 
  * There is 1x MPU6050, 6-axis motion tracking and temperature sensor.
  * The sensor sense 3-axis accelerometer, the gravitational acceleration, 3-axis gyroscope, the rotational velocity and temperature.

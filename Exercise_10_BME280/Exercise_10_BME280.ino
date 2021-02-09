@@ -1,5 +1,5 @@
 /*
- * Hibiscus Sense Example Sketch - BME280
+ * Hibiscus Sense - Exercise 10 BME280
  * 
  * There is 1x BME280, an environment sensor.
  * The sensor sense altitude, barometric pressure, humidity and temperature.

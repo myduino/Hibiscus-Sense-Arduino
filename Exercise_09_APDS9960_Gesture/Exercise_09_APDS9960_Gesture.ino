@@ -38,9 +38,9 @@ void loop() {
 
   uint8_t gesture = apds.readGesture();
 
-  if(gesture == APDS9960_DOWN) Serial.println(APDS9960_DOWN);
-  if(gesture == APDS9960_UP) Serial.println(APDS9960_UP);
-  if(gesture == APDS9960_LEFT) Serial.println(APDS9960_LEFT);
-  if(gesture == APDS9960_RIGHT) Serial.println(APDS9960_RIGHT);
+  if(gesture == APDS9960_DOWN) Serial.println("Gesture Direction: DOWN");
+  if(gesture == APDS9960_UP) Serial.println("Gesture Direction: UP");
+  if(gesture == APDS9960_LEFT) Serial.println("Gesture Direction: LEFT");
+  if(gesture == APDS9960_RIGHT) Serial.println("Gesture Direction: RIGHT");
   
 }
