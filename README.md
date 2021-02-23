@@ -1067,7 +1067,7 @@ Now, we can upload the complete sketch to ESP32, once done uploading observe the
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-twelve.gif" width="300"></a></p>
 
-If you want to monitor and control Hibiscus Blynk demo app, you can download the Blynk App and scan the QR code below:
+If you want to monitor and control Hibiscus Sense Blynk demo app, you can download the Blynk App and scan the QR code below:
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-twelve.png" width="200"></a></p>
 
