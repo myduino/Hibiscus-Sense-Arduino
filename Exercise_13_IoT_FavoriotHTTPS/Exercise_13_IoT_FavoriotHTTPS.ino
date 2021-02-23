@@ -13,9 +13,9 @@ Adafruit_MPU6050 mpu;
 
 sensors_event_t a, g, temp;
 
-char ssid[] = "myinvententerprise";
-char pass[] = "04222682";
-char device_developer_id[] = "HibiscusSense@ariffinastute";
+char ssid[] = "YourWiFiSSID";
+char pass[] = "YourWiFiPassword";
+char device_developer_id[] = "YourDeviceDeveloperId";
 
 long previousMillis = 0;
 
@@ -78,7 +78,7 @@ void loop() {
 
     http.begin("https://apiv2.favoriot.com/v2/streams", "25204d063c95695e2d257959e9217bb76a84f55c");
     http.addHeader("Content-Type", "application/json");
-    http.addHeader("apikey", "Uuj9VCtIp5vysPgOK4jx3sClHswjt4Xe");
+    http.addHeader("apikey", "YourAPIKey");
 
     int httpCode = http.POST(json);
 
