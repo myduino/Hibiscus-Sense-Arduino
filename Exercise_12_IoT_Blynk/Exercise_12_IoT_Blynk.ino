@@ -14,10 +14,10 @@ Adafruit_MPU6050 mpu;
 
 Adafruit_NeoPixel rgb(1, 16);
 
-char auth[] = "R4e9UPgSQvJoBWdFH2lEkLN7JOXkNiAf";
+char auth[] = "YourAuthToken";
 
-char ssid[] = "myinvententerprise";
-char pass[] = "04222682";
+char ssid[] = "YourWiFiSSID";
+char pass[] = "YourWiFiPassword";
 
 sensors_event_t a, g, temp;
 
@@ -73,7 +73,7 @@ void loop(){
     Blynk.virtualWrite(V0, apds.readProximity());
 
     Blynk.virtualWrite(V1, bme.readAltitude(1013.25));
-    Blynk.virtualWrite(V2, bme.readPressure() / 1000.00);
+    Blynk.virtualWrite(V2, bme.readPressure()/1000.00);
     Blynk.virtualWrite(V3, bme.readHumidity());
     Blynk.virtualWrite(V4, bme.readTemperature());
   
