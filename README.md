@@ -47,7 +47,7 @@ Although, we can program ESP32 using other programming language such as C, C++ a
 
 
 
-## Learn How to Program Hibiscus Sense
+## Learn How to Program Hibiscus Sense using Arduino IDE
 
 - [Introduction to Hibiscus Sense](https://github.com/myinvent/hibiscus-sense-arduino/wiki/01.-Introduction-to-Hibiscus-Sense)
 - [Learning Material Preparation](https://github.com/myinvent/hibiscus-sense-arduino/wiki/02.-Learning-Material-Preparation)
