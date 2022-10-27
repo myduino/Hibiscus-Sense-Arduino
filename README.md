@@ -7,7 +7,7 @@
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-logo.png" width="300"></a></p>
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense.png" width="400"></a></p>
 
-> Whenever you are thinking of quick Internet of Things (IoT) hardware prototyping / development, just grab [**Hibiscus Sense**](https://myduino.com/product/myd-036/) and focus on programming :sunglasses:
+> Whenever you are thinking of quick IoT (Internet of Things) hardware prototyping / development, just grab [**Hibiscus Sense**](https://myduino.com/product/myd-036/) and focus on programming  :sunglasses:
 
 ## Introduction
 
@@ -23,7 +23,7 @@
 
 Hibiscus Sense comes with **USB Type-C** to power up the board and to program the ESP32. The on-board USB-to-Serial converter **Silicon Labs CP2104** with **automatic bootloader reset** circuit, we don’t have to press the RESET button each time to upload the program.
 
-Although, we can program ESP32 using other programming language such as C, C++ and Micropython, but in this tutorial we will be using [Arduino](https://www.arduino.cc/) as the learning and prototyping platform.
+Although, we can program ESP32 using other programming language such as C, C++, [Micropython](https://micropython.org/), [Rust](https://github.com/esp-rs/rust), or even with RTOS (Real Time Operating System)  [FreeRTOS](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/system/freertos.html). However, in this tutorial we will be using [Arduino](https://www.arduino.cc/) as the learning and prototyping platform.
 
 ## Hibiscus Sense Features
 
@@ -63,7 +63,8 @@ Although, we can program ESP32 using other programming language such as C, C++ a
 - [Exercise 9: Monitor Gesture Direction using APDS9960](https://github.com/myinvent/hibiscus-sense-arduino/wiki/Exercise-09:-Monitor-Gesture-Direction-from-APDS9960)
 - [Exercise 10: Monitor Environmental Value using BME280](https://github.com/myinvent/hibiscus-sense-arduino/wiki/Exercise-10:-Monitor-Environmental-Value-using-BME280)
 - [Exercise 11: Monitor 6-axis Motion Tracking using MPU6050](https://github.com/myinvent/hibiscus-sense-arduino#exercise-11-monitor-6-axis-motion-tracking-using-mpu6050)
-- [Exercise 12: Internet of Things, Blynk](https://github.com/myinvent/hibiscus-sense-arduino/wiki/Exercise-12:-Internet-of-Things,-Blynk)
+- [Exercise 12: IoT using Blynk](https://github.com/myinvent/hibiscus-sense-arduino/wiki/Exercise-12:-Internet-of-Things,-Blynk)
+- Exercise 13: IoT using Favoriot
 
 ## WiKi Image Credits
 - _Isaac Low on Quora_
