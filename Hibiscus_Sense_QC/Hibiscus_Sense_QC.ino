@@ -7,6 +7,12 @@
 #include <MQTT.h>
 #include <Wire.h>
 
+#define WIFI_SSID             "myinvententerprise"
+#define WIFI_PASSWORD         "04222682"
+#define MQTT_HOST             "broker.hivemq.com"
+#define MQTT_PUBVLISH_TOPIC   "60177875232/Hibiscus-Sense"
+#define MQTT_SUBSCRIBE_TOPIC  "60177875232/Hibiscus-Sense"
+
 Adafruit_APDS9960 apds;
 Adafruit_BME280 bme;
 Adafruit_MPU6050 mpu;
@@ -19,31 +25,52 @@ int freq = 2000;
 int channel = 0;
 int resolution = 8;
 
-const char ssid[] = "Monash-Malaysia";
-const char pass[] = "";
-
 WiFiClient net;
 MQTTClient client;
 
 unsigned long lastMillis = 0;
 
-void connect() {
-  Serial.print("Connecting to Wi-Fi AP (" + String(ssid) + ") ");
+void connectToWiFi() {
+  Serial.print("Connecting to Wi-Fi '" + String(WIFI_SSID) + "' ...");
+
+  WiFi.mode(WIFI_STA);
+  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+  
   while (WiFi.status() != WL_CONNECTED) {
     Serial.print(".");
-    delay(300);
+    delay(500);
   }
-  Serial.println(" connected.");
+  
+  Serial.println(" connected!");
+}
 
-  Serial.print("Connecting to MQTT broker ");
-  while (!client.connect("0177875232-Monash-Malaysia")) {
+void messageReceived(String &topic, String &payload) {
+  Serial.println("Incoming Status: " + payload);
+  Serial.println();
+}
+
+void connectToMqttBroker(){
+  Serial.print("Connecting to '" + String(WIFI_SSID) + "' ...");
+  
+  mqtt.begin(MQTT_HOST, net);
+  mqtt.onMessage(messageReceived);
+
+  String uniqueString = String(WIFI_SSID) + "-" + String(random(1, 98)) + String(random(99, 999));
+  char uniqueClientID[uniqueString.length() + 1];
+  
+  uniqueString.toCharArray(uniqueClientID, uniqueString.length() + 1);
+  
+  while (!mqtt.connect(uniqueClientID)) {
     Serial.print(".");
-    delay(300);
+    delay(500);
   }
 
-  Serial.println(" connected.");
+  Serial.println(" connected!");
 
-  client.subscribe("60177875232/Monash-Malaysia");
+  Serial.println("Subscribe to: " + String(MQTT_PREFIX_TOPIC) + String(MQTT_SUBSCRIBE_TOPIC));
+  
+  mqtt.subscribe(String(MQTT_PREFIX_TOPIC) + String(MQTT_SUBSCRIBE_TOPIC));
+
 }
 
 void messageReceived(String &topic, String &payload) {
