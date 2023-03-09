@@ -82,10 +82,6 @@ void connectToMqttBroker(){
 
 }
 
-void messageReceived(String &topic, String &payload) {
-  Serial.println("Incoming: " + topic + " - " + payload);
-}
-
 void setup() {
 
   pixels.begin();
