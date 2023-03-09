@@ -170,10 +170,10 @@ void setup() {
 
 void loop() {
 
-  client.loop();
+  mqtt.loop();
   delay(10);  // <- fixes some issues with WiFi stability
 
-  if (!client.connected()) {
+  if (!mqtt.connected()) {
     connect();
   }
 
