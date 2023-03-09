@@ -10,7 +10,7 @@
 #define WIFI_SSID             "myinvententerprise"
 #define WIFI_PASSWORD         "04222682"
 #define MQTT_HOST             "broker.hivemq.com"
-#define MQTT_PUBVLISH_TOPIC   "60177875232/Hibiscus-Sense"
+#define MQTT_PUBLISH_TOPIC   "60177875232/Hibiscus-Sense"
 #define MQTT_SUBSCRIBE_TOPIC  "60177875232/Hibiscus-Sense"
 
 Adafruit_APDS9960 apds;
