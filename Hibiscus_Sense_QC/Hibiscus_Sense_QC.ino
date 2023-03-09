@@ -173,8 +173,12 @@ void loop() {
   mqtt.loop();
   delay(10);  // <- fixes some issues with WiFi stability
 
+  if (WiFi.status() != WL_CONNECTED) {
+    connectToWiFi();
+  }
+
   if (!mqtt.connected()) {
-    connect();
+    connectToMqttBroker();
   }
 
   Serial.println("-------------------------------------------------");
