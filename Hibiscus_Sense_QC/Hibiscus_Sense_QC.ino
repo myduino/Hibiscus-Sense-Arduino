@@ -42,6 +42,15 @@ void connectToWiFi() {
   }
   
   Serial.println(" connected!");
+
+  Serial.print("MAC Address: ");
+  Serial.println(WiFi.macAddress());
+
+  Serial.print("Local IP Address: ");
+  Serial.println(WiFi.localIP());
+
+  Serial.print("Network Signal Strength (RSSI): ");
+  Serial.println(WiFi.RSSI());
 }
 
 void messageReceived(String &topic, String &payload) {
@@ -67,14 +76,14 @@ void connectToMqttBroker(){
 
   Serial.println(" connected!");
 
-  Serial.println("Subscribe to: " + String(MQTT_PREFIX_TOPIC) + String(MQTT_SUBSCRIBE_TOPIC));
+  Serial.println("Subscribe to: " + String(MQTT_SUBSCRIBE_TOPIC));
   
-  mqtt.subscribe(String(MQTT_PREFIX_TOPIC) + String(MQTT_SUBSCRIBE_TOPIC));
+  mqtt.subscribe(String(MQTT_SUBSCRIBE_TOPIC));
 
 }
 
 void messageReceived(String &topic, String &payload) {
-  Serial.println("incoming: " + topic + " - " + payload);
+  Serial.println("Incoming: " + topic + " - " + payload);
 }
 
 void setup() {
@@ -131,17 +140,17 @@ void setup() {
 
   Serial.print("Initializing Wi-Fi ... ");
 
-  WiFi.mode(WIFI_STA);
   WiFi.disconnect();
+  WiFi.mode(WIFI_STA);
 
   int n = WiFi.scanNetworks();
 
   if (n == 0) {
-    Serial.println("No WiFi!");
+    Serial.println("No Wi-Fi!");
   }
   else {
     Serial.print(n);
-    Serial.println(" WiFi available:");
+    Serial.println(" Wi-Fi available:");
     for (int i = 0; i < n; ++i) {
       Serial.print("> ");
       Serial.print(i + 1);
@@ -156,18 +165,8 @@ void setup() {
     }
   }
 
-  Serial.print("MAC Address: ");
-  Serial.println(WiFi.macAddress());
-
-  Serial.print("Network Signal Strength (RSSI): ");
-  Serial.println(WiFi.RSSI());
-
-  WiFi.begin(ssid, pass);
-  
-  client.begin("broker.hivemq.com", net);
-  client.onMessage(messageReceived);
-
-  connect();
+  connectToWiFi();
+  connectToMqttBroker();
   
   Serial.println();
 
@@ -270,7 +269,11 @@ void loop() {
 
     String data = "{\"temperature\":" + String(bme.readTemperature()) + ",";
     data += "\"humidity\":" + String(bme.readHumidity()) + "}";
+
+    Serial.println("Data to Publish: " + data);
+    Serial.println("Length of Data: " + String(data.length()));
+    Serial.println("Publish to: " + String(MQTT_PUBLISH_TOPIC));
   
-    client.publish("60177875232/Monash-Malaysia", data);
+    mqtt.publish(String(MQTT_PUBLISH_TOPIC), data);
   }
 }
