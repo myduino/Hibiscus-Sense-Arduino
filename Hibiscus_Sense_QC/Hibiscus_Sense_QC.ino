@@ -26,7 +26,7 @@ int channel = 0;
 int resolution = 8;
 
 WiFiClient net;
-MQTTClient client;
+MQTTClient mqtt;
 
 unsigned long lastMillis = 0;
 
