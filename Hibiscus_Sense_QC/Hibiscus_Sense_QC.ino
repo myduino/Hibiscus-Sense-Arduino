@@ -59,7 +59,7 @@ void messageReceived(String &topic, String &payload) {
 }
 
 void connectToMqttBroker(){
-  Serial.print("Connecting to '" + String(WIFI_SSID) + "' ...");
+  Serial.print("Connecting to '" + String(MQTT_HOST) + "' ...");
   
   mqtt.begin(MQTT_HOST, net);
   mqtt.onMessage(messageReceived);
