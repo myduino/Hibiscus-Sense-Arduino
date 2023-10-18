@@ -9,7 +9,7 @@
  * 2. Data Acquisition - Read data from the sensors
  * 3. Data Ingestion - Send data to Favoriot's data stream using HTTPS
  *
- * Please select ESP8266/ESP32 Boards before compiling the sketch
+ * Please select ESP32 Boards before compiling the sketch
  * (example) Go to menu, Tools > Board > ESP32 Arduino
  *
  * Favoriot's HTTP Secure Certificate Validity Expires On:
