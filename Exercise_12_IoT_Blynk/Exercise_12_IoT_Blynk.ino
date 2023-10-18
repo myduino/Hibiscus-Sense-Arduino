@@ -1,3 +1,22 @@
+/*
+ * Hibiscus Sense - Exercise 12 IoT using Blynk
+ * 
+ * Author: Mohamad Ariffin Zulkifli
+ * Organization: Myinvent Technologies Sdn Bhd
+ *
+ * This sketch has 3 execution steps:
+ * 1. Initialized Wi-Fi conectivity
+ * 2. Connect to the Blynk IoT platform
+ * 3. Data Acquisition - Read data from the sensors
+ * 4. Data Ingestion - Send data to Blynk's data stream using HTTPS
+ *
+ * Install Blynk library before using the sketch.
+ * 
+ * Please select ESP32 Boards before compiling the sketch
+ * (example) Go to menu, Tools > Board > ESP32 Arduino
+ * 
+ */
+
 #define BLYNK_PRINT Serial
 
 #include <WiFi.h>
@@ -15,7 +34,6 @@ Adafruit_MPU6050 mpu;
 Adafruit_NeoPixel rgb(1, 16);
 
 char auth[] = "YourAuthToken";
-
 char ssid[] = "YourWiFiSSID";
 char pass[] = "YourWiFiPassword";
 
