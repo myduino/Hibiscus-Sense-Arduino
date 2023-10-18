@@ -299,11 +299,15 @@ void loop() {
     dataInJson += "\"proximity\":" + String(proximity) + ",";
     dataInJson += "\"temperature\":" + String(temperature) + ",";
     dataInJson += "\"humidity\":" + String(humidity) + ",";
+    dataInJson += "\"barometer\":" + String(barometer) + ",";
     dataInJson += "\"altitude\":" + String(altitude) + ",";
     dataInJson += "\"x_axis\":" + String(x_axis) + ",";
     dataInJson += "\"y_axis\":" + String(y_axis) + ",";
     dataInJson += "\"z_axis\":" + String(z_axis) + ",";
-    dataInJson += "\"barometer\":" + String(barometer);
+    dataInJson += "\"x_gyro\":" + String(x_gyro) + ",";
+    dataInJson += "\"y_gyro\":" + String(y_gyro) + ",";
+    dataInJson += "\"z_gyro\":" + String(z_gyro);
+    
     dataInJson += "}";
 
     // Print and publish the data
