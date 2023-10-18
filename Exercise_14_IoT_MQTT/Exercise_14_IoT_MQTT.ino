@@ -32,9 +32,9 @@
 #include <MQTT.h>
 
 // Define Wi-Fi and MQTT configurations
-#define WIFI_SSID             "myinvententerprise"
-#define WIFI_PASSWORD         "04222682"
-#define MQTT_HOST             "103.186.117.20"
+#define WIFI_SSID             "YourWiFiSSID"
+#define WIFI_PASSWORD         "YourWiFiPassword"
+#define MQTT_HOST             "MQTTBrokerDNSorIP"
 #define MQTT_PREFIX_TOPIC     "hibiscus"
 #define MQTT_PUBLISH_TOPIC    "/data"
 #define MQTT_TRIGGER_TOPIC    "/trigger"
