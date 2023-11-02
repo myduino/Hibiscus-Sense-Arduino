@@ -42,7 +42,7 @@
 #define MQTT_RGB_TOPIC        "/rgb"
 #define MQTT_LED_TOPIC        "/led"
 
-#define SEALEVELPRESSURE_HPA (1013.25)
+#define SEALEVELPRESSURE_HPA (1008) // Average for Malaysia based on https://meteologix.com/
 
 // Initialize sensors and sensor event variables
 Adafruit_APDS9960 apds;
