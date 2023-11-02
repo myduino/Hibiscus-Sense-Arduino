@@ -7,11 +7,13 @@
 #include <MQTT.h>
 #include <Wire.h>
 
-#define WIFI_SSID             "YourWiFiSSID"
-#define WIFI_PASSWORD         "YourWiFiPassword"
-#define MQTT_HOST             "MQTTBrokerDNSorIP"
-#define MQTT_PUBLISH_TOPIC    "60177875232/Hibiscus-Sense"
-#define MQTT_SUBSCRIBE_TOPIC  "60177875232/Hibiscus-Sense"
+#define WIFI_SSID                 "myinvententerprise"
+#define WIFI_PASSWORD             "04222682"
+#define MQTT_HOST                 "broker.hivemq.com"
+#define MQTT_PUBLISH_TOPIC        "60177875232/Hibiscus-Sense"
+#define MQTT_CONTROL_RGB_TOPIC    "60177875232/Hibiscus-Sense/RGB"
+#define MQTT_CONTROL_LED_TOPIC    "60177875232/Hibiscus-Sense/LED"
+#define MQTT_TRIGGER_TOPIC        "60177875232/Hibiscus-Sense/Trigger"
 
 Adafruit_APDS9960 apds;
 Adafruit_BME280 bme;
@@ -19,7 +21,7 @@ Adafruit_MPU6050 mpu;
 
 sensors_event_t a, g, temp;
 
-Adafruit_NeoPixel pixels(1, 16, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel rgb(1, 16, NEO_GRB + NEO_KHZ800);
 
 int freq = 2000;
 int channel = 0;
@@ -28,7 +30,14 @@ int resolution = 8;
 WiFiClient net;
 MQTTClient mqtt;
 
-unsigned long lastMillis = 0;
+unsigned long lastMillis, sendMillis = 0;
+
+volatile bool buttonPressed = false;
+int toggleValue = 0;
+
+void IRAM_ATTR handleButtonPress() {
+  buttonPressed = true;
+}
 
 void connectToWiFi() {
   Serial.print("Connecting to Wi-Fi '" + String(WIFI_SSID) + "' ...");
@@ -54,7 +63,34 @@ void connectToWiFi() {
 }
 
 void messageReceived(String &topic, String &payload) {
-  Serial.println("Incoming Status: " + payload);
+  Serial.println("MQTT SUBSCRIPTION ...");
+  Serial.println("Subscribe Message Received: " + payload);
+
+  if(topic == String(MQTT_CONTROL_RGB_TOPIC)){
+
+    // Extract RGB values from the payload
+    int commaIndex = payload.indexOf(", ");
+    int secondCommaIndex = payload.indexOf(", ", commaIndex+1);
+    int thirdCommaIndex = payload.indexOf(", ", secondCommaIndex+1);
+
+    int red = payload.substring(payload.indexOf("rgb(")+4, commaIndex).toInt();
+    int green = payload.substring(commaIndex+1, secondCommaIndex).toFloat();
+    int blue = payload.substring(secondCommaIndex+1, thirdCommaIndex).toFloat();
+
+    // Set the RGB LED color
+    Serial.print("CONTROL RGB ... ");
+    rgb.setPixelColor(0, rgb.Color(red, green, blue));
+    rgb.show();
+    Serial.println("OK");
+  }
+
+  if(topic == String(MQTT_CONTROL_LED_TOPIC)){
+    // Adjust the LED brightness based on the payload
+    Serial.print("CONTROL LED ... ");
+    digitalWrite(2, payload.toInt());
+    Serial.println("OK");
+  }
+
   Serial.println();
 }
 
@@ -76,16 +112,20 @@ void connectToMqttBroker(){
 
   Serial.println(" connected!");
 
-  Serial.println("Subscribe to: " + String(MQTT_SUBSCRIBE_TOPIC));
-  
-  mqtt.subscribe(String(MQTT_SUBSCRIBE_TOPIC));
+  Serial.println("Subscribe to: " + String(MQTT_CONTROL_RGB_TOPIC));
+  mqtt.subscribe(String(MQTT_CONTROL_RGB_TOPIC));
+  Serial.println("Subscribe to: " + String(MQTT_CONTROL_LED_TOPIC));
+  mqtt.subscribe(String(MQTT_CONTROL_LED_TOPIC));
 
 }
 
 void setup() {
 
-  pixels.begin();
-  pixels.setPixelColor(0, pixels.Color(0, 0, 0)); pixels.show();
+  rgb.begin();
+  rgb.show();
+
+  pinMode(0, INPUT_PULLUP);
+  attachInterrupt(digitalPinToInterrupt(0), handleButtonPress, FALLING);
 
   pinMode(2, OUTPUT);
   digitalWrite(2, HIGH);
@@ -94,11 +134,17 @@ void setup() {
   ledcAttachPin(13, channel);
 
   Serial.begin(115200);
+  Serial.print("Hit Enter on the Serial Monitor input to continue ... ");
   while(!Serial.available());
+  Serial.println("OK");
+  
+  Serial.print("Press the IO0 pushbutton to continue ... ");
+  while(digitalRead(0) != LOW);
+  Serial.println("OK");
 
   delay(1000);
-
-  Serial.println("HIBISCUS SENSE");
+  
+  Serial.println("\nHIBISCUS SENSE");
   Serial.println();
 
   Serial.println("Initializing Sensors:");
@@ -166,6 +212,38 @@ void setup() {
   
   Serial.println();
 
+  Serial.println("-------------------------------------------------");
+
+  Serial.println("ACTUATORS ...");
+  Serial.println("1. Buzzer Buzz");
+  for (int dutyCycle = 0; dutyCycle <= 255; dutyCycle = dutyCycle + 10){
+    ledcWrite(channel, dutyCycle);
+    delay(10);
+  }
+  ledcWrite(channel, 0);
+  
+  Serial.println("2. RGB LED Red Colour");
+  rgb.setPixelColor(0, rgb.Color(255, 0, 0)); rgb.show();
+  delay(300);
+
+  Serial.println("   RGB LED Green Colour");
+  rgb.setPixelColor(0, rgb.Color(0, 255, 0)); rgb.show();
+  delay(300);
+
+  Serial.println("   RGB LED Green Colour");
+  rgb.setPixelColor(0, rgb.Color(0, 0, 255)); rgb.show();
+  delay(300);
+
+  Serial.println("   RGB LED OFF");
+  rgb.setPixelColor(0, rgb.Color(0, 0, 0)); rgb.show();
+  delay(300);
+
+  Serial.println("3. Blue LED Blinking");
+  digitalWrite(2, LOW); delay(100);
+  digitalWrite(2, HIGH); delay(100);
+  digitalWrite(2, LOW); delay(100);
+  digitalWrite(2, HIGH); delay(300);
+
 }
 
 void loop() {
@@ -181,91 +259,59 @@ void loop() {
     connectToMqttBroker();
   }
 
-  Serial.println("-------------------------------------------------");
+  if (buttonPressed) {
+    toggleValue = !toggleValue;
 
-  Serial.println("ACTUATORS ...");
-  Serial.println("1. Buzzer Buzz");
-  for (int dutyCycle = 0; dutyCycle <= 255; dutyCycle = dutyCycle + 10){
-    ledcWrite(channel, dutyCycle);
-    delay(10);
+    Serial.println("MQTT PUBLISHER ...");
+    Serial.println("Publish Trigger: " + String(toggleValue));
+    Serial.println();
+    mqtt.publish(String(MQTT_TRIGGER_TOPIC), String(toggleValue));
+    
+    buttonPressed = false;
   }
-  ledcWrite(channel, 0);
-  
-  Serial.println("2. RGB LED Red Colour");
-  pixels.setPixelColor(0, pixels.Color(255, 0, 0)); pixels.show();
-  delay(300);
 
-  Serial.println("   RGB LED Green Colour");
-  pixels.setPixelColor(0, pixels.Color(0, 255, 0)); pixels.show();
-  delay(300);
-
-  Serial.println("   RGB LED Green Colour");
-  pixels.setPixelColor(0, pixels.Color(0, 0, 255)); pixels.show();
-  delay(300);
-
-  Serial.println("   RGB LED OFF");
-  pixels.setPixelColor(0, pixels.Color(0, 0, 0)); pixels.show();
-  delay(300);
-
-  Serial.println("3. Blue LED Blinking");
-  digitalWrite(2, LOW); delay(100);
-  digitalWrite(2, HIGH); delay(100);
-  digitalWrite(2, LOW); delay(100);
-  digitalWrite(2, HIGH); delay(300);
-
-  Serial.println();
-
-  Serial.println("SENSORS READING ...");
-  Serial.print("1. Proximity: ");
+  // Read sensor data and print periodically
   uint8_t proximity = apds.readProximity();
-  Serial.println(proximity);
-  delay(300);
-  
-  Serial.print("2. Temperature: ");
-  Serial.print(bme.readTemperature());
-  Serial.println(" °C");
-  delay(300);
 
-  Serial.print("3. Pressure: ");
-  Serial.print(bme.readPressure() / 100.0F);
-  Serial.println(" hPa");
-  delay(300);
-
-  Serial.print("4. Approx. Altitude: ");
-  Serial.print(bme.readAltitude(1013.25));
-  Serial.println(" m");
-  delay(300);
-
-  Serial.print("5. Humidity: ");
-  Serial.print(bme.readHumidity());
-  Serial.println(" %RH");
-  delay(300);
+  float temperature = bme.readTemperature();
+  float humidity = bme.readHumidity();
+  float altitude = bme.readAltitude(1008);
+  float barometer = bme.readPressure() / 100.0F;
 
   mpu.getEvent(&a, &g, &temp);
 
-  Serial.print("6. Acceleration X: ");
-  Serial.print(a.acceleration.x);
-  Serial.print(", Y: ");
-  Serial.print(a.acceleration.y);
-  Serial.print(", Z: ");
-  Serial.print(a.acceleration.z);
-  Serial.println(" m/s^2");
-  delay(300);
+  float x_axis = a.acceleration.x;
+  float y_axis = a.acceleration.y;
+  float z_axis = a.acceleration.z;
 
-  Serial.print("7. Rotation X: ");
-  Serial.print(g.gyro.x);
-  Serial.print(", Y: ");
-  Serial.print(g.gyro.y);
-  Serial.print(", Z: ");
-  Serial.print(g.gyro.z);
-  Serial.println(" rad/s");
-  delay(300);
+  float x_gyro = g.gyro.x;
+  float y_gyro = g.gyro.y;
+  float z_gyro = g.gyro.z;
 
-  Serial.println();
+  if(millis() - lastMillis > 1000){
+    Serial.println("-------------------------------------------------");
+
+    lastMillis = millis();
+
+    // Print sensor data
+    Serial.println("SENSORS READING ...");
+    
+    Serial.println("1. Proximity: " + String(proximity));
+    Serial.println("2. Temperature: " + String(temperature) + " °C");
+    Serial.println("3. Humidity: " + String(humidity) + " %RH");
+    Serial.println("4. Approx. Altitude: " + String(altitude) + " m");
+    Serial.println("5. Barometer: " + String(barometer) + " hPa");
+    Serial.println("6. Accelerometer X: " + String(x_axis) + ", Y: " + String(y_axis) + ", Z: " + String(z_axis) + " m/s^2");
+    Serial.println("7. Gyrometer X: " + String(x_gyro) + ", Y: " + String(y_gyro) + ", Z: " + String(z_gyro) + " rad/s");
+
+    Serial.println();
+  }
   
   // publish a message roughly every second.
-  if (millis() - lastMillis > 1000) {
-    lastMillis = millis();
+  if (millis() - sendMillis > 1000) {
+    sendMillis = millis();
+
+    Serial.println("PUBLISH DATA ...");
 
     String data = "{\"temperature\":" + String(bme.readTemperature()) + ",";
     data += "\"humidity\":" + String(bme.readHumidity()) + "}";
