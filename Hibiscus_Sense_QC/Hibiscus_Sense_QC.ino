@@ -313,8 +313,10 @@ void loop() {
 
     Serial.println("PUBLISH DATA ...");
 
-    String data = "{\"temperature\":" + String(bme.readTemperature()) + ",";
-    data += "\"humidity\":" + String(bme.readHumidity()) + "}";
+    String data = "{\"temperature\":" + String(temperature) + ",";
+    String data = "{\"barometer\":" + String(barometer) + ",";
+    String data = "{\"altitude\":" + String(altitude) + ",";
+    data += "\"humidity\":" + String(humidity) + "}";
 
     Serial.println("Data to Publish: " + data);
     Serial.println("Length of Data: " + String(data.length()));
