@@ -14,10 +14,10 @@ Once these 4 required tools are available, let's connect Hibiscus Sense to your 
 1. Connect the USB cable Type-C to Hibiscus Sense and Type-A to your PC.
 2. On the Arduino IDE, choose the correct  *COM port* interfaced to CP2104 USB driver on Hibiscus Sense.
 
-`On Windows OS` Example: COM5
+`On Windows OS` Example: *COM5*
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-com-port.png" width="800"></a></p>
 
-`On Mac OS` Example /dev/cu.usbserial-XXXXXXXXX
+`On Mac OS` Example: */dev/cu.usbserial-XXXXXXXXX*
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-com-port-mac.png" width="800"></a></p>
 
 3. On the board selection, choose *ESP32 Dev Module*.
