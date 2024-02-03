@@ -10,7 +10,7 @@ Prior to start learning and hands-on, you have to make sure required tools below
 
 Once these 4 required tools are available, let's connect Hibiscus Sense to your PC.
 
-## Connect Hibiscus Sense to Computer's USB Port
+## Connect Hibiscus Sense to Your PC (6 Steps)
 1. Connect the USB cable Type-C to Hibiscus Sense and Type-A to your PC.
 2. On the Arduino IDE, choose the correct  *COM port* interfaced to CP2104 USB driver on Hibiscus Sense.
 
@@ -38,7 +38,7 @@ Hibiscus Sense, shipped with default sketch to check the sensors and list availa
 
 If you did not see any result on the Serial Monitor or having challenges to connect the board to your PC, please contact Mr. Ariffin via [WhatsApp](https://api.whatsapp.com/send?phone=60177875232&text=Hi%20Mr.%20Ariffin,%20please%20help.%20My%20Hibiscus%20Sense,%20seems%20not%20working%20for%20the%20first%20time.), he can assist you.
 
-### Install ESP32 Arduino Core using Arduino IDE Boards Manager.
+### Install ESP32 Arduino Core using Arduino IDE Boards Manager. (7 Steps)
 
 1. On the Arduino IDE, go to menu: *File > Preferences*.
 2. Click on *Window icon* beside the Additional board manager URLs field.
