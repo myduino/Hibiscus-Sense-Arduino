@@ -11,13 +11,32 @@ Prior to start learning and hands-on, you have to make sure required tools below
 Once these 4 required tools are available, let's connect Hibiscus Sense to your PC.
 
 ## Connect Hibiscus Sense to Computer's USB Port
-Connect the USB cable Type-C to Hibiscus Sense and Type-A to your PC.
+1. Connect the USB cable Type-C to Hibiscus Sense and Type-A to your PC.
+2. On the Arduino IDE, choose the correct  *COM port* interfaced to CP2104 USB driver on Hibiscus Sense.
 
-Hibiscus Sense comes with preset program to test on-board actuators and sensors. Should be by now we'll see the buzzer is buzzing, the RGB LED changing colors, the blue LED blinking and the reading of sensors at Serial Monitor (we have to open the Arduino IDE Serial Monitor to see the data). Suppose, you didn't see any reaction on the board you can contact Mr. Ariffin via [WhatsApp](https://api.whatsapp.com/send?phone=60177875232&text=Hi%20Mr.%20Ariffin,%20please%20help.%20My%20Hibiscus%20Sense,%20seems%20not%20working%20for%20the%20first%20time.) for help.
+`On Windows OS` Example: COM5
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-com-port.png" width="800"></a></p>
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-first-time.gif" width="600"></a></p>
+`On Mac OS` Example /dev/cu.usbserial-XXXXXXXXX
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-com-port-mac.png" width="800"></a></p>
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-first-time-monitor.gif" width="600"></a></p>
+3. On the board selection, choose *ESP32 Dev Module*.
+
+`On Windows OS`
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-com-board.png" width="800"></a></p>
+
+`On Mac OS`
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-com-board-mac.png" width="800"></a></p>
+
+Hibiscus Sense, shipped with default sketch to check the sensors and list available Wi-Fi networks at your place. Let's continue to test it!
+
+4. Click the *magnifying glass* icon at the right side of the Arduino IDE to open the *Serial Monitor*.
+5. Set the Baud Rate to `115200`.
+6. Click the `IO0` button on Hibiscus Sense. You will see the result of the sensor and Wi-Fi checking on the Serial Monitor.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-first-time-monitor.png" width="800"></a></p>
+
+If you did not see any result on the Serial Monitor or having challenges to connect the board to your PC, please contact Mr. Ariffin via [WhatsApp](https://api.whatsapp.com/send?phone=60177875232&text=Hi%20Mr.%20Ariffin,%20please%20help.%20My%20Hibiscus%20Sense,%20seems%20not%20working%20for%20the%20first%20time.), he can assist you.
 
 ### Install ESP32 Arduino Core using Arduino IDE Boards Manager.
 
