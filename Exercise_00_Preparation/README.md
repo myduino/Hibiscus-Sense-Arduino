@@ -1,7 +1,9 @@
 ## Development Platform Preparation
-Prior to start learning to control the actuators and acquire data from the sensors on Hibiscus Sense using Arduino programming tool and language, we have to make sure all learning material including Arduino ESP32 library is ready, as below:
-1. Hibiscus Sense and a USB cable Type-A to Type-C. If you don't own it yet, you are always welcome to purchase it from :shopping_cart: [Myduino](https://myduino.com/product/myd-036/)
-2. Arduino IDE. Download it from here: [Windows](https://downloads.arduino.cc/arduino-1.8.13-windows.exe) / Linux [32-bit](https://downloads.arduino.cc/arduino-1.8.13-linux32.tar.xz), [64-bit](https://downloads.arduino.cc/arduino-1.8.13-linux64.tar.xz), [ARM 32-bits](https://downloads.arduino.cc/arduino-1.8.13-linuxarm.tar.xz) [ARM 64-bits](https://downloads.arduino.cc/arduino-1.8.13-linuxaarch64.tar.xz) / [Mac OSX](https://downloads.arduino.cc/arduino-1.8.13-macosx.zip).
+Prior to start learning and hands-on, you have to make sure required tools below are ready:
+1. **Hibiscus Sense**. If you don't own it yet, you are always welcome to purchase it from :shopping_cart: [Myduino](https://myduino.com/product/myd-036/)
+2. USB Cable Type-A to Type-C, because Hibiscus Sense's USB port is Type-C.
+2. **Arduino IDE**. Download it from it's official website [Arduino Software](https://www.arduino.cc/en/software) page and install it on your PC.
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-download.png" width="600"></a></p>
 3. [ESP32](https://github.com/espressif/arduino-esp32) hardware library. Below is screenshot, showing the `Arduino IDE Boards Manager` (Arduino IDE Menu: **_Tools > Board:"_________" > Boards Manager..._**) which already have esp32 hardware library `INSTALLED`. Follow this [instruction](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide) to Install using Arduino IDE.
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-hardware-library-esp32.png" width="600"></a></p>
 
