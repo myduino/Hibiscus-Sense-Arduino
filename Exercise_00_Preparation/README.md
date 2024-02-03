@@ -1,10 +1,13 @@
 ## Development Platform Preparation
 Prior to start learning and hands-on, you have to make sure required tools below are ready:
-1. **Hibiscus Sense**. If you don't own it yet, you are always welcome to purchase it from :shopping_cart: [Myduino](https://myduino.com/product/myd-036/)
-2. USB Cable Type-A to Type-C, because Hibiscus Sense's USB port is Type-C.
+1. **Hibiscus Sense**. If you don't own it yet, you can get it from :shopping_cart: [Myduino](https://myduino.com/product/myd-036/)
+2. **USB Cable Type-A to Type-C**, because Hibiscus Sense's USB port is Type-C.
 2. **Arduino IDE**. Download it from it's official website [Arduino Software](https://www.arduino.cc/en/software) page and install it on your PC.
+
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-download.png" width="600"></a></p>
-3. [ESP32](https://github.com/espressif/arduino-esp32) hardware library. Below is screenshot, showing the `Arduino IDE Boards Manager` (Arduino IDE Menu: **_Tools > Board:"_________" > Boards Manager..._**) which already have esp32 hardware library `INSTALLED`. Follow this [instruction](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html#installing-using-arduino-ide) to Install using Arduino IDE.
+
+3. [**ESP32**](https://github.com/espressif/arduino-esp32) **Arduino Core**. If you don't have it yet on your Arduino IDE, follow this [instructions]().
+
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-hardware-library-esp32.png" width="600"></a></p>
 
 ## Connect Hibiscus Sense to Computer's USB Port
@@ -13,5 +16,27 @@ Connect the USB cable Type-C to Hibiscus Sense and Type-A to our computer. Hibis
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-first-time.gif" width="600"></a></p>
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-first-time-monitor.gif" width="600"></a></p>
+
+### Install ESP32 Arduino Core using Arduino IDE Boards Manager.
+
+1. On the Arduino IDE, go to menu: *File > Preferences*.
+2. Click on *Window icon* beside the Additional board manager URLs field.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-menu-preferences-boards.png" width="600"></a></p>
+
+3. Copy the URLs below and paste it into the Additional Boards Manager URLs field and click the *OK* button.
+`https://espressif.github.io/arduino-esp32/package_esp32_index.json`
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-menu-preferences-board-url.png" width="600"></a></p>
+
+4. Click the *OK* button to exit the Preferences window.
+5. Open the *Boards Manager* on the left panel and search keyword: *esp32*
+6. Look for *esp32* by Espressif and click the *INSTALL* button.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-hardware-library-esp32-install.png" width="600"></a></p>
+
+7. Wait until the installation process is done, which would take several minutes, until the status on the boards is *INSTALLED*.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-hardware-library-esp32-installed.png" width="600"></a></p>
 
 <p align="right"><a href="https://github.com/myinvent/hibiscus-sense-arduino#hibiscus-sense-esp32-arduino-tutorial">&#128285; Back to Top</a> | <a href="https://github.com/myinvent/hibiscus-sense-arduino#table-of-content">&#128203; Table of Content</a><br><a href="https://forms.gle/UgpDSFc46K4MkvTM8">&#128640; Tutorial Improvement & Suggestions</a></p>
