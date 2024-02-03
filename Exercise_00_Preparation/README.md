@@ -6,7 +6,7 @@ Prior to start learning and hands-on, you have to make sure required tools below
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-download.png" width="600"></a></p>
 
-3. [**ESP32**](https://github.com/espressif/arduino-esp32) **Arduino Core**. If you don't have it yet on your Arduino IDE, follow this [instructions](https://github.com/myinvent/Hibiscus-Sense-Arduino/tree/main/Exercise_00_Preparation#install-esp32-arduino-core-using-arduino-ide-boards-manager).
+3. [**ESP32**](https://github.com/espressif/arduino-esp32) **Arduino Core**. If you don't have it yet on your Arduino IDE, follow this [instructions](#install-esp32-arduino-core-using-arduino-ide-boards-manager).
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-hardware-library-esp32.png" width="600"></a></p>
 
