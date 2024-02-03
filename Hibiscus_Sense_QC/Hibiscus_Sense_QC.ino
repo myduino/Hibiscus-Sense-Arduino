@@ -1,3 +1,5 @@
+// #include "soc/soc.h"
+// #include "soc/rtc_cntl_reg.h"
 #include <Adafruit_APDS9960.h>
 #include <Adafruit_BME280.h>
 #include <Adafruit_MPU6050.h>
@@ -7,9 +9,9 @@
 #include <MQTT.h>
 #include <Wire.h>
 
-#define WIFI_SSID                 "YourWiFiSSID"
-#define WIFI_PASSWORD             "YourWiFiPassword"
-#define MQTT_HOST                 "MQTTBrokerDNSorIP"
+#define WIFI_SSID                 "myinvententerprise"
+#define WIFI_PASSWORD             "04222682"
+#define MQTT_HOST                 "broker.hivemq.com"
 #define MQTT_PUBLISH_TOPIC        "60177875232/Hibiscus-Sense"
 #define MQTT_CONTROL_RGB_TOPIC    "60177875232/Hibiscus-Sense/RGB"
 #define MQTT_CONTROL_LED_TOPIC    "60177875232/Hibiscus-Sense/LED"
@@ -40,7 +42,7 @@ void IRAM_ATTR handleButtonPress() {
 }
 
 void connectToWiFi() {
-  Serial.print("Connecting to Wi-Fi '" + String(WIFI_SSID) + "' ...");
+  Serial.print("\nConnecting to Wi-Fi '" + String(WIFI_SSID) + "' ...");
 
   WiFi.mode(WIFI_STA);
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
@@ -95,7 +97,7 @@ void messageReceived(String &topic, String &payload) {
 }
 
 void connectToMqttBroker(){
-  Serial.print("Connecting to '" + String(MQTT_HOST) + "' ...");
+  Serial.print("\nConnecting to '" + String(MQTT_HOST) + "' ...");
   
   mqtt.begin(MQTT_HOST, net);
   mqtt.onMessage(messageReceived);
@@ -120,6 +122,8 @@ void connectToMqttBroker(){
 }
 
 void setup() {
+
+  // WRITE_PERI_REG(RTC_CNTL_BROWN_OUT_REG, 0); //disable   detector
 
   rgb.begin();
   rgb.show();
@@ -314,8 +318,8 @@ void loop() {
     Serial.println("PUBLISH DATA ...");
 
     String data = "{\"temperature\":" + String(temperature) + ",";
-    String data = "{\"barometer\":" + String(barometer) + ",";
-    String data = "{\"altitude\":" + String(altitude) + ",";
+    data += "\"barometer\":" + String(barometer) + ",";
+    data += "\"altitude\":" + String(altitude) + ",";
     data += "\"humidity\":" + String(humidity) + "}";
 
     Serial.println("Data to Publish: " + data);
