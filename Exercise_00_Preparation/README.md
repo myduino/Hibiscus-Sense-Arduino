@@ -6,7 +6,7 @@ Prior to start learning and hands-on, you have to make sure required tools below
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-download.png" width="800"></a></p>
 
-4. [**ESP32**](https://github.com/espressif/arduino-esp32) **Arduino Core**. If you don't have it yet on your Arduino IDE, follow this [instructions](#install-esp32-arduino-core-using-arduino-ide-boards-manager).
+4. [**ESP32**](https://github.com/espressif/arduino-esp32) **Arduino Core**. If you don't have it yet on your Arduino IDE, follow this [instructions](#install-esp32-arduino-core-using-arduino-ide-boards-manager-7-steps).
 
 Once these 4 required tools are available, let's connect Hibiscus Sense to your PC.
 
