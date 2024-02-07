@@ -101,7 +101,7 @@ In total, there are 3 data streaming over the Internet on the Blynk platform:
 
 9. Click the **icon** dropdown button and select **droplet** icon.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-virtual-icon.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-virtual-pin-icon.png" width="800"></a></p>
 
 10. Change the **NAME** field to **Humidity**.
 11. Choose the virtual **PIN** to begin with **V0**.
@@ -124,10 +124,16 @@ Good, a datastreams has been created for humidity value. Let's continue next ste
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-virtual-pin-created.png" width="800"></a></p>
 
-18. On the Humidity datastreams row, hover mouse to **Actions** column and click the **copy** icon.
+18. On the **Humidity** datastreams row, hover mouse to **Actions** column and click the **copy** icon.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-virtual-pin-created.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-virtual-pin-copy.png" width="800"></a></p>
 
+19. Replace the icon with **temperature icon**, **NAME** field to ***Temperature***, colour to **red colour**, **UNIT** selection to ***Celsius, °C***, **MAX** to ***60*** and click the **Create** button.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-virtual-pin-temperature.png" width="800"></a></p>
+
+20. Repeat step 18 to copy the datastream configuration.
+21. Replace the icon with **lamp icon**, **NAME** field to ***LED***, colour to **green colour**, **DATA TYPE** selection to ***Integer***, **UNIT** selection to ***None***, **MAX** to ***0*** and click the **Create** button.
 
 Therefore in the sketch below, we program the ESP32 to acquire all the from APDS9960, BME280 and MPU6050. Then update the data to the Blynk app using `Blynk.virtualWrite()` function.
 
