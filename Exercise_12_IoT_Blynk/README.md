@@ -27,26 +27,47 @@ Prior to start program the Hibiscus Sense. Let's setup Blynk platform.
 ## Setup Blynk Platform
 
 1. Click this link [https://blynk.cloud/dashboard/register](https://blynk.cloud/dashboard/register) to create your Blynk account.
-2. as
+2. Fill in your email in the **EMAIL** field, **check** on *I agree to Terms and Conditions and accept Privacy Policy* and click the **Sign Up** button.
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-register-email.png" width="800"></a></p>
 
-There are 2 steps we need to complete, follow the instructions below:
-1. [Getting Started with the Blynk App](https://docs.blynk.cc/#getting-started-getting-started-with-the-blynk-app-1-create-a-blynk-account)
-2. [Getting Started With Hardware](https://docs.blynk.cc/#getting-started-getting-started-with-hardware)
+3. Go to your email and look for the email from Blynk.
 
-In this exercise, we want to monitor:
-1. Proximity
-2. Altitude
-3. Barometric pressure
-4. Humidity
-5. Temperature
-6. Accelerometer, x-axis
-7. Accelerometer, y-axis
-8. Accelerometer, z-axis
-9. Gyrometer, x-axis
-10. Gyrometer, y-axis
-11. Gyrometer, z-axis
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-register-confirm-email.png" width="800"></a></p>
+
+4. Click the **Create Password** button.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-register-link-password.png" width="800"></a></p>
+
+5. Fill in your password in the **PASSWORD** field, make sure to follow the password specifications and click the **Next** button.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-register-create-password.png" width="800"></a></p>
+
+6. Fill in your name in the **FIRST NAME** field and click the **Done** button.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-register-profile.png" width="800"></a></p>
+
+7. Click the **Skip** button, to skip the Blynk Tour.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-register-skip-tour.png" width="800"></a></p>
+
+8. Click the **Cancel** button, to skip the Quickstart process.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-register-cancel-quickstart.png" width="800"></a></p>
+
+Good, you have successfully setup account on the Blynk platform.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-register-welcome.png" width="800"></a></p>
+
+In this exercise, we want to:
+1. Monitor:
+- Humidity
+- Temperature
+
+2. Control
+- LED
+
+Before
 
 Therefore in the sketch below, we program the ESP32 to acquire all the from APDS9960, BME280 and MPU6050. Then update the data to the Blynk app using `Blynk.virtualWrite()` function.
 
