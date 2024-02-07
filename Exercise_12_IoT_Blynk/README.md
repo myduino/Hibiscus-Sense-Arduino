@@ -3,26 +3,35 @@ In this exercise, we will begin the journey of Practical Internet of Things (IoT
 You might have heard IoT somewhere ... in Seminar, Webinar, Podcast, YouTube or even from your closest family and friends. But what actually is IoT? In simple words, IoT is a network of connected devices over the Internet, thus you can either control or monitor the devices over the Internet. In much better definition, **IoT is a _system_**, consists of network of connected devices over the Internet via middleware enabling bidirectional communication between human-to-machine or machine-to-machine in exchanging on-demand information resulting in better decision making.
 
 There are 4 key components in IoT:
-1. **`Things`**: The devices, consists of microcontroller (including power supply, GPIO, etc such as ESP32), sensors (such as Temperature Sensor), actuators (LED & Buzzer) and Internet connectivity. [Hibiscus Sense](https://myduino.com/product/myd-036/) is an example of prototype IoT devices. [UnarvuTemp](https://unarvuiot.com/unarvutemp.html) is an example of end-product IoT devices.
-2. **`Middleware`**: The cloud/server, which handle the inbound/outbound of data transmission and communication over the Internet, including data ingestion, data storage, data management, data analytics, etc. These are available IoT platform such as [Favoriot](https://platform.favoriot.com/v2/signup/FAVO7245IFBK), [Blynk](https://blynk.io/), [Thingspeak](https://thingspeak.com/), [Ubidots](https://ubidots.com/), [Thingsboard](https://thingsboard.io/), [ParticleIO](https://www.particle.io/) and more.
-3. **`App`**: The software interface, visualising or the story teller of the data from the IoT devices in form of human readable format such as alert, notification and dashboard and analytics interfaces. We can find the app in from of mobile app, desktop app or web app.
-4. **`Internet`**. The Internet technology, such as Wi-Fi, Ethernet, Cellular (GSM/GPRS, 3G, 4G, 5G) and Satellite.
+1. **`Things`**: The connected devices, consists of microcontroller (such as ESP32), sensors, actuators with Internet connectivity. [Hibiscus Sense](https://myduino.com/product/myd-036/) is an example of prototype IoT devices. [DDS45-LB Distance Sensor](https://myduino.com/product/drg-039/) is an example of end-product IoT devices.
+2. **`Middleware`**: The cloud/server, which handle the inbound/outbound of data transmission and communication over the Internet, including data ingestion, data storage, data management, data analytics, etc. These are available IoT platform such as [Favoriot](https://platform.favoriot.com/), [Blynk](https://blynk.io/), [Thingspeak](https://thingspeak.com/), [Ubidots](https://ubidots.com/), [Thingsboard](https://thingsboard.io/), [ParticleIO](https://www.particle.io/) and more.
+3. **`App`**: The software interface, where human can interact with the data. Software, visualise the data from the IoT devices in form of human readable format such as alert, notification, dashboard, and analytics interfaces. We can find the app in from of mobile app, desktop app or web app.
+4. **`Internet`**. The Internet technology, such as Wi-Fi, Ethernet, Cellular (GSM/GPRS, 3G, 4G, 5G) and Satellite, is required for Internet connectivity around the world.
 
 Any project without one of the components, it is not an IoT project. Therefore, in any IoT project, first thing to do is to choose the right IoT platform for our IoT project.
 
 In this exercise, we choose Blynk as our IoT platform.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://docs.blynk.cc/images/architecture.png" width="700"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://osoyoo.com/driver/blynk/blynk-iot.png" width="700"></a></p>
 
 **`Blynk`** is one of the most easiest IoT platform ever exist on the planet. Their solution, has most complete IoT components, which are:
 - Things: They provide Blynk Arduino libraries - to enable the communication between the cloud and devices.
 - Middleware: They provide Blynk Server - responsible for all the communications between the smartphone and the things.
 - App: They provide Blynk app - we can create stunning dashboard or interfaces, using its various widgets.
-- Internet: not provided by them, we can choose which technology we want to use on the Things, such as `WiFi (ESP32)`, `Cellular (SIM900 GSM)` or `Ethernet (ENC28J60)`.
+- Internet: Not provided by them, but we can choose which Internet technology we want to use, such as `WiFi (ESP32)`, `Cellular (SIM900 GSM)` or `Ethernet (ENC28J60)`, Blynk provide the library.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/blynkkk/blynkkk.github.io/raw/master/images/GithubBanner.jpg" width="700"></a></p>
 
-Prior to start program the Hibiscus Sense to connect to Blynk on your smartphone. There are 2 steps we need to complete, follow the instructions below:
+Prior to start program the Hibiscus Sense. Let's setup Blynk platform.
+
+## Setup Blynk Platform
+
+1. Click this link [https://blynk.cloud/dashboard/register](https://blynk.cloud/dashboard/register) to create your Blynk account.
+2. as
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-register-email.png" width="800"></a></p>
+
+There are 2 steps we need to complete, follow the instructions below:
 1. [Getting Started with the Blynk App](https://docs.blynk.cc/#getting-started-getting-started-with-the-blynk-app-1-create-a-blynk-account)
 2. [Getting Started With Hardware](https://docs.blynk.cc/#getting-started-getting-started-with-hardware)
 
