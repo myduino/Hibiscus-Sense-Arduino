@@ -80,7 +80,7 @@ In total, there are 3 data streaming over the Internet on the Blynk platform:
 2. **Temperature**, with data type **Double**, minimum value **0** and maximum value **60**.
 3. **LED**, with data type **Integer**, minimum value **0** and maximum value **1**.
 
-### Create a **Blynk Template** with **3 Datastreams**.
+### Create a **Blynk Template** with **3 Datastreams**
 
 1. On the left panel, click the **Developer Zone**.
 2. Click the **+ New Template** button.
@@ -136,6 +136,17 @@ Good, a datastreams has been created for humidity value. Let's continue next ste
 21. Replace the icon with **lamp icon**, **NAME** field to ***LED***, colour to **green colour**, **DATA TYPE** selection to ***Integer***, **UNIT** selection to ***None***, **MAX** to ***0*** and click the **Create** button.
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-virtual-pin-led.png" width="800"></a></p>
+
+22. Click the **Save** button, to save the datastreams configuration.
+
+Good, you have successfully create 3 datastreams with assigned Virtual Pin:
+1. Humidity, V0
+2. Temperature, V1
+3. LED, V2
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-virtual-pins.png" width="800"></a></p>
+
+### Configure the **Blynk Dashboard**
 
 Therefore in the sketch below, we program the ESP32 to acquire all the from APDS9960, BME280 and MPU6050. Then update the data to the Blynk app using `Blynk.virtualWrite()` function.
 
