@@ -110,22 +110,23 @@ In total, there are 3 data streaming over the Internet on the Blynk platform:
 14. Fill in **0** as the MIN value.
 15. Fill in **100** as the MAX value.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-virtual-info.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-virtual-pin-info.png" width="800"></a></p>
 
 16. Click the **colour** dropdown button and select **blue** colour to represent humidity value.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-virtual-color.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-virtual-pin-color.png" width="800"></a></p>
 
 17. Click the **Create** button.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-virtual-create.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-virtual-pin-create.png" width="800"></a></p>
 
 Good, a datastreams has been created for humidity value. Let's continue next steps to complete other 2 datastreams.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-virtual-created.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-virtual-pin-created.png" width="800"></a></p>
 
 18. On the Humidity datastreams row, hover mouse to **Actions** column and click the **copy** icon.
 
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-virtual-pin-created.png" width="800"></a></p>
 
 
 Therefore in the sketch below, we program the ESP32 to acquire all the from APDS9960, BME280 and MPU6050. Then update the data to the Blynk app using `Blynk.virtualWrite()` function.
