@@ -59,6 +59,10 @@ Good, you have successfully setup account on the Blynk platform.
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-register-welcome.png" width="800"></a></p>
 
+## Blynk Library
+
+Before you can program the Hibiscus Sense to connect to Blynk platform, install the Blynk library on the Arduino IDE.
+
 In this exercise, we want to:
 1. Monitor:
 - Humidity
