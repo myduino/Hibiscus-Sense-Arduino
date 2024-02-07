@@ -67,7 +67,7 @@ Before you can program the Hibiscus Sense to connect to Blynk platform, install 
 
 ## Let's Get Started Exercise
 
-In this exercise, we want to:
+In this exercise, we would like to learn how to:
 1. Monitor:
 - Humidity
 - Temperature
