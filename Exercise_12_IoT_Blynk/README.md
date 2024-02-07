@@ -59,9 +59,13 @@ Good, you have successfully setup account on the Blynk platform.
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-register-welcome.png" width="800"></a></p>
 
-## Blynk Library
+## Install Blynk Library on Arduino IDE
 
 Before you can program the Hibiscus Sense to connect to Blynk platform, install the Blynk library on the Arduino IDE.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-library-blynk.png" width="800"></a></p>
+
+## Let's Get Started Exercise
 
 In this exercise, we want to:
 1. Monitor:
@@ -70,8 +74,6 @@ In this exercise, we want to:
 
 2. Control
 - LED
-
-Before
 
 Therefore in the sketch below, we program the ESP32 to acquire all the from APDS9960, BME280 and MPU6050. Then update the data to the Blynk app using `Blynk.virtualWrite()` function.
 
@@ -83,8 +85,6 @@ Therefore in the sketch below, we program the ESP32 to acquire all the from APDS
 #include <BlynkSimpleEsp32.h>
 #include <Adafruit_APDS9960.h>
 #include <Adafruit_BME280.h>
-#include <Adafruit_MPU6050.h>
-#include <Adafruit_NeoPixel.h>
 
 Adafruit_APDS9960 apds;
 Adafruit_BME280 bme;
