@@ -270,6 +270,8 @@ void loop() {
 
   if(millis() - previousMillis > 1000){
 
+    previousMillis = millis();
+
     float humidity = bme.readHumidity();
     float temperature = bme.readTemperature();
 
