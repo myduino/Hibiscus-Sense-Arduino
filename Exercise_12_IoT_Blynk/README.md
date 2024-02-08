@@ -283,8 +283,7 @@ void loop() {
 
 5. Replace the copied Blynk Device Information in the sketch.
 6. Replace the Wi-Fi **ssid** and Wi-Fi **password** information.
-6. Upload the complete sketch to ESP32.
-7. 
+7. Upload the complete sketch to ESP32.
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-dashboard.png" width="800"></a></p>
 
