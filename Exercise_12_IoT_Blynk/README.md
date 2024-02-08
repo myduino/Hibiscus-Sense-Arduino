@@ -291,6 +291,6 @@ void loop() {
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-dashboard.png" width="800"></a></p>
 
-Congratulations, you have successfully complete the exercise.
+Congratulations, you have successfully completed the exercise, connecting Hibiscus Sense to Blynk platform.
 
 <p align="right"><a href="https://forms.gle/UgpDSFc46K4MkvTM8">&#128640; Tutorial Improvement & Suggestions</a></p>
