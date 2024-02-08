@@ -148,6 +148,8 @@ Good, you have successfully create 3 datastreams with assigned Virtual Pin:
 
 ### Configure the **Blynk Dashboard**
 
+1. 
+
 Therefore in the sketch below, we program the ESP32 to acquire all the from APDS9960, BME280 and MPU6050. Then update the data to the Blynk app using `Blynk.virtualWrite()` function.
 
 ```cpp
