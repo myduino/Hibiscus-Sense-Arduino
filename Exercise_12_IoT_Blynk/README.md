@@ -8,7 +8,7 @@ There are 4 key components in IoT:
 1. **`Things`**: The connected devices, consists of microcontroller (such as ESP32), sensors, actuators with Internet connectivity. [Hibiscus Sense](https://myduino.com/product/myd-036/) is an example of prototype IoT devices. [DDS45-LB Distance Sensor](https://myduino.com/product/drg-039/) is an example of end-product IoT devices.
 2. **`Middleware`**: The cloud/server, which handle the inbound/outbound of data transmission and communication over the Internet, including data ingestion, data storage, data management, data analytics, etc. These are available IoT platform such as [Favoriot](https://platform.favoriot.com/), [Blynk](https://blynk.io/), [Thingspeak](https://thingspeak.com/), [Ubidots](https://ubidots.com/), [Thingsboard](https://thingsboard.io/), [ParticleIO](https://www.particle.io/) and more.
 3. **`App`**: The software interface, where human can interact with the data. Software, visualise the data from the IoT devices in form of human readable format such as alert, notification, dashboard, and analytics interfaces. We can find the app in from of mobile app, desktop app or web app.
-4. **`Internet`**. The Internet technology, such as Wi-Fi, Ethernet, Cellular (GSM/GPRS, 3G, 4G, 5G) and Satellite, is required for Internet connectivity around the world.
+4. **`Internet`**. The Internet technology, such as Wi-Fi, Ethernet, Cellular (2G, 3G, 4G, 5G) and Satellite, is required for Internet connectivity around the world.
 
 Any project without one of the components, it is not an IoT project. Therefore, in any IoT project, first thing to do is to choose the right IoT platform for our IoT project.
 
