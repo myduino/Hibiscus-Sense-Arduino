@@ -1,3 +1,5 @@
+# Exercise 12 ESP32 IOT Blynk
+
 In this exercise, we will begin the journey of Practical Internet of Things (IoT) with Arduino.
 
 You might have heard IoT somewhere ... in Seminar, Webinar, Podcast, YouTube or even from your closest family and friends. But what actually is IoT? In simple words, IoT is a network of connected devices over the Internet, thus you can either control or monitor the devices over the Internet. In much better definition, **IoT is a _system_**, consists of network of connected devices over the Internet via middleware enabling bidirectional communication between human-to-machine or machine-to-machine in exchanging on-demand information resulting in better decision making.
