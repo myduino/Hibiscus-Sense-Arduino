@@ -148,9 +148,73 @@ Good, you have successfully create 3 datastreams with assigned Virtual Pin:
 
 ### Configure the **Blynk Dashboard**
 
-1. 
+1. Click the **Web Dashboard** tab.
+2. Click the **Edit** button.
 
-Therefore in the sketch below, we program the ESP32 to acquire all the from APDS9960, BME280 and MPU6050. Then update the data to the Blynk app using `Blynk.virtualWrite()` function.
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-dashboard-edit.png" width="800"></a></p>
+
+3. On the **Widget Box**, scroll down and find **Gauge** widget.
+4. Drag the **Gauge** widget into the **Dashboard**.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-dashboard-humidity-add.png" width="800"></a></p>
+
+5. Hover the mouse to the **Gauge** widget and click on the **Gear** icon to configure the widget.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-dashboard-humidity-config.png" width="800"></a></p>
+
+6. Fill in the **TITLE** to ***Humidity***, **Datastream** select to ***Humidity (V0)***, change the **color** and click the **Save** button.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-dashboard-humidity-info.png" width="800"></a></p>
+
+7. Copy the widget, by hovering your mouse to the **Humidity** widget and click the **copy** icon.
+8. Replace the **TITLE** to ***Temperature***, **Datastream** select to ***Temperature (V1)***, change the **color** and click the **Save** button.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-dashboard-temperature-info.png" width="800"></a></p>
+
+9. On the **Widget Box**, scroll and find **Switch** widget and drag the **Gauge** widget into the **Dashboard**.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-dashboard-led-add.png" width="800"></a></p>
+
+10. Fill in the **TITLE** to ***LED***, **Datastream** select to ***LED (V2)***, change the **color** and click the **Save** button.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-dashboard-led-info.png" width="800"></a></p>
+
+11. Click the **Save** button, to save the dashboard.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-dashboard-save.png" width="800"></a></p>
+
+### Create the **Device**
+
+1. On the left panel, click the **Devices**.
+2. Click the **+ New Device** button.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-device-create.png" width="800"></a></p>
+
+3. Choose to create new device **From Template**.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-device-create-template.png" width="800"></a></p>
+
+4. Choose **Hibiscus Sense** and give name ***Hibiscus Sense*** and click the **Create** button.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-device-create-new.png" width="800"></a></p>
+
+Good, your device has successfully created.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-device-created.png" width="800"></a></p>
+
+Let's program the device.
+
+### Program the Device
+
+To connect Hibiscus Sense to Blynk platform, you need to program the ESP32 including with Blynk Device Information, which can be accessed and copied from the Device Info.
+
+1. On the Device page, click the **Device Info** tab.
+2. Click the on the **FIRMWARE CONFIGURATION** field to **copy** the Blynk Device Information.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-device-created.png" width="800"></a></p>
+
+3. Open the Arduino IDE with new sketch.
+4. Copy the sketch below into the new sketch.
 
 ```cpp
 #define BLYNK_PRINT Serial
@@ -241,12 +305,8 @@ void loop(){
   }
 }
 ```
-Now, we can upload the complete sketch to ESP32, once done uploading observe the output on the Blynk App, while we can control the RGB LED and LED.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-twelve.gif" width="300"></a></p>
-
-If you want to monitor and control Hibiscus Sense Blynk demo app, you can download the Blynk App and scan the QR code below:
-
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-twelve.png" width="200"></a></p>
+5. Replace the copied Blynk Device Information in the sketch.
+6. Upload the complete sketch to ESP32.
 
 <p align="right"><a href="https://forms.gle/UgpDSFc46K4MkvTM8">&#128640; Tutorial Improvement & Suggestions</a></p>
