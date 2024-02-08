@@ -38,21 +38,21 @@ Hibiscus Sense, shipped with default sketch to check the sensors and list availa
 
 If you did not see any result on the Serial Monitor or having challenges to connect the board to your PC, please contact Mr. Ariffin via [WhatsApp](https://api.whatsapp.com/send?phone=60177875232&text=Hi%20Mr.%20Ariffin,%20please%20help.%20My%20Hibiscus%20Sense,%20seems%20not%20working%20for%20the%20first%20time.), he can assist you.
 
-### Install ESP32 Arduino Core using Arduino IDE Boards Manager. (7 Steps)
+### Install ESP32 Arduino Core using Arduino IDE Boards Manager (7 Steps)
 
-1. On the Arduino IDE, go to menu: *File > Preferences*.
-2. Click on *Window icon* beside the Additional board manager URLs field.
+1. On the Arduino IDE, go to menu: ***File > Preferences***.
+2. Click on ***Window icon*** beside the Additional board manager URLs field.
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-menu-preferences-boards.png" width="800"></a></p>
 
-3. Copy the URLs below and paste it into the Additional Boards Manager URLs field and click the *OK* button.
+3. Copy the URLs below and paste it into the Additional Boards Manager URLs field and click the ***OK*** button.
 `https://espressif.github.io/arduino-esp32/package_esp32_index.json`
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-menu-preferences-board-url.png" width="800"></a></p>
 
-4. Click the *OK* button to exit the Preferences window.
-5. Open the *Boards Manager* on the left panel and search keyword: *esp32*
-6. Look for *esp32* by Espressif and click the *INSTALL* button.
+4. Click the ***OK*** button to exit the Preferences window.
+5. Open the ***Boards Manager*** on the left panel and search keyword: ***esp32***
+6. Look for ***esp32*** by Espressif and click the *INSTALL* button.
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-hardware-library-esp32-install.png" width="800"></a></p>
 
