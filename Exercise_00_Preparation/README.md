@@ -1,5 +1,5 @@
-## Development Platform Preparation
-Prior to start learning and hands-on, you have to make sure required tools below are ready:
+# Development Platform Preparation
+Prior to start learning and hands-on, you have to make sure 4 required tools below are ready:
 1. **Hibiscus Sense**. If you don't own it yet, you can get it from :shopping_cart: [Myduino](https://myduino.com/product/myd-036/)
 2. **USB Cable Type-A to Type-C**, because Hibiscus Sense's USB port is Type-C.
 3. **Arduino IDE**. Download it from it's official website [Arduino Software](https://www.arduino.cc/en/software) page and install it on your PC.
