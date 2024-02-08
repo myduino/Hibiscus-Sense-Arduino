@@ -45,7 +45,7 @@ If you did not see any result on the Serial Monitor or having challenges to conn
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-menu-preferences-boards.png" width="800"></a></p>
 
-3. Copy the URLs below and paste it into the Additional Boards Manager URLs field and click the ***OK*** button.
+3. Copy the URLs below and paste it into the ***Additional Boards Manager URLs*** field and click the ***OK*** button.
 `https://espressif.github.io/arduino-esp32/package_esp32_index.json`
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-menu-preferences-board-url.png" width="800"></a></p>
