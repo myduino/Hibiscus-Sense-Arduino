@@ -1,6 +1,6 @@
 # Exercise 04 Melody
 
-The aim of this exercise is to create a simple melody by playing specific frequencies in sequence on the Hibiscus Sense board’s small buzzer (connected to GPIO13).
+The aim of this exercise is to create a simple melody like alarm beeping sound by playing specific frequencies in sequence on the Hibiscus Sense board’s small buzzer (connected to GPIO13).
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four-b.png" width="400"></a></p>
 
