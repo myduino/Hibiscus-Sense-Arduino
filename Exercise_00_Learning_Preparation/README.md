@@ -38,11 +38,11 @@ Once all required tools are available and accesible, you can [Connect Hibiscus S
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-hardware-library-esp32-installed.png" width="800"></a></p>
 
-Let's connect Hibiscus Sense to your PC, follow this [instructions](#connect-hibiscus-sense-to-your-pc-6-steps). If your PC not able to detect the COM port number, you need to install the USB driver, follow this [instructions](#install-usb-driver-in-your-pc-6-steps)
+Great! The required software are succesfully installed, let's connect Hibiscus Sense to your PC, follow this [instructions](#connect-hibiscus-sense-to-your-pc-6-steps). If your PC not able to detect Hibiscus Sense COM port number, you need to install the USB driver, follow this [instructions](#install-usb-driver-in-your-pc-6-steps)
 
 ## Connect Hibiscus Sense to Your PC (6 Steps)
 1. Connect the USB cable Type-C to Hibiscus Sense and Type-A to your PC.
-2. On the Arduino IDE, choose the correct  *COM port* interfaced to CP2104 USB driver on Hibiscus Sense.
+2. On the Arduino IDE, choose the correct *COM port* interfaced to CP2104 USB driver on Hibiscus Sense.
 
 `On Windows OS` Example: *COM5*
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-com-port.png" width="800"></a></p>
