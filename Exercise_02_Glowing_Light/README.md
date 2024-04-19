@@ -42,7 +42,7 @@ void setup() {
 }
 
 void loop() {
-  // function for() to create decremental value by 1 start from 255 --> 0
+  // for() statement to create decremental value by 1 start from 255 --> 0
   // from OFF LED to linear increasing brightness, for active-low circuit
   for(int brightness = 255; brightness >= 0; brightness--){   
     // ledcWrite() function will generate PWM output signal according to variable brightness value
@@ -70,7 +70,7 @@ In the `void setup()` function, we also declare which GPIO to deliver the output
 ledcAttachPin(2, 0);
 ```
 
-Both function to configure the PWM channel and to declare GPIO for PWM output signal has been done. Now we can generate the PWM signal by using `ledcWrite()` function inside the `void loop` to control the brightness of the blue LED to produce glowing blue LED effect. Since the blue LED circuit is active-low, the PWM value _(from 255-0)_ needs to be automatically decremental 1 by 1 by, from 255 to 254, from 254 to 253, from 253 to 252 and so on until the value reach minimum PWM value, 0. Therefore, `for()` function is used to automatically generate decremental variable of PWM value from 255-0 as follows, where the `ledcWrite()` function is inside `for()` function:
+Both function to configure the PWM channel and to declare GPIO for PWM output signal has been done. Now we can generate the PWM signal by using `ledcWrite()` function inside the `void loop` to control the brightness of the blue LED to produce glowing blue LED effect. Since the blue LED circuit is active-low, the PWM value _(from 255-0)_ needs to be automatically decremental 1 by 1 by, from 255 to 254, from 254 to 253, from 253 to 252 and so on until the value reach minimum PWM value, 0. Therefore, `for()` statement is used to automatically generate decremental variable of PWM value from 255-0 as follows, where the `ledcWrite()` function is inside `for()` statement:
 ```cpp
 for(int brightness = 255; brightness >= 0; brightness--){   
   ledcWrite(0, brightness);
