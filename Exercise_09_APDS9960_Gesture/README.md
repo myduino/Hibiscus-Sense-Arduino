@@ -1,6 +1,10 @@
+# Exercise 09: Hand Gesture Detection using APDS9960
+
+The aim of this exercise is to learn how to detect the hand gestures using the APDS9960 sensor.
+
 In this exercise, we will use same APDS9960 from [Exercise 8](https://github.com/myinvent/hibiscus-sense-arduino#exercise-8-monitor-proximity-value-from-apds9960) with different application of sensing gesture direction, the sketch as follows:
 
-**Complete Sketch**
+## Complete Sketch
 
 ```cpp
 // include the Adafruit_APDS9960 header file.
@@ -38,7 +42,7 @@ void loop() {
 }
 ```
 
-Now, we can upload the complete sketch to ESP32, once done uploading open the Serial Monitor. To try the gesture:
+You can copy the sketch above, paste it into the Arduino IDE and upload the complete sketch to ESP32. Once done uploading open the Serial Monitor. To try the gesture:
 1. Activate the proximity by hovering our hands close as possible above the APDS9960.
 2. Make gesture by hivering our hands into direction of UP, DOWN, RIGHT and LEFT.
 
