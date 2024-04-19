@@ -1,3 +1,7 @@
+# Exercise 05 Serial Communication
+
+The aim of this exercise is to demonstrate serial communication between the ESP32 microcontroller on the Hibiscus Sense board and your PC using the USB-to-Serial converter (CP2104) on the Hibiscus Sense board.
+
 Serial Communication is a communication process, receiving and transmitting data between two devices, such as **_computer to computer_** or **_microcontroller to computer_** or **_microcontroller to microcontroller_**, by implementing hardware protocol known as `UART (Universal Asynchronous Receiver/Transmitter)`. The data were sent/receive bit by bit sequentially by UART over two or one transmission line (wires), with configurables speed known as `baud-rate` or `bits-per-second` (bps): _9600, 19200, 38400, 57600, 115200, 230400, 460800, 921600_.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-five.gif" width="200"></a></p>
@@ -38,7 +42,7 @@ Although, the hardware serial is ready, it woudld not initialized, unless we pro
 
 We have understand main `Serial` library functions, now let's write a program ESP32 can transmit incremental value to Arduino IDE's Serial Monitor. The program as below:
 
-**Complete Sketch**
+## Complete Sketch
 ```cpp
 // global variable named as counter with value 0
 int counter = 0;
@@ -57,8 +61,11 @@ void loop() {
   delay(1000);
 }
 ```
+You can copy the sketch above, paste it into the Arduino IDE and upload the complete sketch to ESP32, then observe the output. Once done uploading, open the Serial Monitor. By observation, we can see an incremental value with newline is printed on the Arduino IDE Serial Monitor.
 
-**Detail Sketch Explanations**
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-five-b.gif" width="600"></a></p>
+
+## Detail Sketch Explanations
 
 To create incremental value, we can use (+) plus operator as it is an _addition_ arithmetic operations. We can create a global variable with `initial value of 0` and `int` integer data type.
 ```cpp
@@ -84,9 +91,5 @@ Pause the task for a second before continue to the next action.
 ```cpp
 delay(1000);
 ```
-
-Now, we can upload the complete sketch to ESP32, once done uploading open the Serial Monitor. By observation, we can see an incremental value with newline is printed on the Arduino IDE Serial Monitor.
-
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-five-b.gif" width="600"></a></p>
 
 <p align="right"><a href="https://forms.gle/UgpDSFc46K4MkvTM8">&#128640; Tutorial Improvement & Suggestions</a></p>
