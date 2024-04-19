@@ -1,4 +1,7 @@
 # Exercise 01 Strobe Light
+
+The goal of this exercise is to control the blue LED on GPIO2, alternating the LED state between ON and OFF with a specific delay to create a strobe light effect on the Hibiscus Sense board.
+
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-exercise-one.png" width="400"></a></p>
 
 There is 1x blue LED labelled as `LED` on-board, as circled on the image above. The circuit of this LED is an **active-low circuit**, as shown in the schematic below, which the negative (-ve) terminal of this LED is connected to GPIO2, therefore we have to pull the GPIO2 to LOW state, in order to complete the circuit, then the light of the LED will turn ON. Otherwise, by pulling the GPIO2 to HIGH state, the light of the LED will turn OFF.
@@ -52,7 +55,7 @@ digitalWrite(2, HIGH);
 delay(2000);
 ```
 
-Now, we can upload the complete sketch to ESP32, then observe the output. By observation, the output of the LED only have 2 states, which are ON and OFF, thus this output signal known as **`DIGITAL OUTPUT`**.
+Now, you can upload the complete sketch to ESP32, then observe the output. By observation, the output of the LED only have 2 states, which are ON and OFF, thus this output signal known as **`DIGITAL OUTPUT`**.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-one-a.gif" width="600"></a></p>
 
