@@ -1,3 +1,7 @@
+# Exercise 02 Glowing Light
+
+The aim of this exercise is to control the blue LED on GPIO2, dradually changing the LED brightness to create the glowing effect on the Hibiscus Sense board.
+
 In this exercise, we will use the same blue LED in [Exercise 1](https://github.com/myinvent/hibiscus-sense-arduino#exercise-1-control-blue-led-on-gpio2-strobe-light-effect), but producing glowing light effect, as the image shown below. Where the blue LED color will start from OFF and slowly glowing until it reach its maximum brightness and turn OFF again, repeatedly.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-two.gif" width="300"></a></p>
@@ -28,7 +32,7 @@ Usually in any official Arduino boards or any compatible Arduino boards, we will
 
 Again, to be remember, the blue LED circuit on Hibiscus Sense is active-low, so we will program the LED for glowing effect as follows:
 
-**Complete Sketch**
+## Complete Sketch
 ```cpp
 void setup() {
   // configure PWM controller congfiguration
@@ -52,7 +56,7 @@ void loop() {
 }
 ```
 
-**Detail Sketch Explanations**
+## Detail Sketch Explanations
 
 In the `void setup()` function, there are two functions to be program, first to configure the PWM channelf using `ledcSetup()` function, with **_PWM channel `0`_**, **_PWM frequency `5 kHz`_** and **_`8 bits` PWM resolution_**. 
 ```cpp

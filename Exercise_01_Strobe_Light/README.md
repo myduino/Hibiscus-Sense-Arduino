@@ -1,6 +1,6 @@
 # Exercise 01 Strobe Light
 
-The goal of this exercise is to control the blue LED on GPIO2, alternating the LED state between ON and OFF with a specific delay to create a strobe light effect on the Hibiscus Sense board.
+The aim of this exercise is to control the blue LED on GPIO2, alternating the LED state between ON and OFF with a specific delay to create a strobe light effect on the Hibiscus Sense board.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-exercise-one.png" width="400"></a></p>
 
