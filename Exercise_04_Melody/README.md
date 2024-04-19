@@ -1,4 +1,4 @@
-# Exercise 04 Melody
+# Exercise 04: Melody
 
 The aim of this exercise is to create a simple melody like alarm beeping sound by playing specific frequencies in sequence on the Hibiscus Sense board’s small buzzer (connected to GPIO13).
 

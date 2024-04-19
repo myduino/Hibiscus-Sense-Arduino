@@ -1,4 +1,4 @@
-# Exercise 02 Glowing Light
+# Exercise 02: Glowing Light
 
 The aim of this exercise is to control the blue LED on GPIO2, dradually changing the LED brightness to create the glowing effect on the Hibiscus Sense board.
 

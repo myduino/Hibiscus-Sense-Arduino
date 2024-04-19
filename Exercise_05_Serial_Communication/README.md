@@ -1,4 +1,4 @@
-# Exercise 05 Serial Communication
+# Exercise 05: Serial Communication
 
 The aim of this exercise is to demonstrate serial communication between the ESP32 microcontroller on the Hibiscus Sense board and your PC using the USB-to-Serial converter (CP2104) on the Hibiscus Sense board.
 

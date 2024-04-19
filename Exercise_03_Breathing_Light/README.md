@@ -1,4 +1,4 @@
-# Exercise 03 Breathing Light
+# Exercise 03: Breathing Light
 
 The aim of this exercise is to control the blue LED on GPIO2, gradually changing the LED brightness in a smooth, rhythmic pattern to simulate breathing light effect on the Hibiscus Sense board.
 

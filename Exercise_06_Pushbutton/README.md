@@ -1,4 +1,4 @@
-# Exercise 06 Pushbutton
+# Exercise 06: Pushbutton
 
 The aim of this exercise is to learn how to use a pushbutton (momentary switch) by reading the state of the pushbutton (pressed or released) and responding to button presses to turn ON the blue LED on the Hibiscus Sense board.
 
@@ -40,6 +40,7 @@ void loop() {
   
 }
 ```
+
 You can copy the sketch above, paste it into the Arduino IDE and upload the complete sketch to ESP32, then observe the output. Now we'll see the blue is turn OFF, as it will only turn ON once we pressed the IO0 pushbutton.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-six-b.gif" width="600"></a></p>
@@ -65,7 +66,8 @@ if(pbstatus == LOW) digitalWrite(2, LOW);
 else digitalWrite(2, HIGH);
 ```
 
-## Further Explanation
+## Further Experiment
+
 You can modify the code to perform different actions based on button presses or combine the pushbutton with other sensors or actuators for more complex interactions.
 
 <p align="right"><a href="https://forms.gle/UgpDSFc46K4MkvTM8">&#128640; Tutorial Improvement & Suggestions</a></p>

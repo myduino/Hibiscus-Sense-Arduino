@@ -1,3 +1,7 @@
+# Exercise 07: RGB LED
+
+The aim of this exercise is to control the WS2812 RGB LED (connected to GPIO16) by animating the LED with different colors or patterns. on the Hibiscus Sense board.
+
 RGB LED is a tri-color LED in a package:
 - **Red**
 - **Green**
@@ -27,7 +31,7 @@ To control usual RGB LED, we can generate the PWM signal output to its indivial 
 
 Once the library is successfully installed, we can start to write the sketch as below:
 
-**Complete Sketch**
+## Complete Sketch
 ```cpp
 #include <Adafruit_NeoPixel.h>
 
@@ -65,7 +69,11 @@ void loop() {
 }
 ```
 
-**Detail Sketch Explanations***
+You can copy the sketch above, paste it into the Arduino IDE and upload the complete sketch to ESP32, then observe the output. By observation, the colour output from RGB LED is magenta.
+
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-seven-c.jpg" width="500"></a></p>
+
+## Detail Sketch Explanations
 
 Include `Adafruit_Neopixel` library's header file and declare an instance named `rgb` for `Adafruit_NeoPixel` class and both of its argument, the number of the RGB LED: `1` and connected to which GPIO pin: `16`.
 ```cpp
@@ -93,8 +101,8 @@ rgb.setPixelColor(0, 255, 0, 255);
 rgb.show();
 ```
 
-Now, we can upload the complete sketch to ESP32, then observe the output. By observation, the colour output from RGB LED is magenta.
+## Further Experiment
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-seven-c.jpg" width="500"></a></p>
+You can create custom color patterns and explore animations like color fading, rainbow effects, or chasing patterns.
 
 <p align="right"><a href="https://forms.gle/UgpDSFc46K4MkvTM8">&#128640; Tutorial Improvement & Suggestions</a></p>
