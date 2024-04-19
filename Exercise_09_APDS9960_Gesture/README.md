@@ -50,4 +50,7 @@ We should see the direction on the Serial Monitor, as on the image below:
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-nine.gif" width="600"></a></p>
 
+## Further Experiment
+You can customize the behavior based on specific gestures (e.g., controlling an LED or buzzer) or combine gesture detection with other sensors or actuators for interactive projects.
+
 <p align="right"><a href="https://forms.gle/UgpDSFc46K4MkvTM8">&#128640; Tutorial Improvement & Suggestions</a></p>
