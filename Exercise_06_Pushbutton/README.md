@@ -1,4 +1,4 @@
-# Exercise 06: Pushbutton
+# Exercise 06: Monitor Pushbutton Status on GPIP0 (LED ON/OFF)
 
 The aim of this exercise is to learn how to use a pushbutton (momentary switch) by reading the state of the pushbutton (pressed or released) and responding to button presses to turn ON the blue LED on the Hibiscus Sense board.
 

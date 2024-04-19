@@ -1,4 +1,4 @@
-# Exercise 11: 6-Axis Motion Tracking using MPU6050
+# Exercise 11: Monitor 6-Axis Motion Tracking using MPU6050
 
 The aim of this exercise is to learn how to read and monitori 6-axis motion tracking using the MPU6050 sensor.
 

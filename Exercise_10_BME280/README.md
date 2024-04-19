@@ -1,4 +1,4 @@
-# Exercise 10: Monitor Environmental Value from BME280
+# Exercise 10: Monitor Environmental Value using BME280
 
 The aim of this exercise is to learn how to read and monitor the humidity, temperature, altitude and atmospheric pressure using the APDS9960 sensor.
 

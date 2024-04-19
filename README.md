@@ -45,29 +45,22 @@ Although, we can program ESP32 using other programming language such as C, C++, 
 - Board measurement including header in mm: 58.7 x 27 x 13.3 (length x width x height).
 - Package measurement in mm: 71.8 x 35.5 x 20.4 (length x width x height).
 
-
-
 ## Learn How to Program Hibiscus Sense using Arduino IDE
 
-- [Introduction to Hibiscus Sense](https://github.com/myinvent/hibiscus-sense-arduino/wiki/01.-Introduction-to-Hibiscus-Sense)
-- [Learning Material Preparation](https://github.com/myinvent/hibiscus-sense-arduino/wiki/02.-Learning-Material-Preparation)
-- [Connect Hibiscus Sense to Computer's USB Port](https://github.com/myinvent/hibiscus-sense-arduino/wiki/03.-Connect-Hibiscus-Sense-to-Computer's-USB-Port)
-- [Exercise 1: Control Blue LED on GPIO2 (Strobe Light Effect)](https://github.com/myinvent/hibiscus-sense-arduino/wiki/Exercise-01:-Control-Blue-LED-on-GPIO2-(Strobe-Light-Effect))
-- [Exercise 2: Control Blue LED on GPIO2 (Glowing Light Effect))](https://github.com/myinvent/hibiscus-sense-arduino/wiki/Exercise-02:-Control-Blue-LED-on-GPIO2-(Glowing-Light-Effect))
-- [Exercise 3: Control Blue LED on GPIO2 (Breathing Light Effect)](https://github.com/myinvent/hibiscus-sense-arduino/wiki/Exercise-03:-Control-Blue-LED-on-GPIO2-(Breathing-Light-Effect))
-- [Exercise 4: Control Small Buzzer on GPIO13](https://github.com/myinvent/hibiscus-sense-arduino/wiki/Exercise-04:-Control-Small-Buzzer-on-GPIO13-(Melody))
-- [Exercise 5: Serial Communication (Hibiscus Sense & Computer)](https://github.com/myinvent/hibiscus-sense-arduino/wiki/Exercise-05:-Serial-Communication-(Hibiscus-Sense-&-Computer))
-- [Exercise 6: Monitor Pushbutton Status on GPIP0 (LED ON/OFF)](https://github.com/myinvent/hibiscus-sense-arduino/wiki/Exercise-06:-Monitor-Pushbutton-Status-on-GPIP0-(LED-ON-OFF))
-- [Exercise 7: Control RGB LED on GPIO16](https://github.com/myinvent/hibiscus-sense-arduino/wiki/Exercise-07:-Control-RGB-LED-on-GPIO16)
-- [Exercise 8: Monitor Proximity Value from APDS9960](https://github.com/myinvent/hibiscus-sense-arduino/wiki/Exercise-08:-Monitor-Proximity-Value-from-APDS9960)
-- [Exercise 9: Monitor Gesture Direction using APDS9960](https://github.com/myinvent/hibiscus-sense-arduino/wiki/Exercise-09:-Monitor-Gesture-Direction-from-APDS9960)
-- [Exercise 10: Monitor Environmental Value using BME280](https://github.com/myinvent/hibiscus-sense-arduino/wiki/Exercise-10:-Monitor-Environmental-Value-using-BME280)
-- [Exercise 11: Monitor 6-axis Motion Tracking using MPU6050](https://github.com/myinvent/hibiscus-sense-arduino#exercise-11-monitor-6-axis-motion-tracking-using-mpu6050)
-- [Exercise 12: IoT using Blynk](https://github.com/myinvent/hibiscus-sense-arduino/wiki/Exercise-12:-Internet-of-Things,-Blynk)
-- Exercise 13: IoT using Favoriot
-
-## Contact Us
-- Call or [WhatsApp 6013-2859151](https://wa.me/60132899151)
+- [Hands-On Learning Preparation](https://github.com/myinvent/Hibiscus-Sense-Arduino/tree/main/Exercise_00_Learning_Preparation)
+- [Exercise 01: Control Blue LED on GPIO2 (Strobe Light Effect)](https://github.com/myinvent/Hibiscus-Sense-Arduino/tree/main/Exercise_01_Strobe_Light)
+- [Exercise 02: Control Blue LED on GPIO2 (Glowing Light Effect)](https://github.com/myinvent/Hibiscus-Sense-Arduino/tree/main/Exercise_02_Glowing_Light)
+- [Exercise 03: Control Blue LED on GPIO2 (Breathing Light Effect)](https://github.com/myinvent/Hibiscus-Sense-Arduino/tree/main/Exercise_03_Breathing_Light)
+- [Exercise 04: Control Small Buzzer on GPIO13](https://github.com/myinvent/Hibiscus-Sense-Arduino/tree/main/Exercise_04_Melody)
+- [Exercise 05: Serial Communication (Hibiscus Sense & Computer)](https://github.com/myinvent/Hibiscus-Sense-Arduino/tree/main/Exercise_05_Serial_Communication)
+- [Exercise 06: Monitor Pushbutton Status on GPIP0 (LED ON/OFF)](https://github.com/myinvent/Hibiscus-Sense-Arduino/tree/main/Exercise_06_Pushbutton)
+- [Exercise 07: Control RGB LED on GPIO16](https://github.com/myinvent/Hibiscus-Sense-Arduino/tree/main/Exercise_07_RGB_LED)
+- [Exercise 08: Monitor Proximity Value from APDS9960](https://github.com/myinvent/Hibiscus-Sense-Arduino/tree/main/Exercise_08_APDS9960_Proximity)
+- [Exercise 09: Monitor Hand Gesture Direction using APDS9960](https://github.com/myinvent/hibiscus-sense-arduino/wiki/Exercise-09:-Monitor-Gesture-Directionhttps://github.com/myinvent/Hibiscus-Sense-Arduino/tree/main/Exercise_09_APDS9960_Gesture)
+- [Exercise 10: Monitor Environmental Value using BME280](https://github.com/myinvent/Hibiscus-Sense-Arduino/tree/main/Exercise_10_BME280)
+- [Exercise 11: Monitor 6-Axis Motion Tracking using MPU6050](https://github.com/myinvent/Hibiscus-Sense-Arduino/tree/main/Exercise_11_MPU6050)
+- [Exercise 12: IoT Application using Blynk IoT Platform](https://github.com/myinvent/Hibiscus-Sense-Arduino/tree/main/Exercise_12_IoT_Blynk)
+- [Exercise 13: IoT Application using Favoriot IoT Platform (HTTPS Protocol)](https://github.com/myinvent/Hibiscus-Sense-Arduino/tree/main/Exercise_13_IoT_FavoriotHTTPS)
 
 ## WiKi Image Credits
 - _Isaac Low on Quora_

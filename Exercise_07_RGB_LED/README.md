@@ -1,4 +1,4 @@
-# Exercise 07: RGB LED
+# Exercise 07: Control RGB LED on GPIO16
 
 The aim of this exercise is to control the WS2812 RGB LED (connected to GPIO16) by animating the LED with different colors or patterns.
 

@@ -1,4 +1,4 @@
-# Exercise 09: Hand Gesture Detection using APDS9960
+# Exercise 09: Monitor Hand Gesture Direction using APDS9960
 
 The aim of this exercise is to learn how to detect the hand gestures using the APDS9960 sensor.
 
