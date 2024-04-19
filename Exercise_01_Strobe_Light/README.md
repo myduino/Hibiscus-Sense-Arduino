@@ -40,7 +40,7 @@ Copy the sketch above into the Arduino IDE and upload the complete sketch to ESP
 
 **Detail Sketch Explanations**
 
-The LED is connected to `GPIO2`. We want to control the output voltage 0V or 3.3V from GPIO2 to the LED, therefore we need to configure GPIO2 as `OUTPUT`.
+The LED is connected to `GPIO2`. We want to control the output voltage 0V or 3.3V from GPIO2 to the LED, therefore in the `void setup()` function, we configure GPIO2 as `OUTPUT`.
 ```cpp
 pinMode(2, OUTPUT);
 ```
