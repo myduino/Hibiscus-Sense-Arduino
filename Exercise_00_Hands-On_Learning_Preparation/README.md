@@ -14,7 +14,7 @@ Or you can directly download from here:
 
 3. **Arduino core for the ESP32** in the Arduino IDE, [Github Link](https://github.com/espressif/arduino-esp32) **Arduino Core**. If you don't install it yet on your Arduino IDE, follow this [instructions](#install-esp32-arduino-core-using-arduino-ide-boards-manager-7-steps).
 
-Once all required tools are available and accesible, let's connect Hibiscus Sense to your PC.
+Once all required tools are available and accesible, you can [Connect Hibiscus Sense to your PC](#connect-hibiscus-sense-to-your-pc-6-steps).
 
 ### Install ESP32 Arduino Core using Arduino IDE Boards Manager (7 Steps)
 
