@@ -6,16 +6,13 @@ The aim of this exercise is to create a simple melody by playing specific freque
 
 On Hibiscus Sense, there is 1x small buzzer, labelled as `BUZZER` on-board, as circled on the image above.
 
-## Additional Information
-
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four.png" width="300"></a></p>
 
 Buzzer is a piezoelectrical electronic components, which generate tones when the piezo elements is vibrated based on given voltage supply, different voltage will produce different vibration, thus generating different tone. Since ESP32 has the ability to generate range of voltage using, the built-in PWM controllers, we can apply it on our small buzzer to generate tone.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four-a.gif" width="400"></a></p>
 
-
-The operating voltage of the small buzzer is ranging from 2-4V with rated voltage of 3V, the `(+ve) terminal` of the buzzer is connected to `GPIO13`, while the `(-ve) terminal` is connected to `GND`, as shown in the schematic below. The 3rd terminal of the buzzer is not connected.
+The operating voltage of the small buzzer on the Hibiscus Sense is ranging from 2-4V with rated voltage of 3V, the `(+ve) terminal` of the buzzer is connected to `GPIO13`, while the `(-ve) terminal` is connected to `GND`, as shown in the schematic below. The 3rd terminal of the buzzer is not connected.
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/schematic-exercise-four.png" width="400"></a></p>
 
@@ -29,7 +26,7 @@ In this exercise, all the available note and its frequency to produce the tone, 
 
 Since we have notice, we need to use `ledcWriteTone()` function instead of `ledcWrite()` function to generate the PWM output signal for the buzzer to produce the tone, let's write the program as below:
 
-**Complete Sketch**
+## Complete Sketch
 ```cpp
 // include the preset tones file, which included in local header files named tones.h
 #include "tones.h"
@@ -52,8 +49,9 @@ void loop() {
   delay(500);
 }
 ```
+You can copy the sketch above, paste it into the Arduino IDE and upload the complete sketch to ESP32, then observe the output. Once sucessfully uploaded the program, you'll hear the beeping sound.
 
-**Detail Sketch Explanations**
+## Detail Sketch Explanations
 
 First, we need to include header file, which has the declaration of all available note.
 ```cpp
@@ -74,7 +72,7 @@ delay(500);
 ledcWrite(0, 0);  // buzzer has no sound since PWM signal is 0.
 delay(500);
 ```
-
-Now, we can upload the complete sketch to ESP32. Once done uploading, we'll hear beeping sound.
+## Further Experiment
+You can modify the melody by changing the frequency values or you can upload the sketch below play melodies.
 
 <p align="right"><a href="https://forms.gle/UgpDSFc46K4MkvTM8">&#128640; Tutorial Improvement & Suggestions</a></p>
