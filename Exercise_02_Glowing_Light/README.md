@@ -14,7 +14,7 @@ What we need is the Pulse-Width Modulation (PWM), where the signal output that h
 
 With PWM output signal, we can control brightness of LEDs, the speed of motors, the heat of the heating elements, the vibration of piezo elements for buzzer loudness, the direction of the servo motors and modulated audio signal.
 
-The great news is, ESP32 have 16 congifurable independent PWM channels, which can be configured to generate PWM signal on all GPIOs, except GPIO34 to GPIO39.
+The good news is, ESP32 have 16 congifurable independent PWM channels, which can be configured to generate PWM signal on all GPIOs, except GPIO34 to GPIO39.
 
 Prior to hands-on programming, let's discuss about the program to generate the PWM output signal.
 
@@ -56,6 +56,8 @@ void loop() {
 }
 ```
 
+You can copy the sketch above, paste it into the Arduino IDE and upload the complete sketch to ESP32, then observe the output. By observatoin, the output of the blue LED is repeatedly glowing light effect, which the results from decremental value of the PWM signal output.
+
 ## Detail Sketch Explanations
 
 In the `void setup()` function, there are two functions to be program, first to configure the PWM channelf using `ledcSetup()` function, with **_PWM channel `0`_**, **_PWM frequency `5 kHz`_** and **_`8 bits` PWM resolution_**. 
@@ -75,8 +77,6 @@ for(int brightness = 255; brightness >= 0; brightness--){
   delay(15);
 }
 ```
-
-Now, we can upload the complete sketch to ESP32, then observe the output. By observatoin, the output of the blue LED is repeated glowing light effect, which the results from decremental value of the PWM signal output.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-two-b.gif" width="600"></a></p>
 
