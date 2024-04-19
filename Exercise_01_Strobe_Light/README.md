@@ -34,7 +34,7 @@ void loop() {
 }
 ```
 
-You can copy the sketch above into the Arduino IDE and upload the complete sketch to ESP32, then observe the output. By observation, the output of the LED only have 2 states, which are ON and OFF. This output signal known as **`DIGITAL OUTPUT`**.
+You can copy the sketch above, paste it into the Arduino IDE and upload the complete sketch to ESP32, then observe the output. By observation, the output of the LED only have 2 states, which are ON and OFF. This output signal known as **`DIGITAL OUTPUT`**.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-one-a.gif" width="600"></a></p>
 
