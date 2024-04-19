@@ -38,7 +38,7 @@ Once all required tools are available and accesible, you can [Connect Hibiscus S
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-hardware-library-esp32-installed.png" width="800"></a></p>
 
-Let's connect Hibiscus Sense to your PC, follow this [instructions](#connect-hibiscus-sense-to-your-pc-6-steps).
+Let's connect Hibiscus Sense to your PC, follow this [instructions](#connect-hibiscus-sense-to-your-pc-6-steps). If your PC not able to detect the COM port number, you need to install the USB driver.
 
 ## Connect Hibiscus Sense to Your PC (6 Steps)
 1. Connect the USB cable Type-C to Hibiscus Sense and Type-A to your PC.
@@ -68,4 +68,4 @@ Hibiscus Sense, shipped with default sketch to check the sensors and list availa
 
 If you did not see any result on the Serial Monitor or having challenges to connect the board to your PC, please contact Mr. Ariffin via [WhatsApp](https://api.whatsapp.com/send?phone=60177875232&text=Hi%20Mr.%20Ariffin,%20please%20help.%20My%20Hibiscus%20Sense,%20seems%20not%20working%20for%20the%20first%20time.), he can assist you.
 
-<p align="right"><a href="https://github.com/myinvent/hibiscus-sense-arduino#hibiscus-sense-esp32-arduino-tutorial">&#128285; Back to Top</a> | <a href="https://github.com/myinvent/hibiscus-sense-arduino#table-of-content">&#128203; Table of Content</a><br><a href="https://forms.gle/UgpDSFc46K4MkvTM8">&#128640; Tutorial Improvement & Suggestions</a></p>
+## Install USB Driver in Your PC (6 Steps)
