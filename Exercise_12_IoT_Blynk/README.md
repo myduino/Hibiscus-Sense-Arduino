@@ -2,7 +2,9 @@
 
 The aim of this exercise is to create an Internet of Things (IoT) project by integrating the Hibiscus Sense board and the Blynk platform over the Internet. Sending sensor data (e.g., temperature, humidity) to the Blynk app and controlling actuators (e.g., LED, buzzer) from the Blynk app.
 
-In this exercise, you will begin the journey of Practical Internet of Things (IoT) with Blynk IoT platform using Arduino ESP32.
+In this exercise, you will begin the journey of Practical Internet of Things (IoT) with Blynk IoT platform using Hibiscus Sense.
+
+## What is IoT?
 
 You might have heard IoT somewhere ... in Seminar, Webinar, Podcast, YouTube or even from your closest family and friends.
 
@@ -21,6 +23,8 @@ There are 4 Key Components in IoT:
 Any project without one of the components, is not considered as an IoT project. In IoT project, first thing to do is to choose the most suitable IoT platform for our IoT project.
 
 In this exercise, we choose Blynk as our IoT platform.
+
+## Introduction to Blynk IoT Platform
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://osoyoo.com/driver/blynk/blynk-iot.png" width="700"></a></p>
 
