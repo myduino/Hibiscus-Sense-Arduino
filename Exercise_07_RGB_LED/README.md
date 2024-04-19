@@ -1,6 +1,6 @@
 # Exercise 07: RGB LED
 
-The aim of this exercise is to control the WS2812 RGB LED (connected to GPIO16) by animating the LED with different colors or patterns. on the Hibiscus Sense board.
+The aim of this exercise is to control the WS2812 RGB LED (connected to GPIO16) by animating the LED with different colors or patterns.
 
 RGB LED is a tri-color LED in a package:
 - **Red**
