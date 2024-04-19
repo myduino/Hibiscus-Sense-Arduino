@@ -1,3 +1,7 @@
+# Exercise 08: Monitor Proximity Value from APDS9960
+
+The aim of this exercise is to learn how to read and monitor the proximity value from the APDS9960 sensor.
+
 APDS9960 is an advance sensor offering digital proximity, ambient light, RGB and gesture sensor in a very small package. amazing, right? The advance integrated IR LED and driver on the sensor, allows it to measure proximity (up to a few centimeters) with 8-bit resolution (value: 0-255). Below is an illustration of IR LED acts as proximity sensor.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-eight.gif" width="500"></a></p>
@@ -16,7 +20,7 @@ To acquire sensing information from APDS9660, we need to use [Adafruit_APDS9960]
 
 Once the library is successfully installed, we can start to write the sketch to monitor proximity value as below:
 
-**Complete Sketch**
+## Complete Sketch
 ```cpp
 // include the Adafruit_APDS9960 header file.
 #include <Adafruit_APDS9960.h>
@@ -54,7 +58,8 @@ void loop() {
 }
 ```
 
-Now, we can upload the complete sketch to ESP32, once done uploading open the Serial Monitor and try to hover our hands up and down above the sensor. By observation, we can see on the Serial Monitor a proximity in an 8-bit chaning based on up and down of our hand. The closer the object, the higher the proximity value (maximum value: 255).
+
+You can copy the sketch above, paste it into the Arduino IDE and upload the complete sketch to ESP32. Once done uploading open the Serial Monitor and try to hover our hands up and down above the sensor. By observation, we can see on the Serial Monitor a proximity in an 8-bit chaning based on up and down of our hand. The closer the object, the higher the proximity value (maximum value: 255).
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-eight-c.gif" width="600"></a></p>
 
