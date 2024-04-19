@@ -5,6 +5,13 @@ Prior to hands-on learning to learn how to `control the actuators` and `acquire 
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-download.png" width="800"></a></p>
 
+Or you can directly download from here:
+* [Windows 10 and newers (64 bits)](https://downloads.arduino.cc/arduino-ide/arduino-ide_2.3.2_Windows_64bit.exe)
+* [Linux AppImage (64 bits)](https://downloads.arduino.cc/arduino-ide/arduino-ide_2.3.2_Linux_64bit.AppImage)
+* [Linux Zip File (64 bits)](https://downloads.arduino.cc/arduino-ide/arduino-ide_2.3.2_Linux_64bit.zip)
+* [Mac OS Intel, 10.15: "Catalina" or newer (64 bits)](https://downloads.arduino.cc/arduino-ide/arduino-ide_2.3.2_macOS_64bit.dmg)
+* [Mac OS Apple Silicon, 11: "Big Sur" or newer (64 bits)](https://downloads.arduino.cc/arduino-ide/arduino-ide_2.3.2_macOS_arm64.dmg)
+
 3. **Arduino core for the ESP32** in the Arduino IDE, [Github Link](https://github.com/espressif/arduino-esp32) **Arduino Core**. If you don't install it yet on your Arduino IDE, follow this [instructions](#install-esp32-arduino-core-using-arduino-ide-boards-manager-7-steps).
 
 Once all required tools are available and accesible, let's connect Hibiscus Sense to your PC.
