@@ -1,6 +1,9 @@
 # Exercise 12: IoT Application using Blynk IoT Platform
 
-The aim of this exercise is to create an Internet of Things (IoT) project by integrating the Hibiscus Sense board and the Blynk IoT platform. Sending sensor data (e.g., temperature, humidity) to the Blynk web-based dashboard and controlling actuators (e.g., LED, buzzer) from the Blynk web-based dashboard.
+The aim of this exercise is to create an Internet of Things (IoT) project by integrating the Hibiscus Sense board and the Blynk IoT platform:
+1. Setting Up Blynk Account.
+2. Sending sensor data to the Blynk web-based dashboard.
+3. Controlling the LEDs from the Blynk web-based dashboard.
 
 In this exercise, you will begin the journey of Practical Internet of Things (IoT) with Blynk IoT platform using Hibiscus Sense.
 
@@ -12,7 +15,7 @@ But what actually is IoT?
 
 In simple words, IoT is a network of connected devices over the Internet, which you can remotely control or monitor the devices over the Internet.
 
-For more technical definition, **IoT is a _system_**, consists of network of connected devices over the Internet via middleware (cloud computers) enabling bidirectional communication between human-to-machine or machine-to-machine in exchanging on-demand information resulting in better decision making.
+Technically, **IoT is a _system_**, consists of network of connected devices over the Internet via middleware (cloud computers) enabling bidirectional communication between human-to-machine or machine-to-machine in exchanging on-demand information resulting in better decision making.
 
 There are 4 Key Components in IoT:
 1. **`Smart Things`**: The connected devices, consists of microcontroller (such as ESP32), sensors, actuators with Internet connectivity. [Hibiscus Sense](https://myduino.com/product/myd-036/) is an example of prototype IoT devices. [DDS45-LB Distance Sensor](https://myduino.com/product/drg-039/) is an example of end-product IoT devices.
@@ -79,7 +82,7 @@ Good, you have successfully setup account on the Blynk platform.
 
 ## Install Blynk Library on Arduino IDE
 
-Before you can program the Hibiscus Sense to connect to Blynk platform, install the Blynk library on the Arduino IDE.
+Before you can program the Hibiscus Sense, you need to install the Blynk library on the Arduino IDE.
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-library-blynk.png" width="800"></a></p>
 
