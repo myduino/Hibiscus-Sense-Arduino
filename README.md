@@ -62,7 +62,7 @@ Although, we can program ESP32 using other programming language such as C, C++, 
 - [Exercise 12: IoT Application using Blynk IoT Platform](https://github.com/myinvent/Hibiscus-Sense-Arduino/tree/main/Exercise_12_IoT_Blynk)
 - [Exercise 13: IoT Application using Favoriot IoT Platform (HTTPS Protocol)](https://github.com/myinvent/Hibiscus-Sense-Arduino/tree/main/Exercise_13_IoT_FavoriotHTTPS)
 
-## WiKi Image Credits
+## Exercises Image Credits
 - _Isaac Low on Quora_
 - _Ben Ot on Wikimedia_
 - _Explore Embedded_
