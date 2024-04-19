@@ -21,7 +21,7 @@ The aim of this exercise is to create an Internet of Things (IoT) project by int
 
 3. Go to your email and look for the email from Favoriot.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-register-code.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-register-code.png" width="500"></a></p>
 
 4. Copy the verification code and paste it on the **Vertification Code** field and click the **Register** button.
 
