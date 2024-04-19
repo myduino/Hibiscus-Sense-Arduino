@@ -41,9 +41,9 @@ pinMode(2, OUTPUT);
 
 In the `void loop()` function, the program start by turn ON the LED, as the ciruit is active-low, we use `LOW` state on GPIO2 to complete the LED circuit. Then `delay()` function to pause the program in milliseconds. Vice versa to turn OFF the LED.
 ```cpp
-digitalWrite(2, LOW);
+digitalWrite(2, LOW); // LED ON
 delay(100);
-digitalWrite(2, HIGH);
+digitalWrite(2, HIGH);  // LED OFF
 delay(100);
 
 digitalWrite(2, LOW);
