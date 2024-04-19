@@ -1,3 +1,8 @@
+# Exercise 11: 6-Axis Motion Tracking using MPU6050
+
+The aim of this exercise is to learn how to read and monitori 6-axis motion tracking using the MPU6050 sensor.
+
+
 MPU6050 is a 6-axis motion tracking sensor with the ability to sense:
 1. 3-axis accelerometer, the gravitational acceleration.
 2. 3-axis gyroscope, the rotational velocity.
@@ -12,6 +17,8 @@ To acquire sensing information from MPU6050, we need to use [Adafruit_MPU6050](h
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-ten-a.png" width="700"></a></p>
 
 Once the library is successfully installed, we can start to write the sketch to monitor proximity value as below:
+
+## Complete Sketch
 
 ```cpp
 // include the Adafruit_MPU6050 header file.
@@ -82,8 +89,11 @@ void loop() {
 }
 ```
 
-Now, we can upload the complete sketch to ESP32, once done uploading open the Serial Monitor and move around Hibiscus Sense. Then, we'll see latest value 3-axis accelerometer, 3-axis gyroscope and temperature.
+You can copy the sketch above, paste it into the Arduino IDE and upload the complete sketch to ESP32. Once done uploading open the Serial Monitor and move around Hibiscus Sense. Then, you'll see latest value 3-axis accelerometer, 3-axis gyroscope and temperature.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-eleven.gif" width="600"></a></p>
+
+# Further Experiment
+You can combine the MPU6050 data with other sensors or actuators for more complex projects.
 
 <p align="right"><a href="https://forms.gle/UgpDSFc46K4MkvTM8">&#128640; Tutorial Improvement & Suggestions</a></p>
