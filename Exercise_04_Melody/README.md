@@ -1,12 +1,19 @@
+# Exercise 04 Melody
+
+The aim of this exercise is to create a simple melody by playing specific frequencies in sequence on the Hibiscus Sense board’s small buzzer (connected to GPIO13).
+
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four-b.png" width="400"></a></p>
+
+On Hibiscus Sense, there is 1x small buzzer, labelled as `BUZZER` on-board, as circled on the image above.
+
+## Additional Information
+
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four.png" width="300"></a></p>
 
 Buzzer is a piezoelectrical electronic components, which generate tones when the piezo elements is vibrated based on given voltage supply, different voltage will produce different vibration, thus generating different tone. Since ESP32 has the ability to generate range of voltage using, the built-in PWM controllers, we can apply it on our small buzzer to generate tone.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four-a.gif" width="400"></a></p>
 
-On Hibiscus Sense, there is 1x small buzzer, labelled as `BUZZER` on-board, as circled on the image below.
-
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four-b.png" width="400"></a></p>
 
 The operating voltage of the small buzzer is ranging from 2-4V with rated voltage of 3V, the `(+ve) terminal` of the buzzer is connected to `GPIO13`, while the `(-ve) terminal` is connected to `GND`, as shown in the schematic below. The 3rd terminal of the buzzer is not connected.
 
