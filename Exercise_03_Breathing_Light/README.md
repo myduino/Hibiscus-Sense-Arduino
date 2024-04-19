@@ -8,9 +8,9 @@ In Exercise 2, we use `for()` statement to automatically generate decremental PW
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-three.gif" width="500"></a></p>
 
-It's easy ... we just need to add another `for()` statement to automatically generate incremental PWM value from 0-255, so the program as follows:
+It's easy ... we just need to add another `for()` statement to automatically generate incremental PWM value from 0-255. The complete sketch as follows:
 
-**Complete Sketch**
+## Complete Sketch
 ```cpp
 void setup() {
   // configure PWM controller congfiguration
@@ -40,8 +40,11 @@ void loop() {
 }
 ```
 
-Now, we can upload the complete sketch to ESP32, then observe the output. By observation, the output of the blue LED is repeated breathing light effect, which the results from decremental and incremental value of the PWM signal output.
+You can copy the sketch above, paste it into the Arduino IDE and upload the complete sketch to ESP32, then observe the output. By observation, the output of the blue LED is repeated breathing light effect, which the results from decremental and incremental value of the PWM signal output.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-three-a.gif" width="600"></a></p>
+
+## Further Experiment
+You can adjust the rate of brightness change to customize the breathing speed.
 
 <p align="right"><a href="https://forms.gle/UgpDSFc46K4MkvTM8">&#128640; Tutorial Improvement & Suggestions</a></p>

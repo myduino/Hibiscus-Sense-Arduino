@@ -80,4 +80,7 @@ for(int brightness = 255; brightness >= 0; brightness--){
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-two-b.gif" width="600"></a></p>
 
+## Further Experiment
+You can adjust the rate of brightness change to customize the effect.
+
 <p align="right"><a href="https://forms.gle/UgpDSFc46K4MkvTM8">&#128640; Tutorial Improvement & Suggestions</a></p>
