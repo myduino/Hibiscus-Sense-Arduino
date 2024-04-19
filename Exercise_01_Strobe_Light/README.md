@@ -14,7 +14,7 @@ This is quite unusual behaviour, but it is good to learn how an electronic circu
 
 Since, the blue LED circuit on Hibiscus Sense is active-low, we will program it as below:
 
-**Complete Sketch**
+## Complete Sketch
 ```cpp
 void setup() {
   pinMode(2, OUTPUT); // declaring GPIO2 as an OUTPUT pin.
@@ -38,7 +38,7 @@ You can copy the sketch above, paste it into the Arduino IDE and upload the comp
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-one-a.gif" width="600"></a></p>
 
-**Detail Sketch Explanations**
+## Detail Sketch Explanations
 
 The LED is connected to `GPIO2`. We want to control the output voltage 0V or 3.3V from GPIO2 to the LED, therefore in the `void setup()` function, we configure GPIO2 as `OUTPUT`.
 ```cpp
