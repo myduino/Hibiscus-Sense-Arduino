@@ -22,7 +22,7 @@ Somehow, if a pushbutton circuit is applying pull-down resistor, as shown in the
 
 Since we know that ESP32 will sense `LOW` state at `GPIO0` during pushbutton pressed, so the program as follows:
 
-**Complete Sketch**
+## Complete Sketch
 ```cpp
 void setup() {
   pinMode(0, INPUT);  // declaring GPIO0 as an INPUT pin.
@@ -40,8 +40,11 @@ void loop() {
   
 }
 ```
+You can copy the sketch above, paste it into the Arduino IDE and upload the complete sketch to ESP32, then observe the output. Now we'll see the blue is turn OFF, as it will only turn ON once we pressed the IO0 pushbutton.
 
-**Detail Sketch Explanations**
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-six-b.gif" width="600"></a></p>
+
+## Detail Sketch Explanations
 
 In the `void setup()` function we declare two `pinMode()` function:
 1. To declare GPIO0 as an INPUT pin, connected to the Pushbutton.
@@ -62,8 +65,7 @@ if(pbstatus == LOW) digitalWrite(2, LOW);
 else digitalWrite(2, HIGH);
 ```
 
-Now, we can upload the complete sketch to ESP32. Now we'll see the blue is turn OFF, as it will only turn ON once we pressed the IO0 pushbutton.
-
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-six-b.gif" width="600"></a></p>
+## Further Explanation
+You can modify the code to perform different actions based on button presses or combine the pushbutton with other sensors or actuators for more complex interactions.
 
 <p align="right"><a href="https://forms.gle/UgpDSFc46K4MkvTM8">&#128640; Tutorial Improvement & Suggestions</a></p>
