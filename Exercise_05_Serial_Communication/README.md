@@ -92,4 +92,7 @@ Pause the task for a second before continue to the next action.
 delay(1000);
 ```
 
+## Further Experiment
+You can modify the data being sent/received and explore different baud rates and communication protocols.
+
 <p align="right"><a href="https://forms.gle/UgpDSFc46K4MkvTM8">&#128640; Tutorial Improvement & Suggestions</a></p>
