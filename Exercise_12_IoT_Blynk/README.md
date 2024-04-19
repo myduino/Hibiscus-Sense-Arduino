@@ -6,7 +6,7 @@ In this exercise, you will begin the journey of Practical Internet of Things (Io
 
 ## What is IoT?
 
-You might have heard IoT somewhere ... in Seminar, Webinar, Podcast, YouTube or even from your closest family and friends.
+You might have heard IoT somewhere ... in classes, seminar, webinar, podcast, YouTube or even from your closest family and friends.
 
 But what actually is IoT?
 
