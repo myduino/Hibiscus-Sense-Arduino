@@ -1,3 +1,7 @@
+# Exercise 10: Monitor Environmental Value from BME280
+
+The aim of this exercise is to learn how to read and monitor the humidity, temperature, altitude and atmospheric pressure using the APDS9960 sensor.
+
 BME280 is an environmental sensor with the ability to sense altitude, barometric pressure, humidity and temperature. It is great for indoor environmental monitoring. It has both communication protocol I2C and SPI.
 
 There is 1x BME280 on Hibiscus Sense, as on the image below. The circuit is interfaced to **ESP32's I2C** (`SDA`: **GPIO21**, `SCL`: **GPIO22**) with the sensor I2C default address: **`0x77`**.
@@ -15,6 +19,8 @@ To acquire sensing information from BME280, we need to use [Adafruit_BME280](htt
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-ten-a.png" width="700"></a></p>
 
 Once the library is successfully installed, we can start to write the sketch to monitor proximity value as below:
+
+## Complete Sketch
 
 ```cpp
 // include the Adafruit_BME280 header file.
@@ -67,8 +73,11 @@ void loop() {
 }
 ```
 
-Now, you can upload the complete sketch to ESP32, once done uploading open the Serial Monitor and we'll see latest value altitude, barometric pressure, humidity and temperature.
+You can copy the sketch above, paste it into the Arduino IDE and upload the complete sketch to ESP32. Once done uploading open the Serial Monitor and we'll see latest value altitude, barometric pressure, humidity and temperature.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-ten.gif" width="600"></a></p>
+
+## Further Experiment
+You can adjust the sampling rate or other settings of the BME280 sensor or combine the environmental data with other sensors or actuators for more complex projects.
 
 <p align="right"><a href="https://forms.gle/UgpDSFc46K4MkvTM8">&#128640; Tutorial Improvement & Suggestions</a></p>
