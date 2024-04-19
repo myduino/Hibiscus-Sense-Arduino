@@ -16,7 +16,7 @@ For more technical definition, **IoT is a _system_**, consists of network of con
 
 There are 4 Key Components in IoT:
 1. **`Smart Things`**: The connected devices, consists of microcontroller (such as ESP32), sensors, actuators with Internet connectivity. [Hibiscus Sense](https://myduino.com/product/myd-036/) is an example of prototype IoT devices. [DDS45-LB Distance Sensor](https://myduino.com/product/drg-039/) is an example of end-product IoT devices.
-2. **`Network`**. The Internet technology, such as `Wi-Fi`, `Ethernet`, `Cellular` (2G, 3G, 4G, 5G) and `Satellite`, is required for Internet connectivity around the world. The gateways enabling low-power wireless devices to connect to the Internet.
+2. **`Networks`**. The Internet technology, such as `Wi-Fi`, `Ethernet`, `Cellular` (2G, 3G, 4G, 5G) and `Satellite`, is required for Internet connectivity around the world. The gateways enabling low-power wireless devices to connect to the Internet.
 3. **`Middleware`**: The cloud/server, which handle the inbound/outbound of data transmission and communication over the Internet, including data ingestion, data storage, data management, data analytics, etc. These are available IoT platform such as [Favoriot](https://platform.favoriot.com/), [Blynk](https://blynk.io/), [Thingspeak](https://thingspeak.com/), [Ubidots](https://ubidots.com/), [Thingsboard](https://thingsboard.io/), [ParticleIO](https://www.particle.io/) and more.
 4. **`Applications`**: The software interface, where human can interact with the data. Software, visualise the data from the IoT devices in form of human readable format such as alert, notification, dashboard, and analytics interfaces. We can find the app in from of mobile app, desktop app or web app.
 
