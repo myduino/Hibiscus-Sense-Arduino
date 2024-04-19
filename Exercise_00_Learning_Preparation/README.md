@@ -12,7 +12,7 @@ Or you can directly download from here:
 * [Mac OS Intel, 10.15: "Catalina" or newer (64 bits)](https://downloads.arduino.cc/arduino-ide/arduino-ide_2.3.2_macOS_64bit.dmg)
 * [Mac OS Apple Silicon, 11: "Big Sur" or newer (64 bits)](https://downloads.arduino.cc/arduino-ide/arduino-ide_2.3.2_macOS_arm64.dmg)
 
-3. **Arduino core for the ESP32** in the Arduino IDE, [Github Link](https://github.com/espressif/arduino-esp32) **Arduino Core**. If you don't install it yet on your Arduino IDE, follow this [instructions](#install-esp32-arduino-core-using-arduino-ide-boards-manager-7-steps).
+3. **Arduino core for the ESP32** in the Arduino IDE, [Github](https://github.com/espressif/arduino-esp32). If you don't install it yet on your Arduino IDE, follow this [instructions](#install-esp32-arduino-core-using-arduino-ide-boards-manager-7-steps).
 
 Once all required tools are available and accesible, you can [Connect Hibiscus Sense to your PC](#connect-hibiscus-sense-to-your-pc-6-steps).
 
@@ -24,7 +24,7 @@ Once all required tools are available and accesible, you can [Connect Hibiscus S
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-menu-preferences-boards.png" width="800"></a></p>
 
 3. Copy the URLs below and paste it into the ***Additional Boards Manager URLs*** field and click the ***OK*** button.
-`https://espressif.github.io/arduino-esp32/package_esp32_index.json`
+**`https://espressif.github.io/arduino-esp32/package_esp32_index.json`**
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-menu-preferences-board-url.png" width="800"></a></p>
 
