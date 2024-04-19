@@ -1,3 +1,7 @@
+# Exercise 06 Pushbutton
+
+The aim of this exercise is to learn how to use a pushbutton (momentary switch) by reading the state of the pushbutton (pressed or released) and responding to button presses to turn ON the blue LED on the Hibiscus Sense board.
+
 Pushbutton is a momentary switch that closed the circuit during press of the button, while the button is released, the circuit disconnected, such as shown in the animation below. It is not a toggle switch, where it has ON and OFF position. Pushbutton usually used to act as an input to trigger the system.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-six.gif" width="300"></a></p>
