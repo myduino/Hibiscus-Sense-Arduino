@@ -30,11 +30,11 @@ Once all required tools are available and accesible, you can [Connect Hibiscus S
 
 4. Click the ***OK*** button to exit the Preferences window.
 5. Open the ***Boards Manager*** on the left panel and search keyword: ***esp32***
-6. Look for ***esp32** by Espressif Systems* and click the **INSTALL** button. Current version is 2.0.15.
+6. Look for ***esp32** by Espressif Systems* and click the **INSTALL** button (Current version is 2.0.15).
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-hardware-library-esp32-install.png" width="800"></a></p>
 
-7. Wait until the installation process is done, which would take several minutes, until the status on the boards is *INSTALLED*.
+7. Wait until the installation process is done, which would take several minutes, until the status on the board is *2.0.x installed*.
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-hardware-library-esp32-installed.png" width="800"></a></p>
 
