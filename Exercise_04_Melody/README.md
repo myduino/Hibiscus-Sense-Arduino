@@ -60,8 +60,8 @@ First, we need to include header file, which has the declaration of all availabl
 
 In `void setup()` function, we have to configure the PWM channel using `ledcSetup()` function and declare buzzer (+ve) terminal attach to GPIO13 using `ledcAttachPin()` function.
 ```cpp
-  ledcSetup(0, 5000, 8);
-  ledcAttachPin(13, 0);
+ledcSetup(0, 5000, 8);
+ledcAttachPin(13, 0);
 ```
 
 Inside the `void loop()` function, we use `ledcWriteTone()` function to generate sound of `NOTE_D4` frequency, while `ledcWrite()` function to turn OFF the buzzer. Therefore, the execution of these functions repeatedly, producing alarm-like sound.
