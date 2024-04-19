@@ -67,7 +67,7 @@ void loop() {
 }
 ```
 
-Now, we can upload the complete sketch to ESP32, once done uploading open the Serial Monitor and we'll see latest value altitude, barometric pressure, humidity and temperature.
+Now, you can upload the complete sketch to ESP32, once done uploading open the Serial Monitor and we'll see latest value altitude, barometric pressure, humidity and temperature.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-ten.gif" width="600"></a></p>
 
