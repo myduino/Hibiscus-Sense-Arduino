@@ -1,6 +1,6 @@
 # Exercise 12: IoT Application using Blynk IoT Platform
 
-The aim of this exercise is to create an Internet of Things (IoT) project by integrating the Hibiscus Sense board and the Blynk platform over the Internet. Sending sensor data (e.g., temperature, humidity) to the Blynk web-based dashboard and controlling actuators (e.g., LED, buzzer) from the Blynk web-based dashboard.
+The aim of this exercise is to create an Internet of Things (IoT) project by integrating the Hibiscus Sense board and the Blynk IoT platform. Sending sensor data (e.g., temperature, humidity) to the Blynk web-based dashboard and controlling actuators (e.g., LED, buzzer) from the Blynk web-based dashboard.
 
 In this exercise, you will begin the journey of Practical Internet of Things (IoT) with Blynk IoT platform using Hibiscus Sense.
 
@@ -42,7 +42,7 @@ In this exercise, we choose Blynk as our IoT platform.
 
 Prior to start program the Hibiscus Sense. Let's setup Blynk platform.
 
-## Setup Blynk Platform
+## Setting Up Blynk Account
 
 1. Click this link [https://blynk.cloud/dashboard/register](https://blynk.cloud/dashboard/register) to create your Blynk account.
 2. Fill in your email in the **EMAIL** field, **check** on *I agree to Terms and Conditions and accept Privacy Policy* and click the **Sign Up** button.
