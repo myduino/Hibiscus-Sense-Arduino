@@ -1,12 +1,11 @@
-# Development Platform Preparation
-Prior to start learning and hands-on, you have to make sure 4 required tools below are ready:
-1. **Hibiscus Sense**. If you don't own it yet, you can get it from :shopping_cart: [Myduino](https://myduino.com/product/myd-036/)
-2. **USB Cable Type-A to Type-C**, because Hibiscus Sense's USB port is Type-C.
-3. **Arduino IDE**. Download it from it's official website [Arduino Software](https://www.arduino.cc/en/software) page and install it on your PC.
+# Hands-On Learning Preparation
+Prior to hands-on learning to learn how to `control the actuators` and `acquire data from the sensors` on Hibiscus Sense, we have to make sure the hardware and software is readily accesible on your desk and on your PC:
+1. **Hibiscus Sense** and a **USB cable Type-A to Type-C**. If you don't own it yet, you always welcome to purchase it from :shopping_cart: [Myduino Website](https://myduino.com/product/myd-036/)
+2. **Arduino IDE**. Download it from it's official website [Arduino Software](https://www.arduino.cc/en/software) page and install it on your PC.
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-download.png" width="800"></a></p>
 
-4. [**ESP32**](https://github.com/espressif/arduino-esp32) **Arduino Core**. If you don't have it yet on your Arduino IDE, follow this [instructions](#install-esp32-arduino-core-using-arduino-ide-boards-manager-7-steps).
+4. **Arduino core for the ESP32** in the Arduino IDE, [Github Link](https://github.com/espressif/arduino-esp32) **Arduino Core**. If you don't install it yet on your Arduino IDE, follow this [instructions](#install-esp32-arduino-core-using-arduino-ide-boards-manager-7-steps).
 
 Once these 4 required tools are available, let's connect Hibiscus Sense to your PC.
 
