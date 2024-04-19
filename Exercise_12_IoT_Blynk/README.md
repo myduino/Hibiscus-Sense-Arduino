@@ -1,4 +1,4 @@
-# Exercise 12 ESP32 IOT Blynk
+# Exercise 12: IoT Application using Blynk IoT Platform
 
 The aim of this exercise is to create an Internet of Things (IoT) project by integrating the Hibiscus Sense board and the Blynk platform over the Internet. Sending sensor data (e.g., temperature, humidity) to the Blynk app and controlling actuators (e.g., LED, buzzer) from the Blynk app.
 
