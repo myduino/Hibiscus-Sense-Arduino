@@ -113,7 +113,6 @@ void loop() {
   // STEP 3: Data Ingestion - Send data to Favoriot's data stream using secure HTTP connection
   // Interval 15 seconds
   if(millis() - previousMillis > 15000){
-
     previousMillis = millis();
     
     String json = "{\"device_developer_id\":\"" + String(deviceDeveloperId) + "\",\"data\":{";
