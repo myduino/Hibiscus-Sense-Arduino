@@ -68,7 +68,7 @@ Only 1 device is allowed on FREE ACCOUNT plan, let's **delete** the deviceDefaul
 
 1. Save as the Hibiscus Sense below image into your PC.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-hibiscus-sense.jpg" width="500"></a></p>
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-hibiscus-sense.jpg" width="300"></a></p>
 
 2. Click the **`Create Device`** icon.
 3. Choose group **Hierarchy**: **`groupDefault`**.
