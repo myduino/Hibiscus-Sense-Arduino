@@ -9,11 +9,10 @@
  * 2. Data Acquisition - Read data from the sensors
  * 3. Data Ingestion - Send data to Favoriot's data stream using CoAP protocol
  *
+ * Install coap-simple library before using the sketch.
+ * 
  * Select the board as ESP32 Dev Module before compiling the sketch
  * (example) Go to menu, Tools > Board > esp32 > ESP32 Dev Module
- *
- * Favoriot's Secure Certificate Validity Expires On:
- * Saturday, 26 April 2025 at 08:54:18
  * 
  */
 
@@ -33,27 +32,22 @@ Adafruit_MPU6050 mpu;
 
 sensors_event_t a, g, temp;
 
-const char ssid[] = "";
-const char pass[] = "";
-const char device_developer_id[] = "";
-const char device_access_token[] = "";
+const char ssid[] = "YOUR_WIFI_SSID";
+const char password[] = "YOUR_WIFI_PASSWORD";
+const char deviceDeveloperId[] = "YOUR_DEVICE_DEVELOPER_ID";
+const char deviceAccessToken[] = "YOUR_DEVICE_ACCESS_TOKEN";
 
 long previousMillis = 0;
 
 // CoAP client response callback
 void callback_response(CoapPacket &packet, IPAddress ip, int port);
 
-// UDP and CoAP class
-// other initialize is "Coap coap(Udp, 512);"
-// 2nd default parameter is COAP_BUF_MAX_SIZE(defaulit:128)
-// For UDP fragmentation, it is good to set the maximum under
-// 1280byte when using the internet connection.
 WiFiUDP udp;
 Coap coap(udp, 1024);
 
 char url[] = "coap.favoriot.com";
 String method = "POST";
-IPAddress host(159,65,134,213); //DNS lookup coap.favoriot.com
+IPAddress host(159, 65, 134, 213); //DNS coap.favoriot.com
 int port = 5683;
 
 // CoAP client response callback
@@ -92,7 +86,7 @@ void setup() {
     Serial.println("Failed to find Hibiscus Sense MPU6050 chip");
   }
 
-  WiFi.begin(ssid, pass);
+  WiFi.begin(ssid, password);
 
   while(WiFi.status() != WL_CONNECTED){
     Serial.print(".");
@@ -109,10 +103,51 @@ void setup() {
 }
 
 void loop() {
-  if(millis() - previousMillis > 10000){
+  
+  // STEP 2: Data Acquisition - Read data from the sensors
+  Serial.print("Proximity: ");
+  Serial.println(apds.readProximity());
+
+  Serial.print("Relative Humidity: ");
+  Serial.print(bme.readHumidity());
+  Serial.println(" %RH");
+
+  Serial.print("Approx. Altitude: ");
+  Serial.print(bme.readAltitude(1013.25));
+  Serial.println(" m");
+
+  Serial.print("Barometric Pressure: ");
+  Serial.print(bme.readPressure());
+  Serial.println(" Pa");
+
+  Serial.print("Ambient Temperature: ");
+  Serial.print(bme.readTemperature());
+  Serial.println(" °C");
+
+  mpu.getEvent(&a, &g, &temp);
+
+  Serial.print("Acceleration X:");
+  Serial.print(a.acceleration.x);
+  Serial.print(", Y:");
+  Serial.print(a.acceleration.y);
+  Serial.print(", Z:");
+  Serial.print(a.acceleration.z);
+  Serial.println(" m/s^2");
+
+  Serial.print("Rotation X:");
+  Serial.print(g.gyro.x);
+  Serial.print(", Y:");
+  Serial.print(g.gyro.y);
+  Serial.print(", Z:");
+  Serial.print(g.gyro.z);
+  Serial.println(" rad/s");
+
+  // STEP 3: Data Ingestion - Send data to Favoriot's data stream using secure HTTP connection
+  // Interval 15 seconds
+  if(millis() - previousMillis > 15000){
     previousMillis = millis();
     
-    String parameters = "{\"device_developer_id\":\"" + String(device_developer_id) + "\",\"data\":{";
+    String parameters = "{\"device_developer_id\":\"" + String(deviceDeveloperId) + "\",\"data\":{";
     
     parameters += "\"proximity\":\"" + String(apds.readProximity()) + "\",";
     parameters += "\"altitude\":\"" + String(bme.readAltitude(1013.25)) + "\",";
@@ -132,15 +167,21 @@ void loop() {
     parameters += "}}";
 
     String payloadJSON = "{\"method\":\"" + method + "\",";
-    payloadJSON += "\"apikey\":\"" + String(device_access_token) + "\",";
+    payloadJSON += "\"apikey\":\"" + String(deviceAccessToken) + "\",";
     payloadJSON += "\"parameters\":" + parameters;
     payloadJSON += "}";
 
     char payload[1024];
     payloadJSON.toCharArray(payload, 1024);
-    Serial.println("Send Request");
+    
+    Serial.println("\nSending data to Favoriot's Data Stream ...");
+    Serial.println("Data to Send: " + payloadJSON);
+
     int msgid = coap.send(host, port, url, COAP_CON, COAP_POST, NULL, 0, (uint8_t *)payload, strlen(payload));
   }
 
   coap.loop();
+
+  Serial.println("=============================================");
+  delay(3000);
 }
