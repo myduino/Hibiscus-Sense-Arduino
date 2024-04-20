@@ -1,5 +1,5 @@
 /*
- * Hibiscus Sense - Exercise 13 IoT using Favoriot HTTPS
+ * Hibiscus Sense - Exercise 13 IoT using Favoriot HTTPS Protocol
  * 
  * Author: Mohamad Ariffin Zulkifli
  * Organization: Myinvent Technologies Sdn Bhd
@@ -7,7 +7,7 @@
  * This sketch has 3 summary execution steps:
  * 1. Initialized Wi-Fi conectivity
  * 2. Data Acquisition - Read data from the sensors
- * 3. Data Ingestion - Send data to Favoriot's data stream using secure HTTP connection
+ * 3. Data Ingestion - Send data to Favoriot's data stream using secure HTTP protocol
  *
  * Select the board as ESP32 Dev Module before compiling the sketch
  * (example) Go to menu, Tools > Board > esp32 > ESP32 Dev Module

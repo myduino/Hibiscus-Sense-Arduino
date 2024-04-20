@@ -1,5 +1,5 @@
 /*
- * Hibiscus Sense - Exercise 14 IoT using Favoriot MQTTS
+ * Hibiscus Sense - Exercise 14 IoT using Favoriot MQTTS Protocol
  * 
  * Author: Mohamad Ariffin Zulkifli
  * Organization: Myinvent Technologies Sdn Bhd
@@ -8,7 +8,7 @@
  * 1. Initialized Wi-Fi conectivity
  * 2. Initialized MQTT connection to Favoriot MQTT broker
  * 2. Data Acquisition - Read data from the sensors
- * 3. Data Ingestion - Send data to Favoriot's data stream using secure MQTT connection
+ * 3. Data Ingestion - Send data to Favoriot's data stream using secure MQTT protocol
  *
  * Select the board as ESP32 Dev Module before compiling the sketch
  * (example) Go to menu, Tools > Board > esp32 > ESP32 Dev Module
