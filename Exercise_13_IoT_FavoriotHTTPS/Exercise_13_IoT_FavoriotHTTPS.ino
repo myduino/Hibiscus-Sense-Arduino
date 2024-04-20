@@ -12,7 +12,7 @@
  * Select the board as ESP32 Dev Module before compiling the sketch
  * (example) Go to menu, Tools > Board > esp32 > ESP32 Dev Module
  *
- * Favoriot's HTTP Secure Certificate Validity Expires On:
+ * Favoriot's Secure Certificate Validity Expires On:
  * Saturday, 26 April 2025 at 08:54:18
  * 
  */
