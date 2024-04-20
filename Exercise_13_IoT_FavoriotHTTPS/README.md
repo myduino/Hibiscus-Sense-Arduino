@@ -106,6 +106,9 @@ Good, you have successfully create new device on the Favoriot platform.
 
 Click the **`eye`** icon under the **`Action`** column, to view the device information.
 
+**Note**: **`Device Developer ID`** and **`Device Access Token`**, will be used in the Arduino sketch for ESP32 to create successful HTTP connection to Favoriot platform. *There is **copy** icon beside the field, for you to easily copy the details and paste into the Arduino sketch.*
+
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-success-info-a.png" width="800"></a></p>
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-success-info-b.png" width="800"></a></p>
+
