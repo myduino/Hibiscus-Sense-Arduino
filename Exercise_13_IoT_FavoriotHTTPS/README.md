@@ -1,9 +1,9 @@
 # Exercise 13: IoT Application using Favoriot (HTTPS Protocol)
 
-The aim of this exercise is to create an Internet of Things (IoT) project by integrating the Hibiscus Sense board and the Favoriot IoT platform:
+The aim of this exercise is to create an Internet of Things (IoT) project by integrating secure HTTP connection between the Hibiscus Sense board and the Favoriot IoT platform:
 1. Setting Up a Favoriot Account.
 2. Setting Up IoT Device.
-3. Sending Data to Favoriot.
+3. Sending Data to Favoriot using secure HTTP connection.
 4. Visualizing Data on Favoriot Dashboard.
 5. Creating Rules for Data Alert & Notification.
 
@@ -115,7 +115,7 @@ Click the **`eye`** icon under the **`Action`** column, to view the device infor
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-success-info-b.png" width="800"></a></p>
 
-## Sending Data to Favoriot
+## Sending Data to Favoriot using secure HTTP connection
 
 Let's sending the Hibiscus Sense sensor's data to Favoriot platform.
 
