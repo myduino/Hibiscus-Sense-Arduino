@@ -8,6 +8,10 @@ The aim of this exercise is to create an Internet of Things (IoT) project by int
 
 ## Introduction to Favoriot IoT Platform
 
+[Favoriot Platform](https://www.favoriot.com/favoriotplatform) is an IoT platform developed by [Favoriot Sdn. Bhd.](https://www.favoriot.com/) to simplify IoT device and data management, allowing you to easily perform IoT data pipeline, including data ingestion, data visualization, data alert and notification from your IoT devices.
+
+<p align="center"><img src="https://platform.favoriot.com/tutorial/v2/images/architecture%20v2.png" width="800"></a></p>
+
 ## Setting Up Favoriot Account
 
 1. Click this link [https://platform.favoriot.com/registration](https://platform.favoriot.com/registration) to create your Favoriot account and click the **Continue with Email** button. You can also use your Gmail account to register.
