@@ -376,4 +376,4 @@ Line widget is now shown on the dashboard.
 
 Click the **Edit Widget** icon, to view live data streaming dashboard.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-dashboard-device-new-line.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-dashboard-live.gif" width="800"></a></p>
