@@ -56,6 +56,10 @@ void loop() {
   // 2. bme.readHumidity(), this function will return humidity value in % Relative Humidity.
   // 2. bme.readTemperature(), this function will return temperature value in celcius.
 
+  Serial.print("Relative Humidity: ");
+  Serial.print(bme.readHumidity());
+  Serial.println(" %RH");
+
   Serial.print("Approx. Altitude: ");
   Serial.print(bme.readAltitude(1013.25));
   Serial.println(" m");
@@ -64,13 +68,9 @@ void loop() {
   Serial.print(bme.readPressure());
   Serial.println(" Pa");
 
-  Serial.print("Humidity: ");
-  Serial.print(bme.readHumidity());
-  Serial.println(" %RH");
-  
-  Serial.print("Temperature: ");
+  Serial.print("Ambient Temperature: ");
   Serial.print(bme.readTemperature());
-  Serial.println(" *C");
+  Serial.println(" °C");
 
   Serial.println("==================================");
 
