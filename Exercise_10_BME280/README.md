@@ -11,12 +11,15 @@ There is 1x BME280 on Hibiscus Sense, as on the image below. The circuit is inte
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-ten.png" width="400"></a></p>
 
 BME280 measurement specifications:
-1. Altitude with ±1 meter accuracy.
-2. Barometric pressure with ±1 hPa absolute accuraccy.
-3. Humidity with ±3%RH accuracy.
-4. Temperature with ±1.0°C accuracy.
+1. Relative humidity with ±3%RH accuracy.
+2. Altitude with ±1 meter accuracy.
+3. Barometric pressure with ±1 hPa absolute accuraccy.
+4. Ambient temperature with ±1.0°C accuracy.
 
-To acquire environmental data from BME280, we need to use [Adafruit_BME280](https://github.com/adafruit/Adafruit_BME280_Library) library, as it will helps shorten the time consuming development and focus on the objective, which to sense the proximity value. Prior to program the ESP32, we need to install the library from Arduino IDE's Library Manager, as on the image below.
+## Install Adafruit BME280 Library
+Let's use [Adafruit_BME280](https://github.com/adafruit/Adafruit_BME280_Library) library, to easily program the ESP32 to read the environmental value from the BME280 sensor. Following the image below: 1. On the Arduino IDE, go to the Library Manager.
+2. Search for **`adafruit bme280`**.
+3. Look for ***Adafruit BME280 Library** by Adafruit* and click the **INSTALL** button and wait until the installation process is done, until the status on the library is *`2.2.x installed`*.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-ten-a.png" width="700"></a></p>
 
