@@ -60,7 +60,9 @@ Although, we can program ESP32 using other programming language such as C, C++, 
 - [Exercise 10: Monitor Environmental Value using BME280](https://github.com/myinvent/Hibiscus-Sense-Arduino/tree/main/Exercise_10_BME280)
 - [Exercise 11: Monitor 6-Axis Motion Tracking using MPU6050](https://github.com/myinvent/Hibiscus-Sense-Arduino/tree/main/Exercise_11_MPU6050)
 - [Exercise 12: IoT Application using Blynk IoT Platform](https://github.com/myinvent/Hibiscus-Sense-Arduino/tree/main/Exercise_12_IoT_Blynk)
-- [Exercise 13: IoT Application using Favoriot IoT Platform (HTTPS Protocol)](https://github.com/myinvent/Hibiscus-Sense-Arduino/tree/main/Exercise_13_IoT_FavoriotHTTPS)
+- [Exercise 13: IoT Application using Favoriot IoT Platform (Secure HTTP Protocol)](https://github.com/myinvent/Hibiscus-Sense-Arduino/tree/main/Exercise_13_IoT_FavoriotHTTPS)
+- [Exercise 14: IoT Application using Favoriot IoT Platform (Secure MQTT Protocol)](https://github.com/myinvent/Hibiscus-Sense-Arduino/tree/main/Exercise_14_IoT_FavoriotMQTTS)
+- [Exercise 15: IoT Application using Favoriot IoT Platform (CoAP Protocol)](https://github.com/myinvent/Hibiscus-Sense-Arduino/tree/main/Exercise_15_IoT_FavoriotCoAP)
 
 ## Exercises Image Credits
 - _Isaac Low on Quora_
