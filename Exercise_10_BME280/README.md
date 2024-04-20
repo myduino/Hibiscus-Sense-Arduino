@@ -17,7 +17,8 @@ BME280 measurement specifications:
 4. Ambient temperature with ±1.0°C accuracy.
 
 ## Install Adafruit BME280 Library
-Let's use [Adafruit_BME280](https://github.com/adafruit/Adafruit_BME280_Library) library, to easily program the ESP32 to read the environmental value from the BME280 sensor. Following the image below: 1. On the Arduino IDE, go to the Library Manager.
+Let's use [Adafruit_BME280](https://github.com/adafruit/Adafruit_BME280_Library) library, to easily program the ESP32 to read the environmental value from the BME280 sensor. Following the image below:
+1. On the Arduino IDE, go to the Library Manager.
 2. Search for **`adafruit bme280`**.
 3. Look for ***Adafruit BME280 Library** by Adafruit* and click the **INSTALL** button and wait until the installation process is done, until the status on the library is *`2.2.x installed`*.
 
