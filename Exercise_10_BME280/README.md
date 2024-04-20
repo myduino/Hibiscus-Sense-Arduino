@@ -20,7 +20,7 @@ BME280 measurement specifications:
 Let's use [Adafruit_BME280](https://github.com/adafruit/Adafruit_BME280_Library) library, to easily program the ESP32 to read the environmental value from the BME280 sensor. Following the image below:
 1. On the Arduino IDE, go to the Library Manager.
 2. Search for **`adafruit bme280`**.
-3. Look for **Adafruit BME280 Library** by Adafruit and click the **INSTALL** button and wait until the installation process is done, until the status on the library is *`2.2.x installed`*.
+3. Look for **Adafruit BME280 Library** by Adafruit, click the **INSTALL** button and wait until the installation process is done and the status on the library is *`2.2.x installed`*.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-ten-a.png" width="700"></a></p>
 
