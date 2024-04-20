@@ -2,7 +2,7 @@
 
 The aim of this exercise is to learn how to measure relative humidity, altitude, barometric pressure and ambient temperature using the BME280 sensor.
 
-BME280 is an environmental sensor, developed by [Bosch Sensortec](https://www.bosch-sensortec.com/products/environmental-sensors/humidity-sensors-bme280/) that can measure **`relative humidity`**, **`altitude`**, **`barometric pressure`** and **`ambient temperature`**. It is great for indoor environmental monitoring. Since BME280 position near to the microcontroller, the temperature reading is based on the heat dissipation from the microcontroller. 
+BME280 is an environmental sensor, developed by [Bosch Sensortec](https://www.bosch-sensortec.com/products/environmental-sensors/humidity-sensors-bme280/) that can measure **`relative humidity`**, **`altitude`**, **`barometric pressure`** and **`ambient temperature`**. It is good for indoor environmental monitoring application. **Note**: *Given its close proximity to the microcontroller, the BME280's temperature measurement may be affected by the heat dissipated from the microcontroller.*
 
 It has both communication protocol I2C and SPI.
 
