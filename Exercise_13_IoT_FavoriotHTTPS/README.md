@@ -372,17 +372,32 @@ Gauge widget is now shown on the dashboard.
 
 Line widget is now shown on the dashboard.
 
+Good, you have successfully configure the dashboard for data streaming visualization.
+
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-dashboard-device-new-line.png" width="800"></a></p>
 
-Click the **Edit Widget** icon, to view live data streaming dashboard.
-
-Good, you have successfully configure the dashboard for data streaming visualization.
+If you want to edit the widget, you can click the **Edit Widget** icon.
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-dashboard-live.png" width="800"></a></p>
 
-You can click the **`X`** Exit Edit Mode icon at the right bottom of the page, to go to edit mode. You might want to add other widget, but on FREE ACCOUNT plan, only 2 widget are allowed.
+You can click the **`X`** Exit Edit Mode icon at the right bottom of the page, to go to live mode.
+
+**Note**: You might want to add other widget, but on FREE ACCOUNT plan, only 2 widget are allowed.
 
 You can subscribe to BEGINNER PLAN plan, then you can add extra widget to visualize other data parameter.
 
 ## Creating Rules for Data Alert & Notification
 
+Go to menu and click **Rules** to show the list of dashboards. Currently, we don't have any dashboard, let's create the dashboard!
+
+### Create Dashboard
+1. Click on the **`Create Rule`** icon.
+2. Click the **`Notifications`** icon.
+3. Choose the **Method**: **`Email`**
+4. Key in the **Rule Name**: **`highHumidity`**
+5. Key in the **`Description`**: **`High Humidity > 80`**
+6. Choose the **Device**: **`HibiscusSense`**
+7. Key in the **Rule**: **`stream.humidity > 80`**
+8. Key in the  **To**: **`YOUR_EMAIL_ADDRESS`**
+9. Choose the **Status**: **`Activate`**
+10. Choose the **Threshold**: **`5`**
