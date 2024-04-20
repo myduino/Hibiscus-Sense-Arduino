@@ -244,9 +244,9 @@ To connect Hibiscus Sense to Blynk platform, you need to program the ESP32 inclu
 #define BLYNK_PRINT Serial
 
 /* Fill in information from Blynk Device Info here */
-//#define BLYNK_TEMPLATE_ID           "TMPxxxxxx"
-//#define BLYNK_TEMPLATE_NAME         "Device"
-//#define BLYNK_AUTH_TOKEN            "YourAuthToken"
+#define BLYNK_TEMPLATE_ID           "TMPxxxxxx"
+#define BLYNK_TEMPLATE_NAME         "Device"
+#define BLYNK_AUTH_TOKEN            "YourAuthToken"
 
 
 #include <WiFi.h>
@@ -256,8 +256,8 @@ To connect Hibiscus Sense to Blynk platform, you need to program the ESP32 inclu
 
 // Your WiFi credentials.
 // Set password to "" for open networks.
-char ssid[] = "YourNetworkName";
-char pass[] = "YourPassword";
+char ssid[] = "YourWiFiSSID";
+char password[] = "YourWiFiPassword";
 
 Adafruit_BME280 bme;
 
@@ -274,36 +274,36 @@ void setup() {
   // Debug console
   Serial.begin(115200);
 
-  Blynk.begin(BLYNK_AUTH_TOKEN, ssid, pass);
-
   if (!bme.begin()){
     Serial.println("Failed to find Hibiscus Sense BME280 chip");
   }
+
+  // STEP 1: Initialized Wi-Fi conectivity and Blynk Authentication
+  Blynk.begin(BLYNK_AUTH_TOKEN, ssid, password);
 }
 
 void loop() {
-  if(WiFi.status() != WL_CONNECTED){
-    WiFi.begin(ssid, pass);
-
-    while(WiFi.status() != WL_CONNECTED);
-  }
-
   Blynk.run();
 
+  // Interval 1 seconds
   if(millis() - previousMillis > 1000){
-
     previousMillis = millis();
-
+    
+    // STEP 2: Data Acquisition - Read data from the sensors
     float humidity = bme.readHumidity();
     float temperature = bme.readTemperature();
 
     Serial.println("Humidity: " + String(humidity) + " %RH");
     Serial.println("Temperature: " + String(temperature) + " °C");
 
+    // STEP 3: Data Ingestion - Send data to Blynk's data stream using HTTPS
     Blynk.virtualWrite(V0, humidity);
     Blynk.virtualWrite(V1, temperature);
 
   }
+
+  Serial.println("=============================================");
+  delay(3000);
 }
 ```
 
