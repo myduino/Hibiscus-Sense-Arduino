@@ -388,16 +388,33 @@ You can subscribe to BEGINNER PLAN plan, then you can add extra widget to visual
 
 ## Creating Rules for Data Alert & Notification
 
-Go to menu and click **Rules** to show the list of dashboards. Currently, we don't have any dashboard, let's create the dashboard!
+Go to menu and click **Rules** to show the list of rules. Currently, we don't have any rule, let's create the rule!
 
-### Create Dashboard
 1. Click on the **`Create Rule`** icon.
 2. Click the **`Notifications`** icon.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-rule-new-notification.png" width="800"></a></p>
+
 3. Choose the **Method**: **`Email`**
 4. Key in the **Rule Name**: **`highHumidity`**
 5. Key in the **`Description`**: **`High Humidity > 80`**
 6. Choose the **Device**: **`HibiscusSense`**
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-rule-new-notification-a.png" width="800"></a></p>
+
 7. Key in the **Rule**: **`stream.humidity > 80`**
 8. Key in the  **To**: **`YOUR_EMAIL_ADDRESS`**
-9. Choose the **Status**: **`Activate`**
-10. Choose the **Threshold**: **`5`**
+9. Key in the  **Notification Message**: **`[Hibiscus Sense]: The humidity value detected higher than 80 %RH`**
+10. Choose the **Status**: **`Activate`**
+11. Choose the **Threshold**: **`5`**
+12. Click the **`Confirm`** button.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-rule-new-notification-b.png" width="800"></a></p>
+
+Good, you have successfully create the rule that will trigger an email if the humidity value is detected more than 80 %RH.
+
+Simulate the humidity data to be above 80 %RH.
+
+
+
+Go to your Hibiscus Sense dashboard, monitor the humidity value to be more than 80 %RH and wait for the rule to be detected and send the email notification. 
