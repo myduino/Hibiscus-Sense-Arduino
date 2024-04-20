@@ -14,7 +14,7 @@ There is 1x MPU6050 on Hibiscus Sense, as on the image below. The circuit is int
 
 To acquire sensing information from MPU6050, we need to use [Adafruit_MPU6050](https://github.com/adafruit/Adafruit_MPU6050) library, as it will helps shorten the time consuming development and focus on the objective, which to sense the proximity value. Prior to program the ESP32, we need to install the library from Arduino IDE's Library Manager, as on the image below.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-ten-a.png" width="700"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-eleven-a.png" width="700"></a></p>
 
 Once the library is successfully installed, we can start to write the sketch to monitor proximity value as below:
 
