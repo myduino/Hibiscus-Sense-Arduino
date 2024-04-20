@@ -2,13 +2,13 @@
 
 The aim of this exercise is to learn how to read and monitor the proximity value from the APDS9960 sensor.
 
-APDS9960 is an advance sensor offering digital proximity, ambient light, RGB and gesture sensor in a very small package. amazing, right? The advance integrated IR LED and driver on the sensor, allows it to measure proximity (up to a few centimeters) with 8-bit resolution (value: 0-255). Below is an illustration of IR LED acts as proximity sensor.
+APDS9960 is an advance sensor by [Broadcom](https://www.broadcom.com/products/optical-sensors/integrated-ambient-light-and-proximity-sensors/apds-9960) offering digital RGB, ambient light, proximity and gesture sensing in a very small package. amazing, right? The advance integrated IR LED and driver on the sensor, allows it to measure proximity (up to a few centimeters) with 8-bit resolution (value: 0-255). Below is an illustration of IR LED acts as proximity sensor.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-eight.gif" width="500"></a></p>
 
 The built-in UV and IR blocking filters, allows APDS9960 to sense ambient light and RGB color. While, with four separate diodes sensitive to different directions and ambient light rejectino, allows it to sense gesture.
 
-APDS9960 communication protocol is I2C. Therefore, we can interface it to ESP32 using I2C, to acquire its available measurement.
+APDS9960 communication protocol is I2C. Therefore, we can interface it to ESP32 using I2C, to acquire its sensing measurement.
 
 There is 1x APDS9960 on Hibiscus Sense, as on the image below. The circuit is interfaced to **ESP32's I2C** (`SDA`: **GPIO21**, `SCL`: **GPIO22**) with the sensor I2C default address: **`0x39`**. The arrow is pointing towards gesture sensing **`UP`** direction.
 
