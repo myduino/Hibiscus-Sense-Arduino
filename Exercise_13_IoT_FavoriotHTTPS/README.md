@@ -83,12 +83,23 @@ Only 1 device is allowed on FREE ACCOUNT plan, let's **delete** the deviceDefaul
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-latitude.png" width="800"></a></p>
 
 8. Choose **Timezone**: **`Asia/Kuala_Lumpur`**
+9. Click **`Select Photo`** to add device image.
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-info-b.png" width="800"></a></p>
 
-9. Click **`Select Photo`** to add device image.
+10. Click the **`Upload Image`** button.
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-info-upload.png" width="800"></a></p>
 
+11. Choose the downloaded Hibiscus Sense image from **Step 1**.
+12. Click the **`Done`** button.
 
-10. 
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-info-image.png" width="800"></a></p>
+
+13. Click the **`Confirm`** button to create the new device.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-info-confirm.png" width="800"></a></p>
+
+Good, you have successfully create new device on the Favoriot platform.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-success.png" width="800"></a></p>
