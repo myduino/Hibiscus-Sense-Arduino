@@ -1,3 +1,22 @@
+/*
+ * Hibiscus Sense - Exercise 15 IoT using Favoriot CoAP Protocol
+ * 
+ * Author: Mohamad Ariffin Zulkifli
+ * Organization: Myinvent Technologies Sdn Bhd
+ *
+ * This sketch has 3 summary execution steps:
+ * 1. Initialized Wi-Fi conectivity
+ * 2. Data Acquisition - Read data from the sensors
+ * 3. Data Ingestion - Send data to Favoriot's data stream using CoAP protocol
+ *
+ * Select the board as ESP32 Dev Module before compiling the sketch
+ * (example) Go to menu, Tools > Board > esp32 > ESP32 Dev Module
+ *
+ * Favoriot's Secure Certificate Validity Expires On:
+ * Saturday, 26 April 2025 at 08:54:18
+ * 
+ */
+
 #include <WiFi.h>
 #include <WiFiUdp.h>
 #include <Adafruit_APDS9960.h>
