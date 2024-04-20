@@ -413,8 +413,17 @@ Go to menu and click **Rules** to show the list of rules. Currently, we don't ha
 
 Good, you have successfully create the rule that will trigger an email if the humidity value is detected more than 80 %RH.
 
-Simulate the humidity data to be above 80 %RH.
+Simulate the humidity data to be above 80 %RH. Go to your Hibiscus Sense dashboard, monitor the humidity value to be more than 80 %RH.
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-rule-humidity-detected.png" width="800"></a></p>
 
-Go to your Hibiscus Sense dashboard, monitor the humidity value to be more than 80 %RH and wait for the rule to be detected and send the email notification. 
+Once the Favoriot rule is detected, it will send an email notification.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-rule-humidity-email.png" width="800"></a></p>
+
+Congratulations, you have completed this exercise and gain hands-on experience on how to create IoT applications using Favoriot platform.
+
+## Further Experiment
+You can upgrade your Favoriot account to BEGINNER PLAN and you can have the privileges to add new devices and explore more features on Favoriot platform.
+
+<p align="right"><a href="https://forms.gle/UgpDSFc46K4MkvTM8">&#128640; Tutorial Improvement & Suggestions</a></p>

@@ -313,6 +313,8 @@ void loop() {
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-dashboard.png" width="800"></a></p>
 
+Congratulations, you have completed this exercise and gain hands-on experience on how to create IoT applications using Blynk platform.
+
 ## Further Experiment
 You can customize the Blynk app interface with additional widgets.
 
