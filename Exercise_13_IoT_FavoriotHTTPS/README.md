@@ -415,6 +415,6 @@ Good, you have successfully create the rule that will trigger an email if the hu
 
 Simulate the humidity data to be above 80 %RH.
 
-
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-rule-humidity-detected.png" width="800"></a></p>
 
 Go to your Hibiscus Sense dashboard, monitor the humidity value to be more than 80 %RH and wait for the rule to be detected and send the email notification. 
