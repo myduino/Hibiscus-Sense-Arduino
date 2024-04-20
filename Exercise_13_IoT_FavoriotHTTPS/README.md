@@ -66,22 +66,29 @@ Only 1 device is allowed on FREE ACCOUNT plan, let's **delete** the deviceDefaul
 
 ### Create New Device
 
-1. Click the **`Create Device`** icon.
-2. Choose group **Hierarchy**: **`groupDefault`**.
-3. Key in **Device Name**: **`HibiscusSense`**
-4. Key in **Description**: **`Hibiscus Sense`**
-5. Choose **Device Type**: **`ESP32`** 
+1. Save as the Hibiscus Sense below image into your PC.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-hibiscus-sense.jpg" width="500"></a></p>
+
+2. Click the **`Create Device`** icon.
+3. Choose group **Hierarchy**: **`groupDefault`**.
+4. Key in **Device Name**: **`HibiscusSense`**
+5. Key in **Description**: **`Hibiscus Sense`**
+6. Choose **Device Type**: **`ESP32`** 
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-info-a.png" width="800"></a></p>
 
-6. Key in **Latitude** and **Longitude**. *You can use Google to find your location latitude and longitude.*
+7. Key in **Latitude** and **Longitude**. *You can use Google to find your location latitude and longitude.*
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-latitude.png" width="800"></a></p>
 
-7. Choose **Timezone**: **`Asia/Kuala_Lumpur`**
+8. Choose **Timezone**: **`Asia/Kuala_Lumpur`**
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-info-b.png" width="800"></a></p>
 
-8. Click **`Select Photo`** to add device image.
+9. Click **`Select Photo`** to add device image.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-info-b.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-info-upload.png" width="800"></a></p>
+
+
+10. 
