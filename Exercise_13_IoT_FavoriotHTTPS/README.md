@@ -318,4 +318,62 @@ Once, the data is available on Favoriot platform, let's create the dashboard to 
 On the Favoriot platform, go to menu and click **Dashboards** to show the list of dashboards. Currently, we don't have any dashboard, let's create the dashboard!
 
 ### Create Dashboard
-1. 
+1. Click on the **`Create Dashboard`** icon.
+2. Key in **Dashboard Name**: **`Hibiscus Sense`**
+3. Key in **Tags**: **`proximity, humidity, altitude, barometer, temperature, accx, accy, accz, gyrox, gyroy, gyroz`**
+4. Upload the image of Hibiscus Sense.
+5. Click the **`Confirm`** button.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-dashboard-create-new.png" width="800"></a></p>
+
+Good, you have successfully create new dashboard on the Favoriot platform.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-dashboard-list.png" width="800"></a></p>
+
+Click on the **Hibiscus Sense** dashboard and configure the dashboard.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-dashboard-device-new.png" width="800"></a></p>
+
+### Configure Dashboard
+
+#### Add Gauge Widget
+1. Click the **`+`** icon at the right bottom of the page.
+2. Key in **Title**: **`Humidity`**
+3. Choose **Type**: **`Gauge`**
+4. Choose **Gauge Type**: **`Basic`**
+5. Choose **Device**: **`HibiscusSense`**
+6. Choose **Parameter**: **`humidity`**
+7. Key in **Parameter Unit**: **`%RH`**
+8. Click the **`Confirm`** button.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-dashboard-device-new-widget-gauge.png" width="800"></a></p>
+
+Gauge widget is now shown on the dashboard.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-dashboard-device-new-gauge.png" width="800"></a></p>
+
+### Add Line Widget
+
+1. Click the **`+`** Add Widget icon at the right bottom of the page.
+2. Key in **Title**: **`Humidity`**
+3. Choose **Type**: **`Line`**
+4. Choose **Line Curve**: **`Straight`**
+5. Choose **Device**: **`HibiscusSense`**
+6. Choose **Parameter**: **`humidity`**
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-dashboard-device-new-widget-line-a.png" width="800"></a></p>
+
+7. Key in **X-Axis Label**: **`Time`**
+8. Key in **Y-Axis Label**: **`humidity`**
+9. Key in **Prefill Data Count**: **`30`**
+10. Click the **`Confirm`** button.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-dashboard-device-new-widget-line-b.png" width="800"></a></p>
+
+Line widget is now shown on the dashboard.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-dashboard-device-new-line.png" width="800"></a></p>
+
+Click the **Edit Widget** icon, to view live data streaming dashboard.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-dashboard-device-new-line.png" width="800"></a></p>
