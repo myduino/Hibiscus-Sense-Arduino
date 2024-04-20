@@ -47,6 +47,10 @@ Although, we can program ESP32 using other programming language such as C, C++, 
 
 ## Learn How to Program Hibiscus Sense using Arduino
 
+You can clone or download this repo into your PC and open the exercise example sketch on the Arduino IDE. It is always recommended to begin with the hands-on learning preparation.
+
+Below is the **Table of Contents** of the exercises.
+
 - [Hands-On Learning Preparation](https://github.com/myinvent/Hibiscus-Sense-Arduino/tree/main/Exercise_00_Learning_Preparation)
 - [Exercise 01: Control Blue LED on GPIO2 (Strobe Light Effect)](https://github.com/myinvent/Hibiscus-Sense-Arduino/tree/main/Exercise_01_Strobe_Light)
 - [Exercise 02: Control Blue LED on GPIO2 (Glowing Light Effect)](https://github.com/myinvent/Hibiscus-Sense-Arduino/tree/main/Exercise_02_Glowing_Light)
