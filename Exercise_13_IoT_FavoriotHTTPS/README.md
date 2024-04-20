@@ -10,7 +10,7 @@ The aim of this exercise is to create an Internet of Things (IoT) project by int
 
 [Favoriot Platform](https://www.favoriot.com/favoriotplatform) is an IoT platform developed by [Favoriot Sdn. Bhd.](https://www.favoriot.com/), to simplify IoT devices and it's data management, allowing you to easily perform IoT data pipeline, including data ingestion, data visualization, data analytics, data alert and notification from your IoT devices.
 
-<p align="center"><img src="https://platform.favoriot.com/tutorial/v2/images/architecture%20v2.png" width="600"></a></p>
+<p align="center"><img src="https://platform.favoriot.com/tutorial/v2/images/architecture%20v2.png" width="500"></a></p>
 
 ## Setting Up Favoriot Account
 
@@ -36,5 +36,13 @@ The aim of this exercise is to create an Internet of Things (IoT) project by int
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-login.png" width="800"></a></p>
 
 Good, you have successfully setup account on the Favoriot IoT platform.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-overview.png" width="800"></a></p>
+
+## Setting Up IoT Device
+
+Upon, succesful account registration, Favoriot automatically create the [platform hierarchy](https://platform.favoriot.com/tutorial/v2/#favoriot-platform-hierarchy), from the **`projectDefault`** > **`applicationDefault`** > **`groupDefault`** > **`deviceDefault`**.
+
+Following the image below, go to menu and click **Hierarchy** > **Devices** to show the list IoT devices.
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-overview.png" width="800"></a></p>
