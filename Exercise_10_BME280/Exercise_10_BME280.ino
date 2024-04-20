@@ -34,8 +34,12 @@ void loop() {
   // there are four function need to be called from bme instance:
   // 2. bme.readAltitude(), this function will return altitude value in meters.
   // 1. bme.readPressure(), this function will return barometric pressure value in Pascals.
-  // 2. bme.readHumidity(), this function will return humidity value in % Relative Humidity.
+  // 2. bme.readHumidity(), this function will return relative humidity value in %RH.
   // 2. bme.readTemperature(), this function will return temperature value in celcius.
+
+  Serial.print("Relative Humidity: ");
+  Serial.print(bme.readHumidity());
+  Serial.println(" %RH");
 
   Serial.print("Approx. Altitude: ");
   Serial.print(bme.readAltitude(1013.25));
@@ -45,13 +49,9 @@ void loop() {
   Serial.print(bme.readPressure());
   Serial.println(" Pa");
 
-  Serial.print("Humidity: ");
-  Serial.print(bme.readHumidity());
-  Serial.println(" %RH");
-  
-  Serial.print("Temperature: ");
+  Serial.print("Ambient Temperature: ");
   Serial.print(bme.readTemperature());
-  Serial.println(" *C");
+  Serial.println(" °C");
 
   Serial.println("==================================");
 
