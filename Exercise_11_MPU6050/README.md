@@ -39,7 +39,7 @@ sensors_event_t a, g, temp;
 void setup() {
   
   // Initialize the serial communication with baud rate 9600bps.
-  Serial.begin(9600);
+  Serial.begin(115200);
   // Initialize MPU6050 sensor and if the connection is not successful,
   // print the failed status to the Serial Monitor.
   if (!mpu.begin()){
@@ -87,7 +87,7 @@ void loop() {
 
   Serial.println("=============================================");
 
-  delay(500);
+  delay(3000);
   
 }
 ```

@@ -49,7 +49,7 @@ int counter = 0;
 
 void setup() {
   // initialized ESP32 UART0 with speed 9600bps
-  Serial.begin(9600);
+  Serial.begin(115200);
 }
 
 void loop() {
@@ -74,7 +74,7 @@ int counter = 0;
 
 In the `void setup()` function, firstly we need to initialize the hardware serial communication by calling `begin()` function of `Serial` object, with suitable baud-rate, most commonly used is `9600`.
 ```cpp
-Serial.begin(9600);
+Serial.begin(115200);
 ```
 
 In logical thinking, before we can submit any value we need to have the value first, before we can submit it, right? Therefore, in the `void loop()` function, the first thing to do, is to generate _incremental value_ of variable `counter`, applying (++) arithmetic operations, representing +1 to the previous value of variable counter. Example of previous value of `counter` is `0` then add it by +1, the latest value of variable counter is 1, as thing process is inside the `void loop()` function, the variable counter's value incrementally by 1 each loop.

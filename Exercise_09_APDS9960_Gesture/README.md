@@ -15,7 +15,7 @@ Adafruit_APDS9960 apds;
 
 void setup() {
   // Initialize the serial communication with baud rate 9600bps.
-  Serial.begin(9600);
+  Serial.begin(115200);
   // Initialize APDS9960 sensor and if the connection is not successful,
   // print the failed status to the Serial Monitor.
   if (!apds.begin()){

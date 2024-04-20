@@ -272,7 +272,7 @@ BLYNK_WRITE(V2){
 
 void setup() {
   // Debug console
-  Serial.begin(9600);
+  Serial.begin(115200);
 
   Blynk.begin(BLYNK_AUTH_TOKEN, ssid, pass);
 
