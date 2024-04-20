@@ -2,11 +2,10 @@
 
 The aim of this exercise is to learn how to read and monitori 6-axis motion tracking using the MPU6050 sensor.
 
-
-MPU6050 is a 6-axis motion tracking sensor with the ability to sense:
+MPU6050 is a 6-axis motion tracking sensor by [InvenSense](https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/) to measure:
 1. 3-axis accelerometer, the gravitational acceleration.
 2. 3-axis gyroscope, the rotational velocity.
-3. Temperature
+3. Ambient temperature.
 
 There is 1x MPU6050 on Hibiscus Sense, as on the image below. The circuit is interfaced to **ESP32's I2C** (`SDA`: **GPIO21**, `SCL`: **GPIO22**) with the sensor I2C default address: **`0x68`**.
 
