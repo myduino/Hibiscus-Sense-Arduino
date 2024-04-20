@@ -51,7 +51,7 @@ BLYNK_WRITE(V11){
 
 void setup(){
   
-  Serial.begin(9600);
+  Serial.begin(115200);
   Blynk.begin(auth, ssid, pass);
 
   if (!apds.begin()){

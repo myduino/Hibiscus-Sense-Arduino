@@ -14,7 +14,7 @@ int counter = 0;
 
 void setup() {
   // initialized ESP32 UART0 with speed 9600bps
-  Serial.begin(9600);
+  Serial.begin(115200);
 }
 
 void loop() {

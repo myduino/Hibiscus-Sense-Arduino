@@ -4,16 +4,16 @@
  * Author: Mohamad Ariffin Zulkifli
  * Organization: Myinvent Technologies Sdn Bhd
  *
- * This sketch has 3 execution steps:
+ * This sketch has 3 summary execution steps:
  * 1. Initialized Wi-Fi conectivity
  * 2. Data Acquisition - Read data from the sensors
- * 3. Data Ingestion - Send data to Favoriot's data stream using HTTPS
+ * 3. Data Ingestion - Send data to Favoriot's data stream using secure HTTP connection
  *
- * Please select ESP32 Boards before compiling the sketch
- * (example) Go to menu, Tools > Board > ESP32 Arduino
+ * Select the board as ESP32 Dev Module before compiling the sketch
+ * (example) Go to menu, Tools > Board > esp32 > ESP32 Dev Module
  *
  * Favoriot's HTTP Secure Certificate Validity Expires On:
- * Saturday, 27 May 2023 at 14:17:12
+ * Saturday, 26 April 2025 at 08:54:18
  * 
  */
 
@@ -33,16 +33,16 @@ Adafruit_MPU6050 mpu;
 
 sensors_event_t a, g, temp;
 
-const char ssid[] = "YourWiFiSSID";
-const char pass[] = "YourWiFiPassword";
-const char device_developer_id[] = "YourDeviceDeveloperId";
-const char device_access_token[] = "YourDeviceAccessToken";
+const char ssid[] = "Domiyen";
+const char password[] = "DoMiYen@AAA111";
+const char deviceDeveloperId[] = "HibiscusSense@ariffinastute";
+const char deviceAccessToken[] = "ZPiKKhEupizB19JczB6ZXuKNXlJyuKWr";
 
 long previousMillis = 0;
 
 void setup() {
 
-  Serial.begin(9600);
+  Serial.begin(115200);
 
   rgb.begin();
   rgb.show();
@@ -61,7 +61,8 @@ void setup() {
     Serial.println("Failed to find Hibiscus Sense MPU6050 chip");
   }
 
-  WiFi.begin(ssid, pass);
+  // STEP 1: Initialized Wi-Fi conectivity
+  WiFi.begin(ssid, password);
 
   while(WiFi.status() != WL_CONNECTED){
     Serial.print(".");
@@ -71,17 +72,56 @@ void setup() {
 }
 
 void loop() {
+  // STEP 2: Data Acquisition - Read data from the sensors
+  Serial.print("Proximity: ");
+  Serial.println(apds.readProximity());
 
-  if(millis() - previousMillis > 10000){
+  Serial.print("Relative Humidity: ");
+  Serial.print(bme.readHumidity());
+  Serial.println(" %RH");
+
+  Serial.print("Approx. Altitude: ");
+  Serial.print(bme.readAltitude(1013.25));
+  Serial.println(" m");
+
+  Serial.print("Barometric Pressure: ");
+  Serial.print(bme.readPressure());
+  Serial.println(" Pa");
+
+  Serial.print("Ambient Temperature: ");
+  Serial.print(bme.readTemperature());
+  Serial.println(" °C");
+
+  mpu.getEvent(&a, &g, &temp);
+
+  Serial.print("Acceleration X:");
+  Serial.print(a.acceleration.x);
+  Serial.print(", Y:");
+  Serial.print(a.acceleration.y);
+  Serial.print(", Z:");
+  Serial.print(a.acceleration.z);
+  Serial.println(" m/s^2");
+
+  Serial.print("Rotation X:");
+  Serial.print(g.gyro.x);
+  Serial.print(", Y:");
+  Serial.print(g.gyro.y);
+  Serial.print(", Z:");
+  Serial.print(g.gyro.z);
+  Serial.println(" rad/s");
+
+  // STEP 3: Data Ingestion - Send data to Favoriot's data stream using secure HTTP connection
+  // Interval 15 seconds
+  if(millis() - previousMillis > 15000){
 
     previousMillis = millis();
     
-    String json = "{\"device_developer_id\":\"" + String(device_developer_id) + "\",\"data\":{";
+    String json = "{\"device_developer_id\":\"" + String(deviceDeveloperId) + "\",\"data\":{";
     
     json += "\"proximity\":\"" + String(apds.readProximity()) + "\",";
+    json += "\"humidity\":\"" + String(bme.readHumidity()) + "\",";
     json += "\"altitude\":\"" + String(bme.readAltitude(1013.25)) + "\",";
     json += "\"barometer\":\"" + String(bme.readPressure()/100.00) + "\",";
-    json += "\"humidity\":\"" + String(bme.readHumidity()) + "\",";
     json += "\"temperature\":\"" + String(bme.readTemperature()) + "\",";
     
     mpu.getEvent(&a,&g,&temp);
@@ -95,6 +135,8 @@ void loop() {
     
     json += "}}";
 
+    Serial.println("\nSending data to Favoriot's Data Stream ...");
+
     WiFiClientSecure *client = new WiFiClientSecure;
 
     if(client) {
@@ -105,12 +147,12 @@ void loop() {
         https.begin(*client, "https://apiv2.favoriot.com/v2/streams");
       
         https.addHeader("Content-Type", "application/json");
-        https.addHeader("Apikey", device_access_token);
+        https.addHeader("Apikey", deviceAccessToken);
         
         int httpCode = https.POST(json);
       
         if(httpCode > 0){
-          Serial.print("> HTTPS Request: ");
+          Serial.print("HTTPS Request: ");
           
           httpCode == 201 ? Serial.print("Success, ") : Serial.print("Error, ");
           Serial.println(https.getString());
@@ -126,8 +168,11 @@ void loop() {
       delete client;
     }
     else{
-      Serial.println("Unable to create client");
+      Serial.println("Unable to create secure client connection!");
       Serial.println();
     }
   }
+
+  Serial.println("=============================================");
+  delay(3000);
 }

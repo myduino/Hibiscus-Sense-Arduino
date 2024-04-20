@@ -54,7 +54,7 @@ void callback_response(CoapPacket &packet, IPAddress ip, int port) {
 }
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
 
   rgb.begin();
   rgb.show();

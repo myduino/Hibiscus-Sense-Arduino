@@ -37,9 +37,9 @@ void loop() {
   // 2nd argument: the Red color value.
   // 3nd argument: the Green color value.
   // 4nd argument: the Blue color value.
-//  rgb.setPixelColor(0, 255, 0, 255);  // combination of Red and Blue color = magenta
+  rgb.setPixelColor(0, 255, 0, 255);  // combination of Red and Blue color = magenta
 
   // calling show() function to push the data to the LED.
-//  rgb.show();
+  rgb.show();
 
 }
