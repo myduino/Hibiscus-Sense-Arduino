@@ -12,7 +12,11 @@ There is 1x MPU6050 on Hibiscus Sense, as on the image below. The circuit is int
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-eleven.png" width="400"></a></p>
 
-To acquire sensing information from MPU6050, we need to use [Adafruit_MPU6050](https://github.com/adafruit/Adafruit_MPU6050) library, as it will helps shorten the time consuming development and focus on the objective, which to sense the proximity value. Prior to program the ESP32, we need to install the library from Arduino IDE's Library Manager, as on the image below.
+## Install Adafruit MPU6050 Library
+Let's use [Adafruit_MPU6050](https://github.com/adafruit/Adafruit_MPU6050) library, to easily program the ESP32 to read the 6-axis motion tracking from the MPU6050 sensor. Following the steps below:
+1. On the Arduino IDE, go to the Library Manager.
+2. Search for **`adafruit mpu6050`**.
+3. Look for **Adafruit MPU6050** by Adafruit, click the **INSTALL** button and wait until the installation process is done and the status on the library is *`2.2.x installed`*.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-eleven-a.png" width="700"></a></p>
 
