@@ -45,7 +45,7 @@ Although, we can program ESP32 using other programming language such as C, C++, 
 - Board measurement including header in mm: 58.7 x 27 x 13.3 (length x width x height).
 - Package measurement in mm: 71.8 x 35.5 x 20.4 (length x width x height).
 
-## Learn How to Program Hibiscus Sense using Arduino IDE
+## Learn How to Program Hibiscus Sense using Arduino
 
 - [Hands-On Learning Preparation](https://github.com/myinvent/Hibiscus-Sense-Arduino/tree/main/Exercise_00_Learning_Preparation)
 - [Exercise 01: Control Blue LED on GPIO2 (Strobe Light Effect)](https://github.com/myinvent/Hibiscus-Sense-Arduino/tree/main/Exercise_01_Strobe_Light)
