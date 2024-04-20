@@ -41,7 +41,7 @@ Although, we can program ESP32 using other programming language such as C, C++, 
 - ESP32's `I2C` **SDA** `GPIO21` and **SCL** `GPIO22`, without pullup resistor.
 - **Sensors**: **APDS9960**, **BME280** and **MPU6050** interfaced to the ESP32's `I2C`, respective I2C address: `0x39`, `0x77` and `0x68`.
 - Avoid using `ADC2` channel while using WiFi.
-- Each GPIO absolute maximum current drawn only 16mA.
+- Each GPIO absolute maximum current drawn only 40mA.
 - Board measurement including header in mm: 58.7 x 27 x 13.3 (length x width x height).
 - Package measurement in mm: 71.8 x 35.5 x 20.4 (length x width x height).
 
