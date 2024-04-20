@@ -28,7 +28,7 @@ The schematic of WS2812 RGB on Hibiscus Sense, as in the image below.
 To control usual RGB LED, we can generate the PWM signal output to its indivial lead to produce different colour of RGB LED.
 
 ## Install Adafruit NeoPixel Library
-Let's use [Adafruit_Neopixel](https://github.com/adafruit/Adafruit_NeoPixel) library, to easily program the ESP32 to control the colour of WS2812 RGB LED using single-wire connection. Following the image below:
+Let's use [Adafruit_Neopixel](https://github.com/adafruit/Adafruit_NeoPixel) library, to easily program the ESP32 to control the colour of WS2812 RGB LED using single-wire connection. Following the steps below:
 1. On the Arduino IDE, go to the Library Manager.
 2. Search for **`adafruit neopixel`**.
 3. Look for **Adafruit NeoPixel** by Adafruit, click the **INSTALL** button and wait until the installation process is done and the status on the library is *`1.12.x installed`*.

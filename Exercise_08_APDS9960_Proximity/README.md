@@ -14,7 +14,11 @@ There is 1x APDS9960 on Hibiscus Sense, as on the image below. The circuit is in
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-eight-a.png" width="400"></a></p>
 
-To acquire sensing information from APDS9660, we need to use [Adafruit_APDS9960](https://github.com/adafruit/Adafruit_APDS9960) library, as it will helps shorten the time consuming development and focus on the objective, which to sense the proximity value. Prior to program the ESP32, we need to install the library from Arduino IDE's Library Manager, as on the image below.
+## Install Adafruit APDS9960 Library
+Let's use [Adafruit_APDS9960](https://github.com/adafruit/Adafruit_APDS9960) library, to easily program the ESP32 to read the proximity value from the APDS9960 sensor. Following the steps below:
+1. On the Arduino IDE, go to the Library Manager.
+2. Search for **`adafruit apds9960`**.
+3. Look for **Adafruit APDS9960 Library** by Adafruit, click the **INSTALL** button and wait until the installation process is done and the status on the library is *`1.2.x installed`*.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-eight-b.png" width="700"></a></p>
 
