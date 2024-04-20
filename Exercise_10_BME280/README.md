@@ -24,7 +24,7 @@ Let's use [Adafruit_BME280](https://github.com/adafruit/Adafruit_BME280_Library)
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-ten-a.png" width="700"></a></p>
 
-Once the library is successfully installed, we can start to write the sketch to monitor proximity value as below:
+Once the library is successfully installed, we can start to write the sketch to read and monitor relative humidity, altitude, barometric pressure and ambient temperature value as below:
 
 ## Complete Sketch
 
