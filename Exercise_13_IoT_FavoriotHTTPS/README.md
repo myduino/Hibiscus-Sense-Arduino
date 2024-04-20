@@ -5,7 +5,7 @@ The aim of this exercise is to create an Internet of Things (IoT) project by int
 2. Setting Up IoT Device.
 3. Sending Data to Favoriot.
 4. Visualizing Data on Favoriot Dashboard.
-5. Creating Rules.
+5. Creating Rules for Data Alert & Notification.
 
 ## Introduction to Favoriot IoT Platform
 
@@ -376,4 +376,13 @@ Line widget is now shown on the dashboard.
 
 Click the **Edit Widget** icon, to view live data streaming dashboard.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-dashboard-live.gif" width="800"></a></p>
+Good, you have successfully configure the dashboard for data streaming visualization.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-dashboard-live.png" width="800"></a></p>
+
+You can click the **`X`** Exit Edit Mode icon at the right bottom of the page, to go to edit mode. You might want to add other widget, but on FREE ACCOUNT plan, only 2 widget are allowed.
+
+You can subscribe to BEGINNER PLAN plan, then you can add extra widget to visualize other data parameter.
+
+## Creating Rules for Data Alert & Notification
+
