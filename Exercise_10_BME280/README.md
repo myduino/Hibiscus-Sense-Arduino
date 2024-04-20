@@ -1,20 +1,22 @@
 # Exercise 10: Monitor Environmental Value using BME280
 
-The aim of this exercise is to learn how to read and monitor the humidity, temperature, altitude and atmospheric pressure using the APDS9960 sensor.
+The aim of this exercise is to learn how to measure relative humidity, altitude, barometric pressure and ambient temperature using the BME280 sensor.
 
-BME280 is an environmental sensor with the ability to sense altitude, barometric pressure, humidity and temperature. It is great for indoor environmental monitoring. It has both communication protocol I2C and SPI.
+BME280 is an environmental sensor, developed by [Bosch Sensortec](https://www.bosch-sensortec.com/products/environmental-sensors/humidity-sensors-bme280/) that can measure `*relative humidity*`, `*altitude*`, `*barometric pressure*` and `*ambient temperature*`. It is great for indoor environmental monitoring. Since BME280 position near to the microcontroller, the temperature reading is based on the heat dissipation from the microcontroller. 
+
+It has both communication protocol I2C and SPI.
 
 There is 1x BME280 on Hibiscus Sense, as on the image below. The circuit is interfaced to **ESP32's I2C** (`SDA`: **GPIO21**, `SCL`: **GPIO22**) with the sensor I2C default address: **`0x77`**.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-ten.png" width="400"></a></p>
 
-This sensor is manufactured by Bosch, low-cost sensing solution:
+BME280 measurement specifications:
 1. Altitude with ±1 meter accuracy.
 2. Barometric pressure with ±1 hPa absolute accuraccy.
 3. Humidity with ±3%RH accuracy.
 4. Temperature with ±1.0°C accuracy.
 
-To acquire sensing information from BME280, we need to use [Adafruit_BME280](https://github.com/adafruit/Adafruit_BME280_Library) library, as it will helps shorten the time consuming development and focus on the objective, which to sense the proximity value. Prior to program the ESP32, we need to install the library from Arduino IDE's Library Manager, as on the image below.
+To acquire environmental data from BME280, we need to use [Adafruit_BME280](https://github.com/adafruit/Adafruit_BME280_Library) library, as it will helps shorten the time consuming development and focus on the objective, which to sense the proximity value. Prior to program the ESP32, we need to install the library from Arduino IDE's Library Manager, as on the image below.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-ten-a.png" width="700"></a></p>
 
