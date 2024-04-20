@@ -45,4 +45,43 @@ Upon, succesful account registration, Favoriot automatically create the [platfor
 
 Following the image below, go to menu and click **Hierarchy** > **Devices** to show the list IoT devices.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-overview.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-default.png" width="800"></a></p>
+
+### Delete deviceDefault
+
+Only 1 device is allowed on FREE ACCOUNT plan, let's **delete** the deviceDefault and create new device instead.
+
+1. Click the **`trash bin`** icon under the **`Action`** column.
+2. Click the **`Delete`** button.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-default-delete.png" width="800"></a></p>
+
+3. Click the **`Understood`** button.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-default-delete-confirm.png" width="800"></a></p>
+
+4. Click the **`Delete`** button to confirm deletion of the deviceDefault from the device list.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-default-delete.png" width="800"></a></p>
+
+### Create New Device
+
+1. Click the **`Create Device`** icon.
+2. Choose group **Hierarchy**: **`groupDefault`**.
+3. Key in **Device Name**: **`HibiscusSense`**
+4. Key in **Description**: **`Hibiscus Sense`**
+5. Choose **Device Type**: **`ESP32`** 
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-info-a.png" width="800"></a></p>
+
+6. Key in **Latitude** and **Longitude**. *You can use Google to find your location latitude and longitude.*
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-latitude.png" width="800"></a></p>
+
+7. Choose **Timezone**: **`Asia/Kuala_Lumpur`**
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-info-b.png" width="800"></a></p>
+
+8. Click **`Select Photo`** to add device image.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-info-b.png" width="800"></a></p>
