@@ -1,10 +1,10 @@
 # Exercise 14: IoT Application using Favoriot (MQTTS Protocol)
 
-The aim of this exercise is to learn how to send data to the Favoriot IoT platform using secure MQTT connection.
+The aim of this exercise is to learn how to send data to the Favoriot IoT platform using secure MQTT protocol.
 
 This exercise is continuation from Exercise 13, therefore device, dashboard and rule on Favoriot remain same, only protocol being used by ESP32 to connect to Favoriot platform is change to MQTT.
 
-## Sending Data to Favoriot using secure MQTT connection
+## Sending Data to Favoriot using secure MQTT protocol
 
 Let's sending the Hibiscus Sense sensor's data to Favoriot platform.
 
