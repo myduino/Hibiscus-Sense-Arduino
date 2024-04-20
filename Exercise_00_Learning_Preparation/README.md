@@ -1,7 +1,7 @@
 # Hands-On Learning Preparation
 Prior to hands-on learning to learn how to `control the actuators` and `acquire data from the sensors` on Hibiscus Sense, we have to make sure the hardware and software (3 things below) is readily accesible on your desk and on your PC:
 1. **Hibiscus Sense** and a **USB cable Type-A to Type-C**. If you don't own it yet, you always welcome to purchase it from :shopping_cart: [Myduino Website](https://myduino.com/product/myd-036/)
-2. **Arduino IDE**. Download it from it's official website [Arduino Software](https://www.arduino.cc/en/software) page and install it on your PC.
+2. **Arduino IDE**. Download it from it's official website [Arduino Software](https://www.arduino.cc/en/software) page and install it on your PC. Current version is 2.2.3.
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-download.png" width="800"></a></p>
 
