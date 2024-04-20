@@ -43,7 +43,7 @@ In this exercise, we choose Blynk as our IoT platform.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/blynkkk/blynkkk.github.io/raw/master/images/GithubBanner.jpg" width="700"></a></p>
 
-Prior to start program the Hibiscus Sense. Let's setup Blynk platform.
+Let's setup Blynk platform.
 
 ## Setting Up Blynk Account
 
@@ -82,7 +82,10 @@ Good, you have successfully setup account on the Blynk platform.
 
 ## Install Blynk Library on Arduino IDE
 
-Before you can program the Hibiscus Sense, you need to install the Blynk library on the Arduino IDE.
+Let's to install the Blynk library on the Arduino IDE. Following the steps below:
+1. On the Arduino IDE, go to the Library Manager.
+2. Search for **`Blynk`**.
+3. Look for **Blynk** by Volodymyr Shymanskyy, click the **INSTALL** button and wait until the installation process is done and the status on the library is *`1.3.x installed`*.
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-library-blynk.png" width="800"></a></p>
 
