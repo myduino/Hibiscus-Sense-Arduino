@@ -8,7 +8,7 @@ The aim of this exercise is to create an Internet of Things (IoT) project by int
 
 ## Introduction to Favoriot IoT Platform
 
-[Favoriot Platform](https://www.favoriot.com/favoriotplatform) is an IoT platform developed by [Favoriot Sdn. Bhd.](https://www.favoriot.com/) to simplify IoT device and data management, allowing you to easily perform IoT data pipeline, including data ingestion, data visualization, data alert and notification from your IoT devices.
+[Favoriot Platform](https://www.favoriot.com/favoriotplatform) is an IoT platform developed by [Favoriot Sdn. Bhd.](https://www.favoriot.com/), to simplify IoT devices and it's data management, allowing you to easily perform IoT data pipeline, including data ingestion, data visualization, data analytics, data alert and notification from your IoT devices.
 
 <p align="center"><img src="https://platform.favoriot.com/tutorial/v2/images/architecture%20v2.png" width="600"></a></p>
 
