@@ -103,3 +103,9 @@ Only 1 device is allowed on FREE ACCOUNT plan, let's **delete** the deviceDefaul
 Good, you have successfully create new device on the Favoriot platform.
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-success.png" width="800"></a></p>
+
+Click the **`eye`** icon under the **`Action`** column, to view the device information.
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-success-info-a.png" width="800"></a></p>
+
+<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-success-info-b.png" width="800"></a></p>
