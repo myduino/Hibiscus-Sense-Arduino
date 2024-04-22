@@ -45,11 +45,6 @@ void callback_response(CoapPacket &packet, IPAddress ip, int port);
 WiFiUDP udp;
 Coap coap(udp, 1024);
 
-char url[] = "coap.favoriot.com";
-String method = "POST";
-IPAddress host(159, 65, 134, 213); //DNS coap.favoriot.com
-int port = 5683;
-
 // CoAP client response callback
 void callback_response(CoapPacket &packet, IPAddress ip, int port) {
   Serial.println("[Coap Response got]");
@@ -166,7 +161,7 @@ void loop() {
     
     parameters += "}}";
 
-    String payloadJSON = "{\"method\":\"" + method + "\",";
+    String payloadJSON = "{\"method\":\"POST\",";
     payloadJSON += "\"apikey\":\"" + String(deviceAccessToken) + "\",";
     payloadJSON += "\"parameters\":" + parameters;
     payloadJSON += "}";
@@ -177,7 +172,17 @@ void loop() {
     Serial.println("\nSending data to Favoriot's Data Stream ...");
     Serial.println("Data to Send: " + payloadJSON);
 
-    int msgid = coap.send(host, port, url, COAP_CON, COAP_POST, NULL, 0, (uint8_t *)payload, strlen(payload));
+    coap.send(
+      IPAddress(159, 65, 134, 213), 
+      5683, 
+      "coap.favoriot.com", 
+      COAP_CON, 
+      COAP_POST, 
+      NULL, 
+      0, 
+      (uint8_t *)payload, 
+      strlen(payload)
+    );
   }
 
   coap.loop();
