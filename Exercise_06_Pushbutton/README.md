@@ -35,8 +35,12 @@ void loop() {
   // if the GPIO0 reading is LOW, light ON the LED on GPIO2 with LOW state.
   // else means, the GPIO0 reading is HIGH, light OFF the LED on GPIO2 with HIGH state.
   int pbstatus = digitalRead(0);
-  if(pbstatus == LOW) digitalWrite(2, LOW);
-  else digitalWrite(2, HIGH);
+  if(pbstatus == LOW){
+    digitalWrite(2, LOW);
+  } 
+  else {
+    digitalWrite(2, HIGH);
+  }
   
 }
 ```
@@ -62,8 +66,12 @@ In the `void loop()` function we want to repeatedly monitor the state of GPIO0, 
 ```
 2. Applying `if()` function to **compare**, either the value of `pbstatus` variable _equal to_ `LOW` or else (`HIGH`). If the `pbstatus == LOW` turn ON the LED and if `pbstatus` equal to other than `LOW` turn OFF the LED.
 ```cpp
-if(pbstatus == LOW) digitalWrite(2, LOW);
-else digitalWrite(2, HIGH);
+if(pbstatus == LOW){
+  digitalWrite(2, LOW);
+} 
+else {
+  digitalWrite(2, HIGH);
+}
 ```
 
 ## Further Experiment
