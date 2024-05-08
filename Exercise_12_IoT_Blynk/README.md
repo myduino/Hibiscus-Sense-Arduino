@@ -157,7 +157,7 @@ Good, a datastreams has been created for humidity value. Let's continue next ste
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-virtual-pin-temperature.png" width="800"></a></p>
 
 20. Repeat step 18 to copy the datastream configuration.
-21. Replace the icon with **lamp icon**, **NAME** field to ***LED***, colour to **green colour**, **DATA TYPE** selection to ***Integer***, **UNIT** selection to ***None***, **MAX** to ***0*** and click the **Create** button.
+21. Replace the icon with **lamp icon**, **NAME** field to ***LED***, colour to **green colour**, **DATA TYPE** selection to ***Integer***, **UNIT** selection to ***None***, **MAX** to ***1*** and click the **Create** button.
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-virtual-pin-led.png" width="800"></a></p>
 
