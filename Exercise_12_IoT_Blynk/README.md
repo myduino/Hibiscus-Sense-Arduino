@@ -306,7 +306,7 @@ void loop() {
   delay(3000);
 }
 ```
-``cpp
+```cpp
 #define BLYNK_PRINT Serial
 
 /* Fill in information from Blynk Device Info here */
