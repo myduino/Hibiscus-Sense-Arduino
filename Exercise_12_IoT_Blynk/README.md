@@ -306,6 +306,79 @@ void loop() {
   delay(3000);
 }
 ```
+``cpp
+#define BLYNK_PRINT Serial
+
+/* Fill in information from Blynk Device Info here */
+#define BLYNK_TEMPLATE_ID           "TMPxxxxxx"
+#define BLYNK_TEMPLATE_NAME         "Device"
+#define BLYNK_AUTH_TOKEN            "YourAuthToken"
+
+
+#include <ESP8266WiFi.h>
+#include <BlynkSimpleEsp8266.h>
+#include <SimpleDHT.h>
+
+// Your WiFi credentials.
+// Set password to "" for open networks.
+char ssid[] = "YourWiFiSSID";
+char password[] = "YourWiFiPassword";
+
+int pinDHT11 = D4;
+SimpleDHT11 dht11(pinDHT11);
+
+long previousMillis = 0;
+
+BLYNK_WRITE(V2){
+  int value = param.asInt();
+
+  pinMode(D2, OUTPUT);
+  digitalWrite(D2, value);
+}
+
+void setup() {
+  // Debug console
+  Serial.begin(115200);
+
+  if (!bme.begin()){
+    Serial.println("Failed to find Hibiscus Sense BME280 chip");
+  }
+
+  // STEP 1: Initialized Wi-Fi conectivity and Blynk Authentication
+  Blynk.begin(BLYNK_AUTH_TOKEN, ssid, password);
+}
+
+void loop() {
+  Blynk.run();
+
+  // Interval 1 seconds
+  if(millis() - previousMillis > 1000){
+    previousMillis = millis();
+    
+    // STEP 2: Data Acquisition - Read data from the sensors
+    byte temperature = 0;
+    byte humidity = 0;
+
+    int err = SimpleDHTErrSuccess;
+    if ((err = dht11.read(&temperature, &humidity, NULL)) != SimpleDHTErrSuccess) {
+      // Serial.print("Read DHT11 failed, err="); Serial.print(SimpleDHTErrCode(err));
+      // Serial.print(","); Serial.println(SimpleDHTErrDuration(err)); delay(1000);
+      return;
+    }
+
+    Serial.println("Humidity: " + String(humidity) + " %RH");
+    Serial.println("Temperature: " + String(temperature) + " °C");
+
+    // STEP 3: Data Ingestion - Send data to Blynk's data stream using HTTPS
+    Blynk.virtualWrite(V0, humidity);
+    Blynk.virtualWrite(V1, temperature);
+
+  }
+
+  Serial.println("=============================================");
+  delay(3000);
+}
+```
 
 5. Replace the copied Blynk Device Information in the sketch.
 6. Replace the Wi-Fi **ssid** and Wi-Fi **password** information.
