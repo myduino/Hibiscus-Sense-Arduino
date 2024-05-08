@@ -33,8 +33,8 @@ Adafruit_MPU6050 mpu;
 
 sensors_event_t a, g, temp;
 
-const char ssid[] = "YOUR_WIFI_SSID";
-const char password[] = "YOUR_WIFI_PASSWORD";
+const char ssid[] = " GMI-Student";
+const char password[] = "";
 const char deviceDeveloperId[] = "YOUR_DEVICE_DEVELOPER_ID";
 const char deviceAccessToken[] = "YOUR_DEVICE_ACCESS_TOKEN";
 
@@ -173,5 +173,5 @@ void loop() {
   }
 
   Serial.println("=============================================");
-  delay(3000);
+  // delay(3000);
 }
