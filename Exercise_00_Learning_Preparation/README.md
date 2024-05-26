@@ -1,7 +1,7 @@
 # Hands-On Learning Preparation
-Prior to hands-on learning to learn how to `control the actuators` and `acquire data from the sensors` on Hibiscus Sense, we have to make sure the hardware and software (3 things below) is readily accesible on your desk and on your PC:
-1. **Hibiscus Sense** and a **USB cable Type-A to Type-C**. If you don't own it yet, you always welcome to purchase it from :shopping_cart: [Myduino Website](https://myduino.com/product/myd-036/)
-2. **Arduino IDE**. Download it from it's official website [Arduino Software](https://www.arduino.cc/en/software) page and install it on your PC. Current version is 2.2.3.
+Prior to hands-on learning to learn how to `control the actuators` and `acquire data from the sensors` on NodeMCU ESP32, we have to make sure the hardware and software (3 things below) is readily accesible on your desk and on your PC:
+1. **NodeMCU ESP32** and a **USB cable Type-A to Type-C**. If you don't own it yet, you always welcome to purchase it from :shopping_cart: [Myduino Website](https://myduino.com/product/myd-036/)
+2. **Arduino IDE**. Download it from it's official website [Arduino Software](https://www.arduino.cc/en/software) page and install it on your PC. Current version is 2.3.2.
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-download.png" width="800"></a></p>
 
@@ -14,7 +14,7 @@ Or you can directly download from here:
 
 3. **Arduino core for the ESP32** in the Arduino IDE, [Github](https://github.com/espressif/arduino-esp32). If you don't install it yet on your Arduino IDE, follow this [instructions](#install-esp32-arduino-core-using-arduino-ide-boards-manager-7-steps).
 
-Once all required tools are available and accesible, you can [Connect Hibiscus Sense to your PC](#connect-hibiscus-sense-to-your-pc-6-steps).
+Once all required tools are available and accesible, you can [Connect NodeMCU ESP32 to your PC](#connect-hibiscus-sense-to-your-pc-6-steps).
 
 ### Install ESP32 Arduino Core using Arduino IDE Boards Manager (7 Steps)
 
@@ -38,11 +38,11 @@ Once all required tools are available and accesible, you can [Connect Hibiscus S
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-hardware-library-esp32-installed.png" width="800"></a></p>
 
-Great! The required software are succesfully installed, let's connect Hibiscus Sense to your PC, follow this [instructions](#connect-hibiscus-sense-to-your-pc-6-steps). If your PC not able to detect Hibiscus Sense COM port number, you need to download and install the [CP210x USB to UART Bridge VCP Drivers](#download-usb-driver-in-your-pc)
+Great! The required software are succesfully installed, let's connect NodeMCU ESP32 to your PC, follow this [instructions](#connect-hibiscus-sense-to-your-pc-6-steps). If your PC not able to detect NodeMCU ESP32 COM port number, you need to download and install the [CP210x USB to UART Bridge VCP Drivers](#download-usb-driver-in-your-pc)
 
-## Connect Hibiscus Sense to Your PC (6 Steps)
-1. Connect the USB cable Type-C to Hibiscus Sense and Type-A to your PC.
-2. On the Arduino IDE, choose the correct *COM port* interfaced to CP2104 USB driver on Hibiscus Sense.
+## Connect NodeMCU ESP32 to Your PC (6 Steps)
+1. Connect the USB cable Type-C to NodeMCU ESP32 and Type-A to your PC.
+2. On the Arduino IDE, choose the correct *COM port* interfaced to CP2104 USB driver on NodeMCU ESP32.
 
 `On Windows OS` Example: *COM5*
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-com-port.png" width="800"></a></p>
@@ -58,11 +58,11 @@ Great! The required software are succesfully installed, let's connect Hibiscus S
 `On Mac OS`
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-com-board-mac.png" width="800"></a></p>
 
-Hibiscus Sense, shipped with default sketch to check the sensors and list available Wi-Fi networks at your place. Let's continue to test it!
+NodeMCU ESP32, shipped with default sketch to check the sensors and list available Wi-Fi networks at your place. Let's continue to test it!
 
 4. Click the *magnifying glass* icon at the right side of the Arduino IDE to open the *Serial Monitor*.
 5. Set the Baud Rate to `115200`.
-6. Click the `IO0` button on Hibiscus Sense. You will see the result of the sensor and Wi-Fi checking on the Serial Monitor.
+6. Click the `IO0` button on NodeMCU ESP32. You will see the result of the sensor and Wi-Fi checking on the Serial Monitor.
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-first-time-monitor.png" width="800"></a></p>
 
