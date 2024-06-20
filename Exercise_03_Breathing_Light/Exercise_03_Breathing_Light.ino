@@ -12,26 +12,26 @@
  */
 
 void setup() {
-  // configure PWM controller congfiguration
-  ledcSetup(0, 5000, 8);
   // declare the GPIO number for PWM signal output
-  ledcAttachPin(2, 0);
+  pinMode(2, OUTPUT);
 }
 
 void loop() {
-  // for() statement to create decremental value by 1 start from 255 --> 0
-  // from OFF LED to linear increasing brightness, for active-low circuit
-  for(int brightness = 255; brightness >= 0; brightness--){   
-    ledcWrite(0, brightness);
+  // statement for() to create decremental value by -1
+  // for active-low LED circuit, the PWM value begin from 255 --> 0
+  // from OFF LED to linear increasing brightnes.
+  for(int brightness = 255; brightness >= 100; brightness--){   
+    analogWrite(2, brightness);
     delay(15);
   }
   // wait for 0.2 seconds
   delay(200);
   
-  // for() statement to create incremental value by 1 start from 0 --> 255
-  // from ON LED to linear decreasing brightness, for active-low circuit
-  for(int brightness = 0; brightness <= 255; brightness++){   
-    ledcWrite(0, brightness);
+  // statement for() to create incremental value by +1
+  // for active-low LED circuit, the PWM value begin from 0 --> 255
+  // from ON LED to linear decreasing brightnes.
+  for(int brightness = 100; brightness <= 255; brightness++){   
+    analogWrite(2, brightness);
     delay(15);
   }
   // wait for 0.2 seconds before start again
