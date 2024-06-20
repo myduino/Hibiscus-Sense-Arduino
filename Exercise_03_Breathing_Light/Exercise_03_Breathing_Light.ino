@@ -28,9 +28,9 @@ void loop() {
   delay(200);
   
   // statement for() to create incremental value by +1
-  // for active-low LED circuit, the PWM value begin from 0 --> 255
+  // for active-low LED circuit, the PWM value begin from 255 --> 0
   // from ON LED to linear decreasing brightnes.
-  for(int brightness = 100; brightness <= 255; brightness++){   
+  for(int brightness = 100; brightness <= 255; brightness++){
     analogWrite(2, brightness);
     delay(15);
   }
