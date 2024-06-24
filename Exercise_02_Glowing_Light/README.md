@@ -52,7 +52,7 @@ As usual, in the `void setup()` function, we will configure GPIO2 as an `OUTPUT`
 pinMode(2, OUTPUT);
 ```
 
-Inside the `void loop()` function, we will control the brightness of the blue LED to produce glowing blue LED effect. Since the blue LED circuit is active-low, the PWM value begins from _(255 to 0)_. In order to produce, glowing effect, we need have a decremental PWM value 1 by 1, from 255 to 254, from 254 to 253, from 253 to 252 and so on until the value reach minimum PWM value, for exaple, 150. We can use `for()` statement to automatically generate decremental variable of PWM value from 255-150 as follows, where the `analogWrite()` function is inside `for()` statement:
+Inside the `void loop()` function, we will control the brightness of the blue LED to produce glowing blue LED effect. Since the blue LED circuit is active-low, the PWM value begins from _(255 to 0)_. In order to produce, glowing effect, we need have a decremental PWM value 1 by 1, from 255 to 254, from 254 to 253, from 253 to 252 and so on until the value reach minimum PWM value, for example, 150. We can use `for()` statement to automatically generate decremental variable of PWM value from 255-150 as follows, where the `analogWrite()` function is inside `for()` statement:
 ```cpp
 for(int brightness = 255; brightness >= 150; brightness--){   
     // function will generate PWM output signal according to variable brightness value
