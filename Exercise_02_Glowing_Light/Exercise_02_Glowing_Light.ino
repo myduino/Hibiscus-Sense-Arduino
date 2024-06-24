@@ -23,7 +23,7 @@ void loop() {
   for(int brightness = 255; brightness >= 150; brightness--){   
     // function will generate PWM output signal according to variable brightness value
     analogWrite(2, brightness);
-    delay(15);
+    delay(30);
   }
   // wait for 0.2 seconds before repeating the process.
   delay(200);
