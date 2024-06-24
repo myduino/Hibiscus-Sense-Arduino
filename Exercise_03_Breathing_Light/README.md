@@ -4,38 +4,38 @@ The aim of this exercise is to control the blue LED on GPIO2, gradually changing
 
 This exercise is a continuation from [Exercise 2](https://github.com/myinvent/hibiscus-sense-arduino#exercise-2-control-blue-led-on-gpio2-glowing-light-effect).
 
-In Exercise 2, we use `for()` statement to automatically generate decremental PWM value from 255-0 for the `(active-low circuit)` to produce an output of glowing light effect, while in this exercise we produce breathing light effect.
+In Exercise 2, we use `for()` statement to automatically generate decremental PWM value from 255-150 for the `(active-low circuit)` to produce an output of glowing light effect, while in this exercise we produce breathing light effect.
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-three.gif" width="500"></a></p>
 
-It's easy ... we just need to add another `for()` statement to automatically generate incremental PWM value from 0-255. The complete sketch as follows:
+It's easy ... we just need to add another `for()` statement to automatically generate decremental PWM value from 255-100 (lights up) and incremental PWM value from 100-255 (fades off). The complete sketch as follows:
 
 ## Complete Sketch
 ```cpp
 void setup() {
-  // configure PWM controller congfiguration
-  ledcSetup(0, 5000, 8);
   // declare the GPIO number for PWM signal output
-  ledcAttachPin(2, 0);
+  pinMode(2, OUTPUT);
 }
 
 void loop() {
-  // for() statement to create decremental value by 1 start from 255 --> 0
-  // from OFF LED to linear increasing brightness, for active-low circuit
-  for(int brightness = 255; brightness >= 0; brightness--){   
-    ledcWrite(0, brightness);
+  // statement for() to create decremental value by -1
+  // for active-low LED circuit, the PWM value begin from 255 --> 0
+  // from OFF LED to linear increasing brightnes.
+  for(int brightness = 255; brightness >= 100; brightness--){   
+    analogWrite(2, brightness);
+    delay(15);
+  }
+  // wait for 0.2 seconds
+  delay(200);
+  
+  // statement for() to create incremental value by +1
+  // for active-low LED circuit, the PWM value begin from 255 --> 0
+  // from ON LED to linear decreasing brightnes.
+  for(int brightness = 100; brightness <= 255; brightness++){
+    analogWrite(2, brightness);
     delay(15);
   }
   // wait for 0.2 seconds before start again
-  delay(200);
-  
-  // for() statement to create incremental value by 1 start from 0 --> 255
-  // from ON LED to linear decreasing brightness, for active-low circuit
-  for(int brightness = 0; brightness <= 255; brightness++){   
-    ledcWrite(0, brightness);
-    delay(15);
-  }
-
   delay(200);
 }
 ```
