@@ -34,7 +34,7 @@ Once all required tools are available and accesible, you can [Connect Hibiscus S
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-hardware-library-esp32-install.png" width="800"></a></p>
 
-7. Wait until the installation process is done, which would take several minutes, until the status on the board is *`2.0.x installed`*.
+7. Wait until the installation process is done, which would take several minutes, until the status on the board is *`3.0.x installed`*.
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-hardware-library-esp32-installed.png" width="800"></a></p>
 
