@@ -47,7 +47,7 @@ Although, we can program ESP32 using other programming language such as C, C++, 
 
 ## Learn How to Program Hibiscus Sense using Arduino
 
-**Note:** The example sketch in the exercises below, is based on the latest Arduino ESP32 Core version 3.0.0. So, if you are experience user in Arduino ESP32, please update the core to the latest version, before you can use the following example sketch.
+**Note:** The example sketch in the exercises below, is based on the latest Arduino ESP32 Core version 3.0.0. So, if you are experience user in Arduino ESP32, please update the core to the latest version, before you can use the following example sketch. You can get more information from the [Arduino ESP32 3.0.0 Migration Guide](https://docs.espressif.com/projects/arduino-esp32/en/latest/migration_guides/2.x_to_3.0.html)
 
 You can clone or download this repo into your PC and open the exercise example sketch on the Arduino IDE. It is always recommended to begin with the hands-on learning preparation.
 
