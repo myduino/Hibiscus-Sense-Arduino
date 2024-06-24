@@ -16,42 +16,29 @@ With PWM output signal, we can control brightness of LEDs, the speed of motors, 
 
 ESP32 have 16 congifurable independent PWM channels, which can be configured to generate PWM signal on all GPIOs, except GPIO34 to GPIO39.
 
-Prior to hands-on programming, let's discuss about the program to generate the PWM output signal.
-
-Usually in any official Arduino boards or any compatible Arduino boards, we will use `analogWrite()` function to generate PWM signal. Since ESP32's PWM channels is configurable, it has 3 functions to configure and generate the PWM signal, which are:
-1. `ledcSetup(_channel_, _frequency_, _resolution_)` setup function for PWM controller, with 3 arguments:
-  - _channel_ the number of the PWM channel, from 0 to 15.
-  - _frequency_ the PWM signal frequency, for LED is 5 kHz.
-  - _resolution_ the PWM signal resolution, from 1-bit to 16-bits, for the LED we will use 8 bits resolution.
-2. `ledcAttachPin(_gpio_, _channel_)` function to declare LED's GPIO number and the PWM channel, with 2 arguments:
-  - _gpio_ the GPIO number for output of the PWM signal.
-  - _channel_ the number of the PWM channel.
-3. `ledcWrite(_channel_, _dutycycle_)` function to generate PWM signal outputs, with 2 arguments:
-  - _channel_ the number of the PWM channel.
-  - _dutycycle_ the PWM duty cycle value. For 8 bits resolutions, the value range from 0 - 255.
+The `analogWrite(_gpio_, _dutycycle_)` function will be used to generate PWM signal output, the function has 2 arguments:
+- _gpio_ the GPIO number for output of the PWM signal.
+- _dutycycle_ the PWM duty cycle value. For 8 bits resolutions, the value range from 0 - 255.
 
 Again, to be remember, the blue LED circuit on Hibiscus Sense is active-low, so we will program the LED for glowing effect as follows:
 
 ## Complete Sketch
 ```cpp
 void setup() {
-  // configure PWM controller congfiguration
-  ledcSetup(0, 5000, 8);
-  // declare the GPIO number for PWM signal output
-  ledcAttachPin(2, 0);
+  // declare the GPIO number for PWM signal output.
+  pinMode(2, OUTPUT);
 }
 
 void loop() {
-  // for() statement to create decremental value by 1 start from 255 --> 0
-  // from OFF LED to linear increasing brightness, for active-low circuit
-  for(int brightness = 255; brightness >= 0; brightness--){   
-    // ledcWrite() function will generate PWM output signal according to variable brightness value
-    // 1st argument: PWM channel number.
-    // 2nd argument: Tone frequency.
-    ledcWrite(0, brightness);
-    delay(15);
+  // statement for() to create decremental value by -1
+  // for active-low LED circuit, the PWM value begin from 255 --> 0
+  // from OFF LED to linear increasing brightnes.
+  for(int brightness = 255; brightness >= 150; brightness--){   
+    // function will generate PWM output signal according to variable brightness value
+    analogWrite(2, brightness);
+    delay(30);
   }
-  // wait for 0.2 seconds before start again
+  // wait for 0.2 seconds before repeating the process.
   delay(200);
 }
 ```
@@ -60,22 +47,18 @@ You can copy the sketch above, paste it into the Arduino IDE and upload the comp
 
 ## Detail Sketch Explanations
 
-In the `void setup()` function, there are two functions to be program, first to configure the PWM channelf using `ledcSetup()` function, with **_PWM channel `0`_**, **_PWM frequency `5 kHz`_** and **_`8 bits` PWM resolution_**. 
+As usual, in the `void setup()` function, we will configure GPIO2 as an `OUTPUT`.
 ```cpp
-ledcSetup(0, 5000, 8);
+pinMode(2, OUTPUT);
 ```
 
-In the `void setup()` function, we also declare which GPIO to deliver the output of the PWM signal using `ledcAttachPin();` function, with **_GPIO number `2`_** where the blue LED is interfaced and **_PWM channel `0`_**.
+Inside the `void loop()` function, we will control the brightness of the blue LED to produce glowing blue LED effect. Since the blue LED circuit is active-low, the PWM value begins from _(255 to 0)_. In order to produce, glowing effect, we need have a decremental PWM value 1 by 1, from 255 to 254, from 254 to 253, from 253 to 252 and so on until the value reach minimum PWM value, for exaple, 150. We can use `for()` statement to automatically generate decremental variable of PWM value from 255-150 as follows, where the `analogWrite()` function is inside `for()` statement:
 ```cpp
-ledcAttachPin(2, 0);
-```
-
-Both function to configure the PWM channel and to declare GPIO for PWM output signal has been done. Now we can generate the PWM signal by using `ledcWrite()` function inside the `void loop` to control the brightness of the blue LED to produce glowing blue LED effect. Since the blue LED circuit is active-low, the PWM value _(from 255-0)_ needs to be automatically decremental 1 by 1 by, from 255 to 254, from 254 to 253, from 253 to 252 and so on until the value reach minimum PWM value, 0. Therefore, `for()` statement is used to automatically generate decremental variable of PWM value from 255-0 as follows, where the `ledcWrite()` function is inside `for()` statement:
-```cpp
-for(int brightness = 255; brightness >= 0; brightness--){   
-  ledcWrite(0, brightness);
-  delay(15);
-}
+for(int brightness = 255; brightness >= 150; brightness--){   
+    // function will generate PWM output signal according to variable brightness value
+    analogWrite(2, brightness);
+    delay(30);
+  }
 ```
 
 <p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-two-b.gif" width="600"></a></p>
