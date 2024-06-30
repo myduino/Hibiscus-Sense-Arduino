@@ -6,7 +6,7 @@ Before we begin the hands-on activities to learn how to **`control the actuators
 
 Let's prepare the required software and tools on your PC. 
 
-### Download and Install Arduino IDE (4 Steps)
+## Download and Install Arduino IDE (4 Steps)
 
 1. Download it from it's official website [Arduino Software](https://www.arduino.cc/en/software) page. The current version is 2.3.2.
 
@@ -29,7 +29,7 @@ Or you can directly download from here:
 
 4. You can run Arduino IDE on your PC!
 
-### Install ESP32 Arduino Core using Arduino IDE Boards Manager (7 Steps)
+## Install ESP32 Arduino Core using Arduino IDE Boards Manager (7 Steps)
 
 1. On the Arduino IDE, go to menu: ***File > Preferences***.
 2. Click on ***Window icon*** beside the Additional board manager URLs field.
@@ -52,6 +52,12 @@ Or you can directly download from here:
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-hardware-library-esp32-installed.png" width="800"></a></p>
 
 Great! The required software are succesfully installed, let's connect Hibiscus Sense to your PC, follow this [instructions](#connect-hibiscus-sense-to-your-pc-6-steps). If your PC not able to detect Hibiscus Sense COM port number, you need to download and install the [CP210x USB to UART Bridge VCP Drivers](#download-usb-driver-in-your-pc)
+
+## Install CP210x USB Driver on Your PC
+
+[CP210x Universal Windows Driver](https://www.silabs.com/documents/public/software/CP210x_Universal_Windows_Driver.zip)
+
+Installation instruction by Darren Robinson, [ESP32 Com Port – CP2102 USB to UART Bridge Controller](https://blog.darrenjrobinson.com/esp32-com-port-cp2102-usb-to-uart-bridge-controller/)
 
 ## Connect Hibiscus Sense to Your PC (6 Steps)
 1. Connect the USB cable Type-C to Hibiscus Sense and Type-A to your PC.
@@ -80,11 +86,5 @@ Hibiscus Sense, shipped with default sketch to check the sensors and list availa
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-first-time-monitor.png" width="800"></a></p>
 
 If you did not see any result on the Serial Monitor or having challenges to connect the board to your PC, please contact Mr. Ariffin via [WhatsApp](https://api.whatsapp.com/send?phone=60177875232&text=Hi%20Mr.%20Ariffin,%20please%20help.%20My%20Hibiscus%20Sense,%20seems%20not%20working%20for%20the%20first%20time.), he can assist you.
-
-## Download USB Driver in Your PC
-
-[CP210x Universal Windows Driver](https://www.silabs.com/documents/public/software/CP210x_Universal_Windows_Driver.zip)
-
-Installation instruction by Darren Robinson, [ESP32 Com Port – CP2102 USB to UART Bridge Controller](https://blog.darrenjrobinson.com/esp32-com-port-cp2102-usb-to-uart-bridge-controller/)
 
 <p align="right"><a href="https://forms.gle/UgpDSFc46K4MkvTM8">&#128640; Tutorial Improvement & Suggestions</a></p>
