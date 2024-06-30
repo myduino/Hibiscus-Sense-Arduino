@@ -11,7 +11,7 @@
 
 ## Introduction
 
-[Hibiscus Sense](https://myduino.com/product/myd-036/) is a rapid Internet of Things (IoT) development board, powered by the mighty and popular dual-core [ESP32](https://www.espressif.com/en/products/socs/esp32) microcontroller, which on-board equipped with rich profusion sensor's data and basic actuators as below:
+[Hibiscus Sense](https://myduino.com/product/myd-036/) is a versatile Internet of Things (IoT) development board, powered by the mighty and popular dual-core [ESP32](https://www.espressif.com/en/products/socs/esp32) microcontroller. It comes equipped with an array of sensors and basic actuators as listed below:
 - 3 sensors:
   - **APDS9960**: an environment sensor, which sense *proximity, RGB* and *gesture*.
   - **BME280**: an environment sensor, which sense the *altitude, barometric pressure, humidity* and *temperature*.
