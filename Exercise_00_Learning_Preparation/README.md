@@ -19,7 +19,7 @@ Or you can directly download from here:
 * [Mac OS Intel, 10.15: "Catalina" or newer (64 bits)](https://downloads.arduino.cc/arduino-ide/arduino-ide_2.3.2_macOS_64bit.dmg)
 * [Mac OS Apple Silicon, 11: "Big Sur" or newer (64 bits)](https://downloads.arduino.cc/arduino-ide/arduino-ide_2.3.2_macOS_arm64.dmg)
 
-2. Double click the Arduino installer file, to install the Arduino IDE.
+2. Double click the Arduino IDE installer file, to install the Arduino IDE.
 
 <p align="center"><img src="https://docs.arduino.cc/static/cfcd7a208ddfc85c43a96d94773d5c8b/4ef49/downloading-and-installing-img01.png" width="800"></a></p>
 
