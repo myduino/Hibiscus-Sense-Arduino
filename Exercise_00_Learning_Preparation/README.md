@@ -1,7 +1,14 @@
 # Hands-On Learning Preparation
 Before we begin the hands-on activities to learn how to **`control the actuators`** and **`acquire data from the sensors`** on Hibiscus Sense, please ensure that the following hardware and software components are readily accesible on your desk and on your PC:
-1. **Hibiscus Sense** and a **USB cable Type-A to Type-C**. If you don't own it yet, you always welcome to purchase it from :shopping_cart: [Myduino Website](https://myduino.com/product/myd-036/)
-2. **Arduino IDE**. Download it from it's official website [Arduino Software](https://www.arduino.cc/en/software) page and install it on your PC. Current version is 2.3.2.
+1. **Hibiscus Sense** and a **USB cable Type-A to Type-C**. If you don't own it yet, you are welcome to purchase it from :shopping_cart: [Myduino Website](https://myduino.com/product/myd-036/)
+2. **Arduino IDE**.
+3. **Arduino core for the ESP32**.
+
+Let's prepare the required software and tools on your PC. 
+
+### Download and Install Arduino IDE (4 Steps)
+
+1. Download it from it's official website [Arduino Software](https://www.arduino.cc/en/software) page. The current version is 2.3.2.
 
 <p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-download.png" width="800"></a></p>
 
@@ -12,9 +19,15 @@ Or you can directly download from here:
 * [Mac OS Intel, 10.15: "Catalina" or newer (64 bits)](https://downloads.arduino.cc/arduino-ide/arduino-ide_2.3.2_macOS_64bit.dmg)
 * [Mac OS Apple Silicon, 11: "Big Sur" or newer (64 bits)](https://downloads.arduino.cc/arduino-ide/arduino-ide_2.3.2_macOS_arm64.dmg)
 
-3. **Arduino core for the ESP32** in the Arduino IDE, [Github](https://github.com/espressif/arduino-esp32). If you don't install it yet on your Arduino IDE, follow this [instructions](#install-esp32-arduino-core-using-arduino-ide-boards-manager-7-steps).
+2. Double click the Arduino installer file, to install the Arduino IDE.
 
-Once all required tools are available and accesible, you can [Connect Hibiscus Sense to your PC](#connect-hibiscus-sense-to-your-pc-6-steps).
+<p align="center"><img src="https://docs.arduino.cc/static/cfcd7a208ddfc85c43a96d94773d5c8b/4ef49/downloading-and-installing-img01.png" width="800"></a></p>
+
+3. Follow the instructions in the installation wizard, until the process is succesfully completed.
+
+<p align="center"><img src="https://docs.arduino.cc/static/4d81f22769b64631460ea1c583aa5156/4ef49/downloading-and-installing-img02.png" width="800"></a></p>
+
+4. You can run Arduino IDE on your PC!
 
 ### Install ESP32 Arduino Core using Arduino IDE Boards Manager (7 Steps)
 
