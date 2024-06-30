@@ -21,9 +21,9 @@
   - **LED**: blue LED.
   - **RGB LED**: WS2812 RGB LED.
 
-Hibiscus Sense comes with **USB Type-C** to power up the board and to program the ESP32. The on-board USB-to-Serial converter **Silicon Labs CP2104** with **automatic bootloader reset** circuit, we don’t have to press the RESET button each time to upload the program.
+Hibiscus Sense comes with **USB Type-C** to power up the board and to program the ESP32. The on-board USB-to-Serial converter (**Silicon Labs CP2104**) with **automatic bootloader reset** circuit, eliminating the need to press the RESET button each time you upload a program.
 
-Although, we can program ESP32 using other programming language such as C, C++, [Micropython](https://micropython.org/), [Rust](https://github.com/esp-rs/rust), or even with RTOS (Real Time Operating System)  [FreeRTOS](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/system/freertos.html). However, in this tutorial we will be using [Arduino](https://www.arduino.cc/) as the learning and prototyping platform.
+Although, we can program ESP32 using other programming language such as [Micropython](https://micropython.org/), [Rust](https://github.com/esp-rs/rust), or even with RTOS (Real Time Operating System) [FreeRTOS](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/system/freertos.html), in this tutorial we will be using simplified C, C++ language on [Arduino](https://www.arduino.cc/) as the learning and prototyping platform.
 
 ## Hibiscus Sense Features
 
