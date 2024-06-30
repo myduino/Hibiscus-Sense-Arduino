@@ -8,9 +8,9 @@ Let's prepare the required software and tools on your PC.
 
 ## Download and Install CP210x USB Driver on Your PC
 
-1. Download it from it's official website [CP210x Universal Windows Driver](https://www.silabs.com/documents/public/software/CP210x_Universal_Windows_Driver.zip)
+1. Download it from it's official website [CP210x Universal Windows Driver](https://www.silabs.com/documents/public/software/CP210x_Universal_Windows_Driver.zip).
 
-2. Install the driver based on the following instruction by Darren Robinson, [ESP32 Com Port – CP2102 USB to UART Bridge Controller](https://blog.darrenjrobinson.com/esp32-com-port-cp2102-usb-to-uart-bridge-controller/)
+2. Install the driver based on the following instruction by Darren Robinson, [ESP32 Com Port – CP2102 USB to UART Bridge Controller](https://blog.darrenjrobinson.com/esp32-com-port-cp2102-usb-to-uart-bridge-controller/).
 
 ## Download and Install Arduino IDE (4 Steps)
 
