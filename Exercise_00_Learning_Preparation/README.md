@@ -26,7 +26,7 @@ Let's prepare the required software and tools on your PC.
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/silabs-cp210-install.png" width="800"></a></p>
 
-6. On the security warning pop-up window, click the **Open** button.
+6. On the Open File - Security Warning pop-up window, click the **Open** button.
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/silabs-cp210-open.png" width="400"></a></p>
 
