@@ -55,9 +55,25 @@ Or you can directly download from here:
 
 <p align="center"><img src="https://docs.arduino.cc/static/cfcd7a208ddfc85c43a96d94773d5c8b/4ef49/downloading-and-installing-img01.png" width="800"></a></p>
 
-3. Follow the instructions in the installation wizard, until the process is succesfully completed.
+3. Follow the installation instructions below based on your PC's Operating System.
+
+`On Windows OS`
+
+Follow along the instructions until the installation process is successful.
 
 <p align="center"><img src="https://docs.arduino.cc/static/4d81f22769b64631460ea1c583aa5156/4ef49/downloading-and-installing-img02.png" width="800"></a></p>
+
+`On Mac OS`
+
+Simply drag the **Arduino IDE.app** into the Applications folder.
+
+<p align="center"><img src="https://docs.arduino.cc/static/db9189e3c415aa60eb5eafef4dd5cc49/4ef49/downloading-and-installing-img03.png" width="800"></a></p>
+
+`On Linux OS`
+
+Right-click the Arduino IDE installer file, choose **Properties**, select **Permissions** tab,  tick the **Allow executing file** as program box and close the Properties window.
+
+<p align="center"><img src="https://docs.arduino.cc/cec5dab5c3891762d78e57260fdc7317/linux-installation.gif" width="800"></a></p>
 
 4. You can run Arduino IDE on your PC!
 
