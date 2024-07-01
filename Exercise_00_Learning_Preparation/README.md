@@ -6,7 +6,7 @@ Before we begin the hands-on activities to learn how to **`control the actuators
 
 Let's prepare the required software and tools on your PC.
 
-## Download and Install CP210x USB Driver on Your PC
+## Download and Install CP210x USB Driver on Your PC (8 Steps)
 
 1. Download it from it's official website [CP210x USB to UART Bridge VCP Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads) or you can directly download the .zip file from this link [CP210x Universal Windows Driver](https://www.silabs.com/documents/public/software/CP210x_Universal_Windows_Driver.zip).
 
