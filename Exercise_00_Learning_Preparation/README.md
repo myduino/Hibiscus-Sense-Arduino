@@ -34,7 +34,7 @@ Let's prepare the required software and tools on your PC.
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/silabs-cp210-allow.png" width="400"></a></p>
 
-8. Wait until the installation is successful
+8. Wait until the installation is successful and click the **OK** button.
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/silabs-cp210-successful.png" width="400"></a></p>
 
