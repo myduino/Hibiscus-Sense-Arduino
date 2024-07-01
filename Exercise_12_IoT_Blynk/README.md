@@ -50,35 +50,35 @@ Let's setup Blynk platform.
 1. Click this link [https://blynk.cloud/dashboard/register](https://blynk.cloud/dashboard/register) to create your Blynk account.
 2. Fill in your email in the **EMAIL** field, **check** on *I agree to Terms and Conditions and accept Privacy Policy* and click the **Sign Up** button.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-register-email.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-register-email.png" width="800"></a></p>
 
 3. Go to your email and look for the email from Blynk.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-register-confirm-email.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-register-confirm-email.png" width="800"></a></p>
 
 4. Click the **Create Password** button.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-register-link-password.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-register-link-password.png" width="800"></a></p>
 
 5. Fill in your password in the **PASSWORD** field, make sure to follow the password specifications and click the **Next** button.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-register-create-password.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-register-create-password.png" width="800"></a></p>
 
 6. Fill in your name in the **FIRST NAME** field and click the **Done** button.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-register-profile.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-register-profile.png" width="800"></a></p>
 
 7. Click the **Skip** button, to skip the Blynk Tour.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-register-skip-tour.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-register-skip-tour.png" width="800"></a></p>
 
 8. Click the **Cancel** button, to skip the Quickstart process.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-register-cancel-quickstart.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-register-cancel-quickstart.png" width="800"></a></p>
 
 Good, you have successfully setup account on the Blynk platform.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-register-welcome.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-register-welcome.png" width="800"></a></p>
 
 ## Install Blynk Library on Arduino IDE
 
@@ -87,7 +87,7 @@ Let's to install the Blynk library on the Arduino IDE. Following the steps below
 2. Search for **`Blynk`**.
 3. Look for **Blynk** by Volodymyr Shymanskyy, click the **INSTALL** button and wait until the installation process is done and the status on the library is *`1.3.x installed`*.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/arduino-ide-library-blynk.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/arduino-ide-library-blynk.png" width="800"></a></p>
 
 ## Let's Get Started Exercise
 
@@ -109,23 +109,23 @@ In total, there are 3 data streaming over the Internet on the Blynk platform:
 1. On the left panel, click the **Developer Zone**.
 2. Click the **+ New Template** button.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-developer-zone.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-developer-zone.png" width="800"></a></p>
 
 3. Fill in the template name **Hibiscus Sense** on the **NAME** field.
 4. Choose **ESP32** as the **HARDWARE**.
 5. Choose **WiFi** as the **CONNECTION TYPE**.
 6. Click the **Done** button.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-create-template.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-create-template.png" width="800"></a></p>
 
 7. Click the **Datastreams** tab.
 8. Click the **+ New Datastream** dropdown button and choose **Virtual Pin**.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-create-datastream.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-create-datastream.png" width="800"></a></p>
 
 9. Click the **icon** dropdown button and select **droplet** icon.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-virtual-pin-icon.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-virtual-pin-icon.png" width="800"></a></p>
 
 10. Change the **NAME** field to **Humidity**.
 11. Choose the virtual **PIN** to begin with **V0**.
@@ -134,32 +134,32 @@ In total, there are 3 data streaming over the Internet on the Blynk platform:
 14. Fill in **0** as the MIN value.
 15. Fill in **100** as the MAX value.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-virtual-pin-info.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-virtual-pin-info.png" width="800"></a></p>
 
 16. Click the **colour** dropdown button and select **blue** colour to represent humidity value.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-virtual-pin-color.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-virtual-pin-color.png" width="800"></a></p>
 
 17. Click the **Create** button.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-virtual-pin-create.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-virtual-pin-create.png" width="800"></a></p>
 
 Good, a datastreams has been created for humidity value. Let's continue next steps to complete other 2 datastreams.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-virtual-pin-created.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-virtual-pin-created.png" width="800"></a></p>
 
 18. On the **Humidity** datastreams row, hover mouse to **Actions** column and click the **copy** icon.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-virtual-pin-copy.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-virtual-pin-copy.png" width="800"></a></p>
 
 19. Replace the icon with **temperature icon**, **NAME** field to ***Temperature***, colour to **red colour**, **UNIT** selection to ***Celsius, °C***, **MAX** to ***60*** and click the **Create** button.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-virtual-pin-temperature.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-virtual-pin-temperature.png" width="800"></a></p>
 
 20. Repeat step 18 to copy the datastream configuration.
 21. Replace the icon with **lamp icon**, **NAME** field to ***LED***, colour to **green colour**, **DATA TYPE** selection to ***Integer***, **UNIT** selection to ***None***, **MAX** to ***1*** and click the **Create** button.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-virtual-pin-led.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-virtual-pin-led.png" width="800"></a></p>
 
 22. Click the **Save** button, to save the datastreams configuration.
 
@@ -168,63 +168,63 @@ Good, you have successfully create 3 datastreams with assigned Virtual Pin:
 2. Temperature, V1
 3. LED, V2
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-virtual-pins.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-virtual-pins.png" width="800"></a></p>
 
 ### Configure the **Blynk Dashboard**
 
 1. Click the **Web Dashboard** tab.
 2. Click the **Edit** button.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-dashboard-edit.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-dashboard-edit.png" width="800"></a></p>
 
 3. On the **Widget Box**, scroll down and find **Gauge** widget.
 4. Drag the **Gauge** widget into the **Dashboard**.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-dashboard-humidity-add.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-dashboard-humidity-add.png" width="800"></a></p>
 
 5. Hover the mouse to the **Gauge** widget and click on the **Gear** icon to configure the widget.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-dashboard-humidity-config.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-dashboard-humidity-config.png" width="800"></a></p>
 
 6. Fill in the **TITLE** to ***Humidity***, **Datastream** select to ***Humidity (V0)***, change the **color** and click the **Save** button.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-dashboard-humidity-info.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-dashboard-humidity-info.png" width="800"></a></p>
 
 7. Copy the widget, by hovering your mouse to the **Humidity** widget and click the **copy** icon.
 8. Replace the **TITLE** to ***Temperature***, **Datastream** select to ***Temperature (V1)***, change the **color** and click the **Save** button.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-dashboard-temperature-info.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-dashboard-temperature-info.png" width="800"></a></p>
 
 9. On the **Widget Box**, scroll and find **Switch** widget and drag the **Gauge** widget into the **Dashboard**.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-dashboard-led-add.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-dashboard-led-add.png" width="800"></a></p>
 
 10. Fill in the **TITLE** to ***LED***, **Datastream** select to ***LED (V2)***, change the **color** and click the **Save** button.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-dashboard-led-info.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-dashboard-led-info.png" width="800"></a></p>
 
 11. Click the **Save** button, to save the dashboard.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-dashboard-save.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-dashboard-save.png" width="800"></a></p>
 
 ### Create the **Device**
 
 1. On the left panel, click the **Devices**.
 2. Click the **+ New Device** button.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-device-create.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-device-create.png" width="800"></a></p>
 
 3. Choose to create new device **From Template**.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-device-create-template.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-device-create-template.png" width="800"></a></p>
 
 4. Choose **Hibiscus Sense** and give name ***Hibiscus Sense*** and click the **Create** button.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-device-create-new.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-device-create-new.png" width="800"></a></p>
 
 Good, your device has successfully created.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-device-created.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-device-created.png" width="800"></a></p>
 
 Let's program the device.
 
@@ -235,7 +235,7 @@ To connect Hibiscus Sense to Blynk platform, you need to program the ESP32 inclu
 1. On the Device page, click the **Device Info** tab.
 2. Click the on the **FIRMWARE CONFIGURATION** field to **copy** the Blynk Device Information.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-device-created.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-device-created.png" width="800"></a></p>
 
 3. Open the Arduino IDE with new sketch.
 4. Copy the sketch below into the new sketch.
@@ -384,7 +384,7 @@ void loop() {
 6. Replace the Wi-Fi **ssid** and Wi-Fi **password** information.
 7. Upload the complete sketch to ESP32.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/blynk-dashboard.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/blynk-dashboard.png" width="800"></a></p>
 
 Congratulations, you have completed this exercise and gain hands-on experience on how to create IoT applications using Blynk platform.
 

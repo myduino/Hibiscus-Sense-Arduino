@@ -4,21 +4,21 @@ The aim of this exercise is to learn how to use a pushbutton (momentary switch) 
 
 Pushbutton is a momentary switch that closed the circuit during press of the button, while the button is released, the circuit disconnected, such as shown in the animation below. It is not a toggle switch, where it has ON and OFF position. Pushbutton usually used to act as an input to trigger the system.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-six.gif" width="300"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/image-exercise-six.gif" width="300"></a></p>
 
 On Hibiscus Sense, there are two pushbutton:
 1. **`RST`** push the button to reset the ESP32 program.
 2. **`IO0`** connected to GPIO0.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-six-a.png" width="400"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/image-exercise-six-a.png" width="400"></a></p>
 
 Both pushbutton in Hibiscus Sense applying [pull-up resistor](https://learn.sparkfun.com/tutorials/pull-up-resistors/all), to prevent floating voltage with capacitor to fix [debouncing effect](https://www.analog.com/en/technical-articles/better-way-to-push-your-buttons.html) of pushbutton. The circuit is complete when we push the **`IO0`** pushbutton, then ESP32 saw `LOW` state at `GPIO0`, because `GND` is connected to the junction of `GPIO0` in the circuit, as shown in the schematic below.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/schematic-exercise-six.png" width="300"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/schematic-exercise-six.png" width="300"></a></p>
 
 Somehow, if a pushbutton circuit is applying pull-down resistor, as shown in the schematic below. ESP32 saw `HIGH` state at `GPIO0` when the IO0 pushbutton is pressed, because `3.3V` is connected to the junction of `GPIO0`. _This is **NOT** the circuit on Hibiscus Sense._
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/schematic-exercise-six-a.png" width="300"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/schematic-exercise-six-a.png" width="300"></a></p>
 
 Since we know that ESP32 will sense `LOW` state at `GPIO0` during pushbutton pressed, so the program as follows:
 
@@ -47,7 +47,7 @@ void loop() {
 
 You can copy the sketch above, paste it into the Arduino IDE and upload the complete sketch to ESP32, then observe the output. Now we'll see the blue is turn OFF, as it will only turn ON once we pressed the IO0 pushbutton.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-six-b.gif" width="600"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/image-exercise-six-b.gif" width="600"></a></p>
 
 ## Detail Sketch Explanations
 

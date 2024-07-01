@@ -4,7 +4,7 @@ The aim of this exercise is to learn how to read and monitor the proximity value
 
 APDS9960 is an advance sensor by [Broadcom](https://www.broadcom.com/products/optical-sensors/integrated-ambient-light-and-proximity-sensors/apds-9960) offering digital RGB, ambient light, proximity and gesture sensing in a very small package. amazing, right? The advance integrated IR LED and driver on the sensor, allows it to measure proximity (up to a few centimeters) with 8-bit resolution (value: 0-255). Below is an illustration of IR LED acts as proximity sensor.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-eight.gif" width="500"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/image-exercise-eight.gif" width="500"></a></p>
 
 The built-in UV and IR blocking filters, allows APDS9960 to sense ambient light and RGB color. While, with four separate diodes sensitive to different directions and ambient light rejectino, allows it to sense gesture.
 
@@ -12,7 +12,7 @@ APDS9960 communication protocol is I2C. Therefore, we can interface it to ESP32 
 
 There is 1x APDS9960 on Hibiscus Sense, as on the image below. The circuit is interfaced to **ESP32's I2C** (`SDA`: **GPIO21**, `SCL`: **GPIO22**) with the sensor I2C default address: **`0x39`**. The arrow is pointing towards gesture sensing **`UP`** direction.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-eight-a.png" width="400"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/image-exercise-eight-a.png" width="400"></a></p>
 
 ## Install Adafruit APDS9960 Library
 Let's use [Adafruit_APDS9960](https://github.com/adafruit/Adafruit_APDS9960) library, to easily program the ESP32 to read the proximity value from the APDS9960 sensor. Following the steps below:
@@ -20,7 +20,7 @@ Let's use [Adafruit_APDS9960](https://github.com/adafruit/Adafruit_APDS9960) lib
 2. Search for **`adafruit apds9960`**.
 3. Look for **Adafruit APDS9960 Library** by Adafruit, click the **INSTALL** button and wait until the installation process is done and the status on the library is *`1.2.x installed`*.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-eight-b.png" width="700"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/image-exercise-eight-b.png" width="700"></a></p>
 
 Once the library is successfully installed, we can start to write the sketch to monitor proximity value as below:
 

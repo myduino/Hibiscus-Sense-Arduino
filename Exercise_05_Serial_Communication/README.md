@@ -4,11 +4,11 @@ The aim of this exercise is to demonstrate serial communication between the ESP3
 
 Serial Communication is a communication process, receiving and transmitting data between two devices, such as **_computer to computer_** or **_microcontroller to computer_** or **_microcontroller to microcontroller_**, by implementing hardware protocol known as `UART (Universal Asynchronous Receiver/Transmitter)`. The data were sent/receive bit by bit sequentially by UART over two or one transmission line (wires), with configurables speed known as `baud-rate` or `bits-per-second` (bps): _9600, 19200, 38400, 57600, 115200, 230400, 460800, 921600_.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-five.gif" width="200"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/image-exercise-five.gif" width="200"></a></p>
 
 The two transmission lines of UART, known as `RX (receive)` and `TX (transmit)`. The transmission begin by transmitting the data from TX port of one UART controller to RX port of the other UART controller.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-five-a.png" width="400"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/image-exercise-five-a.png" width="400"></a></p>
 
 There are 3x UART controllers available in ESP32:
 UART | RX  | RX  |
@@ -63,7 +63,7 @@ void loop() {
 ```
 You can copy the sketch above, paste it into the Arduino IDE and upload the complete sketch to ESP32, then observe the output. Once done uploading, open the Serial Monitor. By observation, we can see an incremental value with newline is printed on the Arduino IDE Serial Monitor.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-five-b.gif" width="600"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/image-exercise-five-b.gif" width="600"></a></p>
 
 ## Detail Sketch Explanations
 

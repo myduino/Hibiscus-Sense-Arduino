@@ -9,7 +9,7 @@ MPU6050 is a 6-axis motion tracking sensor by [InvenSense](https://invensense.td
 
 There is 1x MPU6050 on Hibiscus Sense, as on the image below. The circuit is interfaced to **ESP32's I2C** (`SDA`: **GPIO21**, `SCL`: **GPIO22**) with the sensor I2C default address: **`0x68`**.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-eleven.png" width="400"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/image-exercise-eleven.png" width="400"></a></p>
 
 ## Install Adafruit MPU6050 Library
 Let's use [Adafruit_MPU6050](https://github.com/adafruit/Adafruit_MPU6050) library, to easily program the ESP32 to read the 6-axis motion tracking from the MPU6050 sensor. Following the steps below:
@@ -17,7 +17,7 @@ Let's use [Adafruit_MPU6050](https://github.com/adafruit/Adafruit_MPU6050) libra
 2. Search for **`adafruit mpu6050`**.
 3. Look for **Adafruit MPU6050** by Adafruit, click the **INSTALL** button and wait until the installation process is done and the status on the library is *`2.2.x installed`*.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-eleven-a.png" width="700"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/image-exercise-eleven-a.png" width="700"></a></p>
 
 Once the library is successfully installed, we can start to write the sketch to monitor proximity value as below:
 
@@ -94,7 +94,7 @@ void loop() {
 
 You can copy the sketch above, paste it into the Arduino IDE and upload the complete sketch to ESP32. Once done uploading open the Serial Monitor and move around Hibiscus Sense. Then, you'll see latest value 3-axis accelerometer, 3-axis gyroscope and temperature.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-eleven.gif" width="600"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/image-exercise-eleven.gif" width="600"></a></p>
 
 # Further Experiment
 You can combine the MPU6050 data with other sensors or actuators for more complex projects.

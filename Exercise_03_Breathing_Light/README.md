@@ -6,7 +6,7 @@ This exercise is a continuation from [Exercise 2](https://github.com/myinvent/hi
 
 In Exercise 2, we use `for()` statement to automatically generate decremental PWM value from 255-150 for the `(active-low circuit)` to produce an output of glowing light effect, while in this exercise we produce breathing light effect.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-three.gif" width="500"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/image-exercise-three.gif" width="500"></a></p>
 
 It's easy ... we just need to add another `for()` statement to automatically generate decremental PWM value from 255-100 (lights up) and incremental PWM value from 100-255 (fades off). The complete sketch as follows:
 
@@ -42,7 +42,7 @@ void loop() {
 
 You can copy the sketch above, paste it into the Arduino IDE and upload the complete sketch to ESP32, then observe the output. By observation, the output of the blue LED is repeated breathing light effect, which the results from decremental and incremental value of the PWM signal output.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-three-a.gif" width="600"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/image-exercise-three-a.gif" width="600"></a></p>
 
 ## Further Experiment
 You can adjust the rate of brightness change to customize the breathing speed.

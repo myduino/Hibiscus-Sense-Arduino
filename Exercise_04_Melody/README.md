@@ -2,19 +2,19 @@
 
 The aim of this exercise is to create a simple melody like alarm beeping sound by playing specific frequencies in sequence on the Hibiscus Sense board’s small buzzer (connected to GPIO13).
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four-b.png" width="400"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/image-exercise-four-b.png" width="400"></a></p>
 
 On Hibiscus Sense, there is 1x small buzzer, labelled as `BUZZER` on-board, as circled on the image above.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four.png" width="300"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/image-exercise-four.png" width="300"></a></p>
 
 Buzzer is a piezoelectrical electronic components, which generate tones when the piezo elements is vibrated based on given voltage supply, different voltage will produce different vibration, thus generating different tone. Since ESP32 has the ability to generate range of voltage using, the built-in PWM controllers, we can apply it on our small buzzer to generate tone.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four-a.gif" width="400"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/image-exercise-four-a.gif" width="400"></a></p>
 
 The operating voltage of the small buzzer on the Hibiscus Sense is ranging from 2-4V with rated voltage of 3V, the `(+ve) terminal` of the buzzer is connected to `GPIO13`, while the `(-ve) terminal` is connected to `GND`, as shown in the schematic below. The 3rd terminal of the buzzer is not connected.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/schematic-exercise-four.png" width="400"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/schematic-exercise-four.png" width="400"></a></p>
 
 To produce the tone or melody from the buzzer, we need to write PWM functions to control the PWM output signal on GPIO13. In [Exercise 2]() and [Exercise 3]() we use `ledcWrite(_channel_, _dutycycle_)` function to control the brightness of the LEDs, while to generate the tone, ESP32 has other function known as `ledcWriteTone(_channel_, _note_)` function, with 2 arguments:
   - _channel_ the number of the PWM channel.
@@ -22,7 +22,7 @@ To produce the tone or melody from the buzzer, we need to write PWM functions to
 
 In this exercise, all the available note and its frequency to produce the tone, has been declared on a header file, titled `tones.h` as [here](https://github.com/myinvent/hibiscus-sense-arduino/blob/main/Exercise_04_Melody/tones.h) for available tones.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-four-c.png" width="500"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/image-exercise-four-c.png" width="500"></a></p>
 
 Since we have notice, we need to use `ledcWriteTone()` function instead of `ledcWrite()` function to generate the PWM output signal for the buzzer to produce the tone, let's write the program as below:
 

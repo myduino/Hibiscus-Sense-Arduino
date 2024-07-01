@@ -8,7 +8,7 @@ It has both communication protocol I2C and SPI.
 
 There is 1x BME280 on Hibiscus Sense, as on the image below. The circuit is interfaced to **ESP32's I2C** (`SDA`: **GPIO21**, `SCL`: **GPIO22**) with the sensor I2C default address: **`0x77`**.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-ten.png" width="400"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/image-exercise-ten.png" width="400"></a></p>
 
 BME280 measurement specifications:
 1. Relative humidity with ±3%RH accuracy.
@@ -22,7 +22,7 @@ Let's use [Adafruit_BME280](https://github.com/adafruit/Adafruit_BME280_Library)
 2. Search for **`adafruit bme280`**.
 3. Look for **Adafruit BME280 Library** by Adafruit, click the **INSTALL** button and wait until the installation process is done and the status on the library is *`2.2.x installed`*.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-ten-a.png" width="700"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/image-exercise-ten-a.png" width="700"></a></p>
 
 Once the library is successfully installed, we can start to write the sketch to read and monitor relative humidity, altitude, barometric pressure and ambient temperature value as below:
 
@@ -81,7 +81,7 @@ void loop() {
 
 You can copy the sketch above, paste it into the Arduino IDE and upload the complete sketch to ESP32. Once done uploading open the Serial Monitor and we'll see latest value altitude, barometric pressure, humidity and temperature.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-ten.gif" width="600"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/image-exercise-ten.gif" width="600"></a></p>
 
 ## Further Experiment
 You can adjust the sampling rate or other settings of the BME280 sensor or combine the environmental data with other sensors or actuators for more complex projects.

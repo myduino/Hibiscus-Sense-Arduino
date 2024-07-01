@@ -214,13 +214,13 @@ const char deviceAccessToken[] = "YOUR_DEVICE_ACCESS_TOKEN";
 
 The program control the ESP32 to read and print the sensor's data with interval 3 seconds and interval 15 seconds send the data to Favoriot platform.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-mqtts-serial-monitor.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-mqtts-serial-monitor.png" width="800"></a></p>
 
 Now, you can monitor the data on Favoriot's Data Stream.
 
 On the Favoriot platform, go to menu and click **Data Stream** to show the list of data streaming from the Hibiscus Sense.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-data-stream.gif" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-data-stream.gif" width="800"></a></p>
 
 Congratulations, you have completed this exercise and gain hands-on experience on how send data to the Favoriot IoT platform using secure MQTT protocol.
 

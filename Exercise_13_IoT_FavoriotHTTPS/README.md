@@ -17,28 +17,28 @@ The aim of this exercise is to create an Internet of Things (IoT) project by int
 
 1. Click this link [https://platform.favoriot.com/registration](https://platform.favoriot.com/registration) to create your Favoriot account and click the **Continue with Email** button. You can also use your Gmail account to register.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-register.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-register.png" width="800"></a></p>
 
 2. Fill in your information in the form including **First Name**, **Last Name**, **Purpose**, **Organisation**, **Country**, **User ID**, **Password** and **Email**.
 3. Click the **Get Code** button to get the verification code.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-register-get-code.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-register-get-code.png" width="800"></a></p>
 
 3. Go to your email and look for the email from Favoriot.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-register-code.png" width="600"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-register-code.png" width="600"></a></p>
 
 4. Copy the verification code and paste it on the **Verification Code** field and click the **Register** button.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-register-insert-code.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-register-insert-code.png" width="800"></a></p>
 
 5. On the login page, fill in your **User ID** and **Password** and click the **Sign In** button.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-login.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-login.png" width="800"></a></p>
 
 Good, you have successfully setup account on the Favoriot IoT platform.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-overview.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-overview.png" width="800"></a></p>
 
 ## Setting Up IoT Device
 
@@ -46,7 +46,7 @@ Upon, succesful account registration, Favoriot automatically create the [platfor
 
 Following the image below, go to menu and click **Hierarchy** > **Devices** to show the list IoT devices.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-default.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-device-default.png" width="800"></a></p>
 
 ### Delete deviceDefault
 
@@ -55,21 +55,21 @@ Only 1 device is allowed on FREE ACCOUNT plan, let's **delete** the deviceDefaul
 1. Click the **`trash bin`** icon under the **`Action`** column.
 2. Click the **`Delete`** button.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-default-delete.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-device-default-delete.png" width="800"></a></p>
 
 3. Click the **`Understood`** button.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-default-delete-confirm.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-device-default-delete-confirm.png" width="800"></a></p>
 
 4. Click the **`Delete`** button to confirm deletion of the deviceDefault from the device list.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-default-delete.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-device-default-delete.png" width="800"></a></p>
 
 ### Create New Device
 
 1. Save as the Hibiscus Sense below image into your PC.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-hibiscus-sense.jpg" width="300"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-hibiscus-sense.jpg" width="300"></a></p>
 
 2. Click the **`Create Device`** icon.
 3. Choose group **Hierarchy**: **`groupDefault`**.
@@ -77,33 +77,33 @@ Only 1 device is allowed on FREE ACCOUNT plan, let's **delete** the deviceDefaul
 5. Key in **Description**: **`Hibiscus Sense`**
 6. Choose **Device Type**: **`ESP32`** 
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-info-a.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-device-info-a.png" width="800"></a></p>
 
 7. Key in **Latitude** and **Longitude**. *You can use Google to find your location latitude and longitude.*
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-latitude.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-device-latitude.png" width="800"></a></p>
 
 8. Choose **Timezone**: **`Asia/Kuala_Lumpur`**
 9. Click **`Select Photo`** to add device image.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-info-b.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-device-info-b.png" width="800"></a></p>
 
 10. Click the **`Upload Image`** button.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-info-upload.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-device-info-upload.png" width="800"></a></p>
 
 11. Choose the downloaded Hibiscus Sense image from **Step 1**.
 12. Click the **`Done`** button.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-info-image.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-device-info-image.png" width="800"></a></p>
 
 13. Click the **`Confirm`** button to create the new device.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-info-confirm.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-device-info-confirm.png" width="800"></a></p>
 
 Good, you have successfully create new device on the Favoriot platform.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-success.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-device-success.png" width="800"></a></p>
 
 ### Device Developer ID and Access Token
 
@@ -111,9 +111,9 @@ Click the **`eye`** icon under the **`Action`** column, to view the device infor
 
 **Note**: **`Device Developer ID`** and **`Device Access Token`**, will be used in the Arduino sketch for ESP32 to create successful HTTP connection to Favoriot platform. *There is **copy** icon beside the field, for you to easily copy the details and paste into the Arduino sketch.*
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-success-info-a.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-device-success-info-a.png" width="800"></a></p>
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-device-success-info-b.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-device-success-info-b.png" width="800"></a></p>
 
 ## Sending Data to Favoriot using secure HTTP connection
 
@@ -299,7 +299,7 @@ const char deviceAccessToken[] = "YOUR_DEVICE_ACCESS_TOKEN";
 
 The program control the ESP32 to read and print the sensor's data with interval 3 seconds and interval 15 seconds send the data to Favoriot platform.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-https-serial-monitor.gif" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-https-serial-monitor.gif" width="800"></a></p>
 
 Let's monitor the data on Favoriot's Data Stream.
 
@@ -307,7 +307,7 @@ Let's monitor the data on Favoriot's Data Stream.
 
 On the Favoriot platform, go to menu and click **Data Stream** to show the list of data streaming from the Hibiscus Sense.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-data-stream.gif" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-data-stream.gif" width="800"></a></p>
 
 Good, now you have successfully send the sensor's data to the Favoriot platform.
 
@@ -324,15 +324,15 @@ On the Favoriot platform, go to menu and click **Dashboards** to show the list o
 4. Upload the image of Hibiscus Sense.
 5. Click the **`Confirm`** button.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-dashboard-create-new.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-dashboard-create-new.png" width="800"></a></p>
 
 Good, you have successfully create new dashboard on the Favoriot platform.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-dashboard-list.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-dashboard-list.png" width="800"></a></p>
 
 Click on the **Hibiscus Sense** dashboard and configure the dashboard.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-dashboard-device-new.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-dashboard-device-new.png" width="800"></a></p>
 
 ### Configure Dashboard
 
@@ -346,11 +346,11 @@ Click on the **Hibiscus Sense** dashboard and configure the dashboard.
 7. Key in **Parameter Unit**: **`%RH`**
 8. Click the **`Confirm`** button.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-dashboard-device-new-widget-gauge.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-dashboard-device-new-widget-gauge.png" width="800"></a></p>
 
 Gauge widget is now shown on the dashboard.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-dashboard-device-new-gauge.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-dashboard-device-new-gauge.png" width="800"></a></p>
 
 ### Add Line Widget
 
@@ -361,24 +361,24 @@ Gauge widget is now shown on the dashboard.
 5. Choose **Device**: **`HibiscusSense`**
 6. Choose **Parameter**: **`humidity`**
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-dashboard-device-new-widget-line-a.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-dashboard-device-new-widget-line-a.png" width="800"></a></p>
 
 7. Key in **X-Axis Label**: **`Time`**
 8. Key in **Y-Axis Label**: **`humidity`**
 9. Key in **Prefill Data Count**: **`30`**
 10. Click the **`Confirm`** button.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-dashboard-device-new-widget-line-b.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-dashboard-device-new-widget-line-b.png" width="800"></a></p>
 
 Line widget is now shown on the dashboard.
 
 Good, you have successfully configure the dashboard for data streaming visualization.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-dashboard-device-new-line.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-dashboard-device-new-line.png" width="800"></a></p>
 
 If you want to edit the widget, you can click the **Edit Widget** icon.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-dashboard-live.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-dashboard-live.png" width="800"></a></p>
 
 You can click the **`X`** Exit Edit Mode icon at the right bottom of the page, to go to live mode.
 
@@ -393,14 +393,14 @@ Go to menu and click **Rules** to show the list of rules. Currently, we don't ha
 1. Click on the **`Create Rule`** icon.
 2. Click the **`Notifications`** icon.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-rule-new-notification.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-new-notification.png" width="800"></a></p>
 
 3. Choose the **Method**: **`Email`**
 4. Key in the **Rule Name**: **`highHumidity`**
 5. Key in the **`Description`**: **`High Humidity > 80`**
 6. Choose the **Device**: **`HibiscusSense`**
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-rule-new-notification-a.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-new-notification-a.png" width="800"></a></p>
 
 7. Key in the **Rule**: **`stream.humidity > 80`**
 8. Key in the  **To**: **`YOUR_EMAIL_ADDRESS`**
@@ -409,17 +409,17 @@ Go to menu and click **Rules** to show the list of rules. Currently, we don't ha
 11. Choose the **Threshold**: **`5`**
 12. Click the **`Confirm`** button.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-rule-new-notification-b.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-new-notification-b.png" width="800"></a></p>
 
 Good, you have successfully create the rule that will trigger an email if the humidity value is detected more than 80 %RH.
 
 Simulate the humidity data to be above 80 %RH. Go to your Hibiscus Sense dashboard, monitor the humidity value to be more than 80 %RH.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-rule-humidity-detected.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-humidity-detected.png" width="800"></a></p>
 
 Once the Favoriot rule is detected, it will send an email notification.
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/favoriot-rule-humidity-email.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-humidity-email.png" width="800"></a></p>
 
 Congratulations, you have completed this exercise and gain hands-on experience on how to create IoT applications using Favoriot platform.
 

@@ -4,8 +4,8 @@
   <a href="https://myduino.com/product/myd-036/"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fmyinvent%2Fhibiscus-sense-arduino&count_bg=%2379C83D&title_bg=%23555555&icon=powerbi.svg&icon_color=%23E7E7E7&title=hits&edge_flat=false"/></a>
 </p>
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-logo.png" width="300"></a></p>
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense.png" width="400"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/hibiscus-sense-logo.png" width="300"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/hibiscus-sense.png" width="400"></a></p>
 
 > *Whenever you are thinking of quick IoT (Internet of Things) hardware prototyping / development, just grab [**Hibiscus Sense**](https://myduino.com/product/myd-036/) and focus on programming  :sunglasses:*
 
@@ -27,11 +27,11 @@ Although, we can program ESP32 using other programming language such as [Micropy
 
 ## Hibiscus Sense Features
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-features.png" width="900"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/hibiscus-sense-features.png" width="900"></a></p>
 
 ## Hibiscus Sense Pinout Diagram
 
-<p align="center"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/hibiscus-sense-pinout.png" width="900"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/hibiscus-sense-pinout.png" width="900"></a></p>
 
 - **Blue LED** is connected to ESP32's **`GPIO2`**.
 - **Small Buzzer** is connected to ESP32's **`GPIO13`**.

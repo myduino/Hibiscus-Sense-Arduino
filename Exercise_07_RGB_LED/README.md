@@ -7,11 +7,11 @@ RGB LED is a tri-color LED in a package:
 - **Green**
 - **Blue**
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-seven.png" width="400"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/image-exercise-seven.png" width="400"></a></p>
 
 An RGB LED, have four leads, for each colour and one common anode (+ve) or common cathode (-ve). In `common cathode` RGB LED, three LEDs share one `(-ve) connection`, while, in `common anode` RGB LED, three LEDs share one `(+ve) connection`. The image above, shows that the RGB LED is common cathode, as the longest lead is (-ve) lead. We can use ESP32's PWM controller to control each RGB LED lead to produce different colour.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-seven-a.png" width="400"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/image-exercise-seven-a.png" width="400"></a></p>
 
 There is 1x RGB LED on Hibiscus Sense labelled as **`WS2812`** and it is a special RGB LED. WS2812 is an addressable RGB LED that can be connected in series. We can control the colour of the RGB LED colour in its position, with just only one pin to ESP32 microcontroller, amazing!
 
@@ -23,7 +23,7 @@ WS2812 have 4 connector:
 
 The schematic of WS2812 RGB on Hibiscus Sense, as in the image below.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/schematic-exercise-seven.png" width="500"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/schematic-exercise-seven.png" width="500"></a></p>
 
 To control usual RGB LED, we can generate the PWM signal output to its indivial lead to produce different colour of RGB LED.
 
@@ -33,7 +33,7 @@ Let's use [Adafruit_Neopixel](https://github.com/adafruit/Adafruit_NeoPixel) lib
 2. Search for **`adafruit neopixel`**.
 3. Look for **Adafruit NeoPixel** by Adafruit, click the **INSTALL** button and wait until the installation process is done and the status on the library is *`1.12.x installed`*.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-seven-b.png" width="700"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/image-exercise-seven-b.png" width="700"></a></p>
 
 Once the library is successfully installed, we can start to write the sketch as below:
 
@@ -77,7 +77,7 @@ void loop() {
 
 You can copy the sketch above, paste it into the Arduino IDE and upload the complete sketch to ESP32, then observe the output. By observation, the colour output from RGB LED is magenta.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-seven-c.jpg" width="500"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/image-exercise-seven-c.jpg" width="500"></a></p>
 
 ## Detail Sketch Explanations
 
@@ -100,7 +100,7 @@ rgb.show();
 
 `setPixelColor()` function is to set the position of the LED and the colour output of the RGB LED. The combination of the RGB colour range from 0-255 as on the image below, for example in the line of sketch below, RED: 255, GREEN: 0 and BLUE: 255, represent magenta.
 
-<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myinvent/hibiscus-sense/raw/main/references/image-exercise-seven-d.gif" width="600"></a></p>
+<p align="center"><a href="https://myduino.com/product/myd-036/"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/image-exercise-seven-d.gif" width="600"></a></p>
 
 ```cpp
 rgb.setPixelColor(0, 255, 0, 255);
