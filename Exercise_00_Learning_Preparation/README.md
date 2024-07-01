@@ -8,7 +8,7 @@ Let's prepare the required software and tools on your PC.
 
 ## Download and Install CP210x USB Driver on Your PC
 
-1. Download it from it's official website [CP210x USB to UART Bridge VCP Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads) or you can download it directly from this link [CP210x Universal Windows Driver](https://www.silabs.com/documents/public/software/CP210x_Universal_Windows_Driver.zip).
+1. Download it from it's official website [CP210x USB to UART Bridge VCP Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads) or you can directly download the .zip file from this link [CP210x Universal Windows Driver](https://www.silabs.com/documents/public/software/CP210x_Universal_Windows_Driver.zip).
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/silabs-cp210-download.png" width="800"></a></p>
 
