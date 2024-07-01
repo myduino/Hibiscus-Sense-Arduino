@@ -20,7 +20,7 @@ Let's prepare the required software and tools on your PC.
 
 4. Click the **Extract** button.
 
-<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/silabs-cp210-extract.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/silabs-cp210-extract.png" width="400"></a></p>
 
 5. Locate the extracted folder, right click on the **`silabser`** file and click the **Install** option.
 
