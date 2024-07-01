@@ -8,9 +8,35 @@ Let's prepare the required software and tools on your PC.
 
 ## Download and Install CP210x USB Driver on Your PC
 
-1. Download it from it's official website [CP210x Universal Windows Driver](https://www.silabs.com/documents/public/software/CP210x_Universal_Windows_Driver.zip).
+1. Download it from it's official website [CP210x USB to UART Bridge VCP Drivers](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers?tab=downloads) or you can download it directly from this link [CP210x Universal Windows Driver](https://www.silabs.com/documents/public/software/CP210x_Universal_Windows_Driver.zip).
 
-2. Install the driver based on the following instruction by Darren Robinson, [ESP32 Com Port – CP2102 USB to UART Bridge Controller](https://blog.darrenjrobinson.com/esp32-com-port-cp2102-usb-to-uart-bridge-controller/).
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/silabs-cp210-download.png" width="800"></a></p>
+
+2. Locate the compressed file in the Downloads folder.
+
+3. Click the **Extract all** button.
+
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/silabs-cp210-zip.png" width="800"></a></p>
+
+4. Click the **Extract** button.
+
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/silabs-cp210-extract.png" width="800"></a></p>
+
+5. Locate the extracted folder, right click on the **`silabser`** file and click the **Install** option.
+
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/silabs-cp210-install.png" width="800"></a></p>
+
+6. On the security warning pop-up window, click the **Open** button.
+
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/silabs-cp210-open.png" width="400"></a></p>
+
+7. On the User Access Control window, click the **Yes** button.
+
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/silabs-cp210-allow.png" width="400"></a></p>
+
+8. Wait until the installation is successful
+
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/silabs-cp210-successful.png" width="400"></a></p>
 
 ## Download and Install Arduino IDE (4 Steps)
 
