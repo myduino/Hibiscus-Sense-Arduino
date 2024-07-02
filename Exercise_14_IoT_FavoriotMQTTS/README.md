@@ -6,7 +6,7 @@ This exercise is a continuation from Exercise 13, therefore device, dashboard an
 
 ## Extra Information
 
-You can get Favoriot CAcertificate using MQTTS protocol and more information from the link below: 
+You can get Favoriot CAcertificate using MQTTS protocol and more information from the link here: 
 https://www.favoriot.com/mqtt-for-embedded-devices-now-supported-by-favoriot/
 
 ## Sending Data to Favoriot using secure MQTT protocol
