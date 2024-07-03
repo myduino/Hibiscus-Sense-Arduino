@@ -5,11 +5,8 @@
  * This is a passive buzzer and it is connected to GPIO13.
  * We need to generate Pulse Width Modulation (PWM) to control the vibration of the piezo element.
  * 
- * In Arduino ESP32 programming there is no analogWrite() function as usual.
- * ESP32 has 16 channel, from 0 - 15. Channel does not mean GPIO number!
- * Therefore in the sketch,
- * we will use ledcAttachPin(), ledcDetachPin() and ledcWriteTone() function,
- * to generate the PWM signal on GPIO13.
+ * We will use tone(), and noTone() function,
+ * tone() function is used to generates a square wave of the specified frequency (and 50% duty cycle) on a GPIO pin.
  * 
  */
 
@@ -17,20 +14,16 @@
 #include "tones.h"
 
 void setup() {
-  // configure PWM controller congfiguration
-  ledcSetup(0, 5000, 8);
-  // declare the GPIO number for PWM signal output
-  ledcAttachPin(13, 0);
+  
 }
 
 void loop() {
-  // ledcWriteTone() function will generate PWM signal based on given tone frequency.
-  // 1st argument: PWM channel number.
+  // tone() function will generate PWM signal based on given tone frequency.
+  // 1st argument: GPIO number.
   // 2nd argument: Tone frequency.
-  ledcWriteTone(0, NOTE_D4);  // buzzer will sound according to NOTE_D4.
+  tone(13, NOTE_D4);  // buzzer will sound according to NOTE_D4.
   delay(500);
 
-  // ledcDetachPin() function to declare GPIO and PWM channels.
-  ledcWrite(0, 0);  // buzzer has no sound since PWM signal is 0.
+  noTone(13);  // buzzer has no sound since PWM signal is 0.
   delay(500);
 }
