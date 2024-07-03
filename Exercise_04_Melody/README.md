@@ -16,11 +16,9 @@ The operating voltage of the small buzzer on the Hibiscus Sense is ranging from 
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/schematic-exercise-four.png" width="400"></a></p>
 
-To produce the tone or melody from the buzzer, we need to write PWM functions to control the PWM output signal on GPIO13. In [Exercise 2]() and [Exercise 3]() we use `ledcWrite(_channel_, _dutycycle_)` function to control the brightness of the LEDs, while to generate the tone, ESP32 has other function known as `ledcWriteTone(_channel_, _note_)` function, with 2 arguments:
-  - _channel_ the number of the PWM channel.
-  - _note_ the the frequency of note. Example, Note D4 = 147 Hz. Click [here](https://github.com/myinvent/hibiscus-sense-arduino/blob/main/Exercise_04_Melody/tones.h) for available tones.
+To produce the tone or melody from the buzzer, we can use `tone(_gpio_, _frequency_)` function to control the output frequency on GPIO13. While, we can use `noTone(_gpio_)` function to stop generating the frequency.
 
-In this exercise, all the available note and its frequency to produce the tone, has been declared on a header file, titled `tones.h` as [here](https://github.com/myinvent/hibiscus-sense-arduino/blob/main/Exercise_04_Melody/tones.h) for available tones.
+In this exercise, all the available note and its frequency to produce the tone, has been declared on a header file, titled `tones.h` as [here](https://github.com/myduino/Hibiscus-Sense-Arduino/blob/main/Exercise_04_Melody/tones.h) for available tones.
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/image-exercise-four-c.png" width="500"></a></p>
 

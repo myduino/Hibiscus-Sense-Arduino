@@ -2,7 +2,7 @@
 
 The aim of this exercise is to learn how to detect the hand gestures using the APDS9960 sensor.
 
-In this exercise, we will use same APDS9960 from [Exercise 8](https://github.com/myinvent/hibiscus-sense-arduino#exercise-8-monitor-proximity-value-from-apds9960) with different application of sensing gesture direction, the sketch as follows:
+In this exercise, we will use same APDS9960 from [Exercise 8](https://github.com/myduino/Hibiscus-Sense-Arduino#exercise-8-monitor-proximity-value-from-apds9960) with different application of sensing gesture direction, the sketch as follows:
 
 ## Complete Sketch
 

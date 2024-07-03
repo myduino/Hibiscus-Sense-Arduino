@@ -2,7 +2,7 @@
 
 The aim of this exercise is to control the blue LED on GPIO2, gradually changing the LED brightness in a smooth, rhythmic pattern to simulate breathing light effect on the Hibiscus Sense board.
 
-This exercise is a continuation from [Exercise 2](https://github.com/myinvent/hibiscus-sense-arduino#exercise-2-control-blue-led-on-gpio2-glowing-light-effect).
+This exercise is a continuation from [Exercise 2](https://github.com/myduino/Hibiscus-Sense-Arduino#exercise-2-control-blue-led-on-gpio2-glowing-light-effect).
 
 In Exercise 2, we use `for()` statement to automatically generate decremental PWM value from 255-150 for the `(active-low circuit)` to produce an output of glowing light effect, while in this exercise we produce breathing light effect.
 
