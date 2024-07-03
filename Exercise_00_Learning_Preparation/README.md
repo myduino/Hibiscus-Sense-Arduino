@@ -103,9 +103,9 @@ Right-click the Arduino IDE installer file, choose **Properties**, select **Perm
 1. Connect the USB cable Type-C to Hibiscus Sense and Type-A to your PC.
 2. Right-click the **`Windows Start Menu`** and choose **`Device Manager`** to open the Device Manager.
 
-<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/silabs-cp210-open-device-manager.png" width="400"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/silabs-cp210-open-device-manager.png" width="600"></a></p>
 
-4. Click on the **`Ports (COM & LPT)`** to show list of ports available, you should see a port like **`Silicon Labs CP210x USB to UART Bridge (COM5)`** (or with a different COM port number). Remember the port number.
+4. Click on the **`Ports (COM & LPT)`** to show the list of available ports, you should see a port like **`Silicon Labs CP210x USB to UART Bridge (COM5)`** (or with a different COM port number). Remember the port number.
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/silabs-cp210-device-manager.png" width="600"></a></p>
 
