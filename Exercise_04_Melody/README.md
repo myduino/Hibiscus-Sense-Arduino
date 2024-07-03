@@ -30,20 +30,17 @@ Since we have notice, we need to use `ledcWriteTone()` function instead of `ledc
 #include "tones.h"
 
 void setup() {
-  // configure PWM controller congfiguration
-  ledcSetup(0, 5000, 8);
-  // declare the GPIO number for PWM signal output
-  ledcAttachPin(13, 0);
+  
 }
 
 void loop() {
-  // ledcWriteTone() function will generate PWM signal based on given tone frequency.
-  // 1st argument: PWM channel number.
+  // tone() function will generate PWM signal based on given tone frequency.
+  // 1st argument: GPIO number.
   // 2nd argument: Tone frequency.
-  ledcWriteTone(0, NOTE_D4);  // buzzer will sound according to NOTE_D4.
+  tone(13, NOTE_D4);  // buzzer will sound according to NOTE_D4.
   delay(500);
 
-  ledcWrite(0, 0);  // buzzer has no sound since PWM signal is 0.
+  noTone(13);  // buzzer has no sound since PWM signal is 0.
   delay(500);
 }
 ```
@@ -56,18 +53,12 @@ First, we need to include header file, which has the declaration of all availabl
 #include "tones.h"
 ```
 
-In `void setup()` function, we have to configure the PWM channel using `ledcSetup()` function and declare buzzer (+ve) terminal attach to GPIO13 using `ledcAttachPin()` function.
+Inside the `void loop()` function, we use `tone()` function to generate sound of `NOTE_D4` frequency, while `noTone()` function to stop generating any sound from the buzzer. Therefore, the execution of these functions repeatedly, producing alarm-like sound.
 ```cpp
-ledcSetup(0, 5000, 8);
-ledcAttachPin(13, 0);
-```
-
-Inside the `void loop()` function, we use `ledcWriteTone()` function to generate sound of `NOTE_D4` frequency, while `ledcWrite()` function to turn OFF the buzzer. Therefore, the execution of these functions repeatedly, producing alarm-like sound.
-```cpp
-ledcWriteTone(0, NOTE_D4);  // buzzer will sound according to NOTE_D4.
+tone(13, NOTE_D4);  // buzzer will sound according to NOTE_D4.
 delay(500);
 
-ledcWrite(0, 0);  // buzzer has no sound since PWM signal is 0.
+noTone(13);  // buzzer has no sound since PWM signal is 0.
 delay(500);
 ```
 ## Further Experiment
