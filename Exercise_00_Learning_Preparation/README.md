@@ -101,21 +101,25 @@ Right-click the Arduino IDE installer file, choose **Properties**, select **Perm
 
 ## Connect Hibiscus Sense to Your PC (6 Steps)
 1. Connect the USB cable Type-C to Hibiscus Sense and Type-A to your PC.
-2. On the Arduino IDE, choose the correct *COM port* interfaced to CP2104 USB driver on Hibiscus Sense.
+2. Right-click the **`Windows Start Menu`** and choose **`Device Manager`** to open the Device Manager.
 
-`On Windows OS` Example: *COM5*
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/silabs-cp210-open-device-manager.png" width="400"></a></p>
+
+4. Click on the **`Ports (COM & LPT)`** to show list of ports available, you should see a port like **`Silicon Labs CP210x USB to UART Bridge (COM5)`** (or with a different COM port number). Remember the port number.
+
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/silabs-cp210-device-manager.png" width="600"></a></p>
+
+5. Go to the Arduino IDE. Click the **`Select Board`** and choose the correct COM port, different OS will have different ways of port addressing.
+
+`On Windows OS` Example: **`COM5`**
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/arduino-ide-com-port.png" width="800"></a></p>
 
-`On Mac OS` Example: */dev/cu.usbserial-XXXXXXXXX*
+`On Mac OS` Example: **`/dev/cu.usbserial-XXXXXXXXX`**
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/arduino-ide-com-port-mac.png" width="800"></a></p>
 
-3. On the board selection, choose *ESP32 Dev Module*.
+3. On the board selection, choose **`ESP32 Dev Module`**.
 
-`On Windows OS`
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/arduino-ide-com-board.png" width="800"></a></p>
-
-`On Mac OS`
-<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/arduino-ide-com-board-mac.png" width="800"></a></p>
 
 Hibiscus Sense, shipped with default sketch to check the sensors and list available Wi-Fi networks at your place. Let's continue to test it!
 
