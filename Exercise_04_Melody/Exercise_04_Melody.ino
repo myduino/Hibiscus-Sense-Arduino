@@ -7,6 +7,7 @@
  * 
  * We will use tone(), and noTone() function,
  * tone() function is used to generates a square wave of the specified frequency (and 50% duty cycle) on a GPIO pin.
+ * noTone() function is used to stops the generation of a square wave triggered.
  * 
  */
 
