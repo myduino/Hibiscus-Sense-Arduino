@@ -105,11 +105,11 @@ Right-click the Arduino IDE installer file, choose **Properties**, select **Perm
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/silabs-cp210-open-device-manager.png" width="600"></a></p>
 
-4. Click on the **`Ports (COM & LPT)`** to show the list of available ports, you should see a port like **`Silicon Labs CP210x USB to UART Bridge (COM5)`** (or with a different COM port number). Remember the port number.
+3. On the Device Manager window, click on the **`Ports (COM & LPT)`** to show the list of available ports, you should see a port like **`Silicon Labs CP210x USB to UART Bridge (COM5)`** (or with a different COM port number). Remember the port number.
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/silabs-cp210-device-manager.png" width="600"></a></p>
 
-5. Go to the Arduino IDE. Click the **`Select Board`** and choose the correct COM port, different OS will have different ways of port addressing.
+5. Go to the Arduino IDE. Click the **`Select Board`** and choose the correct COM port. Always be reminded, that different OS will have different ways of port addressing.
 
 `On Windows OS` Example: **`COM5`**
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/arduino-ide-com-port.png" width="800"></a></p>
@@ -117,15 +117,15 @@ Right-click the Arduino IDE installer file, choose **Properties**, select **Perm
 `On Mac OS` Example: **`/dev/cu.usbserial-XXXXXXXXX`**
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/arduino-ide-com-port-mac.png" width="800"></a></p>
 
-3. On the board selection, choose **`ESP32 Dev Module`**.
+6. On the board selection, choose **`ESP32 Dev Module`**.
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/arduino-ide-com-board.png" width="800"></a></p>
 
-Hibiscus Sense, shipped with default sketch to check the sensors and list available Wi-Fi networks at your place. Let's continue to test it!
+Hibiscus Sense, shipped with default program to check the sensors and list available Wi-Fi networks at your place. Let's continue to test it!
 
-4. Click the *magnifying glass* icon at the right side of the Arduino IDE to open the *Serial Monitor*.
-5. Set the Baud Rate to `115200`.
-6. Click the `IO0` button on Hibiscus Sense. You will see the result of the sensor and Wi-Fi checking on the Serial Monitor.
+7. Click the *magnifying glass* icon at the right side of the Arduino IDE to open the *Serial Monitor*.
+8. Set the Baud Rate to `115200`.
+9. Click the `IO0` button on Hibiscus Sense. You will see the result of the sensor and Wi-Fi checking on the Serial Monitor.
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/hibiscus-first-time-monitor.png" width="800"></a></p>
 
