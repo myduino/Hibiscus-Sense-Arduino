@@ -1,6 +1,6 @@
 # Hands-On Learning Preparation
-Before we begin the hands-on activities to learn how to **`control the actuators`** and **`acquire data from the sensors`** on Hibiscus Sense, please ensure that the following hardware and software components are readily accesible on your desk and on your PC:
-1. **Hibiscus Sense** and a **USB cable Type-A to Type-C**. If you don't own it yet, you are welcome to purchase it from :shopping_cart: [Myduino Website](https://myduino.com/product/myd-036/)
+Before we begin the hands-on activities to learn how to **`control the actuators`** and **`acquire data from the sensors`** on Hibiscus Sense board, please ensure that the following hardware and software components are readily accesible on your desk and on your PC:
+1. **Hibiscus Sense** board and a **USB cable Type-A to Type-C**. If you don't own it yet, you are welcome to purchase it from :shopping_cart: [Myduino Website](https://myduino.com/product/myd-036/)
 2. **Arduino IDE**.
 3. **Arduino core for the ESP32**.
 
@@ -99,8 +99,8 @@ Right-click the Arduino IDE installer file, choose **Properties**, select **Perm
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/arduino-ide-hardware-library-esp32-installed.png" width="800"></a></p>
 
-## Connect Hibiscus Sense to Your PC (6 Steps)
-1. Connect the USB cable Type-C to Hibiscus Sense and Type-A to your PC.
+## Connect Hibiscus Sense to Your PC (9 Steps)
+1. Connect the USB cable Type-C to Hibiscus Sense board and Type-A to your PC.
 2. Right-click the **`Windows Start Menu`** and choose **`Device Manager`** to open the Device Manager.
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/silabs-cp210-open-device-manager.png" width="600"></a></p>
@@ -121,11 +121,11 @@ Right-click the Arduino IDE installer file, choose **Properties**, select **Perm
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/arduino-ide-com-board.png" width="800"></a></p>
 
-Hibiscus Sense, shipped with default program to check the sensors and list available Wi-Fi networks at your place. Let's continue to test it!
+Hibiscus Sense board, shipped with default program to check the sensors and list of available Wi-Fi networks at your place. Let's continue to test it!
 
-7. Click the *magnifying glass* icon at the right side of the Arduino IDE to open the *Serial Monitor*.
+7. Click the **`magnifying glass`** icon at the right side of the Arduino IDE to open the *Serial Monitor*.
 8. Set the Baud Rate to `115200`.
-9. Click the `IO0` button on Hibiscus Sense. You will see the result of the sensor and Wi-Fi checking on the Serial Monitor.
+9. On the Hibiscus Sense board, click the **`IO0`** button. You will see the result of the sensor and Wi-Fi checking on the Serial Monitor, like on the image below.
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/hibiscus-first-time-monitor.png" width="800"></a></p>
 
