@@ -18,8 +18,9 @@
  * 
  */
 
-#include <WiFiClientSecure.h>
+#include <WiFi.h>
 #include <MQTT.h>
+#include <NetworkClientSecure.h>
 #include <Adafruit_APDS9960.h>
 #include <Adafruit_BME280.h>
 #include <Adafruit_MPU6050.h>
@@ -43,7 +44,7 @@ sensors_event_t a, g, temp;
 
 unsigned long lastMillis = 0;
 
-WiFiClientSecure net;
+NetworkClientSecure client;
 MQTTClient mqtt(4096);
 
 void connectToWiFi() {
@@ -67,9 +68,9 @@ void messageReceived(String &topic, String &payload) {
 void connectToFavoriotMQTT() {
   Serial.print("Connecting to Favoriot MQTT ...");
 
-  net.setCACert(rootCACertificate);
+  client.setCACert(rootCACertificate);
 
-  mqtt.begin("mqtt.favoriot.com", 8883, net);
+  mqtt.begin("mqtt.favoriot.com", 8883, client);
   mqtt.onMessage(messageReceived);
 
   String uniqueString = String(ssid) + "-" + String(random(1, 98)) + String(random(99, 999));
