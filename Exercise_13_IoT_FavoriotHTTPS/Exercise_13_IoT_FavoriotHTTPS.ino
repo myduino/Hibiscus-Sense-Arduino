@@ -19,6 +19,7 @@
 
 #include <WiFi.h>
 #include <HTTPClient.h>
+#include <NetworkClientSecure.h>
 #include <Adafruit_APDS9960.h>
 #include <Adafruit_BME280.h>
 #include <Adafruit_MPU6050.h>
@@ -136,7 +137,7 @@ void loop() {
 
     Serial.println("\nSending data to Favoriot's Data Stream ...");
 
-    WiFiClientSecure *client = new WiFiClientSecure;
+    NetworkClientSecure *client = new NetworkClientSecure;
 
     if(client) {
       client -> setCACert(FavoriotCA);
