@@ -13,7 +13,7 @@ The aim of this exercise is to create an Internet of Things (IoT) project by int
 
 <p align="center"><img src="https://platform.favoriot.com/tutorial/v2/images/architecture%20v2.png" width="500"></a></p>
 
-## Setting Up Favoriot Account
+## Setting Up Favoriot Account (6 Steps)
 
 1. Click this link [https://platform.favoriot.com/registration](https://platform.favoriot.com/registration) to create your Favoriot account and click the **Continue with Email** button. You can also use your Gmail account to register.
 
@@ -24,15 +24,15 @@ The aim of this exercise is to create an Internet of Things (IoT) project by int
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-register-get-code.png" width="800"></a></p>
 
-3. Go to your email and look for the email from Favoriot.
+4. Go to your email and look for the email from Favoriot.
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-register-code.png" width="600"></a></p>
 
-4. Copy the verification code and paste it on the **Verification Code** field and click the **Register** button.
+5. Copy the verification code and paste it on the **Verification Code** field and click the **Register** button.
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-register-insert-code.png" width="800"></a></p>
 
-5. On the login page, fill in your **User ID** and **Password** and click the **Sign In** button.
+6. On the login page, fill in your **User ID** and **Password** and click the **Sign In** button.
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-login.png" width="800"></a></p>
 
