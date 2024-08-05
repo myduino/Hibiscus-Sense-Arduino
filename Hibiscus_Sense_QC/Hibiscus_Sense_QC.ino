@@ -9,13 +9,13 @@
 #include <MQTT.h>
 #include <Wire.h>
 
-#define WIFI_SSID                 "myinvententerprise"
-#define WIFI_PASSWORD             "04222682"
+#define WIFI_SSID                 "Myduino Guest"
+#define WIFI_PASSWORD             "MyduinoGuest"
 #define MQTT_HOST                 "broker.hivemq.com"
-#define MQTT_PUBLISH_TOPIC        "60177875232/Hibiscus-Sense"
-#define MQTT_CONTROL_RGB_TOPIC    "60177875232/Hibiscus-Sense/RGB"
-#define MQTT_CONTROL_LED_TOPIC    "60177875232/Hibiscus-Sense/LED"
-#define MQTT_TRIGGER_TOPIC        "60177875232/Hibiscus-Sense/Trigger"
+#define MQTT_PUBLISH_TOPIC        "Hibiscus-Sense-Test-Device"
+#define MQTT_CONTROL_RGB_TOPIC    "Hibiscus-Sense-Test-Device/RGB"
+#define MQTT_CONTROL_LED_TOPIC    "Hibiscus-Sense-Test-Device/LED"
+#define MQTT_TRIGGER_TOPIC        "Hibiscus-Sense-Test-Device/Trigger"
 
 Adafruit_APDS9960 apds;
 Adafruit_BME280 bme;
@@ -24,10 +24,6 @@ Adafruit_MPU6050 mpu;
 sensors_event_t a, g, temp;
 
 Adafruit_NeoPixel rgb(1, 16, NEO_GRB + NEO_KHZ800);
-
-int freq = 2000;
-int channel = 0;
-int resolution = 8;
 
 WiFiClient net;
 MQTTClient mqtt;
@@ -122,7 +118,6 @@ void connectToMqttBroker(){
 }
 
 void setup() {
-
   // WRITE_PERI_REG(RTC_CNTL_BROWN_OUT_REG, 0); //disable   detector
 
   rgb.begin();
@@ -134,8 +129,7 @@ void setup() {
   pinMode(2, OUTPUT);
   digitalWrite(2, HIGH);
 
-  ledcSetup(channel, freq, resolution);
-  ledcAttachPin(13, channel);
+  pinMode(13, OUTPUT);
 
   Serial.begin(115200);
   Serial.print("Hit Enter on the Serial Monitor input to continue ... ");
@@ -221,10 +215,10 @@ void setup() {
   Serial.println("ACTUATORS ...");
   Serial.println("1. Buzzer Buzz");
   for (int dutyCycle = 0; dutyCycle <= 255; dutyCycle = dutyCycle + 10){
-    ledcWrite(channel, dutyCycle);
+    analogWrite(13, dutyCycle);
     delay(10);
   }
-  ledcWrite(channel, 0);
+  analogWrite(13, 0);
   
   Serial.println("2. RGB LED Red Colour");
   rgb.setPixelColor(0, rgb.Color(255, 0, 0)); rgb.show();
