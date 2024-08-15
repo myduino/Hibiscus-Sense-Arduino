@@ -390,6 +390,8 @@ You can upgrade to [BEGINNER PLAN](https://platform.favoriot.com/iot/subscriptio
 
 Go to menu and click **Rules** to show the list of rules. Currently, we don't have any rule, let's create the rule!
 
+### Email Notification
+
 1. Click on the **`Create Rule`** icon.
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-create-new.png" width="800"></a></p>
@@ -423,6 +425,10 @@ Simulate the humidity data to be above 80 %RH. Go to your Hibiscus Sense dashboa
 Once the Favoriot rule is detected, it will send an email notification.
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-humidity-email.png" width="800"></a></p>
+
+### Telegram Notification
+
+
 
 Congratulations, you have completed this exercise and gain hands-on experience on how to create IoT applications using Favoriot platform.
 
