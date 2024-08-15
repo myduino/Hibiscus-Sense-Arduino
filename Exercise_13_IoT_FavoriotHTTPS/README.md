@@ -481,29 +481,31 @@ Cool, now you have activated the bot. Let's head to Favoriot, to create rule for
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-new-notification.png" width="800"></a></p>
 
 3. Choose the **Method**: **`Telegram`**
-4. Key in the **Rule Name**: **`highHumidityEmail`**
+4. Key in the **Rule Name**: **`highHumidityTelegram`**
 5. Key in the **`Description`**: **`High Humidity > 80 send Telegram`**
 6. Choose the **Device**: **`HibiscusSense`**
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-new-telegram-notification-a.png" width="800"></a></p>
 
 7. Scroll down and key in the **Rule**: **`stream.humidity > 80`**
-8. Go back into your Telegram, copy the token from the BotFather message and paste it into the  **Telegram Token**: **`YOUR_TELEGRAM_BOT_TOKEN`**.
+8. Go back into your Telegram, copy the token from the BotFather message.
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-telegram-botfather-token.jpg" width="300"></a></p>
 
+9. Paste the token into the  **Telegram Token**: **`YOUR_TELEGRAM_BOT_TOKEN`** and click the **Get Chat ID** button.
+
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-new-telegram-notification-b-failed.png" width="800"></a></p>
 
-9. Click the **Get Chat ID** icon. *If you received the error message, like the image below, send the **/start** again on the Telegram bot and click this button again.*
-
-10. 
-
-9. Key in the  **Notification Message**: **`[Hibiscus Sense]: The humidity value detected higher than 80 %RH`**
-10. Choose the **Status**: **`Activate`**
-11. Choose the **Threshold**: **`5`**
-12. Click the **`Confirm`** button.
+10. *If you received the error message, like the image above*, send the **/start** again on the Telegram bot and click the **Get Chat ID** button again until the Chat ID is automatically filled.
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-new-telegram-notification-b.png" width="800"></a></p>
+
+11. Key in the  **Notification Message**: **`[Hibiscus Sense]: The humidity value detected higher than 80 %RH`**
+12. Choose the **Status**: **`Activate`**
+13. Delete the default value on **Threshold**.
+12. Click the **`Confirm`** button.
+
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-new-telegram-notification-c.png" width="800"></a></p>
 
 Good, you have successfully create the rule that will trigger an email if the humidity value is detected more than 80 %RH.
 
@@ -513,7 +515,7 @@ Simulate the humidity data to be above 80 %RH. Go to your Hibiscus Sense dashboa
 
 Once the Favoriot rule is detected, it will send an email notification.
 
-<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-humidity-email.png" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-humidity-telegram.jpg" width="800"></a></p>
 
 Congratulations, you have completed this exercise and gain hands-on experience on how to create IoT applications using Favoriot platform.
 
