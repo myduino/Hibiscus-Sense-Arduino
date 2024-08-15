@@ -428,7 +428,11 @@ Once the Favoriot rule is detected, it will send an email notification.
 
 ### Telegram Notification
 
+#### Create Telegram Bot
 
+1. 
+
+#### Create Rule for Telegram Bot
 
 Congratulations, you have completed this exercise and gain hands-on experience on how to create IoT applications using Favoriot platform.
 
