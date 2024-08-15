@@ -513,9 +513,9 @@ Simulate the humidity data to be above 80 %RH. Go to your Hibiscus Sense dashboa
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-humidity-detected.png" width="800"></a></p>
 
-Once the Favoriot rule is detected, it will send an email notification.
+Once the Favoriot rule is triggered, it will send a Telegram notification.
 
-<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-humidity-telegram.jpg" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-humidity-telegram.jpg" width="300"></a></p>
 
 Congratulations, you have completed this exercise and gain hands-on experience on how to create IoT applications using Favoriot platform.
 
