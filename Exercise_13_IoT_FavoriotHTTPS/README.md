@@ -431,10 +431,15 @@ Once the Favoriot rule is detected, it will send an email notification.
 #### Create Telegram Bot
 
 1. Open Telegram on your smartphone or on your PC.
+2. Tap on the **`Search`** icon.
 
-<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-telegram-find-botfather.jpg" width="800"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-telegram-find-botfather.jpg" width="300"></a></p>
 
-2. 
+3. Type **`botfather`** to filter **`BotFather`**.
+
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-telegram-choose-botfather.jpg" width="300"></a></p>
+
+4. Tap on the **`BotFather`** with verified mark.
 
 #### Create Rule for Telegram Bot
 
