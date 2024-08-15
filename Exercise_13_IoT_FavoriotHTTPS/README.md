@@ -493,7 +493,6 @@ Cool, now you have activated the bot. Let's head to Favoriot, to create rule for
 8. Key in the  **To**: **`YOUR_TELEGRAM_BOT_TOKEN`**
 
 
-
 9. Key in the  **Notification Message**: **`[Hibiscus Sense]: The humidity value detected higher than 80 %RH`**
 10. Choose the **Status**: **`Activate`**
 11. Choose the **Threshold**: **`5`**
