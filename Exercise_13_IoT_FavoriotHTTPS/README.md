@@ -428,7 +428,7 @@ Once the Favoriot rule is detected, it will send an email notification.
 
 ### Telegram Notification
 
-Before, creating the Telegram rule, you need to create a Telegram bot first. but, you need to upgrade to [BEGINNER PLAN](https://platform.favoriot.com/iot/subscriptions) plan, to use Telegram notification.
+Before, creating the Telegram rule, you need to create a Telegram bot first. But, you need to upgrade to [BEGINNER PLAN](https://platform.favoriot.com/iot/subscriptions) plan, to use Telegram notification.
 
 #### Create Telegram Bot
 
