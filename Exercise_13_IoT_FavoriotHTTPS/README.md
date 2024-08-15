@@ -458,9 +458,7 @@ Before, creating the Telegram rule, you need to create a Telegram bot first.
 
 8. Type in the username of your bot. For example **`FavoriotHibiscusSenseBot`** and hit **`Send`**. *Note: If not successful, re-type a new unique username until the username is accepted by BotFather.* 
 
-Good, you have successfully create the bot. *The given token will be use on Favoriot Rule platform.*
-
-9. Tap on the provided bot link.
+9. Tap on the provided bot link. *The given token will be use on Favoriot Rule platform.*
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-telegram-botfather-token.jpg" width="300"></a></p>
 
