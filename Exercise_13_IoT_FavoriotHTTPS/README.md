@@ -428,6 +428,10 @@ Once the Favoriot rule is detected, it will send an email notification.
 
 ### Telegram Notification
 
+You need to upgrade to [BEGINNER PLAN](https://platform.favoriot.com/iot/subscriptions) plan, to use Telegram notification.
+
+Before, creating the Telegram rule, you need to create a Telegram bot first.
+
 #### Create Telegram Bot
 
 1. Open Telegram on your smartphone or on your PC.
@@ -456,12 +460,56 @@ Once the Favoriot rule is detected, it will send an email notification.
 
 Good, you have successfully create the bot. *The given token will be use on Favoriot Rule platform.*
 
+9. Tap on the provided bot link.
+
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-telegram-botfather-token.jpg" width="300"></a></p>
 
+10. Tap on the **`START`** button to activate bot.
 
-<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-telegram-botfather-name.jpg" width="300"></a></p>
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-telegram-bot-start.jpg" width="300"></a></p>
 
-#### Create Rule for Telegram Bot
+Cool, now you have activated the bot. Let's head to Favoriot, to create rule for Telegram notification.
+
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-telegram-bot-started.jpg" width="300"></a></p>
+
+#### Create Rule for Telegram Notification
+
+1. Click on the **`Create Rule`** icon.
+
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-create-new.png" width="800"></a></p>
+
+2. Click the **`Notifications`** icon.
+
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-new-notification.png" width="800"></a></p>
+
+3. Choose the **Method**: **`Telegram`**
+4. Key in the **Rule Name**: **`highHumidityEmail`**
+5. Key in the **`Description`**: **`High Humidity > 80 send Telegram`**
+6. Choose the **Device**: **`HibiscusSense`**
+
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-new-telegram-notification-a.png" width="800"></a></p>
+
+7. Key in the **Rule**: **`stream.humidity > 80`**
+8. Key in the  **To**: **`YOUR_TELEGRAM_BOT_TOKEN`**
+
+
+
+9. Key in the  **Notification Message**: **`[Hibiscus Sense]: The humidity value detected higher than 80 %RH`**
+10. Choose the **Status**: **`Activate`**
+11. Choose the **Threshold**: **`5`**
+12. Click the **`Confirm`** button.
+
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-new-notification-b.png" width="800"></a></p>
+
+Good, you have successfully create the rule that will trigger an email if the humidity value is detected more than 80 %RH.
+
+Simulate the humidity data to be above 80 %RH. Go to your Hibiscus Sense dashboard, monitor the humidity value to be more than 80 %RH.
+
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-humidity-detected.png" width="800"></a></p>
+
+Once the Favoriot rule is detected, it will send an email notification.
+
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-humidity-email.png" width="800"></a></p>
 
 Congratulations, you have completed this exercise and gain hands-on experience on how to create IoT applications using Favoriot platform.
 
