@@ -391,6 +391,9 @@ You can upgrade to [BEGINNER PLAN](https://platform.favoriot.com/iot/subscriptio
 Go to menu and click **Rules** to show the list of rules. Currently, we don't have any rule, let's create the rule!
 
 1. Click on the **`Create Rule`** icon.
+
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-create-new.png" width="800"></a></p>
+
 2. Click the **`Notifications`** icon.
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-new-notification.png" width="800"></a></p>
