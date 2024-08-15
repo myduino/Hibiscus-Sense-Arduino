@@ -448,7 +448,16 @@ Once the Favoriot rule is detected, it will send an email notification.
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-telegram-botfather-create-bot.jpg" width="300"></a></p>
 
-7. Type in the of your bot, for example **`Favoriot Hibiscus Sense`**
+7. Type in the name of your bot. For example **`Favoriot Hibiscus Sense`** and hit **`Send`**.
+
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-telegram-botfather-name.jpg" width="300"></a></p>
+
+8. Type in the username of your bot. For example **`FavoriotHibiscusSenseBot`** and hit **`Send`**. *Note: If not successful, re-type a new unique username until the username is accepted by BotFather.* 
+9. Copy the given token.
+
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-telegram-botfather-token.jpg" width="300"></a></p>
+
+
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-telegram-botfather-name.jpg" width="300"></a></p>
 
