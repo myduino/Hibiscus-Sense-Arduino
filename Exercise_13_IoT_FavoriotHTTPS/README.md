@@ -440,7 +440,7 @@ Once the Favoriot rule is detected, it will send an email notification.
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-telegram-choose-botfather.jpg" width="300"></a></p>
 
-5. If you are new to BotFather, tap on the **`START BUTTON`** to continue.
+5. If you are new to BotFather, tap on the **`START`** button to continue.
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-telegram-botfather-start.png" width="300"></a></p>
 
@@ -448,6 +448,9 @@ Once the Favoriot rule is detected, it will send an email notification.
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-telegram-botfather-create-bot.jpg" width="300"></a></p>
 
+7. Type in the of your bot, for example **`Favoriot Hibiscus Sense`**
+
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/favoriot-rule-telegram-botfather-name.jpg" width="300"></a></p>
 
 #### Create Rule for Telegram Bot
 
