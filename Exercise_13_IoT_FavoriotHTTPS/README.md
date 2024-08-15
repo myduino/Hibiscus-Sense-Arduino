@@ -384,7 +384,7 @@ You can click the **`X`** Exit Edit Mode icon at the right bottom of the page, t
 
 **Note**: You might want to add other widget, but on FREE ACCOUNT plan, only 2 widget are allowed.
 
-You can subscribe to BEGINNER PLAN plan, then you can add extra widget to visualize other data parameter.
+You can upgrade to [BEGINNER PLAN](https://platform.favoriot.com/iot/subscriptions) plan, then you can add extra widget to visualize other data parameter.
 
 ## Creating Rules for Data Alert & Notification
 
