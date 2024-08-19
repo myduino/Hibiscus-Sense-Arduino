@@ -120,10 +120,12 @@ void setup() {
 }
 
 void loop() {
+  // Check Wi-Fi connection
   if (WiFi.status() != WL_CONNECTED) {
     connectToWiFi();
   }
 
+  // Check MQTT connection
   if (!mqtt.connected()) {
     connectToFavoriotMQTT();
   }
