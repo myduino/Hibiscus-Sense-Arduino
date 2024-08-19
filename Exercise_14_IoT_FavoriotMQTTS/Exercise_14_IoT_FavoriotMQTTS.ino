@@ -120,9 +120,6 @@ void setup() {
 }
 
 void loop() {
-  mqtt.loop();
-  delay(10);  // <- fixes some issues with WiFi stability
-
   if (WiFi.status() != WL_CONNECTED) {
     connectToWiFi();
   }
@@ -130,6 +127,9 @@ void loop() {
   if (!mqtt.connected()) {
     connectToFavoriotMQTT();
   }
+
+  mqtt.loop();
+  delay(10);  // <- fixes some issues with WiFi stability
 
   // STEP 3: Data Acquisition - Read data from the sensors
   Serial.print("Proximity: ");
