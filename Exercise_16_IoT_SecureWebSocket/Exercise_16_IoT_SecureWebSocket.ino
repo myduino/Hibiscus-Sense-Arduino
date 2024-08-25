@@ -23,7 +23,6 @@
 #include <Adafruit_MPU6050.h>
 #include <Adafruit_NeoPixel.h>
 #include <ArduinoJson.h>
-#include "FavoriotCA.h"
 
 WebSocketsClient webSocket;
 
