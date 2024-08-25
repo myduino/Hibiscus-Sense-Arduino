@@ -7,8 +7,8 @@
  * This sketch has 4 summary execution steps:
  * 1. Initialized Wi-Fi conectivity
  * 2. Initialized Websocket connection to Favoriot
- * 2. Data Acquisition - Read data from the sensors
- * 3. Data Ingestion - Send data to Favoriot's data stream using secure Websocket protocol
+ * 3. Data Acquisition - Read data from the sensors
+ * 4. Data Ingestion - Send data to Favoriot's data stream using secure Websocket protocol
  *
  * Select the board as ESP32 Dev Module before compiling the sketch
  * (example) Go to menu, Tools > Board > esp32 > ESP32 Dev Module
@@ -34,6 +34,9 @@ Adafruit_BME280 bme;
 Adafruit_MPU6050 mpu;
 
 sensors_event_t a, g, temp;
+
+// https://meteologix.com/my/observations/pressure-qnh.html
+float hPaSeaLevel = 1015.00;
 
 long previousMillis = 0;
 
@@ -140,7 +143,7 @@ void loop() {
     uint8_t proximity = apds.readProximity();
     float humidity = bme.readHumidity();
     float temperature = bme.readTemperature();
-    float altitude = bme.readAltitude(1013.25);
+    float altitude = bme.readAltitude(hPaSeaLevel);
     float barometer = bme.readPressure();
     float accx = a.acceleration.x;
     float accy = a.acceleration.y;
