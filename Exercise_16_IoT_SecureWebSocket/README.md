@@ -1,6 +1,6 @@
 # Exercise 16: IoT Application using Favoriot (Secure WebSocket Protocol)
 
-The aim of this exercise is to learn how to send data to the Favoriot IoT platform using CoAP protocol.
+The aim of this exercise is to learn how to send data to the Favoriot IoT platform using WebSocket protocol.
 
 This exercise is continuation from Exercise 13, therefore device, dashboard and rule on Favoriot remain same, only protocol being used by ESP32 to connect to Favoriot platform is change to WebSocket.
 
