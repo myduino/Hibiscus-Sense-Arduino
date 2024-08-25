@@ -6,8 +6,6 @@ This exercise is continuation from Exercise 13, therefore device, dashboard and 
 
 ## Sending Data to Favoriot using WebSocket protocol
 
-Let's sending the Hibiscus Sense sensor's data to Favoriot platform.
-
 1. Open the sketch on Arduino IDE.
 
 ### Arduino Sketch
