@@ -143,7 +143,7 @@ void loop() {
     float humidity = bme.readHumidity();
     float temperature = bme.readTemperature();
     float altitude = bme.readAltitude(hPaSeaLevel);
-    float barometer = bme.readPressure();
+    float barometer = bme.readPressure() / 100.00;
     float accx = a.acceleration.x;
     float accy = a.acceleration.y;
     float accz = a.acceleration.z;
@@ -170,7 +170,7 @@ void loop() {
 
     Serial.print("Barometric Pressure: ");
     Serial.print(barometer);
-    Serial.println(" Pa");
+    Serial.println(" hPa");
 
     Serial.print("Acceleration X:");
     Serial.print(accx);
