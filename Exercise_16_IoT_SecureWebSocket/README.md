@@ -21,7 +21,6 @@ Let's sending the Hibiscus Sense sensor's data to Favoriot platform.
 #include <Adafruit_MPU6050.h>
 #include <Adafruit_NeoPixel.h>
 #include <ArduinoJson.h>
-#include "FavoriotCA.h"
 
 WebSocketsClient webSocket;
 
@@ -142,7 +141,7 @@ void loop() {
     float humidity = bme.readHumidity();
     float temperature = bme.readTemperature();
     float altitude = bme.readAltitude(hPaSeaLevel);
-    float barometer = bme.readPressure();
+    float barometer = bme.readPressure() / 100.00;
     float accx = a.acceleration.x;
     float accy = a.acceleration.y;
     float accz = a.acceleration.z;
@@ -169,7 +168,7 @@ void loop() {
 
     Serial.print("Barometric Pressure: ");
     Serial.print(barometer);
-    Serial.println(" Pa");
+    Serial.println(" hPa");
 
     Serial.print("Acceleration X:");
     Serial.print(accx);
