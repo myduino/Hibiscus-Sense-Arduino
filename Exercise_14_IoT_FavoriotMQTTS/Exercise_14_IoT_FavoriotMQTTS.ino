@@ -42,6 +42,9 @@ Adafruit_MPU6050 mpu;
 
 sensors_event_t a, g, temp;
 
+// https://meteologix.com/my/observations/pressure-qnh.html
+float hPaSeaLevel = 1015.00;
+
 unsigned long lastMillis = 0;
 
 NetworkClientSecure client;
@@ -134,42 +137,53 @@ void loop() {
   delay(10);  // <- fixes some issues with WiFi stability
 
   // STEP 3: Data Acquisition - Read data from the sensors
-  Serial.print("Proximity: ");
-  Serial.println(apds.readProximity());
+    int proximity = apds.readProximity();
+    float humidity = bme.readHumidity();
+    float temperature = bme.readTemperature();
+    float barometer = bme.readPressure() / 100.00;
+    float altitude = bme.readAltitude(hPaSeaLevel);
+    mpu.getEvent(&a, &g, &temp);
+    float accx = a.acceleration.x;
+    float accy = a.acceleration.y;
+    float accz = a.acceleration.z;
+    float gyrx = g.gyro.x;
+    float gyry = g.gyro.y;
+    float gyrz = g.gyro.z;
 
-  Serial.print("Relative Humidity: ");
-  Serial.print(bme.readHumidity());
-  Serial.println(" %RH");
+    Serial.print("Proximity: ");
+    Serial.println(proximity);
 
-  Serial.print("Approx. Altitude: ");
-  Serial.print(bme.readAltitude(1013.25));
-  Serial.println(" m");
+    Serial.print("Relative Humidity: ");
+    Serial.print(humidity);
+    Serial.println(" %RH");
 
-  Serial.print("Barometric Pressure: ");
-  Serial.print(bme.readPressure());
-  Serial.println(" Pa");
+    Serial.print("Approx. Altitude: ");
+    Serial.print(altitude);
+    Serial.println(" m");
 
-  Serial.print("Ambient Temperature: ");
-  Serial.print(bme.readTemperature());
-  Serial.println(" °C");
+    Serial.print("Barometric Pressure: ");
+    Serial.print(barometer);
+    Serial.println(" Pa");
 
-  mpu.getEvent(&a, &g, &temp);
+    Serial.print("Ambient Temperature: ");
+    Serial.print(temperature);
+    Serial.println(" °C");
 
-  Serial.print("Acceleration X:");
-  Serial.print(a.acceleration.x);
-  Serial.print(", Y:");
-  Serial.print(a.acceleration.y);
-  Serial.print(", Z:");
-  Serial.print(a.acceleration.z);
-  Serial.println(" m/s^2");
+    Serial.print("Acceleration X:");
+    Serial.print(accx);
+    Serial.print(", Y:");
+    Serial.print(accy);
+    Serial.print(", Z:");
+    Serial.print(accz);
+    Serial.println(" m/s^2");
 
-  Serial.print("Rotation X:");
-  Serial.print(g.gyro.x);
-  Serial.print(", Y:");
-  Serial.print(g.gyro.y);
-  Serial.print(", Z:");
-  Serial.print(g.gyro.z);
-  Serial.println(" rad/s");
+    Serial.print("Rotation X:");
+    Serial.print(gyrx);
+    Serial.print(", Y:");
+    Serial.print(gyry);
+    Serial.print(", Z:");
+    Serial.print(gyrz);
+    Serial.println(" rad/s");
 
   // STEP 4: Data Ingestion - Send data to Favoriot's data stream using secure MQTT connection
   // Interval 15 seconds
@@ -177,22 +191,17 @@ void loop() {
     lastMillis = millis();
 
     String favoriotJson = "{\"device_developer_id\":\"" + String(deviceDeveloperId) + "\",\"data\":{";
-    
-    favoriotJson += "\"proximity\":\"" + String(apds.readProximity()) + "\",";
-    favoriotJson += "\"humidity\":\"" + String(bme.readHumidity()) + "\",";
-    favoriotJson += "\"altitude\":\"" + String(bme.readAltitude(1013.25)) + "\",";
-    favoriotJson += "\"barometer\":\"" + String(bme.readPressure()/100.00) + "\",";
-    favoriotJson += "\"temperature\":\"" + String(bme.readTemperature()) + "\",";
-    
-    mpu.getEvent(&a,&g,&temp);
-    
-    favoriotJson += "\"accx\":\"" + String(a.acceleration.x) + "\",";
-    favoriotJson += "\"accy\":\"" + String(a.acceleration.y) + "\",";
-    favoriotJson += "\"accz\":\"" + String(a.acceleration.z) + "\",";
-    favoriotJson += "\"gyrox\":\"" + String(g.gyro.x) + "\",";
-    favoriotJson += "\"gyroy\":\"" + String(g.gyro.y) + "\",";
-    favoriotJson += "\"gyroz\":\"" + String(g.gyro.z) + "\"";
-    
+    favoriotJson += "\"proximity\":\"" + String(proximity) + "\",";
+    favoriotJson += "\"humidity\":\"" + String(humidity) + "\",";
+    favoriotJson += "\"altitude\":\"" + String(altitude) + "\",";
+    favoriotJson += "\"barometer\":\"" + String(barometer) + "\",";
+    favoriotJson += "\"temperature\":\"" + String(temperature) + "\",";
+    favoriotJson += "\"accx\":\"" + String(accx) + "\",";
+    favoriotJson += "\"accy\":\"" + String(accy) + "\",";
+    favoriotJson += "\"accz\":\"" + String(accz) + "\",";
+    favoriotJson += "\"gyrox\":\"" + String(gyrx) + "\",";
+    favoriotJson += "\"gyroy\":\"" + String(gyry) + "\",";
+    favoriotJson += "\"gyroz\":\"" + String(gyrz) + "\"";
     favoriotJson += "}}";
 
     Serial.println("\nSending data to Favoriot's Data Stream ...");
