@@ -125,7 +125,8 @@ Hibiscus Sense board, shipped with default program to check the sensors and list
 
 7. Click the **`magnifying glass`** icon at the right side of the Arduino IDE to open the *Serial Monitor*.
 8. Set the Baud Rate to **`115200`**.
-9. On the Hibiscus Sense board, click the **`IO0`** button. You will see the result of the sensor and Wi-Fi checking on the Serial Monitor, like on the image below.
+9. Hit `Enter` on the Message field.
+10. On the Hibiscus Sense board, click the **`IO0`** button. You will see the result of the sensor and Wi-Fi checking on the Serial Monitor, like on the image below.
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/hibiscus-first-time-monitor.png" width="800"></a></p>
 
