@@ -71,12 +71,11 @@ void loop() {
     Serial.println("Humidity: " + String(humidity) + " %RH");
     Serial.println("Temperature: " + String(temperature) + " °C");
 
+    Serial.println("=============================================");
+
     // STEP 3: Data Ingestion - Send data to Blynk's data stream using HTTPS
     Blynk.virtualWrite(V0, humidity);
     Blynk.virtualWrite(V1, temperature);
 
   }
-
-  Serial.println("=============================================");
-  delay(3000);
 }
