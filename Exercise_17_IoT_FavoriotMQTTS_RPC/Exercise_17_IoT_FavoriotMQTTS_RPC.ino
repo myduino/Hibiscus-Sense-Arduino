@@ -36,7 +36,7 @@ const char publishTopic[] = "/v2/streams";
 const char statusTopic[] = "/v2/streams/status";
 const char rpcTopic[] = "/v2/rpc";
 
-Adafruit_NeoPixel rgb(1, 16);
+Adafruit_NeoPixel rgb(1, 16, NEO_GRB + NEO_KHZ800);
 
 Adafruit_APDS9960 apds;
 Adafruit_BME280 bme;
@@ -51,7 +51,7 @@ NetworkClientSecure client;
 MQTTClient mqtt(4096);
 
 void connectToWiFi() {
-  Serial.print("Connecting to Wi-Fi '" + String(ssid) + "' ...");
+  Serial.print("Connecting to Wi-Fi AP '" + String(ssid) + "' ...");
 
   WiFi.begin(ssid, password);
 
@@ -64,28 +64,36 @@ void connectToWiFi() {
 }
 
 void messageReceived(String &topic, String &payload) {
-  Serial.println("Incoming Status: " + payload);
+  Serial.println("Incoming Status - Topic: " + topic + ", Payload: "  + payload);
   Serial.println();
 
   JsonDocument doc;
   DeserializationError error = deserializeJson(doc, payload);
 
   bool ledBlue = doc.containsKey("ledBlue");
+  bool ledRedRGB = doc.containsKey("ledRedRGB");
   bool ledRGB = doc.containsKey("ledRGB");
 
   if (ledBlue){
     int value = doc["ledBlue"];
-    pinMode(2, OUTPUT); digitalWrite(2, value);
+    digitalWrite(2, value);
+  }
+
+  if (ledRedRGB){
+    int value = doc["ledRedRGB"];
+    rgb.setPixelColor(0, rgb.Color(value, 0, 0)); rgb.show();
   }
   
   if (ledRGB){
-    int value = doc["ledRGB"];
-    rgb.setPixelColor(0, rgb.Color(value, value, value)); rgb.show();
+    int valueRed = doc["ledRGB"]["r"];
+    int valueGreen = doc["ledRGB"]["g"];
+    int valueBlue = doc["ledRGB"]["b"];
+    rgb.setPixelColor(0, rgb.Color(valueRed, valueGreen, valueBlue)); rgb.show();
   }
 }
 
 void connectToFavoriotMQTT() {
-  Serial.print("Connecting to Favoriot MQTT ...");
+  Serial.print("Connecting to Favoriot MQTT Broker ...");
 
   client.setCACert(rootCACertificate);
 
@@ -115,19 +123,25 @@ void connectToFavoriotMQTT() {
 void setup() {
   Serial.begin(115200);
 
-  rgb.begin();
-  rgb.show();
+  // Initialize Blue LED
+  pinMode(2, OUTPUT); digitalWrite(2, HIGH);
+  
+  // Initialize RGB LED
+  rgb.begin(); rgb.clear();
 
+  // Initialize APDS9960 Sensor
   if (!apds.begin()) {
     Serial.println("Failed to find Hibiscus Sense APDS9960 chip");
   }
 
   apds.enableProximity(true);
 
+  // Initialize BME280 Sensor
   if (!bme.begin()) {
     Serial.println("Failed to find Hibiscus Sense BME280 chip");
   }
 
+  // Initialize MPU6050 Sensor
   if (!mpu.begin()) {
     Serial.println("Failed to find Hibiscus Sense MPU6050 chip");
   }
@@ -168,17 +182,19 @@ void loop() {
   float gyry = g.gyro.y;
   float gyrz = g.gyro.z;
 
-  if (millis() - lastMillisDataInternval > 5000) {
-    lastMillisDataInternval = millis();
+  // Print data on Serial Monitor
+  // Interval 5 seconds
+  if (millis() - lastMillisDataInterval > 5000) {
+    lastMillisDataInterval = millis();
 
     Serial.println("Proximity: " + String(proximity));
     Serial.println("Relative Humidity: " + String(humidity) + " %RH");
     Serial.println("Approx. Altitude: " + String(altitude) + " m");
     Serial.println("Barometric Pressure: " + String(barometer) + " hPa");
     Serial.println("Ambient Temperature: " + String(temperature) + " °C");
-    Serial.println("Acceleration X:" + String(accx) + ", Y:" + String(accy) + ", Z:" + String(accz) + " m/s^2");
-    Serial.println("Rotation X:" + String(gyrx) + ", Y:" + String(gyroy) + ", Z:" + String(gyroz) + " rad/s");
-    Serial.println("=============================================");
+    Serial.println("Acceleration X: " + String(accx) + ", Y:" + String(accy) + ", Z:" + String(accz) + " m/s^2");
+    Serial.println("Rotation X: " + String(gyrx) + ", Y:" + String(gyry) + ", Z:" + String(gyrz) + " rad/s");
+    Serial.println();
   }
 
   // STEP 4: Data Ingestion - Send data to Favoriot's data stream using secure MQTT connection
@@ -186,25 +202,28 @@ void loop() {
   if (millis() - lastMillisUpdateInternval > 15000) {
     lastMillisUpdateInternval = millis();
 
-    String favoriotJson = "{\"device_developer_id\":\"" + String(deviceDeveloperId) + "\",\"data\":{";
-    favoriotJson += "\"proximity\":\"" + String(proximity) + "\",";
-    favoriotJson += "\"humidity\":\"" + String(humidity) + "\",";
-    favoriotJson += "\"altitude\":\"" + String(altitude) + "\",";
-    favoriotJson += "\"barometer\":\"" + String(barometer) + "\",";
-    favoriotJson += "\"temperature\":\"" + String(temperature) + "\",";
-    favoriotJson += "\"accx\":\"" + String(accx) + "\",";
-    favoriotJson += "\"accy\":\"" + String(accy) + "\",";
-    favoriotJson += "\"accz\":\"" + String(accz) + "\",";
-    favoriotJson += "\"gyrox\":\"" + String(gyrx) + "\",";
-    favoriotJson += "\"gyroy\":\"" + String(gyry) + "\",";
-    favoriotJson += "\"gyroz\":\"" + String(gyrz) + "\"";
-    favoriotJson += "}}";
+    String json = "{\"device_developer_id\":\"" + String(deviceDeveloperId) + "\",\"data\":{";
+    json += "\"proximity\":\"" + String(proximity) + "\",";
+    json += "\"humidity\":\"" + String(humidity) + "\",";
+    json += "\"altitude\":\"" + String(altitude) + "\",";
+    json += "\"barometer\":\"" + String(barometer) + "\",";
+    json += "\"temperature\":\"" + String(temperature) + "\",";
+    json += "\"accx\":\"" + String(accx) + "\",";
+    json += "\"accy\":\"" + String(accy) + "\",";
+    json += "\"accz\":\"" + String(accz) + "\",";
+    json += "\"gyrox\":\"" + String(gyrx) + "\",";
+    json += "\"gyroy\":\"" + String(gyry) + "\",";
+    json += "\"gyroz\":\"" + String(gyrz) + "\"";
+    json += "}}";
 
     Serial.println("\nSending data to Favoriot's Data Stream ...");
 
-    Serial.println("Data to Publish: " + favoriotJson);
+    Serial.println("Data to Publish: " + json);
     Serial.println("Publish to: " + String(deviceAccessToken) + String(publishTopic));
 
-    mqtt.publish(String(deviceAccessToken) + String(publishTopic), favoriotJson);
+    mqtt.publish(String(deviceAccessToken) + String(publishTopic), json);
+
+    Serial.println("======================================================");
+    Serial.println();
   }
 }
