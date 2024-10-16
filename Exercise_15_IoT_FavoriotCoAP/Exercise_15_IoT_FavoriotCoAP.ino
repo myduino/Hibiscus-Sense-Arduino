@@ -61,6 +61,15 @@ void callback_response(CoapPacket &packet, IPAddress ip, int port) {
   Serial.println("Stream Created");
 }
 
+void connect_to_wifi(){
+  WiFi.begin(ssid, password);
+
+  while(WiFi.status() != WL_CONNECTED){
+    Serial.print(".");
+    delay(250);
+  }
+}
+
 void setup() {
   Serial.begin(115200);
 
@@ -81,12 +90,7 @@ void setup() {
     Serial.println("Failed to find Hibiscus Sense MPU6050 chip");
   }
 
-  WiFi.begin(ssid, password);
-
-  while(WiFi.status() != WL_CONNECTED){
-    Serial.print(".");
-    delay(250);
-  }
+  connect_to_wifi();
 
   // client response callback.
   // this endpoint is single callback.
@@ -95,9 +99,14 @@ void setup() {
 
   // start coap server/client
   coap.start();
+
 }
 
 void loop() {
+
+  if(WiFi.status() != WL_CONNECTED){
+    connect_to_wifi();
+  }
   
   // STEP 2: Data Acquisition - Read data from the sensors
   Serial.print("Proximity: ");
