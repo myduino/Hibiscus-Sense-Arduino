@@ -7,8 +7,8 @@
  * This sketch has 4 summary execution steps:
  * 1. Initialized Wi-Fi conectivity
  * 2. Initialized MQTT connection to Favoriot MQTT broker
- * 2. Data Acquisition - Read data from the sensors
- * 3. Data Ingestion - Send data to Favoriot's data stream using secure MQTT protocol
+ * 3. Data Acquisition - Read data from the sensors
+ * 4. Data Ingestion - Send data to Favoriot's data stream using secure MQTT protocol
  *
  * Select the board as ESP32 Dev Module before compiling the sketch
  * (example) Go to menu, Tools > Board > esp32 > ESP32 Dev Module
@@ -150,16 +150,9 @@ void loop() {
     float gyry = g.gyro.y;
     float gyrz = g.gyro.z;
 
-    Serial.print("Proximity: ");
-    Serial.println(proximity);
-
-    Serial.print("Relative Humidity: ");
-    Serial.print(humidity);
-    Serial.println(" %RH");
-
-    Serial.print("Approx. Altitude: ");
-    Serial.print(altitude);
-    Serial.println(" m");
+    Serial.println("Proximity: " + String(proximity));
+    Serial.println("Relative Humidity: " + String(humidity) + " %RH");
+    Serial.println("Approx. Altitude: " + String(altitude) + " m");
 
     Serial.print("Barometric Pressure: ");
     Serial.print(barometer);
