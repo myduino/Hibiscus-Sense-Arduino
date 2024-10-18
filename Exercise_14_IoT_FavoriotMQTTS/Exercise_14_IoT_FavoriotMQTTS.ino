@@ -42,9 +42,6 @@ Adafruit_MPU6050 mpu;
 
 sensors_event_t a, g, temp;
 
-// https://meteologix.com/my/observations/pressure-qnh.html
-float hPaSeaLevel = 1015.00;
-
 unsigned long lastMillis = 0;
 
 NetworkClientSecure client;
@@ -90,6 +87,7 @@ void connectToFavoriotMQTT() {
 
   Serial.println("Subscribe to: " + String(deviceAccessToken) + String(statusTopic));
 
+  // Subscribe to /v2/streams/status
   mqtt.subscribe(String(deviceAccessToken) + String(statusTopic));
   Serial.println();
 }
@@ -141,7 +139,7 @@ void loop() {
     float humidity = bme.readHumidity();
     float temperature = bme.readTemperature();
     float barometer = bme.readPressure() / 100.00;
-    float altitude = bme.readAltitude(hPaSeaLevel);
+    float altitude = bme.readAltitude(1015); // based on https://aqicn.org/
     mpu.getEvent(&a, &g, &temp);
     float accx = a.acceleration.x;
     float accy = a.acceleration.y;
@@ -202,6 +200,7 @@ void loop() {
     Serial.println("Data to Publish: " + favoriotJson);
     Serial.println("Publish to: " + String(deviceAccessToken) + String(publishTopic));
 
+    // Publish to /v2/streams
     mqtt.publish(String(deviceAccessToken) + String(publishTopic), favoriotJson);
   }
 
