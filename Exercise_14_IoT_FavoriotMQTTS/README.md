@@ -42,9 +42,6 @@ Adafruit_MPU6050 mpu;
 
 sensors_event_t a, g, temp;
 
-// https://meteologix.com/my/observations/pressure-qnh.html
-float hPaSeaLevel = 1015.00;
-
 unsigned long lastMillis = 0;
 
 NetworkClientSecure client;
@@ -90,6 +87,7 @@ void connectToFavoriotMQTT() {
 
   Serial.println("Subscribe to: " + String(deviceAccessToken) + String(statusTopic));
 
+  // Subscribe to /v2/streams/status
   mqtt.subscribe(String(deviceAccessToken) + String(statusTopic));
   Serial.println();
 }
@@ -137,53 +135,46 @@ void loop() {
   delay(10);  // <- fixes some issues with WiFi stability
 
   // STEP 3: Data Acquisition - Read data from the sensors
-    int proximity = apds.readProximity();
-    float humidity = bme.readHumidity();
-    float temperature = bme.readTemperature();
-    float barometer = bme.readPressure() / 100.00;
-    float altitude = bme.readAltitude(hPaSeaLevel);
-    mpu.getEvent(&a, &g, &temp);
-    float accx = a.acceleration.x;
-    float accy = a.acceleration.y;
-    float accz = a.acceleration.z;
-    float gyrx = g.gyro.x;
-    float gyry = g.gyro.y;
-    float gyrz = g.gyro.z;
+  int proximity = apds.readProximity();
+  float humidity = bme.readHumidity();
+  float temperature = bme.readTemperature();
+  float barometer = bme.readPressure() / 100.00;
+  float altitude = bme.readAltitude(1015); // based on https://aqicn.org/
+  mpu.getEvent(&a, &g, &temp);
+  float accx = a.acceleration.x;
+  float accy = a.acceleration.y;
+  float accz = a.acceleration.z;
+  float gyrx = g.gyro.x;
+  float gyry = g.gyro.y;
+  float gyrz = g.gyro.z;
 
-    Serial.print("Proximity: ");
-    Serial.println(proximity);
+  Serial.println("Proximity: " + String(proximity));
+  Serial.println("Relative Humidity: " + String(humidity) + " %RH");
+  Serial.println("Approx. Altitude: " + String(altitude) + " m");
 
-    Serial.print("Relative Humidity: ");
-    Serial.print(humidity);
-    Serial.println(" %RH");
+  Serial.print("Barometric Pressure: ");
+  Serial.print(barometer);
+  Serial.println(" Pa");
 
-    Serial.print("Approx. Altitude: ");
-    Serial.print(altitude);
-    Serial.println(" m");
+  Serial.print("Ambient Temperature: ");
+  Serial.print(temperature);
+  Serial.println(" °C");
 
-    Serial.print("Barometric Pressure: ");
-    Serial.print(barometer);
-    Serial.println(" Pa");
+  Serial.print("Acceleration X:");
+  Serial.print(accx);
+  Serial.print(", Y:");
+  Serial.print(accy);
+  Serial.print(", Z:");
+  Serial.print(accz);
+  Serial.println(" m/s^2");
 
-    Serial.print("Ambient Temperature: ");
-    Serial.print(temperature);
-    Serial.println(" °C");
-
-    Serial.print("Acceleration X:");
-    Serial.print(accx);
-    Serial.print(", Y:");
-    Serial.print(accy);
-    Serial.print(", Z:");
-    Serial.print(accz);
-    Serial.println(" m/s^2");
-
-    Serial.print("Rotation X:");
-    Serial.print(gyrx);
-    Serial.print(", Y:");
-    Serial.print(gyry);
-    Serial.print(", Z:");
-    Serial.print(gyrz);
-    Serial.println(" rad/s");
+  Serial.print("Rotation X:");
+  Serial.print(gyrx);
+  Serial.print(", Y:");
+  Serial.print(gyry);
+  Serial.print(", Z:");
+  Serial.print(gyrz);
+  Serial.println(" rad/s");
 
   // STEP 4: Data Ingestion - Send data to Favoriot's data stream using secure MQTT connection
   // Interval 15 seconds
@@ -209,11 +200,12 @@ void loop() {
     Serial.println("Data to Publish: " + favoriotJson);
     Serial.println("Publish to: " + String(deviceAccessToken) + String(publishTopic));
 
+    // Publish to /v2/streams
     mqtt.publish(String(deviceAccessToken) + String(publishTopic), favoriotJson);
   }
 
   Serial.println("=============================================");
-  delay(3000);
+  delay(5000);
 }
 
 ```
