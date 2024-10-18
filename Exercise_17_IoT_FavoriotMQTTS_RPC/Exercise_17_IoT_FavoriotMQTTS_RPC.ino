@@ -1,12 +1,13 @@
 /*
- * Hibiscus Sense - Exercise 15 IoT using Favoriot MQTTS Protocol with Remote Procedure Call (RPC)
+ * Hibiscus Sense - Exercise 17 IoT using Favoriot MQTTS Protocol with Remote Procedure Call (RPC)
  * 
  * Author: Mohamad Ariffin Zulkifli
  * Organization: Myinvent Technologies Sdn Bhd
  *
- * This sketch has 4 summary execution steps:
+ * This sketch has 4 summary execution steps while handling RPC message:
  * 1. Initialized Wi-Fi conectivity
- * 2. Initialized MQTT connection to Favoriot MQTT broker
+ * 2. Initialized MQTT connection to Favoriot MQTT broker and
+ *    subscribe to Favoriot's MQTT RPC topic
  * 3. Data Acquisition - Read data from the sensors
  * 4. Data Ingestion - Send data to Favoriot's data stream using secure MQTT protocol
  *
@@ -44,8 +45,8 @@ Adafruit_MPU6050 mpu;
 
 sensors_event_t a, g, temp;
 
-unsigned long lastMillisUpdateInternval = 0;
 unsigned long lastMillisDataInterval = 0;
+unsigned long lastMillisUpdateInternval = 0;
 
 NetworkClientSecure client;
 MQTTClient mqtt(4096);
@@ -63,42 +64,13 @@ void connectToWiFi() {
   Serial.println(" connected!");
 }
 
-void messageReceived(String &topic, String &payload) {
-  Serial.println("Incoming Status - Topic: " + topic + ", Payload: "  + payload);
-  Serial.println();
-
-  JsonDocument doc;
-  DeserializationError error = deserializeJson(doc, payload);
-
-  bool ledBlue = doc.containsKey("ledBlue");
-  bool ledRedRGB = doc.containsKey("ledRedRGB");
-  bool ledRGB = doc.containsKey("ledRGB");
-
-  if (ledBlue){
-    int value = doc["ledBlue"];
-    digitalWrite(2, value);
-  }
-
-  if (ledRedRGB){
-    int value = doc["ledRedRGB"];
-    rgb.setPixelColor(0, rgb.Color(value, 0, 0)); rgb.show();
-  }
-  
-  if (ledRGB){
-    int valueRed = doc["ledRGB"]["r"];
-    int valueGreen = doc["ledRGB"]["g"];
-    int valueBlue = doc["ledRGB"]["b"];
-    rgb.setPixelColor(0, rgb.Color(valueRed, valueGreen, valueBlue)); rgb.show();
-  }
-}
-
 void connectToFavoriotMQTT() {
   Serial.print("Connecting to Favoriot MQTT Broker ...");
 
   client.setCACert(rootCACertificate);
 
   mqtt.begin("mqtt.favoriot.com", 8883, client);
-  mqtt.onMessage(messageReceived);
+  mqtt.onMessage(rpcMessageReceived);
 
   String uniqueString = String(ssid) + "-" + String(random(1, 98)) + String(random(99, 999));
   char uniqueClientID[uniqueString.length() + 1];
@@ -115,19 +87,55 @@ void connectToFavoriotMQTT() {
   Serial.println("Subscribe to: " + String(deviceAccessToken) + String(statusTopic));
   Serial.println("Subscribe to: " + String(deviceAccessToken) + String(rpcTopic));
 
+  // Subscribe to /v2/streams/status
   mqtt.subscribe(String(deviceAccessToken) + String(statusTopic));
+  // Subscribe to /v2/rpc
   mqtt.subscribe(String(deviceAccessToken) + String(rpcTopic));
   Serial.println();
+}
+
+// Function to handle RPC message
+void rpcMessageReceived(String &topic, String &payload) {
+  Serial.println("Incoming Status - Topic: " + topic + ", Payload: " + payload);
+  Serial.println();
+
+  JsonDocument doc;
+  DeserializationError error = deserializeJson(doc, payload);
+
+  bool ledBlue = doc.containsKey("ledBlue");
+  bool ledRedRGB = doc.containsKey("ledRedRGB");
+  bool ledRGB = doc.containsKey("ledRGB");
+
+  if (ledBlue) {
+    int value = doc["ledBlue"];
+    digitalWrite(2, value);
+  }
+
+  if (ledRedRGB) {
+    int value = doc["ledRedRGB"];
+    rgb.setPixelColor(0, rgb.Color(value, 0, 0));
+    rgb.show();
+  }
+
+  if (ledRGB) {
+    int valueRed = doc["ledRGB"]["r"];
+    int valueGreen = doc["ledRGB"]["g"];
+    int valueBlue = doc["ledRGB"]["b"];
+    rgb.setPixelColor(0, rgb.Color(valueRed, valueGreen, valueBlue));
+    rgb.show();
+  }
 }
 
 void setup() {
   Serial.begin(115200);
 
   // Initialize Blue LED
-  pinMode(2, OUTPUT); digitalWrite(2, HIGH);
-  
+  pinMode(2, OUTPUT);
+  digitalWrite(2, HIGH);
+
   // Initialize RGB LED
-  rgb.begin(); rgb.clear();
+  rgb.begin();
+  rgb.clear();
 
   // Initialize APDS9960 Sensor
   if (!apds.begin()) {
@@ -173,7 +181,7 @@ void loop() {
   float humidity = bme.readHumidity();
   float temperature = bme.readTemperature();
   float barometer = bme.readPressure() / 100.00;
-  float altitude = bme.readAltitude(1015); // based on https://aqicn.org/
+  float altitude = bme.readAltitude(1015);  // based on https://aqicn.org/
   mpu.getEvent(&a, &g, &temp);
   float accx = a.acceleration.x;
   float accy = a.acceleration.y;
