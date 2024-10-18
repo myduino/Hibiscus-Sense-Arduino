@@ -117,12 +117,12 @@ void loop() {
   Serial.println(" %RH");
 
   Serial.print("Approx. Altitude: ");
-  Serial.print(bme.readAltitude(1013.25));
+  Serial.print(bme.readAltitude(1015));
   Serial.println(" m");
 
   Serial.print("Barometric Pressure: ");
-  Serial.print(bme.readPressure());
-  Serial.println(" Pa");
+  Serial.print(bme.readPressure() / 100.00);
+  Serial.println(" hPa");
 
   Serial.print("Ambient Temperature: ");
   Serial.print(bme.readTemperature());
@@ -154,8 +154,8 @@ void loop() {
     String parameters = "{\"device_developer_id\":\"" + String(deviceDeveloperId) + "\",\"data\":{";
     
     parameters += "\"proximity\":\"" + String(apds.readProximity()) + "\",";
-    parameters += "\"altitude\":\"" + String(bme.readAltitude(1013.25)) + "\",";
-    parameters += "\"barometer\":\"" + String(bme.readPressure()/100.00) + "\",";
+    parameters += "\"altitude\":\"" + String(bme.readAltitude(1015)) + "\",";
+    parameters += "\"barometer\":\"" + String(bme.readPressure() / 100.00) + "\",";
     parameters += "\"humidity\":\"" + String(bme.readHumidity()) + "\",";
     parameters += "\"temperature\":\"" + String(bme.readTemperature()) + "\",";
     
