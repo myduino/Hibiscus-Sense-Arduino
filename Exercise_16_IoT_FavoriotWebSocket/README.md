@@ -30,9 +30,6 @@ Adafruit_MPU6050 mpu;
 
 sensors_event_t a, g, temp;
 
-// https://meteologix.com/my/observations/pressure-qnh.html
-float hPaSeaLevel = 1015.00;
-
 long previousMillis = 0;
 
 const char* ssid = "YOUR_WIFI_SSID";
@@ -138,7 +135,7 @@ void loop() {
     uint8_t proximity = apds.readProximity();
     float humidity = bme.readHumidity();
     float temperature = bme.readTemperature();
-    float altitude = bme.readAltitude(hPaSeaLevel);
+    float altitude = bme.readAltitude(1015); // based on https://aqicn.org/
     float barometer = bme.readPressure() / 100.00;
     float accx = a.acceleration.x;
     float accy = a.acceleration.y;
