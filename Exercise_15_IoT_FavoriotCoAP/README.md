@@ -58,6 +58,15 @@ void callback_response(CoapPacket &packet, IPAddress ip, int port) {
   Serial.println("Stream Created");
 }
 
+void connect_to_wifi(){
+  WiFi.begin(ssid, password);
+
+  while(WiFi.status() != WL_CONNECTED){
+    Serial.print(".");
+    delay(250);
+  }
+}
+
 void setup() {
   Serial.begin(115200);
 
@@ -78,12 +87,7 @@ void setup() {
     Serial.println("Failed to find Hibiscus Sense MPU6050 chip");
   }
 
-  WiFi.begin(ssid, password);
-
-  while(WiFi.status() != WL_CONNECTED){
-    Serial.print(".");
-    delay(250);
-  }
+  connect_to_wifi();
 
   // client response callback.
   // this endpoint is single callback.
@@ -92,9 +96,14 @@ void setup() {
 
   // start coap server/client
   coap.start();
+
 }
 
 void loop() {
+
+  if(WiFi.status() != WL_CONNECTED){
+    connect_to_wifi();
+  }
   
   // STEP 2: Data Acquisition - Read data from the sensors
   Serial.print("Proximity: ");
@@ -105,12 +114,12 @@ void loop() {
   Serial.println(" %RH");
 
   Serial.print("Approx. Altitude: ");
-  Serial.print(bme.readAltitude(1013.25));
+  Serial.print(bme.readAltitude(1015));
   Serial.println(" m");
 
   Serial.print("Barometric Pressure: ");
-  Serial.print(bme.readPressure());
-  Serial.println(" Pa");
+  Serial.print(bme.readPressure() / 100.00);
+  Serial.println(" hPa");
 
   Serial.print("Ambient Temperature: ");
   Serial.print(bme.readTemperature());
@@ -142,8 +151,8 @@ void loop() {
     String parameters = "{\"device_developer_id\":\"" + String(deviceDeveloperId) + "\",\"data\":{";
     
     parameters += "\"proximity\":\"" + String(apds.readProximity()) + "\",";
-    parameters += "\"altitude\":\"" + String(bme.readAltitude(1013.25)) + "\",";
-    parameters += "\"barometer\":\"" + String(bme.readPressure()/100.00) + "\",";
+    parameters += "\"altitude\":\"" + String(bme.readAltitude(1015)) + "\",";
+    parameters += "\"barometer\":\"" + String(bme.readPressure() / 100.00) + "\",";
     parameters += "\"humidity\":\"" + String(bme.readHumidity()) + "\",";
     parameters += "\"temperature\":\"" + String(bme.readTemperature()) + "\",";
     
