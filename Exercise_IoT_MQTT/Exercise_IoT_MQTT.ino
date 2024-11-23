@@ -35,7 +35,8 @@
 #define WIFI_SSID             "YourWiFiSSID"
 #define WIFI_PASSWORD         "YourWiFiPassword"
 #define MQTT_HOST             "MQTTBrokerDNSorIP"
-#define MQTT_PREFIX_TOPIC     "hibiscus"
+#define MQTT_PREFIX_TOPIC     "hibiscus-sense/"
+#define MQTT_UNIQUE_TOPIC     "YourPhoneNumber"
 #define MQTT_PUBLISH_TOPIC    "/data"
 #define MQTT_TRIGGER_TOPIC    "/trigger"
 #define MQTT_SUBSCRIBE_TOPIC  "/control"
@@ -92,7 +93,7 @@ void messageReceived(String &topic, String &payload) {
   Serial.println("MQTT SUBSCRIPTION ...");
   Serial.println("Subscribe Message Received: " + payload);
 
-  if(topic == String(MQTT_PREFIX_TOPIC) + String(MQTT_SUBSCRIBE_TOPIC) + String(MQTT_RGB_TOPIC)){
+  if(topic == String(MQTT_PREFIX_TOPIC) + String(MQTT_UNIQUE_TOPIC) + String(MQTT_SUBSCRIBE_TOPIC) + String(MQTT_RGB_TOPIC)){
 
     // Extract RGB values from the payload
     int commaIndex = payload.indexOf(", ");
@@ -110,7 +111,7 @@ void messageReceived(String &topic, String &payload) {
     Serial.println("OK");
   }
 
-  if(topic == String(MQTT_PREFIX_TOPIC) + String(MQTT_SUBSCRIBE_TOPIC) + String(MQTT_LED_TOPIC)){
+  if(topic == String(MQTT_PREFIX_TOPIC) + String(MQTT_UNIQUE_TOPIC) + String(MQTT_SUBSCRIBE_TOPIC) + String(MQTT_LED_TOPIC)){
     // Adjust the LED brightness based on the payload
     Serial.print("CONTROL LED ... ");
     analogWrite(ledPin, 255 - payload.toInt());
@@ -142,11 +143,11 @@ void connectToMqttBroker(){
   Serial.println(" connected!");
 
   // Subscribe to MQTT topics for control
-  Serial.println("Subscribe to MQTT topic: " + String(MQTT_PREFIX_TOPIC) + String(MQTT_SUBSCRIBE_TOPIC) + String(MQTT_RGB_TOPIC));
-  Serial.println("Subscribe to MQTT topic: " + String(MQTT_PREFIX_TOPIC) + String(MQTT_SUBSCRIBE_TOPIC) + String(MQTT_LED_TOPIC));
+  Serial.println("Subscribe to MQTT topic: " + String(MQTT_PREFIX_TOPIC) + String(MQTT_UNIQUE_TOPIC) + String(MQTT_SUBSCRIBE_TOPIC) + String(MQTT_RGB_TOPIC));
+  Serial.println("Subscribe to MQTT topic: " + String(MQTT_PREFIX_TOPIC) + String(MQTT_UNIQUE_TOPIC) + String(MQTT_SUBSCRIBE_TOPIC) + String(MQTT_LED_TOPIC));
   
-  mqtt.subscribe(String(MQTT_PREFIX_TOPIC) + String(MQTT_SUBSCRIBE_TOPIC) + String(MQTT_RGB_TOPIC));
-  mqtt.subscribe(String(MQTT_PREFIX_TOPIC) + String(MQTT_SUBSCRIBE_TOPIC) + String(MQTT_LED_TOPIC));
+  mqtt.subscribe(String(MQTT_PREFIX_TOPIC) + String(MQTT_UNIQUE_TOPIC) + String(MQTT_SUBSCRIBE_TOPIC) + String(MQTT_RGB_TOPIC));
+  mqtt.subscribe(String(MQTT_PREFIX_TOPIC) + String(MQTT_UNIQUE_TOPIC) + String(MQTT_SUBSCRIBE_TOPIC) + String(MQTT_LED_TOPIC));
 }
 
 void setup() {
@@ -245,7 +246,7 @@ void loop() {
     Serial.println("MQTT PUBLISHER ...");
     Serial.println("Publish Trigger: " + String(toggleValue));
     Serial.println();
-    mqtt.publish(String(MQTT_PREFIX_TOPIC) + String(MQTT_TRIGGER_TOPIC), String(toggleValue));
+    mqtt.publish(String(MQTT_PREFIX_TOPIC) + String(MQTT_UNIQUE_TOPIC) + String(MQTT_TRIGGER_TOPIC), String(toggleValue));
     
     buttonPressed = false;
   }
@@ -308,9 +309,9 @@ void loop() {
     Serial.println("MQTT PUBLISHER ...");
     Serial.println("Data to Publish: " + dataInJson);
     Serial.println("Length of Data: " + String(dataInJson.length()));
-    Serial.println("Publish to MQTT topic: " + String(MQTT_PREFIX_TOPIC) + String(MQTT_PUBLISH_TOPIC));
+    Serial.println("Publish to MQTT topic: " + String(MQTT_PREFIX_TOPIC) + String(MQTT_UNIQUE_TOPIC) + String(MQTT_PUBLISH_TOPIC));
     Serial.println();
     
-    mqtt.publish(String(MQTT_PREFIX_TOPIC) + String(MQTT_PUBLISH_TOPIC), dataInJson);
+    mqtt.publish(String(MQTT_PREFIX_TOPIC) + String(MQTT_UNIQUE_TOPIC) + String(MQTT_PUBLISH_TOPIC), dataInJson);
   }
 }
