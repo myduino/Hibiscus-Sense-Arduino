@@ -152,7 +152,6 @@ void connectToMqttBroker(){
 void setup() {
 
   Serial.begin(115200);
-  while(!Serial.available());
 
   Serial.println("HIBISCUS SENSE");
   Serial.println();
