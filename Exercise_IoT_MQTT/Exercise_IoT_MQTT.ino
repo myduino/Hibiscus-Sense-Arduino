@@ -1,5 +1,5 @@
 /*
- * Hibiscus Sense - Exercise 14 IoT using MQTT
+ * Hibiscus Sense - Exercise IoT using MQTT
  * 
  * Author: Mohamad Ariffin Zulkifli
  * Organization: Myinvent Technologies Sdn Bhd
