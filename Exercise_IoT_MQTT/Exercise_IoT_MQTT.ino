@@ -55,9 +55,6 @@ Adafruit_NeoPixel rgb(1, 16, NEO_GRB + NEO_KHZ800);
 
 // Define LED-related variables
 const int ledPin = 2;
-int ledFrequency = 2000;
-int ledChannel = 0;
-int ledResolution = 8;
 
 // Define button-related variables
 const int buttonPin = 0;
@@ -116,7 +113,7 @@ void messageReceived(String &topic, String &payload) {
   if(topic == String(MQTT_PREFIX_TOPIC) + String(MQTT_SUBSCRIBE_TOPIC) + String(MQTT_LED_TOPIC)){
     // Adjust the LED brightness based on the payload
     Serial.print("CONTROL LED ... ");
-    ledcWrite(ledChannel, 255 - payload.toInt());
+    analogWrite(ledPin, 255 - payload.toInt());
     Serial.println("OK");
   }
 
@@ -164,9 +161,7 @@ void setup() {
 
   // Initialize and configure LED
   Serial.print("1. LED ... ");
-  ledcSetup(ledChannel, ledFrequency, ledResolution);
-  ledcAttachPin(ledPin, ledChannel);
-  ledcWrite(ledChannel, 255);
+  pinMode(ledPin, OUTPUT);
   Serial.println("OK");
 
   // Initialize RGB LED
