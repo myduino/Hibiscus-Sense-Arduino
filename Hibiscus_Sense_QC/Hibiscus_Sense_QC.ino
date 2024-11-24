@@ -118,16 +118,13 @@ void connectToMqttBroker(){
 }
 
 void setup() {
-  // WRITE_PERI_REG(RTC_CNTL_BROWN_OUT_REG, 0); //disable   detector
-
-  Serial.begin(115200); delay(3000);
-  Serial.print("\nHit Enter on the Serial Monitor input to continue ... ");
+  Serial.begin(115200); delay(5000);
+  Serial.print("Hit Enter on the Serial Monitor input to continue ... ");
   while(!Serial.available());
   Serial.println("OK");
-
-  delay(1000);
+  Serial.println();
   
-  Serial.println("\nHIBISCUS SENSE");
+  Serial.println("HIBISCUS SENSE");
   Serial.println();
 
   Serial.println("Initializing Actuators:");
@@ -156,11 +153,11 @@ void setup() {
   Serial.print("1. Pushbutton ... ");
   pinMode(0, INPUT);
   Serial.println("OK");
-  Serial.println();
   
   Serial.print("Press the IO0 pushbutton to continue ... ");
   while(digitalRead(0) != LOW);
   Serial.println("OK");
+  Serial.println();
 
   Serial.println("Initializing Sensors:");
   
