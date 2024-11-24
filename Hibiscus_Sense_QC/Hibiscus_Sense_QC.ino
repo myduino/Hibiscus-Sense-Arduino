@@ -9,8 +9,8 @@
 #include <MQTT.h>
 #include <Wire.h>
 
-#define WIFI_SSID                 "Myduino Guest"
-#define WIFI_PASSWORD             "MyduinoGuest"
+#define WIFI_SSID                 "YOUR_WIFI_SSID"
+#define WIFI_PASSWORD             "YOUR_WIFI_PASSWORD"
 #define MQTT_HOST                 "broker.hivemq.com"
 #define MQTT_PUBLISH_TOPIC        "Hibiscus-Sense-Test-Device"
 #define MQTT_CONTROL_RGB_TOPIC    "Hibiscus-Sense-Test-Device/RGB"
