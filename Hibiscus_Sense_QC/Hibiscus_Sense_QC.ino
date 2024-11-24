@@ -284,11 +284,11 @@ void loop() {
     buttonPressed = false;
   }
 
-  if(millis() - lastMillis > 1000){
+  // Read sensor data, print the data and publish with 5 seconds interval
+  if(millis() - lastMillis > 5000){
     Serial.println("-------------------------------------------------");
     lastMillis = millis();
 
-    // Read sensor data and print periodically
     Serial.println("TEST SENSORS ...");
     
     uint8_t proximity = apds.readProximity();
@@ -308,7 +308,6 @@ void loop() {
     float y_gyro = g.gyro.y;
     float z_gyro = g.gyro.z;
 
-    // Print sensor data
     Serial.println("1. Proximity: " + String(proximity));
     Serial.println("2. Temperature: " + String(temperature) + " °C");
     Serial.println("3. Humidity: " + String(humidity) + " %RH");
