@@ -12,10 +12,10 @@
 #define WIFI_SSID                 "YOUR_WIFI_SSID"
 #define WIFI_PASSWORD             "YOUR_WIFI_PASSWORD"
 #define MQTT_HOST                 "broker.hivemq.com"
-#define MQTT_PUBLISH_TOPIC        "Hibiscus-Sense-Test-Device"
-#define MQTT_CONTROL_RGB_TOPIC    "Hibiscus-Sense-Test-Device/RGB"
-#define MQTT_CONTROL_LED_TOPIC    "Hibiscus-Sense-Test-Device/LED"
-#define MQTT_TRIGGER_TOPIC        "Hibiscus-Sense-Test-Device/Trigger"
+#define MQTT_PUBLISH_TOPIC        "hibiscus-sense-qc/data"
+#define MQTT_CONTROL_RGB_TOPIC    "hibiscus-sense-qc/rgb"
+#define MQTT_CONTROL_LED_TOPIC    "hibiscus-sense-qc/led"
+#define MQTT_TRIGGER_TOPIC        "hibiscus-sense-qc/trigger"
 
 Adafruit_APDS9960 apds;
 Adafruit_BME280 bme;
@@ -38,7 +38,7 @@ void IRAM_ATTR handleButtonPress() {
 }
 
 void connectToWiFi() {
-  Serial.print("\nConnecting to Wi-Fi '" + String(WIFI_SSID) + "' ...");
+  Serial.print("\nConnecting to Wi-Fi AP '" + String(WIFI_SSID) + "' ...");
 
   WiFi.mode(WIFI_STA);
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
@@ -119,6 +119,7 @@ void connectToMqttBroker(){
 
 void setup() {
   // WRITE_PERI_REG(RTC_CNTL_BROWN_OUT_REG, 0); //disable   detector
+  delay(3000);
 
   rgb.begin();
   rgb.show();
