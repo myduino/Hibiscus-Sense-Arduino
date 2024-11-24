@@ -28,7 +28,7 @@ Adafruit_NeoPixel rgb(1, 16, NEO_GRB + NEO_KHZ800);
 WiFiClient net;
 MQTTClient mqtt;
 
-unsigned long lastMillis, sendMillis = 0;
+unsigned long lastMillis = 0;
 
 volatile bool buttonPressed = false;
 int toggleValue = 0;
@@ -119,32 +119,48 @@ void connectToMqttBroker(){
 
 void setup() {
   // WRITE_PERI_REG(RTC_CNTL_BROWN_OUT_REG, 0); //disable   detector
-  delay(3000);
 
-  rgb.begin();
-  rgb.show();
-
-  pinMode(0, INPUT_PULLUP);
-  attachInterrupt(digitalPinToInterrupt(0), handleButtonPress, FALLING);
-
-  pinMode(2, OUTPUT);
-  digitalWrite(2, HIGH);
-
-  pinMode(13, OUTPUT);
-
-  Serial.begin(115200);
-  Serial.print("Hit Enter on the Serial Monitor input to continue ... ");
+  Serial.begin(115200); delay(3000);
+  Serial.print("\nHit Enter on the Serial Monitor input to continue ... ");
   while(!Serial.available());
-  Serial.println("OK");
-  
-  Serial.print("Press the IO0 pushbutton to continue ... ");
-  while(digitalRead(0) != LOW);
   Serial.println("OK");
 
   delay(1000);
   
   Serial.println("\nHIBISCUS SENSE");
   Serial.println();
+
+  Serial.println("Initializing Actuators:");
+
+  // Initialize and configure LED
+  Serial.print("1. LED ... ");
+  pinMode(2, OUTPUT);
+  digitalWrite(2, HIGH);
+  Serial.println("OK");
+
+  // Initialize RGB LED
+  Serial.print("2. RGB LED ... ");
+  rgb.begin();
+  rgb.show();
+  Serial.println("OK");
+
+  // Initialize Buzzer
+  Serial.print("3. Buzzer ... ");
+  pinMode(13, OUTPUT);
+  Serial.println("OK");
+  Serial.println();
+
+  Serial.println("Initializing Inputs:");
+
+  // Initialize Pushbutton
+  Serial.print("1. Pushbutton ... ");
+  pinMode(0, INPUT);
+  Serial.println("OK");
+  Serial.println();
+  
+  Serial.print("Press the IO0 pushbutton to continue ... ");
+  while(digitalRead(0) != LOW);
+  Serial.println("OK");
 
   Serial.println("Initializing Sensors:");
   
@@ -190,8 +206,7 @@ void setup() {
     Serial.println("No Wi-Fi!");
   }
   else {
-    Serial.print(n);
-    Serial.println(" Wi-Fi available:");
+    Serial.println(String(n) + " Wi-Fi available:");
     for (int i = 0; i < n; ++i) {
       Serial.print("> ");
       Serial.print(i + 1);
@@ -213,7 +228,7 @@ void setup() {
 
   Serial.println("-------------------------------------------------");
 
-  Serial.println("ACTUATORS ...");
+  Serial.println("TEST ACTUATORS ...");
   Serial.println("1. Buzzer Buzz");
   for (int dutyCycle = 0; dutyCycle <= 255; dutyCycle = dutyCycle + 10){
     analogWrite(13, dutyCycle);
@@ -247,9 +262,6 @@ void setup() {
 
 void loop() {
 
-  mqtt.loop();
-  delay(10);  // <- fixes some issues with WiFi stability
-
   if (WiFi.status() != WL_CONNECTED) {
     connectToWiFi();
   }
@@ -257,6 +269,9 @@ void loop() {
   if (!mqtt.connected()) {
     connectToMqttBroker();
   }
+
+  mqtt.loop();
+  delay(10);  // <- fixes some issues with WiFi stability
 
   if (buttonPressed) {
     toggleValue = !toggleValue;
@@ -269,32 +284,31 @@ void loop() {
     buttonPressed = false;
   }
 
-  // Read sensor data and print periodically
-  uint8_t proximity = apds.readProximity();
-
-  float temperature = bme.readTemperature();
-  float humidity = bme.readHumidity();
-  float altitude = bme.readAltitude(1008);
-  float barometer = bme.readPressure() / 100.0F;
-
-  mpu.getEvent(&a, &g, &temp);
-
-  float x_axis = a.acceleration.x;
-  float y_axis = a.acceleration.y;
-  float z_axis = a.acceleration.z;
-
-  float x_gyro = g.gyro.x;
-  float y_gyro = g.gyro.y;
-  float z_gyro = g.gyro.z;
-
   if(millis() - lastMillis > 1000){
     Serial.println("-------------------------------------------------");
-
     lastMillis = millis();
 
-    // Print sensor data
-    Serial.println("SENSORS READING ...");
+    // Read sensor data and print periodically
+    Serial.println("TEST SENSORS ...");
     
+    uint8_t proximity = apds.readProximity();
+
+    float temperature = bme.readTemperature();
+    float humidity = bme.readHumidity();
+    float altitude = bme.readAltitude(1008);
+    float barometer = bme.readPressure() / 100.0F;
+
+    mpu.getEvent(&a, &g, &temp);
+
+    float x_axis = a.acceleration.x;
+    float y_axis = a.acceleration.y;
+    float z_axis = a.acceleration.z;
+
+    float x_gyro = g.gyro.x;
+    float y_gyro = g.gyro.y;
+    float z_gyro = g.gyro.z;
+
+    // Print sensor data
     Serial.println("1. Proximity: " + String(proximity));
     Serial.println("2. Temperature: " + String(temperature) + " °C");
     Serial.println("3. Humidity: " + String(humidity) + " %RH");
@@ -304,13 +318,8 @@ void loop() {
     Serial.println("7. Gyrometer X: " + String(x_gyro) + ", Y: " + String(y_gyro) + ", Z: " + String(z_gyro) + " rad/s");
 
     Serial.println();
-  }
-  
-  // publish a message roughly every second.
-  if (millis() - sendMillis > 1000) {
-    sendMillis = millis();
 
-    Serial.println("PUBLISH DATA ...");
+    Serial.println("MQTT PUBLISH SENSOR'S DATA ...");
 
     String data = "{\"temperature\":" + String(temperature) + ",";
     data += "\"barometer\":" + String(barometer) + ",";
