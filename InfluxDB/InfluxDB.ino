@@ -9,11 +9,11 @@
 #include <InfluxDbCloud.h>
 
 #define DEVICE "Hibiscus Sense"
-#define WIFI_SSID "Myduino Team"
-#define WIFI_PASSWORD "InspireToInvent@2009"
-#define INFLUXDB_URL "http://192.168.0.124:8086"
-#define INFLUXDB_TOKEN "_CURdIIms839JXzrzzLdUOhI0QjzIExOBDZDS4Xi4a2c48fShZ9M9hHhBrDWVaW1wzDkvBzA_x3NpqqVcPNJsw=="
-#define INFLUXDB_ORG "d5e6496c092edb92"
+#define WIFI_SSID "YOUR_WIFI_SSID"
+#define WIFI_PASSWORD "YOUR_WIFI_PASSWORD"
+#define INFLUXDB_URL "http://YOUR_IP_ADDRESS:8086"
+#define INFLUXDB_TOKEN "YOUR_INFLUXDB_TOKEN"
+#define INFLUXDB_ORG "OUR_INFLUXDB_ORG_ID"
 #define INFLUXDB_BUCKET "hibiscus_sense"
 #define TZ_INFO "UTC8"
 
