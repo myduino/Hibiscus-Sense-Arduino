@@ -25,13 +25,13 @@ Hibiscus Sense comes with **USB Type-C** to power up the board and to program th
 
 Although, we can program ESP32 using other programming language such as [Micropython](https://micropython.org/), [Rust](https://github.com/esp-rs/rust), or even with RTOS (Real Time Operating System) [FreeRTOS](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/system/freertos.html), in this tutorial we will be using simplified C, C++ language on [Arduino](https://www.arduino.cc/) as the learning and prototyping platform.
 
-## Hibiscus Sense Features
-
-<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/hibiscus-sense-features.png" width="900"></a></p>
-
 ## Hibiscus Sense Pinout Diagram
 
 <p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/hibiscus-sense-pinout.png" width="900"></a></p>
+
+## Hibiscus Sense Features
+
+<p align="center"><img src="https://github.com/myduino/Hibiscus-Sense-Arduino/raw/main/references/hibiscus-sense-features.png" width="900"></a></p>
 
 - **Blue LED** is connected to ESP32's **`GPIO2`**.
 - **Small Buzzer** is connected to ESP32's **`GPIO13`**.
